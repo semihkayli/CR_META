@@ -6,6 +6,21 @@
 const fs = require("fs");
 const path = require("path");
 
+// Load .env manually if running standalone
+const envPath = path.join(__dirname, "../.env");
+if (fs.existsSync(envPath)) {
+  const envContent = fs.readFileSync(envPath, "utf8");
+  envContent.split(/\r?\n/).forEach(line => {
+    const trimmed = line.trim();
+    if (trimmed && !trimmed.startsWith("#") && trimmed.includes("=")) {
+      const eqIdx = trimmed.indexOf("=");
+      const key = trimmed.substring(0, eqIdx).trim();
+      const val = trimmed.substring(eqIdx + 1).trim();
+      process.env[key] = val;
+    }
+  });
+}
+
 // Configuration
 const API_BASE_URL = "https://api.clashroyale.com/v1";
 const LIMIT_PLAYERS = 100; // Number of top players to scan battle logs for (rate limit friendly)
