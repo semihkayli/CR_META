@@ -23,7 +23,7 @@ if (fs.existsSync(envPath)) {
 
 // Configuration
 const API_BASE_URL = "https://api.clashroyale.com/v1";
-const LIMIT_PLAYERS = 100; // Number of top players to scan battle logs for (rate limit friendly)
+const LIMIT_PLAYERS = 40; // Number of top players to scan battle logs for (rate limit friendly)
 const MIN_DECK_USE_COUNT = 3; // Minimum games played with a deck to count in meta rankings
 const REQUEST_DELAY_MS = 100; // Delay between API calls to stay under 10 req/sec rate limit
 
@@ -209,6 +209,49 @@ async function cacheCardIcons(metaDecks, proDecks) {
     }
   }
   console.log("[Image Cache] Finished card icons caching.");
+}
+
+// Dynamic classification of pro/e-sports players based on POL rankings, legacy rankings, and badges
+function classifyProPlayer(profile) {
+  if (!profile) return null;
+
+  // Check 1: Best Path of Legend finish (Ultimate Champion rank in the top 1000 in the world)
+  if (profile.bestPathOfLegendSeasonResult && profile.bestPathOfLegendSeasonResult.rank && profile.bestPathOfLegendSeasonResult.rank <= 1000) {
+    return `Pro [POL Best: #${profile.bestPathOfLegendSeasonResult.rank}]`;
+  }
+
+  // Check 2: Previous Path of Legend season finish (rank in the top 1000)
+  if (profile.leagueStatistics && profile.leagueStatistics.previousSeason && profile.leagueStatistics.previousSeason.rank && profile.leagueStatistics.previousSeason.rank <= 1000) {
+    return `Pro [Prev POL: #${profile.leagueStatistics.previousSeason.rank}]`;
+  }
+
+  // Check 3: Best Trophy Road legacy season finish (rank in the top 1000)
+  if (profile.leagueStatistics && profile.leagueStatistics.bestSeason && profile.leagueStatistics.bestSeason.rank && profile.leagueStatistics.bestSeason.rank <= 1000) {
+    return `Pro [Best Finish: #${profile.leagueStatistics.bestSeason.rank}]`;
+  }
+
+  // Check 4: Badges indicating CRL 20 Wins or multiple Grand Challenge wins
+  if (profile.badges && Array.isArray(profile.badges)) {
+    // CRL badge (starts with Crl)
+    const crlBadge = profile.badges.find(b => b.name && b.name.toLowerCase().startsWith("crl"));
+    if (crlBadge) {
+      return `CRL Esports Pro (${crlBadge.name})`;
+    }
+
+    // Top finish badge
+    const hasTopFinishBadge = profile.badges.some(b => b.name && (b.name === "LadderTop1000" || b.name === "LadderTournamentTop1000"));
+    if (hasTopFinishBadge) {
+      return `Ladder Pro (Top Finish)`;
+    }
+
+    // Grand Challenge 12 Wins badge with high wins count (e.g. >= 20 GC wins)
+    const gcBadge = profile.badges.find(b => b.name === "Grand12Wins");
+    if (gcBadge && gcBadge.progress && gcBadge.progress >= 20) {
+      return `Elite Grinder [${gcBadge.progress} GC Wins]`;
+    }
+  }
+
+  return null;
 }
 
 async function main() {
@@ -400,19 +443,42 @@ async function main() {
     ...playerTags
   ])].map(tag => tag.replace("#", ""));
 
-  console.log(`[Pipeline] Scanning battlelogs for ${allTargetTags.length} unique player profiles...`);
+  console.log(`[Pipeline] Fetching profiles & battlelogs for ${allTargetTags.length} unique players...`);
 
-  // Step 3: Loop through and scan battle logs
+  // Step 3: Loop through and scan player profiles & battle logs
   for (let i = 0; i < allTargetTags.length; i++) {
     const tag = allTargetTags[i];
-    const isPro = proTagsSet.has(tag);
-    const proName = proPlayerLookup.get(tag);
+    
+    // 1. Fetch player profile to inspect badges and top finishes dynamically
+    const profileUrl = `${API_BASE_URL}/players/%23${tag}`;
+    await delay(REQUEST_DELAY_MS);
+    const profileRes = await fetchWithRetry(profileUrl, { method: "GET" });
+    if (!profileRes) continue;
+    
+    const profileData = await profileRes.json();
+    if (!profileData) continue;
 
-    console.log(`[Pipeline] (${i + 1}/${allTargetTags.length}) Scanning tag #${tag} ${isPro ? `[PRO: ${proName}]` : ""}`);
+    let proName = proPlayerLookup.get(tag);
+    let isPro = proTagsSet.has(tag);
+
+    if (!isPro) {
+      // Dynamic classification based on badges, best POL finish, and legacy rankings
+      const dynamicLabel = classifyProPlayer(profileData);
+      if (dynamicLabel) {
+        proName = `${profileData.name} (${dynamicLabel})`;
+        proTagsSet.add(tag);
+        proPlayerLookup.set(tag, proName);
+        isPro = true;
+        console.log(`[Pipeline Pro Detected] Player #${tag} (${profileData.name}) dynamically classified as PRO: ${dynamicLabel}`);
+      }
+    } else {
+      console.log(`[Pipeline Verified Pro] Player #${tag} is verified pro: ${proName}`);
+    }
+
+    console.log(`[Pipeline] (${i + 1}/${allTargetTags.length}) Scanning battlelog for #${tag} ${isPro ? `[PRO: ${proName}]` : ""}`);
     
+    // 2. Fetch battle logs
     const battlelogUrl = `${API_BASE_URL}/players/%23${tag}/battlelog`;
-    
-    // 100ms delay to stay within rate limits (10 req/s)
     await delay(REQUEST_DELAY_MS);
     
     const battlelogRes = await fetchWithRetry(battlelogUrl, { method: "GET" });

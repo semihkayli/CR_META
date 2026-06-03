@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-03T17:23:48.184Z",
+  "updatedAt": "2026-06-03T17:30:49.017Z",
   "metaDecks": [
     {
       "deckId": "26000006;26000015;26000034;26000035;26000037;28000005;28000012;28000015",
@@ -429,9 +429,9 @@
           }
         }
       ],
-      "winRate": 54.3,
-      "useCount": 35,
-      "winCount": 19
+      "winRate": 54.5,
+      "useCount": 33,
+      "winCount": 18
     },
     {
       "deckId": "26000015;26000034;26000050;26000085;27000001;28000007;28000012;28000015",
@@ -2239,7 +2239,7 @@
     },
     {
       "playerTag": "#9J2QVPLQQ",
-      "playerName": "F2P I ❤PEDRO❤ (Top 18)",
+      "playerName": "F2P I ❤PEDRO❤ (Top 19)",
       "deckId": "26000015;26000034;26000050;26000085;27000001;28000007;28000012;28000015",
       "cards": [
         {
@@ -2313,7 +2313,7 @@
     },
     {
       "playerTag": "#QQ8QVQ8JR",
-      "playerName": "jex (Top 5)",
+      "playerName": "jex (Top 7)",
       "deckId": "26000010;26000024;26000035;26000044;26000061;26000084;28000000;28000015",
       "cards": [
         {
@@ -2535,7 +2535,7 @@
     },
     {
       "playerTag": "#89P0Y8U0",
-      "playerName": "Helhão ✌ (Top 43)",
+      "playerName": "Helhão ✌ (Top 2)",
       "deckId": "26000000;26000019;26000032;26000049;26000058;27000004;28000009;28000011",
       "cards": [
         {
@@ -2609,7 +2609,7 @@
     },
     {
       "playerTag": "#9092VJPQY",
-      "playerName": "Dehh (Top 29)",
+      "playerName": "Dehh (Top 30)",
       "deckId": "26000006;26000015;26000034;26000035;26000037;28000005;28000012;28000015",
       "cards": [
         {
@@ -2905,7 +2905,7 @@
     },
     {
       "playerTag": "#2LU2L08LR",
-      "playerName": "Alan (Top 34)",
+      "playerName": "Alan (Top 35)",
       "deckId": "26000004;26000021;26000023;26000025;26000034;26000063;28000012;28000026",
       "cards": [
         {
@@ -2979,7 +2979,7 @@
     },
     {
       "playerTag": "#GPRJY2Y2",
-      "playerName": "<c2>Mohammed AR (Top 1)",
+      "playerName": "<c2>Mohammed AR (Top 2)",
       "deckId": "26000031;26000058;26000065;27000006;27000010;27000013;28000009;28000011",
       "cards": [
         {
@@ -3201,7 +3201,7 @@
     },
     {
       "playerTag": "#9V92QUJ98",
-      "playerName": "marcopolo (Top 33)",
+      "playerName": "marcopolo (Top 34)",
       "deckId": "26000000;26000035;26000036;26000040;26000042;26000055;27000010;28000011",
       "cards": [
         {
@@ -3497,7 +3497,7 @@
     },
     {
       "playerTag": "#909QU9RLQ",
-      "playerName": "FÁBIO PANSERI (Top 11)",
+      "playerName": "FÁBIO PANSERI (Top 12)",
       "deckId": "26000000;26000007;26000021;26000047;26000049;27000012;28000000;28000001",
       "cards": [
         {
