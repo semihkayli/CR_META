@@ -288,7 +288,6 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   background-color: var(--surface-container-high);
-  border: 1px solid var(--panel-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,6 +297,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.card-asset::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid var(--panel-border);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+  transition: all var(--transition-fast);
 }
 
 /* Locked Card Overlay */
@@ -334,8 +346,11 @@
 
 /* Evolved / Champion overlays */
 .card-asset.evo-border {
-  border: 2px solid var(--evo-violet) !important;
-  box-shadow: 0 0 10px var(--evo-glow);
+  box-shadow: 0 0 10px var(--evo-glow) !important;
+}
+
+.card-asset.evo-border::before {
+  border: 2.5px solid var(--evo-violet) !important;
 }
 
 .evo-locked-overlay {
@@ -367,12 +382,18 @@
 
 /* Legendary/Champion glows matching Stitch */
 .legendary-blue-glow {
-  box-shadow: 0 0 12px rgba(2, 132, 199, 0.3);
-  border: 1.5px solid var(--rarity-legendary-start) !important;
+  box-shadow: 0 0 12px rgba(2, 132, 199, 0.3) !important;
+}
+
+.card-asset.legendary-blue-glow::before {
+  border: 2px solid var(--rarity-legendary-start) !important;
 }
 
 .champion-orange-glow {
-  box-shadow: 0 0 12px var(--gold-glow);
-  border: 2px solid var(--secondary) !important;
+  box-shadow: 0 0 12px var(--gold-glow) !important;
+}
+
+.card-asset.champion-orange-glow::before {
+  border: 2.5px solid var(--secondary) !important;
 }
 

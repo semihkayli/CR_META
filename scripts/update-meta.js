@@ -313,24 +313,87 @@ async function main() {
 
   // Step 1: Fetch Top leaderboard player tags
   let playerTags = [];
+  let leaderboardItems = [];
   console.log("[Pipeline] Fetching global leaderboards...");
   const leaderboardUrl = `${API_BASE_URL}/locations/global/rankings/players?limit=${LIMIT_PLAYERS}`;
-  const leaderboardRes = await fetchWithRetry(leaderboardUrl, { method: "GET" });
-
-  if (leaderboardRes) {
-    const leaderboardData = await leaderboardRes.json();
-    if (leaderboardData.items) {
-      playerTags = leaderboardData.items.map(item => item.tag);
-      console.log(`[Pipeline] Retrieved ${playerTags.length} players from leaderboard.`);
+  
+  try {
+    const leaderboardRes = await fetchWithRetry(leaderboardUrl, { method: "GET" });
+    if (leaderboardRes) {
+      const leaderboardData = await leaderboardRes.json();
+      if (leaderboardData && leaderboardData.items) {
+        leaderboardItems = leaderboardData.items;
+        playerTags = leaderboardItems.map(item => item.tag);
+        console.log(`[Pipeline] Retrieved ${playerTags.length} players from leaderboard.`);
+      }
+    } else {
+      console.warn("[Pipeline Warning] Failed to fetch leaderboard. Continuing...");
     }
-  } else {
-    console.error("[Pipeline Error] Failed to fetch leaderboard. Aborting database rewrite.");
-    return;
+  } catch (err) {
+    console.warn(`[Pipeline Warning] Leaderboard query failed: ${err.message}. Continuing...`);
   }
 
-  // Step 2: Merge in pro players (ensure unique tags)
-  const proTagsSet = new Set(proPlayers.map(p => p.tag.replace("#", "")));
-  const proPlayerLookup = new Map(proPlayers.map(p => [p.tag.replace("#", ""), p.name]));
+  // Fallback: If player leaderboard is empty (e.g. season reset), fetch players from top clans!
+  if (playerTags.length === 0) {
+    console.log("[Pipeline Fallback] Player leaderboard is empty. Fetching top global clans to retrieve active players...");
+    try {
+      const clansUrl = `${API_BASE_URL}/locations/global/rankings/clans?limit=5`;
+      const clansRes = await fetchWithRetry(clansUrl, { method: "GET" });
+      if (clansRes) {
+        const clansData = await clansRes.json();
+        if (clansData.items) {
+          for (const clan of clansData.items.slice(0, 3)) {
+            console.log(`[Pipeline Fallback] Fetching members for clan ${clan.name} (${clan.tag})...`);
+            const cleanClanTag = clan.tag.replace("#", "%23");
+            const membersUrl = `${API_BASE_URL}/clans/${cleanClanTag}/members`;
+            const membersRes = await fetchWithRetry(membersUrl, { method: "GET" });
+            if (membersRes) {
+              const membersData = await membersRes.json();
+              if (membersData.items) {
+                const clanPlayerTags = membersData.items.map(m => m.tag);
+                playerTags.push(...clanPlayerTags);
+                console.log(`[Pipeline Fallback] Added ${clanPlayerTags.length} players from ${clan.name}.`);
+                
+                membersData.items.forEach(m => {
+                  leaderboardItems.push({
+                    tag: m.tag,
+                    name: m.name,
+                    rank: m.clanRank,
+                    trophies: m.trophies
+                  });
+                });
+              }
+            }
+            await delay(100);
+          }
+          playerTags = [...new Set(playerTags)];
+          console.log(`[Pipeline Fallback] Total unique players gathered via clans fallback: ${playerTags.length}`);
+        }
+      }
+    } catch (err) {
+      console.error(`[Pipeline Fallback Error] Failed to fetch players from top clans: ${err.message}`);
+    }
+  }
+
+  // Step 2: Merge in pro players (ensure unique tags) and dynamically treat top leaderboard players as pros
+  const proTagsSet = new Set();
+  const proPlayerLookup = new Map();
+
+  // Load from static pro_players.json
+  proPlayers.forEach(p => {
+    const cleanTag = p.tag.replace("#", "");
+    proTagsSet.add(cleanTag);
+    proPlayerLookup.set(cleanTag, p.name);
+  });
+
+  // Also classify top leaderboard players as pros/top players using their leaderboard names
+  leaderboardItems.forEach(item => {
+    const cleanTag = item.tag.replace("#", "");
+    proTagsSet.add(cleanTag);
+    if (!proPlayerLookup.has(cleanTag)) {
+      proPlayerLookup.set(cleanTag, `${item.name} (Top ${item.rank})`);
+    }
+  });
   
   const allTargetTags = [...new Set([
     ...proPlayers.map(p => p.tag),
@@ -359,8 +422,8 @@ async function main() {
     if (!Array.isArray(battles)) continue;
 
     for (const battle of battles) {
-      // Filter competitive match types
-      if (battle.type !== "pathOfLegend" && battle.type !== "challenge" && battle.type !== "grandChallenge") {
+      // Filter competitive match types - restrict strictly to Path of Legend (Ranked Mode)
+      if (battle.type !== "pathOfLegend") {
         continue;
       }
 
