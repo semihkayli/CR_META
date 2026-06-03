@@ -1,0 +1,337 @@
+{
+  "updatedAt": "2026-05-04T16:32:59.259Z",
+  "metaDecks": [
+    {
+      "deckId": "26000000;26000002;26000003;26000042;26000087;26000093;28000011;28000034",
+      "cards": [
+        {
+          "name": "Knight",
+          "id": 26000000,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/knight.png"
+          }
+        },
+        {
+          "name": "Goblins",
+          "id": 26000002,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/goblins.png"
+          }
+        },
+        {
+          "name": "Giant",
+          "id": 26000003,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/giant.png"
+          }
+        },
+        {
+          "name": "Electro Wizard",
+          "id": 26000042,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/electrowizard.png"
+          }
+        },
+        {
+          "name": "Phoenix",
+          "id": 26000087,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/phoenix.png"
+          }
+        },
+        {
+          "name": "Little Prince",
+          "id": 26000093,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/littleprince.png"
+          }
+        },
+        {
+          "name": "The Log",
+          "id": 28000011,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/thelog.png"
+          }
+        },
+        {
+          "name": "Void",
+          "id": 28000034,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/void.png"
+          }
+        }
+      ],
+      "winRate": 57.1,
+      "useCount": 142,
+      "winCount": 83
+    },
+    {
+      "deckId": "26000010;26000015;26000021;26000032;28000000;28000008;28000015;28000016",
+      "cards": [
+        {
+          "name": "Skeletons",
+          "id": 26000010,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/skeletons.png"
+          }
+        },
+        {
+          "name": "Ice Golem",
+          "id": 26000015,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/icegolem.png"
+          }
+        },
+        {
+          "name": "Hog Rider",
+          "id": 26000021,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/hogrider.png"
+          }
+        },
+        {
+          "name": "Musketeer",
+          "id": 26000032,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/musketeer.png"
+          }
+        },
+        {
+          "name": "Fireball",
+          "id": 28000000,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/fireball.png"
+          }
+        },
+        {
+          "name": "Zap",
+          "id": 28000008,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/zap.png"
+          }
+        },
+        {
+          "name": "Cannon",
+          "id": 28000015,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/cannon.png"
+          }
+        },
+        {
+          "name": "Ice Spirit",
+          "id": 28000016,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/icespirit.png"
+          }
+        }
+      ],
+      "winRate": 52.7,
+      "useCount": 98,
+      "winCount": 53
+    },
+    {
+      "deckId": "26000000;26000004;26000011;26000027;26000030;28000000;28000011;28000012",
+      "cards": [
+        {
+          "name": "Knight",
+          "id": 26000000,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/knight.png"
+          }
+        },
+        {
+          "name": "P.E.K.K.A",
+          "id": 26000004,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/pekka.png"
+          }
+        },
+        {
+          "name": "Goblin Gang",
+          "id": 26000011,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/goblingang.png"
+          }
+        },
+        {
+          "name": "Battle Ram",
+          "id": 26000027,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/battleram.png"
+          }
+        },
+        {
+          "name": "Bandit",
+          "id": 26000030,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/bandit.png"
+          }
+        },
+        {
+          "name": "Fireball",
+          "id": 28000000,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/fireball.png"
+          }
+        },
+        {
+          "name": "The Log",
+          "id": 28000011,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/thelog.png"
+          }
+        },
+        {
+          "name": "Poison",
+          "id": 28000012,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/poison.png"
+          }
+        }
+      ],
+      "winRate": 55.6,
+      "useCount": 84,
+      "winCount": 48
+    }
+  ],
+  "proDecks": [
+    {
+      "playerTag": "#P90G2PY8",
+      "playerName": "Mohamed Light",
+      "deckId": "26000000;26000002;26000003;26000042;26000087;26000093;28000011;28000034",
+      "cards": [
+        {
+          "name": "Knight",
+          "id": 26000000,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/knight.png"
+          }
+        },
+        {
+          "name": "Goblins",
+          "id": 26000002,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/goblins.png"
+          }
+        },
+        {
+          "name": "Giant",
+          "id": 26000003,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/giant.png"
+          }
+        },
+        {
+          "name": "Electro Wizard",
+          "id": 26000042,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/electrowizard.png"
+          }
+        },
+        {
+          "name": "Phoenix",
+          "id": 26000087,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/phoenix.png"
+          }
+        },
+        {
+          "name": "Little Prince",
+          "id": 26000093,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/littleprince.png"
+          }
+        },
+        {
+          "name": "The Log",
+          "id": 28000011,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/thelog.png"
+          }
+        },
+        {
+          "name": "Void",
+          "id": 28000034,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/void.png"
+          }
+        }
+      ],
+      "winRate": 83.3,
+      "useCount": 12,
+      "winCount": 10
+    },
+    {
+      "playerTag": "#GYV2Y0YV",
+      "playerName": "Mugi",
+      "deckId": "26000010;26000015;26000021;26000032;28000000;28000008;28000015;28000016",
+      "cards": [
+        {
+          "name": "Skeletons",
+          "id": 26000010,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/skeletons.png"
+          }
+        },
+        {
+          "name": "Ice Golem",
+          "id": 26000015,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/icegolem.png"
+          }
+        },
+        {
+          "name": "Hog Rider",
+          "id": 26000021,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/hogrider.png"
+          }
+        },
+        {
+          "name": "Musketeer",
+          "id": 26000032,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/musketeer.png"
+          }
+        },
+        {
+          "name": "Fireball",
+          "id": 28000000,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/fireball.png"
+          }
+        },
+        {
+          "name": "Zap",
+          "id": 28000008,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/zap.png"
+          }
+        },
+        {
+          "name": "Cannon",
+          "id": 28000015,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/cannon.png"
+          }
+        },
+        {
+          "name": "Ice Spirit",
+          "id": 28000016,
+          "iconUrls": {
+            "medium": "https://cdn.clashroyale.com/cards/300/icespirit.png"
+          }
+        }
+      ],
+      "winRate": 75,
+      "useCount": 8,
+      "winCount": 6
+    }
+  ]
+}
