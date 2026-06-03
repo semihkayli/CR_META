@@ -151,17 +151,21 @@ export default function Home() {
 
         {/* Sidebar Logo Header */}
         <div className="sidebar-logo-container">
-          <div style={{ 
+          <div className="logo-icon-container" style={{ 
             width: "2.5rem", 
             height: "2.5rem", 
             borderRadius: "var(--radius-md)", 
-            background: "var(--elixir-grad)", 
             display: "flex", 
             alignItems: "center", 
             justifyContent: "center" 
           }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            {/* Clash Royale Inspired Crown/Drop SVG */}
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M4 18V9L8 13L12 6L16 13L20 9V18H4Z" fill="#ffffff" stroke="#ffffff" strokeWidth="1" strokeLinejoin="round"/>
+              <circle cx="4" cy="7" r="1.5" fill="#ffd700"/>
+              <circle cx="12" cy="4" r="1.5" fill="#ffd700"/>
+              <circle cx="20" cy="7" r="1.5" fill="#ffd700"/>
+              <path d="M12 12C12 12 9 14.5 9 16C9 17.6569 10.3431 19 12 19C13.6569 19 15 17.6569 15 16C15 14.5 12 12 12 12Z" fill="#ff5ebc"/>
             </svg>
           </div>
           <div>
@@ -181,22 +185,16 @@ export default function Home() {
           </button>
 
           <button 
-            onClick={() => { if (playerData) { setActiveTab("analytics"); setSidebarOpen(false); } }}
+            onClick={() => { setActiveTab("analytics"); setSidebarOpen(false); }}
             className={`sidebar-link ${activeTab === "analytics" ? "active" : ""}`}
-            style={{ opacity: playerData ? 1 : 0.45, cursor: playerData ? "pointer" : "not-allowed" }}
-            title={playerData ? "" : t.searchHint}
-            disabled={!playerData}
           >
             <span className="material-symbols-outlined">leaderboard</span>
             <span>{t.profileTitle}</span>
           </button>
 
           <button 
-            onClick={() => { if (playerData) { setActiveTab("collection"); setSidebarOpen(false); } }}
+            onClick={() => { setActiveTab("collection"); setSidebarOpen(false); }}
             className={`sidebar-link ${activeTab === "collection" ? "active" : ""}`}
-            style={{ opacity: playerData ? 1 : 0.45, cursor: playerData ? "pointer" : "not-allowed" }}
-            title={playerData ? "" : t.searchHint}
-            disabled={!playerData}
           >
             <span className="material-symbols-outlined">inventory_2</span>
             <span>{t.collectionTab}</span>
@@ -320,11 +318,11 @@ export default function Home() {
               <button 
                 type="button"
                 onClick={() => setLangMenuOpen(!langMenuOpen)} 
-                className="btn-secondary active-shrink" 
-                style={{ padding: "0 0.75rem", display: "flex", alignItems: "center", gap: "0.25rem", height: "38px" }}
+                className="flag-capsule-btn active-shrink" 
+                style={{ height: "38px" }}
                 title={t.languageLabel}
               >
-                <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>language</span>
+                <span style={{ fontSize: "1.1rem" }}>{lang === "tr" ? "🇹🇷" : "🇬🇧"}</span>
                 <span style={{ fontSize: "0.8rem", fontWeight: 700 }}>{lang.toUpperCase()}</span>
                 <span className="material-symbols-outlined" style={{ fontSize: "16px", margin: 0 }}>arrow_drop_down</span>
               </button>
@@ -337,7 +335,7 @@ export default function Home() {
                     position: "absolute", 
                     right: 0, 
                     top: "44px", 
-                    minWidth: "130px", 
+                    minWidth: "140px", 
                     borderRadius: "var(--radius-md)", 
                     padding: "0.35rem", 
                     display: "flex", 
@@ -358,11 +356,14 @@ export default function Home() {
                       width: "100%",
                       fontWeight: lang === "tr" ? 700 : 500,
                       backgroundColor: lang === "tr" ? "rgba(255, 255, 255, 0.08)" : "transparent",
-                      color: lang === "tr" ? "var(--secondary)" : "var(--text-main)"
+                      color: lang === "tr" ? "var(--secondary)" : "var(--text-main)",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.5rem"
                     }}
                     className="active-shrink"
                   >
-                    Türkçe (TR)
+                    <span>🇹🇷</span> Türkçe (TR)
                   </button>
                   <button
                     type="button"
@@ -375,11 +376,14 @@ export default function Home() {
                       width: "100%",
                       fontWeight: lang === "en" ? 700 : 500,
                       backgroundColor: lang === "en" ? "rgba(255, 255, 255, 0.08)" : "transparent",
-                      color: lang === "en" ? "var(--secondary)" : "var(--text-main)"
+                      color: lang === "en" ? "var(--secondary)" : "var(--text-main)",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.5rem"
                     }}
                     className="active-shrink"
                   >
-                    English (EN)
+                    <span>🇬🇧</span> English (EN)
                   </button>
                 </div>
               )}
@@ -390,10 +394,10 @@ export default function Home() {
               type="button"
               onClick={toggleTheme} 
               className="btn-secondary active-shrink" 
-              style={{ padding: "0 0.75rem", height: "38px", display: "flex", alignItems: "center", justifySelf: "center" }}
+              style={{ padding: "0 0.75rem", height: "38px", display: "flex", alignItems: "center", justifySelf: "center", borderRadius: "100px" }}
               title={t.themeLabel}
             >
-              <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>
+              <span className="material-symbols-outlined theme-icon-rotate" style={{ fontSize: "20px" }}>
                 {theme === "dark" ? "light_mode" : "dark_mode"}
               </span>
             </button>
@@ -518,23 +522,51 @@ export default function Home() {
           )}
 
           {/* Render Tab 3: Analytics (Active Player Profile Stats Bento Grid) */}
-          {activeTab === "analytics" && playerData && (
-            <div>
-              <div style={{ marginBottom: "1.5rem" }}>
-                <h2 style={{ fontSize: "1.5rem", fontWeight: 700 }}>{t.profileTitle}</h2>
+          {activeTab === "analytics" && (
+            playerData ? (
+              <div>
+                <div style={{ marginBottom: "1.5rem" }}>
+                  <h2 style={{ fontSize: "1.5rem", fontWeight: 700 }}>{t.profileTitle}</h2>
+                </div>
+                <ProfileCard playerData={playerData} t={t} viewMode="analytics" onNavigateToCollection={() => setActiveTab("collection")} />
               </div>
-              <ProfileCard playerData={playerData} t={t} viewMode="analytics" onNavigateToCollection={() => setActiveTab("collection")} />
-            </div>
+            ) : (
+              <div className="glass-panel" style={{ padding: "4rem 2rem", textAlign: "center", borderRadius: "var(--radius-lg)", maxWidth: "600px", margin: "2rem auto" }}>
+                <span className="material-symbols-outlined" style={{ fontSize: "4rem", color: "var(--secondary)", marginBottom: "1rem" }}>account_circle</span>
+                <h3 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.5rem" }}>
+                  {lang === "tr" ? "Lütfen Önce Oyuncu Arayın" : "Please Search a Player First"}
+                </h3>
+                <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
+                  {lang === "tr" 
+                    ? "Profil istatistiklerinizi ve analizlerinizi görüntülemek için üst kısımdaki arama kutusuna Clash Royale oyuncu etiketinizi (örneğin #G9YV9GR8R) girip aratın." 
+                    : "To view your profile stats and analytics, please search your Clash Royale player tag (e.g. #G9YV9GR8R) in the top search bar."}
+                </p>
+              </div>
+            )
           )}
 
           {/* Render Tab 4: My Collection */}
-          {activeTab === "collection" && playerData && (
-            <div>
-              <div style={{ marginBottom: "1.5rem" }}>
-                <h2 style={{ fontSize: "1.5rem", fontWeight: 700 }}>{t.collectionTab}</h2>
+          {activeTab === "collection" && (
+            playerData ? (
+              <div>
+                <div style={{ marginBottom: "1.5rem" }}>
+                  <h2 style={{ fontSize: "1.5rem", fontWeight: 700 }}>{t.collectionTab}</h2>
+                </div>
+                <ProfileCard playerData={playerData} t={t} viewMode="collection" />
               </div>
-              <ProfileCard playerData={playerData} t={t} viewMode="collection" />
-            </div>
+            ) : (
+              <div className="glass-panel" style={{ padding: "4rem 2rem", textAlign: "center", borderRadius: "var(--radius-lg)", maxWidth: "600px", margin: "2rem auto" }}>
+                <span className="material-symbols-outlined" style={{ fontSize: "4rem", color: "var(--primary)", marginBottom: "1rem" }}>inventory_2</span>
+                <h3 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.5rem" }}>
+                  {lang === "tr" ? "Lütfen Önce Oyuncu Arayın" : "Please Search a Player First"}
+                </h3>
+                <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
+                  {lang === "tr" 
+                    ? "Kart koleksiyonunuzu ve evrimlerinizi incelemek için üst kısımdaki arama kutusuna Clash Royale oyuncu etiketinizi girip aratın." 
+                    : "To inspect your card collection and evolutions, please search your Clash Royale player tag in the top search bar."}
+                </p>
+              </div>
+            )
           )}
         </main>
       </div>

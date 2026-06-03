@@ -2,61 +2,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 :root {
-  /* Official Clash Royale Color Palette Refinement */
-  --bg-arena: #0a0f1d; /* Deep steel navy */
-  --on-surface: #f8fafc; /* Crisp white */
+  /* Official Clash Royale Color Palette Refinement matching DESIGN.md */
+  --bg-arena: #090d16; /* Deep steel navy matching DESIGN.md */
+  --on-surface: #f8fafc; /* Slate white text */
   --on-surface-variant: #94a3b8; /* Slate gray */
   
-  --primary: #f2188e; /* Clash Royale Elixir Magenta */
+  --primary: #9d174d; /* Elixir Ruby - Kadifemsi yakut/mürdüm */
   --on-primary: #ffffff;
-  --primary-container: #b01062;
+  --primary-container: #700b34;
   --on-primary-container: #ffd0e5;
   
-  --secondary: #ffc72c; /* Clash Royale Gold */
-  --on-secondary: #3b2800;
-  --secondary-container: #d4a325;
-  --on-secondary-container: #231900;
+  --secondary: #c27803; /* Amber Gold - Şampiyon kehribarı */
+  --on-secondary: #ffffff;
+  --secondary-container: #925102;
+  --on-secondary-container: #fef08a;
   
-  --tertiary: #2ecc71; /* Success Green */
-  --on-tertiary: #003913;
-  --tertiary-container: #1b8a47;
-  --on-tertiary-container: #a8ffc4;
+  --tertiary: #15803d; /* Success Green */
+  --on-tertiary: #ffffff;
+  --tertiary-container: #166534;
+  --on-tertiary-container: #bbf7d0;
   
-  --surface: #131924; /* Steel dark surface */
-  --surface-dim: #0e131f;
-  --surface-bright: #20293a;
+  --surface: #0f172a; /* Slate dark surface */
+  --surface-dim: #090d16;
+  --surface-bright: #1e293b;
   --surface-variant: #1e293b;
   
-  --surface-container-lowest: #070a12;
-  --surface-container-low: #0f1524;
-  --surface-container: #131a2c;
-  --surface-container-high: #1a233a;
-  --surface-container-highest: #24304f;
+  --surface-container-lowest: #05070c;
+  --surface-container-low: #090d16;
+  --surface-container: #0f172a;
+  --surface-container-high: #1e293b;
+  --surface-container-highest: #334155;
   
-  --panel-bg: rgba(15, 21, 36, 0.65); /* Sleek glassy dark panel */
-  --panel-border: rgba(255, 255, 255, 0.06);
+  --panel-bg: rgba(15, 23, 42, 0.55); /* Sleek glassy dark panel matching DESIGN.md */
+  --panel-border: rgba(255, 255, 255, 0.05); /* Cam kenarlığı */
   --panel-border-hover: rgba(255, 255, 255, 0.15);
   
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   
-  --elixir: #f2188e;
-  --elixir-dark: #b01062;
-  --elixir-grad: linear-gradient(135deg, #ff5ebc 0%, #a00754 100%);
-  --elixir-glow: rgba(242, 24, 142, 0.35);
+  --elixir: #9d174d;
+  --elixir-dark: #700b34;
+  --elixir-grad: linear-gradient(135deg, #db2777 0%, #9d174d 100%);
+  --elixir-glow: rgba(157, 23, 77, 0.35);
   
-  --gold: #ffc72c;
-  --gold-dark: #d4a325;
-  --gold-grad: linear-gradient(135deg, #ffe066 0%, #b8860b 100%);
-  --gold-glow: rgba(255, 199, 44, 0.35);
+  --gold: #c27803;
+  --gold-dark: #925102;
+  --gold-grad: linear-gradient(135deg, #eab308 0%, #c27803 100%);
+  --gold-glow: rgba(194, 120, 3, 0.35);
 
-  --evo-violet: #8b5cf6;
+  --evo-violet: #6b21a8;
   --evo-grad: linear-gradient(135deg, #a855f7 0%, #6b21a8 100%);
-  --evo-glow: rgba(139, 92, 246, 0.35);
+  --evo-glow: rgba(107, 33, 168, 0.35);
 
   /* Card Rarity Colors */
   --rarity-common: #94a3b8;
-  --rarity-rare: #f97316;
+  --rarity-rare: #ea580c;
   --rarity-epic: #a855f7;
   --rarity-legendary-start: #0284c7;
   --rarity-legendary-end: #3b82f6;
@@ -469,6 +469,71 @@ input, select, textarea {
   .lg-hidden {
     display: none !important;
   }
+}
+
+/* Premium Logo & Control animations */
+@keyframes logoShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes shimmerEffect {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.logo-icon-container {
+  position: relative;
+  background: var(--elixir-grad);
+  box-shadow: 0 0 15px var(--elixir-glow);
+  overflow: hidden;
+}
+
+.logo-icon-container::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: shimmerEffect 4s ease-in-out infinite;
+}
+
+/* Smooth Rotation for Theme Toggle Icon */
+.theme-icon-rotate {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-icon-rotate:hover {
+  transform: rotate(180deg);
+}
+
+/* Flag Capsule Buttons */
+.flag-capsule-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(120, 120, 120, 0.06);
+  border: 1px solid var(--panel-border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 100px;
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 0.8rem;
+  transition: all var(--transition-fast);
+}
+
+.flag-capsule-btn:hover {
+  background: rgba(120, 120, 120, 0.12);
+  border-color: var(--panel-border-hover);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 

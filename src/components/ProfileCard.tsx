@@ -290,6 +290,11 @@ export default function ProfileCard({
                           fontSize: "0.55rem", 
                           padding: "0.1rem 0.25rem",
                           borderRadius: "4px",
+                          background: "var(--evo-grad)",
+                          color: "#fff",
+                          fontWeight: "800",
+                          border: "1px solid rgba(255, 255, 255, 0.25)",
+                          boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
                           zIndex: 2 
                         }}
                       >
@@ -306,11 +311,15 @@ export default function ProfileCard({
                           fontSize: "0.55rem", 
                           padding: "0.1rem 0.25rem",
                           borderRadius: "4px",
-                          color: "#3b2800",
+                          background: "var(--gold-grad)",
+                          color: "#000",
+                          fontWeight: "900",
+                          border: "1px solid rgba(255, 255, 255, 0.35)",
+                          boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
                           zIndex: 2 
                         }}
                       >
-                        {isTurkish ? "KAHRAMAN" : "HERO"}
+                        👑
                       </div>
                     )}
 
@@ -425,10 +434,38 @@ export default function ProfileCard({
                       fontSize: "0.55rem", 
                       padding: "0.1rem 0.25rem",
                       borderRadius: "4px",
+                      background: "var(--evo-grad)",
+                      color: "#fff",
+                      fontWeight: "800",
+                      border: "1px solid rgba(255, 255, 255, 0.25)",
+                      boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
                       zIndex: 2 
                     }}
                   >
                     EVO
+                  </div>
+                )}
+
+                {/* Champion Overlay */}
+                {rarity === "champion" && !isLocked && (
+                  <div 
+                    className="rarity-badge champion"
+                    style={{ 
+                      position: "absolute", 
+                      top: "4px", 
+                      right: "4px", 
+                      fontSize: "0.55rem", 
+                      padding: "0.1rem 0.25rem",
+                      borderRadius: "4px",
+                      background: "var(--gold-grad)",
+                      color: "#000",
+                      fontWeight: "900",
+                      border: "1px solid rgba(255, 255, 255, 0.35)",
+                      boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
+                      zIndex: 2 
+                    }}
+                  >
+                    👑
                   </div>
                 )}
 

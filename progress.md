@@ -55,3 +55,11 @@ Bu dosya, projenin yapım aşamalarını ve mevcut ilerleme durumunu gösterir. 
   - [x] Görüntü yükleme hatalarına karşı `onError CDN fallback` korumasının eklenmesi
   - [x] GitHub Actions ile Path of Legend sezon takibi, `current_season.json` ve `previous_season_decks.json` kopyalama mantığının betiğe eklenmesi
   - [x] `page.tsx` arayüzüne Sezon Seçici (Aktif/Geçmiş Sezon) dropdown bileşeninin eklenmesi ve entegrasyonu
+
+- [x] **Faz 9: UI/UX İyileştirmeleri ve Tasarım Cilası (GitHub Öncesi Revizyonlar)**
+  - [x] Arama kutusundaki beyaz arka plan & kontrast okunabilirlik hatasının düzeltilmesi
+  - [x] Sol Sidebar'daki "Koleksiyonum" ve "Oyuncu Profili" sekmelerinin tıklanabilir hale getirilmesi (pasif durumlar için TR/EN yönlendirme ekranı entegrasyonu)
+  - [x] Renk paletinin `DESIGN.md` yönergeleriyle tam uyumlu hale getirilmesi
+  - [x] Evolved ve Champion kart görsellerine premium çerçeve, parıltı (glow) ve gradyanlı rozetlerin eklenmesi
+  - [x] Sol sidebar logosunun iksir + taç simgesiyle premium ve shimmer efektli yapılması
+  - [x] Dil düğmesinin 🇹🇷 TR / 🇬🇧 EN bayraklı kapsüle dönüştürülmesi ve tema düğmesine pürüzsüz dönüş animasyonu eklenmesi

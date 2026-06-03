@@ -164,9 +164,13 @@
   padding: 0.75rem 1rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--panel-border);
-  backgroundColor: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.25);
   color: var(--text-main);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+[data-theme="light"] .glass-input {
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .glass-input:focus {
@@ -330,7 +334,8 @@
 
 /* Evolved / Champion overlays */
 .card-asset.evo-border {
-  border: 2.5px dashed var(--primary);
+  border: 2px solid var(--evo-violet) !important;
+  box-shadow: 0 0 10px var(--evo-glow);
 }
 
 .evo-locked-overlay {
@@ -362,12 +367,12 @@
 
 /* Legendary/Champion glows matching Stitch */
 .legendary-blue-glow {
-  box-shadow: 0 0 15px var(--legendary-blue-start);
-  border: 1.5px solid var(--legendary-blue-end) !important;
+  box-shadow: 0 0 12px rgba(2, 132, 199, 0.3);
+  border: 1.5px solid var(--rarity-legendary-start) !important;
 }
 
 .champion-orange-glow {
-  box-shadow: 0 0 15px rgba(255, 184, 103, 0.4);
-  border: 1.5px solid var(--secondary) !important;
+  box-shadow: 0 0 12px var(--gold-glow);
+  border: 2px solid var(--secondary) !important;
 }
 

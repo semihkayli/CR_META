@@ -160,15 +160,43 @@ export default function DeckCard({ deck, title, t }: DeckCardProps) {
                   className="rarity-badge evolution" 
                   style={{ 
                     position: "absolute", 
-                    top: "1px", 
-                    right: "1px", 
+                    top: "2px", 
+                    right: "2px", 
                     fontSize: "0.45rem", 
-                    padding: "0.05rem 0.15rem",
-                    borderRadius: "2px",
+                    padding: "0.05rem 0.2rem",
+                    borderRadius: "3px",
+                    background: "var(--evo-grad)",
+                    color: "#fff",
+                    fontWeight: "800",
+                    border: "1px solid rgba(255, 255, 255, 0.25)",
+                    boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
                     zIndex: 2
                   }}
                 >
                   EVO
+                </div>
+              )}
+
+              {/* CHAMPION Badge */}
+              {rarity === "champion" && !isCardMissing && (
+                <div 
+                  className="rarity-badge champion" 
+                  style={{ 
+                    position: "absolute", 
+                    top: "2px", 
+                    right: "2px", 
+                    fontSize: "0.45rem", 
+                    padding: "0.05rem 0.2rem",
+                    borderRadius: "3px",
+                    background: "var(--gold-grad)",
+                    color: "#000",
+                    fontWeight: "900",
+                    border: "1px solid rgba(255, 255, 255, 0.35)",
+                    boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
+                    zIndex: 2
+                  }}
+                >
+                  👑
                 </div>
               )}
 
