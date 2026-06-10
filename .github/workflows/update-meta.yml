@@ -10,6 +10,7 @@ on:
 jobs:
   sync-decks:
     runs-on: ubuntu-latest
+    timeout-minutes: 30   # Extended for 1000 player scan (~8-15 min)
     
     steps:
       - name: Checkout Repository

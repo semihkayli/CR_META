@@ -1,3 +1,18 @@
+export interface SlotConfig {
+  evoSlotCardId: number;
+  championSlotCardId: number;
+  flexSlotCardId: number | null;
+  flexSlotType: "evolution" | "champion" | null;
+}
+
+export interface ProPlayerInfo {
+  tag: string;
+  name: string;
+  useCount: number;
+  winCount: number;
+  winRate: number;
+}
+
 export interface MatchFilters {
   evoTolerance: number;      // 0, 1, 2
   cardTolerance: number;     // 0, 1, 2
@@ -19,8 +34,22 @@ export interface DeckData {
   cards: DeckCardData[];
   winRate: number;
   useCount: number;
+  winCount?: number;
+  rating?: number;
+  slotConfig?: SlotConfig;
   playerName?: string;
   playerTag?: string;
+}
+
+export interface ProDeckData {
+  deckId: string;
+  cards: DeckCardData[];
+  slotConfig?: SlotConfig;
+  totalUseCount: number;
+  totalWinCount: number;
+  overallWinRate: number;
+  proCount: number;
+  pros: ProPlayerInfo[];
 }
 
 export interface MatchResult extends DeckData {
@@ -87,5 +116,6 @@ export function matchDecks(
       const evoToleranceOk = match.missingEvoIds.length <= filters.evoTolerance;
 
       return cardToleranceOk && evoToleranceOk;
-    });
+    })
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0)); // Sort by rating DESC
 }

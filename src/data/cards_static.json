@@ -1,0 +1,966 @@
+{
+  "updatedAt": "2026-06-10T17:27:02.945Z",
+  "totalCards": 120,
+  "cards": {
+    "26000000": {
+      "name": "Knight",
+      "elixirCost": 3,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000001": {
+      "name": "Archers",
+      "elixirCost": 3,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000002": {
+      "name": "Goblins",
+      "elixirCost": 2,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000003": {
+      "name": "Giant",
+      "elixirCost": 5,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000004": {
+      "name": "P.E.K.K.A",
+      "elixirCost": 7,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000005": {
+      "name": "Minions",
+      "elixirCost": 3,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000006": {
+      "name": "Balloon",
+      "elixirCost": 5,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000007": {
+      "name": "Witch",
+      "elixirCost": 5,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000008": {
+      "name": "Barbarians",
+      "elixirCost": 5,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000009": {
+      "name": "Golem",
+      "elixirCost": 8,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000010": {
+      "name": "Skeletons",
+      "elixirCost": 1,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000011": {
+      "name": "Valkyrie",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000012": {
+      "name": "Skeleton Army",
+      "elixirCost": 3,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000013": {
+      "name": "Bomber",
+      "elixirCost": 2,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000014": {
+      "name": "Musketeer",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000015": {
+      "name": "Baby Dragon",
+      "elixirCost": 4,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000016": {
+      "name": "Prince",
+      "elixirCost": 5,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000017": {
+      "name": "Wizard",
+      "elixirCost": 5,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000018": {
+      "name": "Mini P.E.K.K.A",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000019": {
+      "name": "Spear Goblins",
+      "elixirCost": 2,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000020": {
+      "name": "Giant Skeleton",
+      "elixirCost": 6,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000021": {
+      "name": "Hog Rider",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000022": {
+      "name": "Minion Horde",
+      "elixirCost": 5,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000023": {
+      "name": "Ice Wizard",
+      "elixirCost": 3,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000024": {
+      "name": "Royal Giant",
+      "elixirCost": 6,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000025": {
+      "name": "Guards",
+      "elixirCost": 3,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000026": {
+      "name": "Princess",
+      "elixirCost": 3,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000027": {
+      "name": "Dark Prince",
+      "elixirCost": 4,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000028": {
+      "name": "Three Musketeers",
+      "elixirCost": 9,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000029": {
+      "name": "Lava Hound",
+      "elixirCost": 7,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000030": {
+      "name": "Ice Spirit",
+      "elixirCost": 1,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000031": {
+      "name": "Fire Spirit",
+      "elixirCost": 1,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000032": {
+      "name": "Miner",
+      "elixirCost": 3,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000033": {
+      "name": "Sparky",
+      "elixirCost": 6,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000034": {
+      "name": "Bowler",
+      "elixirCost": 5,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000035": {
+      "name": "Lumberjack",
+      "elixirCost": 4,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000036": {
+      "name": "Battle Ram",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000037": {
+      "name": "Inferno Dragon",
+      "elixirCost": 4,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000038": {
+      "name": "Ice Golem",
+      "elixirCost": 2,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000039": {
+      "name": "Mega Minion",
+      "elixirCost": 3,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000040": {
+      "name": "Dart Goblin",
+      "elixirCost": 3,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000041": {
+      "name": "Goblin Gang",
+      "elixirCost": 3,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000042": {
+      "name": "Electro Wizard",
+      "elixirCost": 4,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000043": {
+      "name": "Elite Barbarians",
+      "elixirCost": 6,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000044": {
+      "name": "Hunter",
+      "elixirCost": 4,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000045": {
+      "name": "Executioner",
+      "elixirCost": 5,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000046": {
+      "name": "Bandit",
+      "elixirCost": 3,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000047": {
+      "name": "Royal Recruits",
+      "elixirCost": 7,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000048": {
+      "name": "Night Witch",
+      "elixirCost": 4,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000049": {
+      "name": "Bats",
+      "elixirCost": 2,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000050": {
+      "name": "Royal Ghost",
+      "elixirCost": 3,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000051": {
+      "name": "Ram Rider",
+      "elixirCost": 5,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000052": {
+      "name": "Zappies",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000053": {
+      "name": "Rascals",
+      "elixirCost": 5,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000054": {
+      "name": "Cannon Cart",
+      "elixirCost": 5,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000055": {
+      "name": "Mega Knight",
+      "elixirCost": 7,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000056": {
+      "name": "Skeleton Barrel",
+      "elixirCost": 3,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000057": {
+      "name": "Flying Machine",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000058": {
+      "name": "Wall Breakers",
+      "elixirCost": 2,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000059": {
+      "name": "Royal Hogs",
+      "elixirCost": 5,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000060": {
+      "name": "Goblin Giant",
+      "elixirCost": 6,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000061": {
+      "name": "Fisherman",
+      "elixirCost": 3,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000062": {
+      "name": "Magic Archer",
+      "elixirCost": 4,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000063": {
+      "name": "Electro Dragon",
+      "elixirCost": 5,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000064": {
+      "name": "Firecracker",
+      "elixirCost": 3,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000065": {
+      "name": "Mighty Miner",
+      "elixirCost": 4,
+      "rarity": "Champion",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000066": {
+      "name": "Super Witch",
+      "elixirCost": 6,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000067": {
+      "name": "Elixir Golem",
+      "elixirCost": 3,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000068": {
+      "name": "Battle Healer",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000069": {
+      "name": "Skeleton King",
+      "elixirCost": 4,
+      "rarity": "Champion",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000070": {
+      "name": "Super Lava Hound",
+      "elixirCost": 8,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000071": {
+      "name": "Super Magic Archer",
+      "elixirCost": 5,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000072": {
+      "name": "Archer Queen",
+      "elixirCost": 5,
+      "rarity": "Champion",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000073": {
+      "name": "Santa Hog Rider",
+      "elixirCost": 5,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000074": {
+      "name": "Golden Knight",
+      "elixirCost": 4,
+      "rarity": "Champion",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000075": {
+      "name": "Super Ice Golem",
+      "elixirCost": 4,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000077": {
+      "name": "Monk",
+      "elixirCost": 5,
+      "rarity": "Champion",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000078": {
+      "name": "Super Archers",
+      "elixirCost": 3,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000080": {
+      "name": "Skeleton Dragons",
+      "elixirCost": 4,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000081": {
+      "name": "Terry",
+      "elixirCost": 4,
+      "rarity": "Champion",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000082": {
+      "name": "Super Mini P.E.K.K.A",
+      "elixirCost": 5,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000083": {
+      "name": "Mother Witch",
+      "elixirCost": 4,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000084": {
+      "name": "Electro Spirit",
+      "elixirCost": 1,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000085": {
+      "name": "Electro Giant",
+      "elixirCost": 7,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000086": {
+      "name": "Raging Prince",
+      "elixirCost": 5,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "26000087": {
+      "name": "Phoenix",
+      "elixirCost": 4,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000000": {
+      "name": "Cannon",
+      "elixirCost": 3,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000001": {
+      "name": "Goblin Hut",
+      "elixirCost": 5,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000002": {
+      "name": "Mortar",
+      "elixirCost": 4,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000003": {
+      "name": "Inferno Tower",
+      "elixirCost": 5,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000004": {
+      "name": "Bomb Tower",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000005": {
+      "name": "Barbarian Hut",
+      "elixirCost": 6,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000006": {
+      "name": "Tesla",
+      "elixirCost": 4,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000007": {
+      "name": "Elixir Collector",
+      "elixirCost": 6,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000008": {
+      "name": "X-Bow",
+      "elixirCost": 6,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000009": {
+      "name": "Tombstone",
+      "elixirCost": 3,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000010": {
+      "name": "Furnace",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000012": {
+      "name": "Goblin Cage",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000013": {
+      "name": "Goblin Drill",
+      "elixirCost": 4,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "27000014": {
+      "name": "Party Hut",
+      "elixirCost": 5,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000000": {
+      "name": "Fireball",
+      "elixirCost": 4,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000001": {
+      "name": "Arrows",
+      "elixirCost": 3,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000002": {
+      "name": "Rage",
+      "elixirCost": 2,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000003": {
+      "name": "Rocket",
+      "elixirCost": 6,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000004": {
+      "name": "Goblin Barrel",
+      "elixirCost": 3,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000005": {
+      "name": "Freeze",
+      "elixirCost": 4,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000006": {
+      "name": "Mirror",
+      "elixirCost": 1,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000007": {
+      "name": "Lightning",
+      "elixirCost": 6,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000008": {
+      "name": "Zap",
+      "elixirCost": 2,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000009": {
+      "name": "Poison",
+      "elixirCost": 4,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000010": {
+      "name": "Graveyard",
+      "elixirCost": 5,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000011": {
+      "name": "The Log",
+      "elixirCost": 2,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000012": {
+      "name": "Tornado",
+      "elixirCost": 3,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000013": {
+      "name": "Clone",
+      "elixirCost": 3,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000014": {
+      "name": "Earthquake",
+      "elixirCost": 3,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000015": {
+      "name": "Barbarian Barrel",
+      "elixirCost": 2,
+      "rarity": "Epic",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000016": {
+      "name": "Heal Spirit",
+      "elixirCost": 1,
+      "rarity": "Rare",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000017": {
+      "name": "Giant Snowball",
+      "elixirCost": 2,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000018": {
+      "name": "Royal Delivery",
+      "elixirCost": 3,
+      "rarity": "Common",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    },
+    "28000020": {
+      "name": "Party Rocket",
+      "elixirCost": 5,
+      "rarity": "Legendary",
+      "maxLevel": 14,
+      "maxEvolutionLevel": 0,
+      "iconUrls": {}
+    }
+  }
+}

@@ -12,8 +12,9 @@ export const APP_CONFIG = {
   
   // GitHub Action / Data Pipeline Settings
   META_DATA: {
-    DECKS_LIMIT: 50,
-    MIN_MATCH_USE_COUNT: 5, // Minimum match occurrences to be considered a meta deck
+    DECKS_OUTPUT_LIMIT: 50,
+    PRO_DECKS_OUTPUT_LIMIT: 30,
+    MIN_MATCH_USE_COUNT: 8, // Minimum match occurrences to be considered a meta deck
   },
 
   // Deck Matcher Algorithm Defaults
@@ -28,5 +29,25 @@ export const APP_CONFIG = {
     MAX_DECK_CARDS: 8,
     MAX_EVOS_IN_DECK: 2,
     MAX_CHAMPIONS_IN_DECK: 1,
-  }
+  },
+
+  // Pro Player Discovery Scoring System
+  PRO_DISCOVERY: {
+    MIN_PRO_SCORE: 40,
+    CRL_BADGE_POINTS: 30,
+    TOP_FINISH_BADGE_POINTS: 20,
+    GC_WIN_POINTS: 2,
+    TWENTY_WIN_POINTS: 25,
+    POL_TOP10_POINTS: 50,
+    POL_TOP100_POINTS: 30,
+    POL_TOP1000_POINTS: 15,
+    BEST_SEASON_TOP100_POINTS: 25,
+    BEST_SEASON_TOP1000_POINTS: 10,
+  },
+
+  // Meta Deck Rating Formula Weights
+  RATING: {
+    WIN_RATE_WEIGHT: 0.6,
+    USE_COUNT_WEIGHT: 0.4,
+  },
 };

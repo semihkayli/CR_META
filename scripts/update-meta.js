@@ -1,12 +1,25 @@
 /**
- * Clash Royale Meta Deck Aggregator Script
+ * Clash Royale Meta Deck Aggregator Script (v2.0)
+ * 
+ * Improvements over v1:
+ * - Scans 1000 players (up from 40) for more accurate meta data
+ * - Tracks deck slot configuration (evolution/champion/flex slots)
+ * - Cumulative season data accumulation (season_accumulator.json)
+ * - Pro score system with badge-based heuristic detection
+ * - Rating formula combining win rate and popularity
+ * - Failsafe: aborts if fewer than 20 decks are found
+ * - Downloads cards_static.json from cr-api-data for elixir/rarity info
+ * - Pro deck aggregation: groups same deck used by multiple pros
+ * 
  * Run with: node scripts/update-meta.js
  */
 
 const fs = require("fs");
 const path = require("path");
 
-// Load .env manually if running standalone
+// ---------------------------------------------------------------------------
+// ENV LOADER
+// ---------------------------------------------------------------------------
 const envPath = path.join(__dirname, "../.env");
 if (fs.existsSync(envPath)) {
   const envContent = fs.readFileSync(envPath, "utf8");
@@ -21,21 +34,54 @@ if (fs.existsSync(envPath)) {
   });
 }
 
-// Configuration
+// ---------------------------------------------------------------------------
+// CONFIGURATION
+// ---------------------------------------------------------------------------
 const API_BASE_URL = "https://api.clashroyale.com/v1";
-const LIMIT_PLAYERS = 40; // Number of top players to scan battle logs for (rate limit friendly)
-const MIN_DECK_USE_COUNT = 3; // Minimum games played with a deck to count in meta rankings
-const REQUEST_DELAY_MS = 100; // Delay between API calls to stay under 10 req/sec rate limit
+const LIMIT_PLAYERS = 1000;           // Number of top players to scan (was 40)
+const MIN_DECK_USE_COUNT = 8;         // Minimum games for a deck to count in meta (was 3)
+const MIN_META_DECKS_FAILSAFE = 20;   // Abort if fewer decks found (data integrity)
+const REQUEST_DELAY_MS = 100;         // Delay between API calls (rate limit friendly)
+const META_DECKS_OUTPUT_LIMIT = 50;   // Top N meta decks to output
+const PRO_DECKS_OUTPUT_LIMIT = 30;    // Top N pro decks to output
+const MIN_PRO_SCORE = 40;             // Minimum score to be classified as discovered pro
+const CARDS_DATA_URL = "https://royaleapi.github.io/cr-api-data/json/cards.json";
+
+// Rating formula weights
+const WIN_RATE_WEIGHT = 0.6;
+const USE_COUNT_WEIGHT = 0.4;
+
+// Pro score point values
+const PRO_SCORE_CONFIG = {
+  CRL_BADGE_POINTS: 30,
+  TOP_FINISH_BADGE_POINTS: 20,
+  GC_WIN_POINTS: 2,
+  TWENTY_WIN_POINTS: 25,
+  POL_TOP10_POINTS: 50,
+  POL_TOP100_POINTS: 30,
+  POL_TOP1000_POINTS: 15,
+  BEST_SEASON_TOP100_POINTS: 25,
+  BEST_SEASON_TOP1000_POINTS: 10,
+};
 
 // Input/Output paths
 const PRO_PLAYERS_PATH = path.join(__dirname, "../src/data/pro_players.json");
 const OUTPUT_PATH = path.join(__dirname, "../src/data/meta_decks.json");
+const ACCUMULATOR_PATH = path.join(__dirname, "../src/data/season_accumulator.json");
+const CURRENT_SEASON_FILE = path.join(__dirname, "../src/data/current_season.json");
+const PREVIOUS_DECKS_FILE = path.join(__dirname, "../src/data/previous_season_decks.json");
+const DISCOVERED_PROS_PATH = path.join(__dirname, "../src/data/discovered_pros.json");
+const CARDS_STATIC_PATH = path.join(__dirname, "../src/data/cards_static.json");
 
-// Helper delay function
+// ---------------------------------------------------------------------------
+// UTILITY FUNCTIONS
+// ---------------------------------------------------------------------------
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-// Exponential backoff fetch
-async function fetchWithRetry(url, options, retries = 3, backoff = 1000) {
+/**
+ * Exponential backoff fetch wrapper with retry logic.
+ */
+async function fetchWithRetry(url, options = {}, retries = 3, backoff = 1000) {
   const apiKey = process.env.CLASH_ROYALE_API_KEY;
   const headers = {
     Authorization: `Bearer ${apiKey}`,
@@ -47,14 +93,14 @@ async function fetchWithRetry(url, options, retries = 3, backoff = 1000) {
     try {
       const response = await fetch(url, { ...options, headers });
       if (response.ok) return response;
-      
+
       if (response.status === 429) {
         console.warn(`[Rate Limit] 429 received. Backing off for ${backoff}ms...`);
         await delay(backoff);
         backoff *= 2;
         continue;
       }
-      
+
       console.error(`[API Error] HTTP ${response.status} for ${url}`);
       return null;
     } catch (err) {
@@ -67,102 +113,196 @@ async function fetchWithRetry(url, options, retries = 3, backoff = 1000) {
   return null;
 }
 
-// Curated mock data for failsafe fallback (if API Key is missing)
-const MOCK_META_DECKS = {
-  updatedAt: new Date().toISOString(),
-  metaDecks: [
-    {
-      deckId: "26000000;26000002;26000003;26000042;26000087;26000093;28000011;28000034",
-      cards: [
-        { name: "Knight", id: 26000000, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/knight.png" } },
-        { name: "Goblins", id: 26000002, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/goblins.png" } },
-        { name: "Giant", id: 26000003, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/giant.png" } },
-        { name: "Electro Wizard", id: 26000042, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/electrowizard.png" } },
-        { name: "Phoenix", id: 26000087, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/phoenix.png" } },
-        { name: "Little Prince", id: 26000093, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/littleprince.png" } },
-        { name: "The Log", id: 28000011, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/thelog.png" } },
-        { name: "Void", id: 28000034, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/void.png" } }
-      ],
-      winRate: 58.6,
-      useCount: 142,
-      winCount: 83
-    },
-    {
-      deckId: "26000010;26000015;26000021;26000032;28000000;28000008;28000015;28000016",
-      cards: [
-        { name: "Skeletons", id: 26000010, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/skeletons.png" } },
-        { name: "Ice Golem", id: 26000015, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/icegolem.png" } },
-        { name: "Hog Rider", id: 26000021, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/hogrider.png" } },
-        { name: "Musketeer", id: 26000032, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/musketeer.png" } },
-        { name: "Fireball", id: 28000000, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/fireball.png" } },
-        { name: "Zap", id: 28000008, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/zap.png" } },
-        { name: "Cannon", id: 28000015, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/cannon.png" } },
-        { name: "Ice Spirit", id: 28000016, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/icespirit.png" } }
-      ],
-      winRate: 54.2,
-      useCount: 98,
-      winCount: 53
-    },
-    {
-      deckId: "26000000;26000004;26000011;26000027;26000030;28000000;28000011;28000012",
-      cards: [
-        { name: "Knight", id: 26000000, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/knight.png" } },
-        { name: "P.E.K.K.A", id: 26000004, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/pekka.png" } },
-        { name: "Goblin Gang", id: 26000011, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/goblingang.png" } },
-        { name: "Battle Ram", id: 26000027, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/battleram.png" } },
-        { name: "Bandit", id: 26000030, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/bandit.png" } },
-        { name: "Fireball", id: 28000000, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/fireball.png" } },
-        { name: "The Log", id: 28000011, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/thelog.png" } },
-        { name: "Poison", id: 28000012, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/poison.png" } }
-      ],
-      winRate: 57.1,
-      useCount: 84,
-      winCount: 48
+/**
+ * Fetch without auth header (for non-CR API calls like cr-api-data).
+ */
+async function fetchPublic(url) {
+  try {
+    const response = await fetch(url);
+    if (response.ok) return response;
+    console.error(`[Fetch Error] HTTP ${response.status} for ${url}`);
+    return null;
+  } catch (err) {
+    console.error(`[Fetch Error] ${err.message} for ${url}`);
+    return null;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// SEASON HELPER (mirrors src/utils/seasonHelper.ts for Node.js context)
+// ---------------------------------------------------------------------------
+
+/**
+ * Calculates the start date of a Clash Royale season.
+ * Seasons start on the first Monday of each month at 09:00 UTC.
+ */
+function getSeasonStart(year, month) {
+  const firstDay = new Date(Date.UTC(year, month, 1, 9, 0, 0));
+  const dayOfWeek = firstDay.getUTCDay();
+  const daysUntilMonday = dayOfWeek === 0 ? 1 : dayOfWeek === 1 ? 0 : 8 - dayOfWeek;
+  return new Date(Date.UTC(year, month, 1 + daysUntilMonday, 9, 0, 0));
+}
+
+/**
+ * Gets the current season's start/end dates and ID.
+ */
+function getCurrentSeasonBounds() {
+  const now = new Date();
+  const currentStart = getSeasonStart(now.getUTCFullYear(), now.getUTCMonth());
+
+  if (now < currentStart) {
+    const prevMonth = now.getUTCMonth() === 0 ? 11 : now.getUTCMonth() - 1;
+    const prevYear = now.getUTCMonth() === 0 ? now.getUTCFullYear() - 1 : now.getUTCFullYear();
+    const start = getSeasonStart(prevYear, prevMonth);
+    return {
+      start,
+      end: currentStart,
+      seasonId: `${prevYear}-${String(prevMonth + 1).padStart(2, "0")}`
+    };
+  }
+
+  const nextMonth = now.getUTCMonth() === 11 ? 0 : now.getUTCMonth() + 1;
+  const nextYear = now.getUTCMonth() === 11 ? now.getUTCFullYear() + 1 : now.getUTCFullYear();
+  const end = getSeasonStart(nextYear, nextMonth);
+
+  return {
+    start: currentStart,
+    end,
+    seasonId: `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, "0")}`
+  };
+}
+
+/**
+ * Parses Clash Royale battle time format to a Date object.
+ * Format: "20260604T120000.000Z" or "20260604T120000"
+ */
+function parseBattleTime(battleTime) {
+  if (!battleTime) return new Date(0);
+  const cleaned = battleTime.replace(/\./g, "").replace("Z", "");
+  const year = parseInt(cleaned.substring(0, 4));
+  const month = parseInt(cleaned.substring(4, 6)) - 1;
+  const day = parseInt(cleaned.substring(6, 8));
+  const hour = parseInt(cleaned.substring(9, 11)) || 0;
+  const minute = parseInt(cleaned.substring(11, 13)) || 0;
+  const second = parseInt(cleaned.substring(13, 15)) || 0;
+  return new Date(Date.UTC(year, month, day, hour, minute, second));
+}
+
+// ---------------------------------------------------------------------------
+// PRO SCORE SYSTEM
+// ---------------------------------------------------------------------------
+
+/**
+ * Calculates a "pro score" for a player based on badges, achievements, and rankings.
+ * Higher score = more likely to be a professional/top competitive player.
+ */
+function calculateProScore(profile) {
+  if (!profile) return { score: 0, details: [], name: "", tag: "" };
+
+  let score = 0;
+  const details = [];
+
+  // Badge analysis
+  if (profile.badges && Array.isArray(profile.badges)) {
+    // CRL badges (each CRL participation/badge = +30 points)
+    const crlBadges = profile.badges.filter(b =>
+      b.name && b.name.toLowerCase().startsWith("crl")
+    );
+    if (crlBadges.length > 0) {
+      score += crlBadges.length * PRO_SCORE_CONFIG.CRL_BADGE_POINTS;
+      details.push(`CRL: ${crlBadges.length} badge(s)`);
     }
-  ],
-  proDecks: [
-    {
-      playerTag: "#P90G2PY8",
-      playerName: "Mohamed Light",
-      deckId: "26000000;26000002;26000003;26000042;26000087;26000093;28000011;28000034",
-      cards: [
-        { name: "Knight", id: 26000000, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/knight.png" } },
-        { name: "Goblins", id: 26000002, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/goblins.png" } },
-        { name: "Giant", id: 26000003, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/giant.png" } },
-        { name: "Electro Wizard", id: 26000042, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/electrowizard.png" } },
-        { name: "Phoenix", id: 26000087, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/phoenix.png" } },
-        { name: "Little Prince", id: 26000093, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/littleprince.png" } },
-        { name: "The Log", id: 28000011, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/thelog.png" } },
-        { name: "Void", id: 28000034, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/void.png" } }
-      ],
-      winRate: 83.3,
-      useCount: 12,
-      winCount: 10
-    },
-    {
-      playerTag: "#GYV2Y0YV",
-      playerName: "Mugi",
-      deckId: "26000010;26000015;26000021;26000032;28000000;28000008;28000015;28000016",
-      cards: [
-        { name: "Skeletons", id: 26000010, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/skeletons.png" } },
-        { name: "Ice Golem", id: 26000015, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/icegolem.png" } },
-        { name: "Hog Rider", id: 26000021, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/hogrider.png" } },
-        { name: "Musketeer", id: 26000032, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/musketeer.png" } },
-        { name: "Fireball", id: 28000000, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/fireball.png" } },
-        { name: "Zap", id: 28000008, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/zap.png" } },
-        { name: "Cannon", id: 28000015, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/cannon.png" } },
-        { name: "Ice Spirit", id: 28000016, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/icespirit.png" } }
-      ],
-      winRate: 75.0,
-      useCount: 8,
-      winCount: 6
+
+    // Top Finish badges (+20 each)
+    const topFinishBadges = profile.badges.filter(b =>
+      b.name && (b.name === "LadderTop1000" || b.name === "LadderTournamentTop1000")
+    );
+    if (topFinishBadges.length > 0) {
+      score += topFinishBadges.length * PRO_SCORE_CONFIG.TOP_FINISH_BADGE_POINTS;
+      details.push(`Top Finish: ${topFinishBadges.length} badge(s)`);
     }
-  ]
-};
+
+    // Grand Challenge 12 Wins badge (+2 per GC win count)
+    const gcBadge = profile.badges.find(b => b.name === "Grand12Wins");
+    if (gcBadge && gcBadge.progress) {
+      score += gcBadge.progress * PRO_SCORE_CONFIG.GC_WIN_POINTS;
+      details.push(`GC 12 Wins: ${gcBadge.progress}x`);
+    }
+
+    // 20 Win badge (+25)
+    const twentyWinBadge = profile.badges.find(b =>
+      b.name && (b.name === "Classic20Wins" || b.name === "Grand20Wins" || b.name === "CRL20Wins")
+    );
+    if (twentyWinBadge) {
+      score += PRO_SCORE_CONFIG.TWENTY_WIN_POINTS;
+      details.push("20 Win Achievement");
+    }
+  }
+
+  // Best Path of Legend season finish
+  if (profile.bestPathOfLegendSeasonResult && profile.bestPathOfLegendSeasonResult.rank) {
+    const rank = profile.bestPathOfLegendSeasonResult.rank;
+    if (rank <= 10) {
+      score += PRO_SCORE_CONFIG.POL_TOP10_POINTS;
+      details.push(`Best PoL: #${rank} (Top 10)`);
+    } else if (rank <= 100) {
+      score += PRO_SCORE_CONFIG.POL_TOP100_POINTS;
+      details.push(`Best PoL: #${rank} (Top 100)`);
+    } else if (rank <= 1000) {
+      score += PRO_SCORE_CONFIG.POL_TOP1000_POINTS;
+      details.push(`Best PoL: #${rank} (Top 1000)`);
+    }
+  }
+
+  // Best legacy season finish
+  if (profile.leagueStatistics && profile.leagueStatistics.bestSeason && profile.leagueStatistics.bestSeason.rank) {
+    const rank = profile.leagueStatistics.bestSeason.rank;
+    if (rank <= 100) {
+      score += PRO_SCORE_CONFIG.BEST_SEASON_TOP100_POINTS;
+      details.push(`Best Season: #${rank} (Top 100)`);
+    } else if (rank <= 1000) {
+      score += PRO_SCORE_CONFIG.BEST_SEASON_TOP1000_POINTS;
+      details.push(`Best Season: #${rank} (Top 1000)`);
+    }
+  }
+
+  return {
+    score,
+    details,
+    name: profile.name || "",
+    tag: profile.tag || ""
+  };
+}
+
+// ---------------------------------------------------------------------------
+// RATING FORMULA
+// ---------------------------------------------------------------------------
+
+/**
+ * Calculates a combined rating for a deck based on win rate and popularity.
+ * Rating = winRate * 0.6 + normalize(useCount) * 0.4
+ */
+function calculateRating(deck, allDecks) {
+  if (!allDecks || allDecks.length === 0) return deck.winRate || 0;
+
+  const useCounts = allDecks.map(d => d.useCount);
+  const maxUse = Math.max(...useCounts);
+  const minUse = Math.min(...useCounts);
+
+  const normalizedUse = maxUse > minUse
+    ? ((deck.useCount - minUse) / (maxUse - minUse)) * 100
+    : 50;
+
+  return parseFloat((deck.winRate * WIN_RATE_WEIGHT + normalizedUse * USE_COUNT_WEIGHT).toFixed(1));
+}
+
+// ---------------------------------------------------------------------------
+// CARD ICON CACHING
+// ---------------------------------------------------------------------------
 
 async function cacheCardIcons(metaDecks, proDecks) {
   const cardsMap = new Map();
-  
+
   // Collect all unique cards from meta decks
   metaDecks.forEach(deck => {
     deck.cards.forEach(card => {
@@ -194,7 +334,6 @@ async function cacheCardIcons(metaDecks, proDecks) {
 
     console.log(`[Image Cache] Downloading card image: ${id} from ${url}`);
     try {
-      // Add delay to prevent hitting rate limits
       await delay(100);
       const res = await fetch(url);
       if (!res.ok) {
@@ -211,174 +350,419 @@ async function cacheCardIcons(metaDecks, proDecks) {
   console.log("[Image Cache] Finished card icons caching.");
 }
 
-// Dynamic classification of pro/e-sports players based on POL rankings, legacy rankings, and badges
-function classifyProPlayer(profile) {
-  if (!profile) return null;
+// ---------------------------------------------------------------------------
+// CARDS STATIC DATA DOWNLOADER
+// ---------------------------------------------------------------------------
 
-  // Check 1: Best Path of Legend finish (Ultimate Champion rank in the top 1000 in the world)
-  if (profile.bestPathOfLegendSeasonResult && profile.bestPathOfLegendSeasonResult.rank && profile.bestPathOfLegendSeasonResult.rank <= 1000) {
-    return `Pro [POL Best: #${profile.bestPathOfLegendSeasonResult.rank}]`;
-  }
-
-  // Check 2: Previous Path of Legend season finish (rank in the top 1000)
-  if (profile.leagueStatistics && profile.leagueStatistics.previousSeason && profile.leagueStatistics.previousSeason.rank && profile.leagueStatistics.previousSeason.rank <= 1000) {
-    return `Pro [Prev POL: #${profile.leagueStatistics.previousSeason.rank}]`;
-  }
-
-  // Check 3: Best Trophy Road legacy season finish (rank in the top 1000)
-  if (profile.leagueStatistics && profile.leagueStatistics.bestSeason && profile.leagueStatistics.bestSeason.rank && profile.leagueStatistics.bestSeason.rank <= 1000) {
-    return `Pro [Best Finish: #${profile.leagueStatistics.bestSeason.rank}]`;
-  }
-
-  // Check 4: Badges indicating CRL 20 Wins or multiple Grand Challenge wins
-  if (profile.badges && Array.isArray(profile.badges)) {
-    // CRL badge (starts with Crl)
-    const crlBadge = profile.badges.find(b => b.name && b.name.toLowerCase().startsWith("crl"));
-    if (crlBadge) {
-      return `CRL Esports Pro (${crlBadge.name})`;
+/**
+ * Downloads card metadata (elixir cost, rarity) from RoyaleAPI cr-api-data repo.
+ * Saves as src/data/cards_static.json.
+ */
+async function downloadCardsStaticData() {
+  console.log("[Cards Data] Downloading card metadata from cr-api-data...");
+  try {
+    const res = await fetchPublic(CARDS_DATA_URL);
+    if (!res) {
+      console.warn("[Cards Data] Failed to download. Using existing data if available.");
+      return;
     }
 
-    // Top finish badge
-    const hasTopFinishBadge = profile.badges.some(b => b.name && (b.name === "LadderTop1000" || b.name === "LadderTournamentTop1000"));
-    if (hasTopFinishBadge) {
-      return `Ladder Pro (Top Finish)`;
+    const cards = await res.json();
+    if (!Array.isArray(cards) || cards.length === 0) {
+      console.warn("[Cards Data] Empty or invalid response. Skipping update.");
+      return;
     }
 
-    // Grand Challenge 12 Wins badge with high wins count (e.g. >= 20 GC wins)
-    const gcBadge = profile.badges.find(b => b.name === "Grand12Wins");
-    if (gcBadge && gcBadge.progress && gcBadge.progress >= 20) {
-      return `Elite Grinder [${gcBadge.progress} GC Wins]`;
-    }
+    // Convert to ID-keyed map for fast lookup
+    const cardsMap = {};
+    cards.forEach(card => {
+      if (card.id) {
+        cardsMap[card.id] = {
+          name: card.name || "",
+          elixirCost: card.elixirCost || card.elixir || 0,
+          rarity: card.rarity || "Common",
+          maxLevel: card.maxLevel || 14,
+          maxEvolutionLevel: card.maxEvolutionLevel || 0,
+          iconUrls: card.iconUrls || {}
+        };
+      }
+    });
+
+    const outputData = {
+      updatedAt: new Date().toISOString(),
+      totalCards: Object.keys(cardsMap).length,
+      cards: cardsMap
+    };
+
+    fs.mkdirSync(path.dirname(CARDS_STATIC_PATH), { recursive: true });
+    fs.writeFileSync(CARDS_STATIC_PATH, JSON.stringify(outputData, null, 2), "utf8");
+    console.log(`[Cards Data] Saved ${outputData.totalCards} cards to cards_static.json.`);
+  } catch (err) {
+    console.error(`[Cards Data Error] ${err.message}`);
   }
-
-  return null;
 }
+
+// ---------------------------------------------------------------------------
+// ACCUMULATOR MANAGEMENT
+// ---------------------------------------------------------------------------
+
+/**
+ * Loads the season accumulator or creates a new one.
+ */
+function loadAccumulator(seasonId) {
+  if (fs.existsSync(ACCUMULATOR_PATH)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(ACCUMULATOR_PATH, "utf8"));
+      // If same season, return existing accumulator
+      if (data.seasonId === seasonId) {
+        console.log(`[Accumulator] Loaded existing accumulator for season ${seasonId} with ${Object.keys(data.decks || {}).length} decks.`);
+        return data;
+      }
+      console.log(`[Accumulator] Season changed from ${data.seasonId} to ${seasonId}. Starting fresh.`);
+    } catch (err) {
+      console.error(`[Accumulator Error] Failed to read: ${err.message}`);
+    }
+  }
+
+  // Create new accumulator
+  return {
+    seasonId,
+    startedAt: new Date().toISOString(),
+    lastUpdatedAt: new Date().toISOString(),
+    totalBattlesAnalyzed: 0,
+    totalPlayersScanned: 0,
+    decks: {}
+  };
+}
+
+/**
+ * Merges daily deck data into the season accumulator.
+ */
+function mergeIntoAccumulator(accumulator, dailyDecksMap) {
+  for (const [deckId, dailyStats] of dailyDecksMap.entries()) {
+    if (!accumulator.decks[deckId]) {
+      // New deck entry
+      accumulator.decks[deckId] = {
+        cards: dailyStats.cards,
+        useCount: 0,
+        winCount: 0,
+        slotConfigs: {},
+        proUsage: {}
+      };
+    }
+
+    const accDeck = accumulator.decks[deckId];
+    accDeck.useCount += dailyStats.useCount;
+    accDeck.winCount += dailyStats.winCount;
+
+    // Merge slot configurations
+    for (const [configKey, count] of dailyStats.slotConfigs.entries()) {
+      accDeck.slotConfigs[configKey] = (accDeck.slotConfigs[configKey] || 0) + count;
+    }
+
+    // Merge pro usage
+    for (const [proTag, proStat] of dailyStats.prosPlayed.entries()) {
+      if (!accDeck.proUsage[proTag]) {
+        accDeck.proUsage[proTag] = { name: proStat.name, wins: 0, games: 0 };
+      }
+      accDeck.proUsage[proTag].wins += proStat.wins;
+      accDeck.proUsage[proTag].games += proStat.games;
+    }
+  }
+
+  accumulator.lastUpdatedAt = new Date().toISOString();
+}
+
+/**
+ * Saves the accumulator to disk.
+ */
+function saveAccumulator(accumulator) {
+  fs.mkdirSync(path.dirname(ACCUMULATOR_PATH), { recursive: true });
+  fs.writeFileSync(ACCUMULATOR_PATH, JSON.stringify(accumulator, null, 2), "utf8");
+  console.log(`[Accumulator] Saved. Total decks tracked: ${Object.keys(accumulator.decks).length}`);
+}
+
+// ---------------------------------------------------------------------------
+// SLOT CONFIGURATION HELPER
+// ---------------------------------------------------------------------------
+
+/**
+ * Extracts the best (most common) slot configuration for a deck.
+ * Slots: [0] = Evolution, [1] = Champion, [2] = Flex (evo or champion)
+ */
+function getBestSlotConfig(slotConfigs) {
+  const entries = Object.entries(slotConfigs);
+  if (entries.length === 0) return null;
+
+  // Find the most frequently used slot configuration
+  entries.sort((a, b) => b[1] - a[1]);
+  const [bestConfigKey] = entries[0];
+  const [evoId, championId, flexId] = bestConfigKey.split("|").map(Number);
+
+  // Determine flex slot type based on card ID:
+  // If the flex card ID is the same as evo (unlikely) or is a regular card → "evolution"
+  // We'll use a heuristic: if we can detect it from battle data, we use that
+  // For now, default to "evolution" unless it's a known champion ID range
+  let flexSlotType = null;
+  if (flexId && flexId > 0) {
+    // Champion cards typically have IDs in the 26000085+ or specific ranges
+    // This will be refined as we validate with real data
+    flexSlotType = "evolution"; // Default assumption; can be overridden
+  }
+
+  return {
+    evoSlotCardId: evoId || 0,
+    championSlotCardId: championId || 0,
+    flexSlotCardId: flexId || null,
+    flexSlotType
+  };
+}
+
+// ---------------------------------------------------------------------------
+// MOCK DATA (Failsafe fallback when API Key is missing)
+// ---------------------------------------------------------------------------
+
+const MOCK_META_DECKS = {
+  updatedAt: new Date().toISOString(),
+  seasonId: getCurrentSeasonBounds().seasonId,
+  totalBattlesAnalyzed: 0,
+  totalPlayersScanned: 0,
+  metaDecks: [
+    {
+      deckId: "26000000;26000002;26000003;26000042;26000087;26000093;28000011;28000034",
+      cards: [
+        { name: "Knight", id: 26000000, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/knight.png" } },
+        { name: "Goblins", id: 26000002, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/goblins.png" } },
+        { name: "Giant", id: 26000003, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/giant.png" } },
+        { name: "Electro Wizard", id: 26000042, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/electrowizard.png" } },
+        { name: "Phoenix", id: 26000087, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/phoenix.png" } },
+        { name: "Little Prince", id: 26000093, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/littleprince.png" } },
+        { name: "The Log", id: 28000011, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/thelog.png" } },
+        { name: "Void", id: 28000034, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/void.png" } }
+      ],
+      slotConfig: { evoSlotCardId: 26000000, championSlotCardId: 26000093, flexSlotCardId: null, flexSlotType: null },
+      winRate: 58.6,
+      useCount: 142,
+      winCount: 83,
+      rating: 55.2
+    },
+    {
+      deckId: "26000010;26000015;26000021;26000032;28000000;28000008;28000015;28000016",
+      cards: [
+        { name: "Skeletons", id: 26000010, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/skeletons.png" } },
+        { name: "Ice Golem", id: 26000015, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/icegolem.png" } },
+        { name: "Hog Rider", id: 26000021, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/hogrider.png" } },
+        { name: "Musketeer", id: 26000032, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/musketeer.png" } },
+        { name: "Fireball", id: 28000000, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/fireball.png" } },
+        { name: "Zap", id: 28000008, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/zap.png" } },
+        { name: "Cannon", id: 28000015, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/cannon.png" } },
+        { name: "Ice Spirit", id: 28000016, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/icespirit.png" } }
+      ],
+      slotConfig: { evoSlotCardId: 26000010, championSlotCardId: 26000021, flexSlotCardId: null, flexSlotType: null },
+      winRate: 54.2,
+      useCount: 98,
+      winCount: 53,
+      rating: 48.5
+    },
+    {
+      deckId: "26000000;26000004;26000011;26000027;26000030;28000000;28000011;28000012",
+      cards: [
+        { name: "Knight", id: 26000000, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/knight.png" } },
+        { name: "P.E.K.K.A", id: 26000004, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/pekka.png" } },
+        { name: "Goblin Gang", id: 26000011, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/goblingang.png" } },
+        { name: "Battle Ram", id: 26000027, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/battleram.png" } },
+        { name: "Bandit", id: 26000030, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/bandit.png" } },
+        { name: "Fireball", id: 28000000, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/fireball.png" } },
+        { name: "The Log", id: 28000011, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/thelog.png" } },
+        { name: "Poison", id: 28000012, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/poison.png" } }
+      ],
+      slotConfig: { evoSlotCardId: 26000000, championSlotCardId: 26000030, flexSlotCardId: 26000027, flexSlotType: "evolution" },
+      winRate: 57.1,
+      useCount: 84,
+      winCount: 48,
+      rating: 50.3
+    }
+  ],
+  proDecks: [
+    {
+      deckId: "26000000;26000002;26000003;26000042;26000087;26000093;28000011;28000034",
+      cards: [
+        { name: "Knight", id: 26000000, evolutionLevel: 1, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/knight.png" } },
+        { name: "Goblins", id: 26000002, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/goblins.png" } },
+        { name: "Giant", id: 26000003, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/giant.png" } },
+        { name: "Electro Wizard", id: 26000042, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/electrowizard.png" } },
+        { name: "Phoenix", id: 26000087, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/phoenix.png" } },
+        { name: "Little Prince", id: 26000093, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/littleprince.png" } },
+        { name: "The Log", id: 28000011, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/thelog.png" } },
+        { name: "Void", id: 28000034, iconUrls: { medium: "https://cdn.clashroyale.com/cards/300/void.png" } }
+      ],
+      slotConfig: { evoSlotCardId: 26000000, championSlotCardId: 26000093, flexSlotCardId: null, flexSlotType: null },
+      totalUseCount: 12,
+      totalWinCount: 10,
+      overallWinRate: 83.3,
+      proCount: 1,
+      pros: [
+        { tag: "#P90G2PY8", name: "Mohamed Light", useCount: 12, winCount: 10, winRate: 83.3 }
+      ]
+    }
+  ]
+};
+
+// ---------------------------------------------------------------------------
+// MAIN PIPELINE
+// ---------------------------------------------------------------------------
 
 async function main() {
   const apiKey = process.env.CLASH_ROYALE_API_KEY;
 
+  // Step 0: Download cards static data (elixir, rarity info)
+  await downloadCardsStaticData();
+
+  // =========================================================================
+  // FAILSAFE MODE: No API Key
+  // =========================================================================
   if (!apiKey || apiKey.trim() === "") {
     console.warn("[Failsafe Warning] CLASH_ROYALE_API_KEY environment variable is not defined!");
-    console.log("[Failsafe Mode] Writing high-quality static MOCK meta decks database to src/data/meta_decks.json...");
-    
-    // Ensure parent folders exist
+    console.log("[Failsafe Mode] Writing static MOCK meta decks database...");
+
     fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
     fs.writeFileSync(OUTPUT_PATH, JSON.stringify(MOCK_META_DECKS, null, 2), "utf8");
     console.log("[Failsafe Success] Mock meta decks database generated successfully!");
 
-    // Also write mock previous season decks for failsafe mode
-    const PREVIOUS_DECKS_FILE = path.join(__dirname, "../src/data/previous_season_decks.json");
+    // Write mock previous season decks
     if (!fs.existsSync(PREVIOUS_DECKS_FILE)) {
       const mockPrevDecks = {
         ...MOCK_META_DECKS,
         updatedAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),
-        metaDecks: MOCK_META_DECKS.metaDecks.map(deck => ({ ...deck, winRate: parseFloat((deck.winRate - 1.5).toFixed(1)) }))
+        metaDecks: MOCK_META_DECKS.metaDecks.map(deck => ({
+          ...deck,
+          winRate: parseFloat((deck.winRate - 1.5).toFixed(1))
+        }))
       };
       fs.writeFileSync(PREVIOUS_DECKS_FILE, JSON.stringify(mockPrevDecks, null, 2), "utf8");
-      console.log("[Failsafe Success] Mock previous season decks database generated successfully!");
+      console.log("[Failsafe Success] Mock previous season decks generated.");
     }
 
-    // Also write mock current season info
-    const CURRENT_SEASON_FILE = path.join(__dirname, "../src/data/current_season.json");
+    // Write mock current season info
+    const seasonBounds = getCurrentSeasonBounds();
     if (!fs.existsSync(CURRENT_SEASON_FILE)) {
-      fs.writeFileSync(CURRENT_SEASON_FILE, JSON.stringify({ id: "2026-05", updatedAt: new Date().toISOString() }, null, 2), "utf8");
+      fs.writeFileSync(CURRENT_SEASON_FILE, JSON.stringify({
+        id: seasonBounds.seasonId,
+        startDate: seasonBounds.start.toISOString(),
+        endDate: seasonBounds.end.toISOString(),
+        updatedAt: new Date().toISOString()
+      }, null, 2), "utf8");
     }
-    
+
     console.log("[Failsafe Mode] Caching mock card icons locally...");
     await cacheCardIcons(MOCK_META_DECKS.metaDecks, MOCK_META_DECKS.proDecks);
     return;
   }
 
-  console.log(`[Pipeline] Checking current Path of Legend season ID from Clash Royale API...`);
-  
-  let currentSeasonId = "";
-  const CURRENT_SEASON_FILE = path.join(__dirname, "../src/data/current_season.json");
-  const PREVIOUS_DECKS_FILE = path.join(__dirname, "../src/data/previous_season_decks.json");
+  // =========================================================================
+  // REAL MODE: API Key is present
+  // =========================================================================
 
-  try {
-    const seasonsUrl = `${API_BASE_URL}/locations/global/rankings/pathoflegend/seasons`;
-    const seasonsRes = await fetchWithRetry(seasonsUrl, { method: "GET" });
-    if (seasonsRes) {
-      const seasonsData = await seasonsRes.json();
-      if (seasonsData.items && seasonsData.items.length > 0) {
-        currentSeasonId = seasonsData.items[0].id;
-        console.log(`[Pipeline] Latest season ID from API is: ${currentSeasonId}`);
-      }
+  console.log("[Pipeline] Starting Clash Royale Meta Deck Aggregator v2.0...");
+
+  // -----------------------------------------------------------------
+  // Step 1: Season management
+  // -----------------------------------------------------------------
+  const seasonBounds = getCurrentSeasonBounds();
+  console.log(`[Pipeline] Calculated season: ${seasonBounds.seasonId} (${seasonBounds.start.toISOString()} → ${seasonBounds.end.toISOString()})`);
+
+  // Check for season transition
+  let savedSeason = {};
+  if (fs.existsSync(CURRENT_SEASON_FILE)) {
+    try {
+      savedSeason = JSON.parse(fs.readFileSync(CURRENT_SEASON_FILE, "utf8"));
+    } catch (err) {
+      console.error(`[Pipeline Error] Failed to read current_season.json: ${err.message}`);
     }
-  } catch (err) {
-    console.error(`[Pipeline Warning] Failed to check seasons from API: ${err.message}`);
   }
 
-  if (currentSeasonId) {
-    let savedSeason = {};
-    if (fs.existsSync(CURRENT_SEASON_FILE)) {
-      try {
-        savedSeason = JSON.parse(fs.readFileSync(CURRENT_SEASON_FILE, "utf8"));
-      } catch (err) {
-        console.error(`[Pipeline Error] Failed to read current_season.json: ${err.message}`);
-      }
-    }
+  if (savedSeason.id && savedSeason.id !== seasonBounds.seasonId) {
+    console.log(`[Pipeline Season Transition] Season changed from ${savedSeason.id} to ${seasonBounds.seasonId}!`);
 
-    if (savedSeason.id && savedSeason.id !== currentSeasonId) {
-      console.log(`[Pipeline Season Transition] Season ID changed from ${savedSeason.id} to ${currentSeasonId}!`);
-      if (fs.existsSync(OUTPUT_PATH)) {
-        try {
+    // Archive current accumulator as previous season data
+    if (fs.existsSync(ACCUMULATOR_PATH)) {
+      try {
+        const oldAccumulator = JSON.parse(fs.readFileSync(ACCUMULATOR_PATH, "utf8"));
+        // Build previous season decks from accumulator
+        const prevSeasonData = buildOutputFromAccumulator(oldAccumulator);
+        fs.writeFileSync(PREVIOUS_DECKS_FILE, JSON.stringify(prevSeasonData, null, 2), "utf8");
+        console.log(`[Pipeline Season Transition] Previous season data archived to ${PREVIOUS_DECKS_FILE}`);
+      } catch (err) {
+        console.error(`[Pipeline Error] Failed to archive previous season: ${err.message}`);
+        // Fallback: copy current meta_decks.json
+        if (fs.existsSync(OUTPUT_PATH)) {
           fs.copyFileSync(OUTPUT_PATH, PREVIOUS_DECKS_FILE);
-          console.log(`[Pipeline Season Transition] Current meta decks archived to: ${PREVIOUS_DECKS_FILE}`);
-        } catch (err) {
-          console.error(`[Pipeline Error] Failed to archive previous season decks: ${err.message}`);
+          console.log("[Pipeline Season Transition] Fallback: Copied current meta_decks.json as previous season.");
         }
       }
-    } else {
-      console.log(`[Pipeline] Season ID remains: ${currentSeasonId}. No transition needed.`);
-    }
-
-    try {
-      fs.writeFileSync(CURRENT_SEASON_FILE, JSON.stringify({ id: currentSeasonId, updatedAt: new Date().toISOString() }, null, 2), "utf8");
-    } catch (err) {
-      console.error(`[Pipeline Error] Failed to write current_season.json: ${err.message}`);
+    } else if (fs.existsSync(OUTPUT_PATH)) {
+      fs.copyFileSync(OUTPUT_PATH, PREVIOUS_DECKS_FILE);
+      console.log("[Pipeline Season Transition] Copied current meta_decks.json as previous season.");
     }
   }
 
-  console.log(`[Pipeline] Initializing meta data compilation. scanning top ${LIMIT_PLAYERS} leaderboard players + pros...`);
+  // Save current season info
+  fs.mkdirSync(path.dirname(CURRENT_SEASON_FILE), { recursive: true });
+  fs.writeFileSync(CURRENT_SEASON_FILE, JSON.stringify({
+    id: seasonBounds.seasonId,
+    startDate: seasonBounds.start.toISOString(),
+    endDate: seasonBounds.end.toISOString(),
+    updatedAt: new Date().toISOString()
+  }, null, 2), "utf8");
 
+  // -----------------------------------------------------------------
+  // Step 2: Load pro players list
+  // -----------------------------------------------------------------
   let proPlayers = [];
   try {
     if (fs.existsSync(PRO_PLAYERS_PATH)) {
       proPlayers = JSON.parse(fs.readFileSync(PRO_PLAYERS_PATH, "utf8"));
-      console.log(`[Pipeline] Loaded ${proPlayers.length} pro players.`);
+      console.log(`[Pipeline] Loaded ${proPlayers.length} pro players from pro_players.json.`);
     }
   } catch (err) {
     console.error(`[Pipeline Error] Failed to read pro_players.json: ${err.message}`);
   }
 
-  const decksMap = new Map(); // deckId -> { cards, useCount, winCount, proPlayersPlayed: [] }
+  // Build pro tag sets (ONLY from pro_players.json, NOT from leaderboard)
+  const proTagsSet = new Set();
+  const proPlayerLookup = new Map();
 
-  // Step 1: Fetch Top leaderboard player tags
+  proPlayers.forEach(p => {
+    const cleanTag = p.tag.replace("#", "");
+    proTagsSet.add(cleanTag);
+    proPlayerLookup.set(cleanTag, p.name);
+  });
+
+  // -----------------------------------------------------------------
+  // Step 3: Fetch leaderboard player tags
+  // -----------------------------------------------------------------
   let playerTags = [];
-  let leaderboardItems = [];
-  console.log("[Pipeline] Fetching global leaderboards...");
+  console.log(`[Pipeline] Fetching top ${LIMIT_PLAYERS} global leaderboard players...`);
   const leaderboardUrl = `${API_BASE_URL}/locations/global/rankings/players?limit=${LIMIT_PLAYERS}`;
-  
+
   try {
     const leaderboardRes = await fetchWithRetry(leaderboardUrl, { method: "GET" });
     if (leaderboardRes) {
       const leaderboardData = await leaderboardRes.json();
       if (leaderboardData && leaderboardData.items) {
-        leaderboardItems = leaderboardData.items;
-        playerTags = leaderboardItems.map(item => item.tag);
+        playerTags = leaderboardData.items.map(item => item.tag);
         console.log(`[Pipeline] Retrieved ${playerTags.length} players from leaderboard.`);
       }
     } else {
-      console.warn("[Pipeline Warning] Failed to fetch leaderboard. Continuing...");
+      console.warn("[Pipeline Warning] Failed to fetch leaderboard.");
     }
   } catch (err) {
-    console.warn(`[Pipeline Warning] Leaderboard query failed: ${err.message}. Continuing...`);
+    console.warn(`[Pipeline Warning] Leaderboard query failed: ${err.message}`);
   }
 
-  // Fallback: If player leaderboard is empty (e.g. season reset), fetch players from top clans!
+  // Fallback: If leaderboard is empty (e.g. season reset), fetch players from top clans
   if (playerTags.length === 0) {
-    console.log("[Pipeline Fallback] Player leaderboard is empty. Fetching top global clans to retrieve active players...");
+    console.log("[Pipeline Fallback] Player leaderboard is empty. Fetching top clans...");
     try {
       const clansUrl = `${API_BASE_URL}/locations/global/rankings/clans?limit=5`;
       const clansRes = await fetchWithRetry(clansUrl, { method: "GET" });
@@ -386,109 +770,92 @@ async function main() {
         const clansData = await clansRes.json();
         if (clansData.items) {
           for (const clan of clansData.items.slice(0, 3)) {
-            console.log(`[Pipeline Fallback] Fetching members for clan ${clan.name} (${clan.tag})...`);
+            console.log(`[Pipeline Fallback] Fetching members for clan ${clan.name}...`);
             const cleanClanTag = clan.tag.replace("#", "%23");
             const membersUrl = `${API_BASE_URL}/clans/${cleanClanTag}/members`;
             const membersRes = await fetchWithRetry(membersUrl, { method: "GET" });
             if (membersRes) {
               const membersData = await membersRes.json();
               if (membersData.items) {
-                const clanPlayerTags = membersData.items.map(m => m.tag);
-                playerTags.push(...clanPlayerTags);
-                console.log(`[Pipeline Fallback] Added ${clanPlayerTags.length} players from ${clan.name}.`);
-                
-                membersData.items.forEach(m => {
-                  leaderboardItems.push({
-                    tag: m.tag,
-                    name: m.name,
-                    rank: m.clanRank,
-                    trophies: m.trophies
-                  });
-                });
+                playerTags.push(...membersData.items.map(m => m.tag));
+                console.log(`[Pipeline Fallback] Added ${membersData.items.length} players from ${clan.name}.`);
               }
             }
-            await delay(100);
+            await delay(REQUEST_DELAY_MS);
           }
           playerTags = [...new Set(playerTags)];
-          console.log(`[Pipeline Fallback] Total unique players gathered via clans fallback: ${playerTags.length}`);
+          console.log(`[Pipeline Fallback] Total unique players: ${playerTags.length}`);
         }
       }
     } catch (err) {
-      console.error(`[Pipeline Fallback Error] Failed to fetch players from top clans: ${err.message}`);
+      console.error(`[Pipeline Fallback Error] ${err.message}`);
     }
   }
 
-  // Step 2: Merge in pro players (ensure unique tags) and dynamically treat top leaderboard players as pros
-  const proTagsSet = new Set();
-  const proPlayerLookup = new Map();
-
-  // Load from static pro_players.json
-  proPlayers.forEach(p => {
-    const cleanTag = p.tag.replace("#", "");
-    proTagsSet.add(cleanTag);
-    proPlayerLookup.set(cleanTag, p.name);
-  });
-
-  // Also classify top leaderboard players as pros/top players using their leaderboard names
-  leaderboardItems.forEach(item => {
-    const cleanTag = item.tag.replace("#", "");
-    proTagsSet.add(cleanTag);
-    if (!proPlayerLookup.has(cleanTag)) {
-      proPlayerLookup.set(cleanTag, `${item.name} (Top ${item.rank})`);
-    }
-  });
-  
+  // Merge pro player tags into target list (ensure unique)
   const allTargetTags = [...new Set([
     ...proPlayers.map(p => p.tag),
     ...playerTags
   ])].map(tag => tag.replace("#", ""));
 
-  console.log(`[Pipeline] Fetching profiles & battlelogs for ${allTargetTags.length} unique players...`);
+  console.log(`[Pipeline] Will scan ${allTargetTags.length} unique players (${proPlayers.length} pro + ${playerTags.length} leaderboard).`);
 
-  // Step 3: Loop through and scan player profiles & battle logs
+  // -----------------------------------------------------------------
+  // Step 4: Scan player profiles & battlelogs
+  // -----------------------------------------------------------------
+  const dailyDecksMap = new Map(); // deckId → { cards, useCount, winCount, slotConfigs, prosPlayed }
+  const discoveredPros = [];       // Players with high pro scores
+  let totalBattlesAnalyzed = 0;
+
   for (let i = 0; i < allTargetTags.length; i++) {
     const tag = allTargetTags[i];
-    
-    // 1. Fetch player profile to inspect badges and top finishes dynamically
+
+    // Progress logging every 50 players
+    if (i % 50 === 0 || i === allTargetTags.length - 1) {
+      console.log(`[Pipeline] Progress: ${i + 1}/${allTargetTags.length} players scanned...`);
+    }
+
+    // 4a. Fetch player profile
     const profileUrl = `${API_BASE_URL}/players/%23${tag}`;
     await delay(REQUEST_DELAY_MS);
     const profileRes = await fetchWithRetry(profileUrl, { method: "GET" });
     if (!profileRes) continue;
-    
+
     const profileData = await profileRes.json();
     if (!profileData) continue;
 
+    // Check if this player is a known pro
     let proName = proPlayerLookup.get(tag);
     let isPro = proTagsSet.has(tag);
 
+    // Calculate pro score for non-known players (pro discovery)
     if (!isPro) {
-      // Dynamic classification based on badges, best POL finish, and legacy rankings
-      const dynamicLabel = classifyProPlayer(profileData);
-      if (dynamicLabel) {
-        proName = `${profileData.name} (${dynamicLabel})`;
-        proTagsSet.add(tag);
-        proPlayerLookup.set(tag, proName);
-        isPro = true;
-        console.log(`[Pipeline Pro Detected] Player #${tag} (${profileData.name}) dynamically classified as PRO: ${dynamicLabel}`);
+      const proScoreResult = calculateProScore(profileData);
+      if (proScoreResult.score >= MIN_PRO_SCORE) {
+        discoveredPros.push({
+          tag: `#${tag}`,
+          name: proScoreResult.name,
+          proScore: proScoreResult.score,
+          details: proScoreResult.details,
+          discoveredAt: new Date().toISOString()
+        });
+        console.log(`[Pipeline Pro Discovered] #${tag} (${proScoreResult.name}) score=${proScoreResult.score} [${proScoreResult.details.join(", ")}]`);
       }
-    } else {
-      console.log(`[Pipeline Verified Pro] Player #${tag} is verified pro: ${proName}`);
     }
 
-    console.log(`[Pipeline] (${i + 1}/${allTargetTags.length}) Scanning battlelog for #${tag} ${isPro ? `[PRO: ${proName}]` : ""}`);
-    
-    // 2. Fetch battle logs
+    // 4b. Fetch battlelog
     const battlelogUrl = `${API_BASE_URL}/players/%23${tag}/battlelog`;
     await delay(REQUEST_DELAY_MS);
-    
+
     const battlelogRes = await fetchWithRetry(battlelogUrl, { method: "GET" });
     if (!battlelogRes) continue;
 
     const battles = await battlelogRes.json();
     if (!Array.isArray(battles)) continue;
 
+    // 4c. Process each battle
     for (const battle of battles) {
-      // Filter competitive match types - restrict strictly to Path of Legend (Ranked Mode)
+      // Filter: only ranked (Path of Legend) matches
       if (battle.type !== "pathOfLegend") {
         continue;
       }
@@ -496,39 +863,53 @@ async function main() {
       const team = battle.team && battle.team[0];
       if (!team || !team.cards || team.cards.length !== 8) continue;
 
-      // Extract cards
-      const cards = team.cards.map(c => ({
+      // Extract cards (PRESERVE ORDER for slot tracking)
+      const orderedCards = team.cards.map(c => ({
         name: c.name,
         id: c.id,
         evolutionLevel: c.evolutionLevel || 0,
-        iconUrls: { medium: c.iconUrls.medium }
+        iconUrls: { medium: (c.iconUrls && c.iconUrls.medium) || "" }
       }));
 
-      // Sort cards by ID numerically to create a consistent unique deck signature (deckId)
-      const sortedIds = cards.map(c => c.id).sort((a, b) => a - b);
+      // Create deck signature (order-independent for same-deck matching)
+      const sortedIds = [...orderedCards.map(c => c.id)].sort((a, b) => a - b);
       const deckId = sortedIds.join(";");
 
-      // Verify if player won the match
-      const crownsEarned = team.crowns !== undefined ? team.crowns : 0;
-      const crownsOpponent = (battle.opponent && battle.opponent[0] && battle.opponent[0].crowns) !== undefined ? battle.opponent[0].crowns : 0;
+      // Track slot configuration (first 3 positions matter)
+      // Slot 0 = Evolution, Slot 1 = Champion, Slot 2 = Flex (evo/champion)
+      const slotConfigKey = `${orderedCards[0].id}|${orderedCards[1].id}|${orderedCards[2].id}`;
+
+      // Determine win/loss
+      const crownsEarned = team.crowns !== undefined ? team.crowns : (team.crownsEarned || 0);
+      const crownsOpponent = (battle.opponent && battle.opponent[0])
+        ? (battle.opponent[0].crowns !== undefined ? battle.opponent[0].crowns : (battle.opponent[0].crownsEarned || 0))
+        : 0;
       const isWin = crownsEarned > crownsOpponent;
 
-      // Update aggregation map
-      if (!decksMap.has(deckId)) {
-        decksMap.set(deckId, {
+      totalBattlesAnalyzed++;
+
+      // Update daily decks map
+      if (!dailyDecksMap.has(deckId)) {
+        dailyDecksMap.set(deckId, {
           deckId,
-          cards,
+          cards: orderedCards, // Store cards in original order (first occurrence)
           useCount: 0,
           winCount: 0,
-          prosPlayed: new Map() // proTag -> { name, wins, games }
+          slotConfigs: new Map(),   // configKey → count
+          prosPlayed: new Map()     // proTag → { name, wins, games }
         });
       }
 
-      const deckStats = decksMap.get(deckId);
+      const deckStats = dailyDecksMap.get(deckId);
       deckStats.useCount += 1;
       if (isWin) deckStats.winCount += 1;
 
-      // If played by a pro, log the pro match detail
+      // Track slot configuration frequency
+      deckStats.slotConfigs.set(slotConfigKey,
+        (deckStats.slotConfigs.get(slotConfigKey) || 0) + 1
+      );
+
+      // If played by a known pro, log their match
       if (isPro) {
         if (!deckStats.prosPlayed.has(tag)) {
           deckStats.prosPlayed.set(tag, { name: proName, wins: 0, games: 0 });
@@ -540,68 +921,173 @@ async function main() {
     }
   }
 
-  console.log(`[Pipeline] Analyzed battle logs. Found ${decksMap.size} distinct deck signatures.`);
+  console.log(`[Pipeline] Daily scan complete. ${totalBattlesAnalyzed} battles analyzed, ${dailyDecksMap.size} distinct deck signatures found.`);
 
-  // Step 4: Separate into General Meta and Pro Player Decks
-  const metaDecks = [];
-  const proDecks = [];
+  // -----------------------------------------------------------------
+  // Step 5: Merge into cumulative season accumulator
+  // -----------------------------------------------------------------
+  const accumulator = loadAccumulator(seasonBounds.seasonId);
+  accumulator.totalBattlesAnalyzed += totalBattlesAnalyzed;
+  accumulator.totalPlayersScanned += allTargetTags.length;
+  mergeIntoAccumulator(accumulator, dailyDecksMap);
+  saveAccumulator(accumulator);
 
-  for (const [deckId, stats] of decksMap.entries()) {
-    const winRate = parseFloat(((stats.winCount / stats.useCount) * 100).toFixed(1));
-    
-    // General meta selection (Needs minimum use count to prevent noise)
-    if (stats.useCount >= MIN_DECK_USE_COUNT) {
-      metaDecks.push({
-        deckId,
-        cards: stats.cards,
-        winRate,
-        useCount: stats.useCount,
-        winCount: stats.winCount
-      });
-    }
+  // -----------------------------------------------------------------
+  // Step 6: Build output from accumulator
+  // -----------------------------------------------------------------
+  const outputData = buildOutputFromAccumulator(accumulator);
 
-    // Pro decks mapping
-    if (stats.prosPlayed.size > 0) {
-      for (const [proTag, proStat] of stats.prosPlayed.entries()) {
-        const proWinRate = parseFloat(((proStat.wins / proStat.games) * 100).toFixed(1));
-        proDecks.push({
-          playerTag: `#${proTag}`,
-          playerName: proStat.name,
-          deckId,
-          cards: stats.cards,
-          winRate: proWinRate,
-          useCount: proStat.games,
-          winCount: proStat.wins
-        });
-      }
-    }
+  // Failsafe check
+  if (outputData.metaDecks.length < MIN_META_DECKS_FAILSAFE) {
+    console.error(`[Failsafe] Only ${outputData.metaDecks.length} meta decks found (minimum: ${MIN_META_DECKS_FAILSAFE}). Aborting to prevent data loss.`);
+    console.log("[Failsafe] Existing meta_decks.json has been preserved.");
+    // Still save discovered pros (they are additive, not destructive)
+    saveDiscoveredPros(discoveredPros);
+    process.exit(0);
   }
 
-  // Sort meta decks by use count primarily, then win rate
-  metaDecks.sort((a, b) => b.useCount - a.useCount || b.winRate - a.winRate);
-  
-  // Sort pro decks by win count, then win rate
-  proDecks.sort((a, b) => b.useCount - a.useCount || b.winRate - a.winRate);
-
-  // Crop to top list sizes
-  const outputData = {
-    updatedAt: new Date().toISOString(),
-    metaDecks: metaDecks.slice(0, 30),
-    proDecks: proDecks.slice(0, 20)
-  };
-
-  // Step 5: Save database to path
+  // Save output
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(outputData, null, 2), "utf8");
-  console.log(`[Pipeline Success] Compiled database saved successfully to ${OUTPUT_PATH}!`);
-  console.log(`- Saved ${outputData.metaDecks.length} general meta decks.`);
-  console.log(`- Saved ${outputData.proDecks.length} pro player match decks.`);
+  console.log(`[Pipeline Success] Saved ${outputData.metaDecks.length} meta decks and ${outputData.proDecks.length} pro decks.`);
 
-  // Step 6: Download card icons locally for caching
+  // -----------------------------------------------------------------
+  // Step 7: Save discovered pros
+  // -----------------------------------------------------------------
+  saveDiscoveredPros(discoveredPros);
+
+  // -----------------------------------------------------------------
+  // Step 8: Cache card icons locally
+  // -----------------------------------------------------------------
   console.log("[Pipeline] Starting card icons local caching...");
   await cacheCardIcons(outputData.metaDecks, outputData.proDecks);
 }
 
+// ---------------------------------------------------------------------------
+// BUILD OUTPUT FROM ACCUMULATOR
+// ---------------------------------------------------------------------------
+
+/**
+ * Converts the cumulative accumulator data into the final meta_decks.json format.
+ */
+function buildOutputFromAccumulator(accumulator) {
+  const metaDecks = [];
+  const proDecksGrouped = new Map(); // deckId → aggregated pro deck
+
+  for (const [deckId, deckData] of Object.entries(accumulator.decks)) {
+    const winRate = parseFloat(((deckData.winCount / deckData.useCount) * 100).toFixed(1));
+
+    // Determine best slot configuration
+    const slotConfig = getBestSlotConfig(deckData.slotConfigs || {});
+
+    // General meta selection (needs minimum use count)
+    if (deckData.useCount >= MIN_DECK_USE_COUNT) {
+      metaDecks.push({
+        deckId,
+        cards: deckData.cards,
+        slotConfig,
+        winRate,
+        useCount: deckData.useCount,
+        winCount: deckData.winCount,
+        rating: 0 // Will be calculated after all decks are collected
+      });
+    }
+
+    // Pro decks aggregation (group by deck, show which pros use it)
+    const proUsage = deckData.proUsage || {};
+    const proEntries = Object.entries(proUsage);
+    if (proEntries.length > 0) {
+      const pros = proEntries.map(([proTag, proStat]) => ({
+        tag: `#${proTag}`,
+        name: proStat.name,
+        useCount: proStat.games,
+        winCount: proStat.wins,
+        winRate: parseFloat(((proStat.wins / proStat.games) * 100).toFixed(1))
+      }));
+
+      const totalUseCount = pros.reduce((s, p) => s + p.useCount, 0);
+      const totalWinCount = pros.reduce((s, p) => s + p.winCount, 0);
+
+      proDecksGrouped.set(deckId, {
+        deckId,
+        cards: deckData.cards,
+        slotConfig,
+        totalUseCount,
+        totalWinCount,
+        overallWinRate: parseFloat(((totalWinCount / totalUseCount) * 100).toFixed(1)),
+        proCount: pros.length,
+        pros: pros.sort((a, b) => b.useCount - a.useCount) // Sort pros by usage
+      });
+    }
+  }
+
+  // Calculate ratings for meta decks
+  metaDecks.forEach(deck => {
+    deck.rating = calculateRating(deck, metaDecks);
+  });
+
+  // Sort meta decks by rating (combined win rate + popularity)
+  metaDecks.sort((a, b) => b.rating - a.rating);
+
+  // Sort pro decks by proCount (most popular among pros), then by overall win rate
+  const proDecks = [...proDecksGrouped.values()]
+    .sort((a, b) => b.proCount - a.proCount || b.overallWinRate - a.overallWinRate);
+
+  return {
+    updatedAt: new Date().toISOString(),
+    seasonId: accumulator.seasonId,
+    totalBattlesAnalyzed: accumulator.totalBattlesAnalyzed,
+    totalPlayersScanned: accumulator.totalPlayersScanned,
+    metaDecks: metaDecks.slice(0, META_DECKS_OUTPUT_LIMIT),
+    proDecks: proDecks.slice(0, PRO_DECKS_OUTPUT_LIMIT)
+  };
+}
+
+// ---------------------------------------------------------------------------
+// DISCOVERED PROS PERSISTENCE
+// ---------------------------------------------------------------------------
+
+/**
+ * Saves newly discovered pro-score players, merging with existing list.
+ */
+function saveDiscoveredPros(newDiscoveries) {
+  if (newDiscoveries.length === 0) {
+    console.log("[Pro Discovery] No new pro-score players discovered this run.");
+    return;
+  }
+
+  let existingPros = [];
+  if (fs.existsSync(DISCOVERED_PROS_PATH)) {
+    try {
+      existingPros = JSON.parse(fs.readFileSync(DISCOVERED_PROS_PATH, "utf8"));
+    } catch (err) {
+      console.error(`[Pro Discovery Error] Failed to read existing file: ${err.message}`);
+    }
+  }
+
+  // Merge: update existing entries or add new ones
+  const proMap = new Map();
+  existingPros.forEach(p => proMap.set(p.tag, p));
+
+  newDiscoveries.forEach(p => {
+    const existing = proMap.get(p.tag);
+    if (!existing || p.proScore > existing.proScore) {
+      // Update with higher score or new entry
+      proMap.set(p.tag, p);
+    }
+  });
+
+  // Sort by proScore descending
+  const merged = [...proMap.values()].sort((a, b) => b.proScore - a.proScore);
+
+  fs.mkdirSync(path.dirname(DISCOVERED_PROS_PATH), { recursive: true });
+  fs.writeFileSync(DISCOVERED_PROS_PATH, JSON.stringify(merged, null, 2), "utf8");
+  console.log(`[Pro Discovery] Saved ${merged.length} discovered pros (${newDiscoveries.length} new/updated this run).`);
+}
+
+// ---------------------------------------------------------------------------
+// ENTRY POINT
+// ---------------------------------------------------------------------------
 
 main().catch(err => {
   console.error("[Fatal Error] Data Pipeline failed:", err);
