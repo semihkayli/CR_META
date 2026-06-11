@@ -38,12 +38,31 @@ if (fs.existsSync(envPath)) {
 // CONFIGURATION
 // ---------------------------------------------------------------------------
 const API_BASE_URL = "https://proxy.royaleapi.dev/v1";
-const LIMIT_PLAYERS = 1000;           // Number of top players to scan (was 40)
+const LIMIT_PER_REGION = 200;         // Players to fetch per region leaderboard
 const MIN_DECK_USE_COUNT = 8;         // Minimum games for a deck to count in meta (was 3)
 const MIN_META_DECKS_FAILSAFE = 20;   // Abort if fewer decks found (data integrity)
 const REQUEST_DELAY_MS = 100;         // Delay between API calls (rate limit friendly)
 const META_DECKS_OUTPUT_LIMIT = 50;   // Top N meta decks to output
 const PRO_DECKS_OUTPUT_LIMIT = 30;    // Top N pro decks to output
+
+// Regional leaderboard location IDs (countries with strong CR competitive scenes)
+const LEADERBOARD_REGIONS = [
+  { id: "global", name: "Global" },
+  { id: "57000006", name: "France" },
+  { id: "57000094", name: "Finland" },
+  { id: "57000056", name: "Germany" },
+  { id: "57000209", name: "Turkey" },
+  { id: "57000138", name: "Japan" },
+  { id: "57000249", name: "USA" },
+  { id: "57000035", name: "China" },
+  { id: "57000024", name: "Brazil" },
+  { id: "57000184", name: "Saudi Arabia" },
+  { id: "57000230", name: "Spain" },
+  { id: "57000109", name: "South Korea" },
+  { id: "57000136", name: "Italy" },
+  { id: "57000015", name: "Argentina" },
+  { id: "57000149", name: "Mexico" }
+];
 const MIN_PRO_SCORE = 40;             // Minimum score to be classified as discovered pro
 const CARDS_DATA_URL = "https://royaleapi.github.io/cr-api-data/json/cards.json";
 
@@ -739,40 +758,49 @@ async function main() {
   });
 
   // -----------------------------------------------------------------
-  // Step 3: Fetch leaderboard player tags
+  // Step 3: Fetch leaderboard player tags (multi-region strategy)
   // -----------------------------------------------------------------
   let playerTags = [];
-  console.log(`[Pipeline] Fetching top ${LIMIT_PLAYERS} global leaderboard players...`);
-  const leaderboardUrl = `${API_BASE_URL}/locations/global/rankings/players?limit=${LIMIT_PLAYERS}`;
+  console.log(`[Pipeline] Fetching top players from ${LEADERBOARD_REGIONS.length} regional leaderboards...`);
 
-  try {
-    const leaderboardRes = await fetchWithRetry(leaderboardUrl, { method: "GET" });
-    if (leaderboardRes) {
-      const leaderboardData = await leaderboardRes.json();
-      if (leaderboardData && leaderboardData.items) {
-        playerTags = leaderboardData.items.map(item => item.tag);
-        console.log(`[Pipeline] Retrieved ${playerTags.length} players from leaderboard.`);
+  for (const region of LEADERBOARD_REGIONS) {
+    try {
+      const url = `${API_BASE_URL}/locations/${region.id}/rankings/players?limit=${LIMIT_PER_REGION}`;
+      await delay(REQUEST_DELAY_MS);
+      const res = await fetchWithRetry(url, { method: "GET" });
+      if (res) {
+        const data = await res.json();
+        if (data && data.items && data.items.length > 0) {
+          const tags = data.items.map(item => item.tag);
+          playerTags.push(...tags);
+          console.log(`[Pipeline] ${region.name}: ${tags.length} players fetched.`);
+        } else {
+          console.log(`[Pipeline] ${region.name}: 0 players (empty leaderboard).`);
+        }
       }
-    } else {
-      console.warn("[Pipeline Warning] Failed to fetch leaderboard.");
+    } catch (err) {
+      console.warn(`[Pipeline Warning] ${region.name} leaderboard failed: ${err.message}`);
     }
-  } catch (err) {
-    console.warn(`[Pipeline Warning] Leaderboard query failed: ${err.message}`);
   }
 
-  // Fallback: If leaderboard is empty (e.g. season reset), fetch players from top clans
-  if (playerTags.length === 0) {
-    console.log("[Pipeline Fallback] Player leaderboard is empty. Fetching top clans...");
+  // Deduplicate player tags from all regions
+  playerTags = [...new Set(playerTags)];
+  console.log(`[Pipeline] Total unique leaderboard players: ${playerTags.length}`);
+
+  // Fallback: If all leaderboards are empty, fetch top clans members
+  if (playerTags.length < 100) {
+    console.log("[Pipeline Fallback] Few leaderboard players found. Supplementing with top clan members...");
     try {
-      const clansUrl = `${API_BASE_URL}/locations/global/rankings/clans?limit=5`;
+      const clansUrl = `${API_BASE_URL}/locations/global/rankings/clans?limit=10`;
       const clansRes = await fetchWithRetry(clansUrl, { method: "GET" });
       if (clansRes) {
         const clansData = await clansRes.json();
         if (clansData.items) {
-          for (const clan of clansData.items.slice(0, 3)) {
+          for (const clan of clansData.items.slice(0, 5)) {
             console.log(`[Pipeline Fallback] Fetching members for clan ${clan.name}...`);
             const cleanClanTag = clan.tag.replace("#", "%23");
             const membersUrl = `${API_BASE_URL}/clans/${cleanClanTag}/members`;
+            await delay(REQUEST_DELAY_MS);
             const membersRes = await fetchWithRetry(membersUrl, { method: "GET" });
             if (membersRes) {
               const membersData = await membersRes.json();
@@ -781,10 +809,9 @@ async function main() {
                 console.log(`[Pipeline Fallback] Added ${membersData.items.length} players from ${clan.name}.`);
               }
             }
-            await delay(REQUEST_DELAY_MS);
           }
           playerTags = [...new Set(playerTags)];
-          console.log(`[Pipeline Fallback] Total unique players: ${playerTags.length}`);
+          console.log(`[Pipeline Fallback] Total unique players after clans: ${playerTags.length}`);
         }
       }
     } catch (err) {
@@ -810,40 +837,16 @@ async function main() {
   for (let i = 0; i < allTargetTags.length; i++) {
     const tag = allTargetTags[i];
 
-    // Progress logging every 50 players
-    if (i % 50 === 0 || i === allTargetTags.length - 1) {
+    // Progress logging every 100 players
+    if (i % 100 === 0 || i === allTargetTags.length - 1) {
       console.log(`[Pipeline] Progress: ${i + 1}/${allTargetTags.length} players scanned...`);
     }
 
-    // 4a. Fetch player profile
-    const profileUrl = `${API_BASE_URL}/players/%23${tag}`;
-    await delay(REQUEST_DELAY_MS);
-    const profileRes = await fetchWithRetry(profileUrl, { method: "GET" });
-    if (!profileRes) continue;
-
-    const profileData = await profileRes.json();
-    if (!profileData) continue;
-
     // Check if this player is a known pro
-    let proName = proPlayerLookup.get(tag);
-    let isPro = proTagsSet.has(tag);
+    const proName = proPlayerLookup.get(tag);
+    const isPro = proTagsSet.has(tag);
 
-    // Calculate pro score for non-known players (pro discovery)
-    if (!isPro) {
-      const proScoreResult = calculateProScore(profileData);
-      if (proScoreResult.score >= MIN_PRO_SCORE) {
-        discoveredPros.push({
-          tag: `#${tag}`,
-          name: proScoreResult.name,
-          proScore: proScoreResult.score,
-          details: proScoreResult.details,
-          discoveredAt: new Date().toISOString()
-        });
-        console.log(`[Pipeline Pro Discovered] #${tag} (${proScoreResult.name}) score=${proScoreResult.score} [${proScoreResult.details.join(", ")}]`);
-      }
-    }
-
-    // 4b. Fetch battlelog
+    // Fetch battlelog only (no profile fetch — saves 50% API calls)
     const battlelogUrl = `${API_BASE_URL}/players/%23${tag}/battlelog`;
     await delay(REQUEST_DELAY_MS);
 
@@ -853,7 +856,7 @@ async function main() {
     const battles = await battlelogRes.json();
     if (!Array.isArray(battles)) continue;
 
-    // 4c. Process each battle
+    // Process each battle
     for (const battle of battles) {
       // Filter: only ranked (Path of Legend) matches
       if (battle.type !== "pathOfLegend") {
@@ -952,9 +955,12 @@ async function main() {
   console.log(`[Pipeline Success] Saved ${outputData.metaDecks.length} meta decks and ${outputData.proDecks.length} pro decks.`);
 
   // -----------------------------------------------------------------
-  // Step 7: Save discovered pros
+  // Step 7: Discovered pros (skipped — no profile fetching in v2.1)
   // -----------------------------------------------------------------
-  saveDiscoveredPros(discoveredPros);
+  // Pro discovery via profile badges is disabled to save API calls.
+  // Pro players are managed manually via pro_players.json.
+  // To re-enable, uncomment profile fetching in Step 4.
+  console.log(`[Pro Discovery] Skipped (profile fetching disabled). Pro list managed via pro_players.json (${proPlayers.length} players).`);
 
   // -----------------------------------------------------------------
   // Step 8: Cache card icons locally
