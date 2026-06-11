@@ -2,8 +2,11 @@ name: Daily Meta Decks Sync
 
 on:
   schedule:
-    # Run everyday at 00:00 UTC
-    - cron: '0 0 * * *'
+    # Run 3 times daily to capture different battlelog snapshots
+    # 08:00 UTC (TR 11:00) — morning players
+    # 16:00 UTC (TR 19:00) — peak hours
+    # 00:00 UTC (TR 03:00) — late night / different regions
+    - cron: '0 0,8,16 * * *'
   workflow_dispatch:
     # Allows manual triggering from GitHub actions tab
 

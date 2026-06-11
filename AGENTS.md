@@ -16,12 +16,14 @@ Bu projenin amacı, Clash Royale oyuncularının kendi kart seviyelerine, sahip 
 
 ### Temel Özellikler:
 *   **Oyuncu Profili Sorgulama:** Oyuncunun oyuncu etiketi (player tag) ile Clash Royale API'sinden profil verilerini çekmek. Sahip olduğu kartları, seviyelerini, evrimlerini ve kahramanlarını analiz etmek.
-*   **Meta Destelerin Çekilmesi:** Güncel metada en çok oynanan veya kazanma oranı en yüksek destelerin çekilmesi ve listelenmesi (API veya kazıma yöntemleri ile).
-*   **E-Sporcu (Pro) Deste Takibi:** Dünyanın en iyi Clash Royale e-sporcularının (Mohamed Light, Mugi, Ian77 vb.) güncel maçlarını ve destelerini özel olarak listeleyen ve filtreleyen bir sistem. (İlk aşamada `pro_players.json` dosyasındaki statik etiketler analiz edilecek, ilerleyen süreçte profildeki derece/rozet verilerine göre dinamik tespit edilmesi test edilecektir.)
+*   **Meta Destelerin Çekilmesi:** Güncel metada en çok oynanan veya kazanma oranı en yüksek destelerin çekilmesi ve listelenmesi. RoyaleAPI proxy üzerinden Clash Royale API'si kullanılır.
+*   **E-Sporcu (Pro) Deste Takibi:** `pro_players.json` dosyasında elle yönetilen pro oyuncu listesi (20+ oyuncu). Bu oyuncuların destelerini ayrı bir bölümde isimleriyle gösterme. İleride RoyaleAPI/Liquipedia gibi kaynaklardan otomatik liste çekme planlanmaktadır.
 *   **Akıllı Deste Eşleştirme Algoritması:** Oyuncunun kart havuzunu meta destelerle karşılaştırıp en uygun olanları listelemek.
 *   **Gelişmiş Filtreleme ve Öneri Sistemi:**
     *   *Kart Seçimi:* Belirli kartların destede olmasını zorunlu kılma.
-    *   *Evrim/Kart Açma Simülasyonu:* "1 Evrim Açabilirim", "2 Evrim Açabilirim", "1 Kahraman/Kart Açabilirim" veya "2 Kahraman/Kart Açabilirim" filtreleri. Bu filtreler sayesinde kullanıcıya "Şu evrimi/kartı açarsan şu meta desteyi de oynayabilirsin" gibi nokta atışı akıllı tavsiyeler sunulacaktır.
+    *   *Evrim Açma Simülasyonu:* "1 Evrim Açabilirim" veya "2 Evrim Açabilirim" — oyuncunun sahip olmadığı evrimi açma toleransı.
+    *   *Hero Açma Simülasyonu:* "1 Hero Açabilirim" veya "2 Hero Açabilirim" — oyuncunun sahip olmadığı Hero slotundaki kartı (Hero Tombstone, Mighty Miner vb.) açma toleransı. **Not:** Buradaki "Hero" terimi, Clash Royale'deki Hero Slot'a (Slot 1) ve Wild Slot'a (Slot 2) yerleştirilebilen özel Hero/Champion kartlarını ifade eder. Normal kartlardan farklıdır.
+    *   *Sıralama Seçenekleri:* "Önerilen" (rating formülü), "En Çok Oynanan" (useCount), "En Yüksek Kazanma Oranı" (winRate) olmak üzere 3 farklı sıralama kriteri.
 *   **Geçmiş Sezon Metası ve Görsel Önbellekleme (Ek Özellikler):** 
     *   *Sezon Seçimi:* Aktif sezona ek olarak bir önceki sezonun dondurulmuş metası ile eşleştirme yapabilme imkanı.
     *   *Görsel Önbellek:* Supercell CDN değişikliklerinden etkilenmemek amacıyla görsellerin yerel depoda (`public/images/cards/`) barındırılması ve bulunamayan görseller için `onError CDN fallback` koruması.
@@ -93,15 +95,19 @@ CR/
 │   │   ├── meta_decks.json # GitHub Action tarafından derlenen en son meta desteler
 │   │   ├── previous_season_decks.json # Bir önceki sezona ait dondurulmuş meta desteler
 │   │   ├── current_season.json # Kayıtlı güncel sezon ID verisi
-│   │   └── pro_players.json # E-sporcuların (Pro) oyuncu etiketlerini içeren liste (Mohamed Light, Mugi vb.)
+│   │   ├── season_accumulator.json # Sezon boyunca kümülatif maç verisi (günde 3 kez güncellenir)
+│   │   ├── cards_static.json # cr-api-data'dan çekilen kart bilgileri (elixir, rarity)
+│   │   ├── pro_players.json # Elle yönetilen pro oyuncu listesi (20+ oyuncu)
+│   │   └── discovered_pros.json # Badge analizi ile keşfedilen potansiyel pro oyuncular
 │   ├── services/           # Clash Royale API entegrasyonu ve iş mantığı
-│   │   ├── royaleApi.ts    # Resmi API çağrıları
-│   │   └── deckMatcher.ts  # Deste eşleştirme ve isteğe bağlı öneri algoritması
+│   │   ├── royaleApi.ts    # Resmi API çağrıları (RoyaleAPI proxy üzerinden)
+│   │   └── deckMatcher.ts  # Deste eşleştirme, hero/evo filtresi ve sıralama algoritması
 │   ├── styles/             # Global stiller ve tasarım token'ları
 │   │   ├── globals.css     # CSS Variables (Color, Typography, Shadows)
 │   │   └── theme.css       # Premium tema ayarları (Dark mode, Glassmorphism)
 │   └── utils/              # Yardımcı fonksiyonlar
-│       └── cardHelpers.ts  # Nadirlik ve iksir değerlerini tutan ortak yardımcı modül
+│       ├── cardHelpers.ts  # cards_static.json'dan okuyan kart bilgi modülü
+│       └── seasonHelper.ts # Sezon tarih hesaplayıcı (ilk Pazartesi, 09:00 UTC)
 
 ```
 
@@ -116,39 +122,44 @@ CR/
     *   GitHub deposuna her kod gönderildiğinde (push) siteyi otomatik olarak derleyip yayına alır.
 
 ### 4.2 Otomatik Meta Veri Güncelleme Hattı (GitHub Actions Pipeline)
-*   RoyaleAPI gibi devasa veri sunan siteler Supercell'in resmi "Developer Partner"ı olup doğrudan veri tabanı senkronizasyonuna veya çok yüksek istek limitlerine sahiptir. Standart bir geliştirici anahtarı ile canlı olarak her kullanıcı girdiğinde 1000 oyuncuyu taramak API limitlerine takılacaktır.
-*   **Çözüm:** Depomuzda ücretsiz bir **GitHub Action** iş akışı kuracağız.
-    *   Bu iş akışı günde bir kez arka planda otomatik olarak çalışır.
-    *   Resmi Clash Royale API'sinden global ilk 1000 oyuncunun etiketlerini ve `src/data/pro_players.json` dosyasındaki pro oyuncuların etiketlerini alır.
-    *   Bu oyuncuların son maç geçmişlerini (`/battlelog`) ve aktif destelerini analiz eder.
-    *   En çok kullanılan ve kazanma oranı en yüksek desteleri belirler.
-    *   **API Limit Koruması:** İsteklerin API limitlerine takılmaması (Rate limit 429 hatası) için ardışık istekler arasına kısa bekleme süreleri (örn. 50ms gecikme veya limitli paralel istekler) konulur ve hata durumunda otomatik yeniden deneme (exponential backoff) uygulanır.
-    *   Sonuçları `src/data/meta_decks.json` dosyasına yazıp depoya otomatik olarak commit eder. Ayrıca indirilen yeni kart görsellerini ve sezon arşivlerini de depoya pushlar.
-    *   Değişiklik depoya yansıdığında Vercel siteyi statik olarak yeniden derler. Bu sayede web sitemiz **0ms veritabanı/API gecikmesiyle** son derece hızlı çalışır.
+*   **Proxy:** Resmi Clash Royale API'si IP kısıtlaması uyguladığından, GitHub Actions ortamında `proxy.royaleapi.dev` üzerinden istek atılır. API anahtarı `45.79.218.79` IP'sine kayıtlıdır.
+*   **Çalışma Sıklığı:** Günde **3 kez** (08:00, 16:00, 00:00 UTC = TR 11:00, 19:00, 03:00). Farklı saatlerde çalışarak farklı battlelog snapshot'larını yakalayıp kümülatif veri zenginliği sağlanır.
+*   **Çözüm:** Depomuzda ücretsiz bir **GitHub Action** iş akışı çalışır.
+    *   **Çoklu Bölge Stratejisi:** Global leaderboard PoL geçişinden beri boş döndüğü için, 15 farklı ülke leaderboard'undan (Fransa, Almanya, Türkiye, Japonya, ABD, Çin, Brezilya, Suudi Arabistan, İspanya, G. Kore, İtalya, Arjantin, Meksika, Finlandiya + Global) top 200 oyuncuları çekilir.
+    *   Toplamda ~1000+ benzersiz oyuncunun sadece **battlelog** verisi çekilir (profil çekme kaldırıldı — %50 hız kazancı).
+    *   `pro_players.json` dosyasındaki pro oyuncuların desteleri ayrıca etiketlenir.
+    *   **Kümülatif Accumulator:** Her çalıştırmada veriler `season_accumulator.json` dosyasına kümülatif olarak eklenir. Sezon boyunca veri kalitesi sürekli artar.
+    *   **API Limit Koruması:** İstekler arasına 100ms gecikme + exponential backoff ile yeniden deneme.
+    *   **Failsafe:** Eğer 20'den az meta deste bulunursa, mevcut `meta_decks.json` korunur ve üzerine yazılmaz.
+    *   Sonuçlar `meta_decks.json`'a yazılıp depoya otomatik commit edilir. Vercel siteyi yeniden derler.
 
 #### 4.2.1 Veri Analiz Algoritması (GitHub Action Script Detayı)
-GitHub Action tetiklendiğinde arka planda çalışan Node.js betiği şu adımları izler:
-1.  **Veri Toplama:** İlk 1000 oyuncunun ve `pro_players.json` içindeki oyuncuların `/battlelog` verilerini çeker.
-2.  **Maç Filtreleme:** Sadece rekabetçi oyun modlarındaki (`type: "pathOfLegend"` veya `"challenge"`) maçlar analize dahil edilir. Dostluk maçları veya 2v2 gibi eğlence modları filtrelenir.
-3.  **Deste Benzersizleştirme (Deck Signature):** Her maçtaki 8 kartın ID'leri sayısal olarak sıralanıp aralarına noktalı virgül (`;`) konularak benzersiz bir anahtar (`deckId`) oluşturulur (Örn: `26000000;26000012;...`).
-4.  **Kazanma Durumu:** Oyuncunun kron sayısı rakibinden fazla ise (`teamCrowns > opponentCrowns` veya `crownsEarned` kıyaslaması) o maç "Galibiyet" olarak sayılır.
-5.  **İstatistik Toplama:** Bellekteki bir haritada (Map) her `deckId` için `useCount` (kullanım sayısı) ve `winCount` (kazanma sayısı) toplanır.
-6.  **Filtreleme & Eşik Değeri:** Sadece 1 kez oynanıp kazanan (yalancı %100 kazanma oranına sahip) desteleri engellemek için, sadece belirli bir kullanım sınırını (Örn: en az 5-10 maç) aşan desteler hesaba katılır.
-7.  **Sıralama:** Desteler kazanma oranına (`winRate / useCount`) ve kullanım sıklığına göre sıralanarak en iyi 30 deste `meta_decks.json` içerisine kaydedilir. E-sporcu desteleri ise ayrı bir `pro_decks` etiketi altında toplanır.
-8.  **Sezon Geçiş Kontrolü:** Betik, resmi API'den en son Path of Legend sezon ID'sini denetler. Eğer bu ID, `current_season.json` dosyasındakinden farklıysa, mevcut `meta_decks.json` dosyası `previous_season_decks.json` olarak kopyalanıp arşivlenir ve yeni sezon verileri sıfırdan oluşturulmaya başlanır.
-9.  **Görsel Önbellekleme:** Betik, derlenen destelerdeki tüm kart ID'lerini tarar. Eğer `public/images/cards/{id}.png` dosya yolunda kartın resmi yerel olarak bulunmuyorsa, CDN üzerinden indirip kaydeder.
+GitHub Action tetiklendiğinde arka planda çalışan Node.js betiği (`scripts/update-meta.js`) şu adımları izler:
+1.  **Kart Verisi İndirme:** `cr-api-data` reposundan kart meta verisi (elixir, rarity) indirilip `cards_static.json`'a kaydedilir.
+2.  **Sezon Yönetimi:** Sezon ID'si hesaplanır (her ayın ilk Pazartesi 09:00 UTC). Sezon değişimi tespit edilirse accumulator arşivlenip sıfırlanır.
+3.  **Çoklu Bölge Oyuncu Toplama:** 15 ülke leaderboard'undan top 200 oyuncular çekilir, tekilleştirilir. Fallback olarak top 5 klanın üyeleri taranır.
+4.  **Battlelog Tarama:** Her oyuncunun `/battlelog` verisi çekilir (profil çekilmez). Sadece `pathOfLegend` modundaki maçlar işlenir.
+5.  **Deste Analizi:** 8 kartın ID'leri sıralanıp benzersiz `deckId` oluşturulur. Slot konfigürasyonu (evo/hero/flex) ilk 3 pozisyondan takip edilir.
+6.  **Kümülatif Birleştirme:** Günlük veriler `season_accumulator.json` ile merge edilir (useCount/winCount toplanır).
+7.  **Rating Hesaplama:** `rating = winRate × 0.6 + normalize(useCount) × 0.4` formülüyle desteler puanlanır.
+8.  **Çıktı:** En iyi 50 meta deste + 30 pro deste `meta_decks.json`'a yazılır. Eksik kart görselleri CDN'den indirilir.
 
 ### 4.3 Deste Kopyalama (Copy Deck) Özelliği
 *   Clash Royale oyununun desteklediği resmi URL şemasını kullanacağız:
     `https://link.clashroyale.com/deck/en?deck=ID1;ID2;ID3;ID4;ID5;ID6;ID7;ID8`
 *   Her deste kartında bir **"Oyuna Kopyala"** butonu olacak. Bu buton, kullanıcının cihazında oyunu otomatik olarak açarak desteyi doğrudan boş bir slota kopyalamasını sağlayacaktır.
 
-### 4.4 Simülasyon Filtreleme Kuralları (Eksik Kart/Evrim)
-*   **Varsayılan Durum:** Algoritma sadece kullanıcının o anki kart seviyeleri ve evrimlerine göre %100 kurabileceği desteleri listeler.
-*   **İsteğe Bağlı Filtre (Toggle / Seçim):** Kullanıcı filtre panelinden şu simülasyon filtrelerini ayrı ayrı açabilir:
-    *   *Evrim Açabilirim:* "1 Evrim Açabilirim" veya "2 Evrim Açabilirim".
-    *   *Kahraman/Kart Açabilirim:* "1 Kahraman/Kart Açabilirim" veya "2 Kahraman/Kart Açabilirim".
-*   Seçilen filtre değerine göre, oyuncunun o an sahip olmadığı veya evrimleştirmediği kart/evrim sayısı tolerans dahilinde tutulur. Deste üzerinde eksik olan kartlar ve açılması gereken evrimler kullanıcıya tavsiye rozetiyle gösterilir (örn: *"1 Evrim Gerekli: Knight evrimini açarak bu desteyi oynayabilirsiniz"*).
+### 4.4 Simülasyon Filtreleme Kuralları (Eksik Kart/Evrim/Hero)
+*   **Varsayılan Durum:** Algoritma sadece kullanıcının o anki kart seviyeleri, evrimlerine ve hero kartlarına göre %100 kurabileceği desteleri listeler.
+*   **İsteğe Bağlı Filtreler (Bağımsız Çalışır):**
+    *   *Evrim Açabilirim:* "1 Evrim Açabilirim" veya "2 Evrim Açabilirim" — Oyuncunun sahip olduğu ama evrimleştirmediği kartlar için tolerans.
+    *   *Hero Açabilirim:* "1 Hero Açabilirim" veya "2 Hero Açabilirim" — Oyuncunun sahip olmadığı **Hero Slot kartları** için tolerans. Hero Slot kartları: Hero Tombstone (Tomb Queen), Mighty Miner, Archer Queen, Golden Knight, Skeleton King, Monk gibi Hero/Champion sınıfı kartlar. Bunlar normal kartlardan farklıdır ve oyunda Hero Slotu veya Wild Slotu gerektirir.
+    *   *Kart Açabilirim:* "1 Kart Açabilirim" veya "2 Kart Açabilirim" — Oyuncunun sahip olmadığı hero olmayan normal kartlar için tolerans.
+*   **Sıralama Seçenekleri (Sorting):**
+    *   *Önerilen (Varsayılan):* Rating formülü (`winRate × 0.6 + normalize(useCount) × 0.4`)
+    *   *En Çok Oynanan:* `useCount` (kullanım sayısına göre azalan)
+    *   *En Yüksek Kazanma Oranı:* `winRate` (kazanma yüzdesine göre azalan)
+*   Deste üzerinde eksik olan kartlar, evrimler ve hero kartlar kullanıcıya ayrı ayrı tavsiye rozetiyle gösterilir (örn: *"1 Hero Gerekli: Hero Tombstone kartını açarak bu desteyi oynayabilirsiniz"*).
 
 ### 4.5 Mimari Kararlar ve Risk Yönetimi (Architecture & Risk Management)
 *   **Failsafe (Hata Güvenliği):** GitHub Actions veri toplama betiği, çekilen veri miktarını doğrular. Eğer elde edilen geçerli meta deste sayısı belirlenen eşik değerinin (örn. en az 20 deste) altındaysa, işlem iptal edilir ve mevcut çalışan `meta_decks.json` dosyası üzerine yazılmaz.
