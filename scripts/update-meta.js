@@ -37,7 +37,7 @@ if (fs.existsSync(envPath)) {
 // ---------------------------------------------------------------------------
 // CONFIGURATION
 // ---------------------------------------------------------------------------
-const API_BASE_URL = "https://api.clashroyale.com/v1";
+const API_BASE_URL = "https://proxy.royaleapi.dev/v1";
 const LIMIT_PLAYERS = 1000;           // Number of top players to scan (was 40)
 const MIN_DECK_USE_COUNT = 8;         // Minimum games for a deck to count in meta (was 3)
 const MIN_META_DECKS_FAILSAFE = 20;   // Abort if fewer decks found (data integrity)
