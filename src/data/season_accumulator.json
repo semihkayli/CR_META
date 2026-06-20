@@ -2,24 +2,24 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-20T11:20:40.923Z",
-  "totalBattlesAnalyzed": 290,
-  "totalPlayersScanned": 20,
-  "totalRunCount": 1,
+  "lastUpdatedAt": "2026-06-20T14:08:19.980Z",
+  "totalBattlesAnalyzed": 313,
+  "totalPlayersScanned": 40,
+  "totalRunCount": 2,
   "playerLastScan": {
     "G9YV9GR8R": "20260619T005844.000Z",
-    "2CLV2RP0": "20260619T143021.000Z",
+    "2CLV2RP0": "20260620T121521.000Z",
     "Y9R22RQ2": "20260620T040330.000Z",
     "R90PRV0PY": "20260619T173506.000Z",
-    "9G28ULYR": "20260620T042723.000Z",
+    "9G28ULYR": "20260620T122002.000Z",
     "92L9R2JG": "20260620T075928.000Z",
     "PCG229PC": "20260620T013634.000Z",
     "GG829JGY": "20260619T205615.000Z",
-    "PPV2JUUGU": "20260620T082446.000Z",
+    "PPV2JUUGU": "20260620T134611.000Z",
     "9890JJJV": "20260601T085828.000Z",
     "9RV2VVJVL": "20260521T190503.000Z",
-    "989PQYY8": "20260620T104039.000Z",
-    "GLUU9JGQ": "20260620T111906.000Z",
+    "989PQYY8": "20260620T133807.000Z",
+    "GLUU9JGQ": "20260620T114306.000Z",
     "UJ0CVRUV": "20260619T151925.000Z"
   },
   "decks": {
@@ -934,16 +934,21 @@
           "evo": 0
         }
       ],
-      "useCount": 4,
-      "winCount": 3,
+      "useCount": 5,
+      "winCount": 4,
       "slotConfigs": {
-        "26000059|26000072|27000000": 4
+        "26000059|26000072|27000000": 5
       },
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
           "wins": 3,
           "games": 4
+        },
+        "2CLV2RP0": {
+          "name": "Mugi",
+          "wins": 1,
+          "games": 1
         }
       }
     },
@@ -982,16 +987,21 @@
           "evo": 0
         }
       ],
-      "useCount": 4,
-      "winCount": 0,
+      "useCount": 6,
+      "winCount": 1,
       "slotConfigs": {
-        "26000058|26000062|26000049": 4
+        "26000058|26000062|26000049": 6
       },
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
           "wins": 0,
           "games": 4
+        },
+        "PPV2JUUGU": {
+          "name": "Boss",
+          "wins": 1,
+          "games": 2
         }
       }
     },
@@ -1006,11 +1016,11 @@
           "evo": 0
         },
         {
-          "id": 28000004,
+          "id": 27000000,
           "evo": 1
         },
         {
-          "id": 27000000,
+          "id": 28000004,
           "evo": 0
         },
         {
@@ -1030,16 +1040,22 @@
           "evo": 0
         }
       ],
-      "useCount": 4,
-      "winCount": 3,
+      "useCount": 5,
+      "winCount": 4,
       "slotConfigs": {
-        "26000026|26000065|28000004": 4
+        "26000026|26000065|28000004": 4,
+        "26000026|26000065|27000000": 1
       },
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
           "wins": 3,
           "games": 4
+        },
+        "9G28ULYR": {
+          "name": "LucasXGamer",
+          "wins": 1,
+          "games": 1
         }
       }
     },
@@ -1377,16 +1393,16 @@
           "evo": 0
         }
       ],
-      "useCount": 21,
+      "useCount": 22,
       "winCount": 9,
       "slotConfigs": {
-        "28000004|26000002|26000011": 21
+        "28000004|26000002|26000011": 22
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
           "wins": 9,
-          "games": 21
+          "games": 22
         }
       }
     },
@@ -1569,16 +1585,16 @@
           "evo": 0
         }
       ],
-      "useCount": 10,
-      "winCount": 7,
+      "useCount": 21,
+      "winCount": 15,
       "slotConfigs": {
-        "27000002|26000002|26000022": 10
+        "27000002|26000002|26000022": 21
       },
       "proUsage": {
         "989PQYY8": {
           "name": "SULLY",
-          "wins": 7,
-          "games": 10
+          "wins": 15,
+          "games": 21
         }
       }
     },
@@ -2396,6 +2412,102 @@
           "name": "NotRealPro",
           "wins": 9,
           "games": 9
+        }
+      }
+    },
+    "26000011;26000021;26000034;26000037;26000064;27000012;28000004;28000011": {
+      "cards": [
+        {
+          "id": 26000037,
+          "evo": 1
+        },
+        {
+          "id": 26000034,
+          "evo": 2
+        },
+        {
+          "id": 27000012,
+          "evo": 1
+        },
+        {
+          "id": 26000021,
+          "evo": 0
+        },
+        {
+          "id": 26000064,
+          "evo": 0
+        },
+        {
+          "id": 28000004,
+          "evo": 0
+        },
+        {
+          "id": 28000011,
+          "evo": 0
+        },
+        {
+          "id": 26000011,
+          "evo": 0
+        }
+      ],
+      "useCount": 1,
+      "winCount": 1,
+      "slotConfigs": {
+        "26000037|26000034|27000012": 1
+      },
+      "proUsage": {
+        "GLUU9JGQ": {
+          "name": "FBI",
+          "wins": 1,
+          "games": 1
+        }
+      }
+    },
+    "26000028;26000036;26000038;26000050;26000074;27000007;28000015;28000016": {
+      "cards": [
+        {
+          "id": 26000036,
+          "evo": 1
+        },
+        {
+          "id": 26000074,
+          "evo": 0
+        },
+        {
+          "id": 26000050,
+          "evo": 1
+        },
+        {
+          "id": 28000015,
+          "evo": 0
+        },
+        {
+          "id": 28000016,
+          "evo": 0
+        },
+        {
+          "id": 26000038,
+          "evo": 0
+        },
+        {
+          "id": 26000028,
+          "evo": 0
+        },
+        {
+          "id": 27000007,
+          "evo": 0
+        }
+      ],
+      "useCount": 6,
+      "winCount": 4,
+      "slotConfigs": {
+        "26000036|26000074|26000050": 6
+      },
+      "proUsage": {
+        "GLUU9JGQ": {
+          "name": "FBI",
+          "wins": 4,
+          "games": 6
         }
       }
     }
