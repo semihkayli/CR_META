@@ -53,5 +53,11 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: auto-update meta data and cached images [skip ci]"
-            git push
+            
+            # Retry push with rebase to handle concurrent updates
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              echo "Push attempt $i failed, retrying in 5s..."
+              sleep 5
+            done
           fi
