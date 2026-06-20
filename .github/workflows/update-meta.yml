@@ -2,19 +2,29 @@ name: Daily Meta Decks Sync
 
 on:
   schedule:
-    # Run 3 times daily to capture different battlelog snapshots
-    # 08:00 UTC (TR 11:00) — morning players
-    # 16:00 UTC (TR 19:00) — peak hours
-    # 00:00 UTC (TR 03:00) — late night / different regions
-    - cron: '0 0,8,16 * * *'
+    # Run 8 times daily (every 3 hours) with timezone-aware region rotation
+    # Each run scans regions whose players are most active at that UTC hour
+    # 00:00 UTC (TR 03:00) — South America peak + Europe late
+    # 03:00 UTC (TR 06:00) — South America + North America
+    # 06:00 UTC (TR 09:00) — North America late + Global
+    # 09:00 UTC (TR 12:00) — East Asia mid-peak + Oceania
+    # 12:00 UTC (TR 15:00) — East Asia + South Asia + Oceania
+    # 15:00 UTC (TR 18:00) — South Asia + Middle East
+    # 18:00 UTC (TR 21:00) — Middle East + Europe peak
+    # 21:00 UTC (TR 00:00) — Europe peak + Global
+    - cron: '0 0,3,6,9,12,15,18,21 * * *'
   workflow_dispatch:
-    # Allows manual triggering from GitHub actions tab
+    inputs:
+      scan_all:
+        description: 'Scan all regions instead of rotation'
+        type: boolean
+        default: false
 
 jobs:
   sync-decks:
     runs-on: ubuntu-latest
-    timeout-minutes: 30   # Extended for 1000 player scan (~8-15 min)
-    
+    timeout-minutes: 30
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -29,6 +39,7 @@ jobs:
       - name: Compile Meta Decks
         env:
           CLASH_ROYALE_API_KEY: ${{ secrets.CLASH_ROYALE_API_KEY }}
+          SCAN_ALL_REGIONS: ${{ inputs.scan_all || 'false' }}
         run: node scripts/update-meta.js
 
       - name: Commit and Push Changes

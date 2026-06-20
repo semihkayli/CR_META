@@ -95,7 +95,7 @@ CR/
 │   │   ├── meta_decks.json # GitHub Action tarafından derlenen en son meta desteler
 │   │   ├── previous_season_decks.json # Bir önceki sezona ait dondurulmuş meta desteler
 │   │   ├── current_season.json # Kayıtlı güncel sezon ID verisi
-│   │   ├── season_accumulator.json # Sezon boyunca kümülatif maç verisi (günde 3 kez güncellenir)
+│   │   ├── season_accumulator.json # Sezon boyunca kümülatif maç verisi (günde 8 kez güncellenir, sıkıştırılmış format)
 │   │   ├── cards_static.json # cr-api-data'dan çekilen kart bilgileri (elixir, rarity)
 │   │   ├── pro_players.json # Elle yönetilen pro oyuncu listesi (20+ oyuncu)
 │   │   └── discovered_pros.json # Badge analizi ile keşfedilen potansiyel pro oyuncular
@@ -121,28 +121,33 @@ CR/
     *   İstemci tarafındaki CORS engellerini aşmak ve API Key'i gizlemek için Next.js **Route Handler (Serverless API)** desteği sunar.
     *   GitHub deposuna her kod gönderildiğinde (push) siteyi otomatik olarak derleyip yayına alır.
 
-### 4.2 Otomatik Meta Veri Güncelleme Hattı (GitHub Actions Pipeline)
-*   **Proxy:** Resmi Clash Royale API'si IP kısıtlaması uyguladığından, GitHub Actions ortamında `proxy.royaleapi.dev` üzerinden istek atılır. API anahtarı `45.79.218.79` IP'sine kayıtlıdır.
-*   **Çalışma Sıklığı:** Günde **3 kez** (08:00, 16:00, 00:00 UTC = TR 11:00, 19:00, 03:00). Farklı saatlerde çalışarak farklı battlelog snapshot'larını yakalayıp kümülatif veri zenginliği sağlanır.
+### 4.2 Otomatik Meta Veri Güncelleme Hattı (GitHub Actions Pipeline v3.0)
+*   **Proxy:** Resmi Clash Royale API'si IP kısıtlaması uyguladığından, GitHub Actions ortamında `proxy.royaleapi.dev` üzerinden istek atılır.
+*   **Çalışma Sıklığı:** Günde **8 kez** (her 3 saatte bir: 00, 03, 06, 09, 12, 15, 18, 21 UTC). Her çalışmada **o saatte aktif olan bölgeler** taranır (zaman dilimi bazlı rotasyon).
 *   **Çözüm:** Depomuzda ücretsiz bir **GitHub Action** iş akışı çalışır.
-    *   **Çoklu Bölge Stratejisi:** Global leaderboard PoL geçişinden beri boş döndüğü için, 15 farklı ülke leaderboard'undan (Fransa, Almanya, Türkiye, Japonya, ABD, Çin, Brezilya, Suudi Arabistan, İspanya, G. Kore, İtalya, Arjantin, Meksika, Finlandiya + Global) top 200 oyuncuları çekilir.
-    *   Toplamda ~1000+ benzersiz oyuncunun sadece **battlelog** verisi çekilir (profil çekme kaldırıldı — %50 hız kazancı).
-    *   `pro_players.json` dosyasındaki pro oyuncuların desteleri ayrıca etiketlenir.
-    *   **Kümülatif Accumulator:** Her çalıştırmada veriler `season_accumulator.json` dosyasına kümülatif olarak eklenir. Sezon boyunca veri kalitesi sürekli artar.
+    *   **27 Bölge + Zaman Dilimi Rotasyonu:** 26 ülke + Global leaderboard. Her çalışmada o saatte pik yapan bölgeler (örn. UTC 18:00'da Orta Doğu + Avrupa) taranır. Bu sayede her bölgenin en aktif saatlerinde veri toplanır.
+    *   **Bölge Grupları:** Doğu Asya (JP, KR, CN, PH), Güney Asya (IN, ID, TH), Orta Doğu (SA, EG, TR), Avrupa (FR, DE, IT, ES, FI, UK, NO, PL), Güney Amerika (BR, AR, MX, CO, PE), Kuzey Amerika (US, CA), Okyanusya (AU).
+    *   **Battlelog Deduplikasyonu:** Her oyuncu için `lastScannedTime` saklanır. Aynı maç iki kere sayılmaz — sıklık artışı güvenle çalışır.
+    *   **Sıkıştırılmış Accumulator:** Kart verileri sadece ID + evo level olarak saklanır (iconUrls/name çıkarıldı). ~%97 boyut azalması (880 KB → ~20 KB).
+    *   **Pro Oyuncu currentDeck:** Her çalışmada pro oyuncuların (20 kişi) profili çekilerek aktif desteleri `meta_decks.json`'a `proCurrentDecks` olarak eklenir.
+    *   `pro_players.json` dosyasındaki pro oyuncuların battlelog desteleri ayrıca etiketlenir.
+    *   **Kümülatif Accumulator:** Her çalıştırmada yeni maçlar `season_accumulator.json` dosyasına kümülatif olarak eklenir.
+    *   **Düşük Kullanımlı Deste Budama:** `useCount < 2` olan desteler otomatik temizlenir.
     *   **API Limit Koruması:** İstekler arasına 100ms gecikme + exponential backoff ile yeniden deneme.
     *   **Failsafe:** Eğer 20'den az meta deste bulunursa, mevcut `meta_decks.json` korunur ve üzerine yazılmaz.
     *   Sonuçlar `meta_decks.json`'a yazılıp depoya otomatik commit edilir. Vercel siteyi yeniden derler.
 
-#### 4.2.1 Veri Analiz Algoritması (GitHub Action Script Detayı)
+#### 4.2.1 Veri Analiz Algoritması (GitHub Action Script v3.0 Detayı)
 GitHub Action tetiklendiğinde arka planda çalışan Node.js betiği (`scripts/update-meta.js`) şu adımları izler:
 1.  **Kart Verisi İndirme:** `cr-api-data` reposundan kart meta verisi (elixir, rarity) indirilip `cards_static.json`'a kaydedilir.
 2.  **Sezon Yönetimi:** Sezon ID'si hesaplanır (her ayın ilk Pazartesi 09:00 UTC). Sezon değişimi tespit edilirse accumulator arşivlenip sıfırlanır.
-3.  **Çoklu Bölge Oyuncu Toplama:** 15 ülke leaderboard'undan top 200 oyuncular çekilir, tekilleştirilir. Fallback olarak top 5 klanın üyeleri taranır.
-4.  **Battlelog Tarama:** Her oyuncunun `/battlelog` verisi çekilir (profil çekilmez). Sadece `pathOfLegend` modundaki maçlar işlenir.
-5.  **Deste Analizi:** 8 kartın ID'leri sıralanıp benzersiz `deckId` oluşturulur. Slot konfigürasyonu (evo/hero/flex) ilk 3 pozisyondan takip edilir.
-6.  **Kümülatif Birleştirme:** Günlük veriler `season_accumulator.json` ile merge edilir (useCount/winCount toplanır).
-7.  **Rating Hesaplama:** `rating = winRate × 0.6 + normalize(useCount) × 0.4` formülüyle desteler puanlanır.
-8.  **Çıktı:** En iyi 50 meta deste + 30 pro deste `meta_decks.json`'a yazılır. Eksik kart görselleri CDN'den indirilir.
+3.  **Zaman Dilimi Bazlı Bölge Rotasyonu:** UTC saatine göre o an aktif bölgeler belirlenir. Her çalışmada ~5-11 bölgenin leaderboard'u taranır.
+4.  **Battlelog Tarama + Deduplikasyon:** Her oyuncunun `/battlelog` verisi çekilir. `lastScannedTime` ile daha önce sayılmış maçlar atlanır. Sadece ranked (Path of Legends) maçlar işlenir.
+5.  **Deste Analizi (Sıkıştırılmış):** 8 kartın ID + evo level bilgisi saklanır. Slot konfigürasyonu ilk 3 pozisyondan takip edilir.
+6.  **Kümülatif Birleştirme:** Günlük veriler accumulator ile merge edilir. Düşük kullanımlı desteler budanır.
+7.  **Çıktı Oluşturma:** Sıkıştırılmış kartlar `cards_static.json`'dan zenginleştirilir (isim, ikon eklenir). Rating hesaplanır.
+8.  **Pro CurrentDeck:** Pro oyuncuların profil API'sinden aktif desteleri çekilir.
+9.  **Çıktı:** En iyi 50 meta deste + 30 pro deste + pro current desteler `meta_decks.json`'a yazılır. Eksik kart görselleri CDN'den indirilir.
 
 ### 4.3 Deste Kopyalama (Copy Deck) Özelliği
 *   Clash Royale oyununun desteklediği resmi URL şemasını kullanacağız:

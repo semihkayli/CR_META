@@ -5,7 +5,7 @@
 export const APP_CONFIG = {
   // Clash Royale API Settings
   API: {
-    BASE_URL: "https://api.clashroyale.com/v1",
+    BASE_URL: "https://proxy.royaleapi.dev/v1",
     PROXY_PATH: "/api/player",
     TIMEOUT_MS: 10000,
   },
