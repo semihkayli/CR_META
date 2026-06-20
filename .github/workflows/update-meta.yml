@@ -47,29 +47,27 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Backup the freshly generated data files before touching git
+          mkdir -p /tmp/generated_data /tmp/generated_cards
+          cp -r src/data/* /tmp/generated_data/
+          cp -r public/images/cards/* /tmp/generated_cards/ 2>/dev/null || true
+          
+          # Fetch and hard-reset to latest remote HEAD (avoids all merge conflicts)
+          git fetch origin main
+          git reset --hard origin/main
+          
+          # Restore the generated files on top of the clean remote state
+          cp -r /tmp/generated_data/* src/data/
+          mkdir -p public/images/cards
+          cp -r /tmp/generated_cards/* public/images/cards/ 2>/dev/null || true
+          
+          # Stage and commit
           git add src/data/ public/images/cards/
           
-          # Only commit if there are changes
           if git diff --staged --quiet; then
             echo "No changes to commit."
-            exit 0
-          fi
-          
-          git commit -m "chore: auto-update meta data and cached images [skip ci]"
-          
-          # Disable exit-on-error for retry loop (bash -e kills the script on first git push failure)
-          set +e
-          for attempt in 1 2 3; do
-            git pull --rebase origin main
+          else
+            git commit -m "chore: auto-update meta data and cached images [skip ci]"
             git push
-            if [ $? -eq 0 ]; then
-              echo "Push succeeded on attempt $attempt."
-              exit 0
-            fi
-            echo "Push attempt $attempt failed. Retrying in 5s..."
-            sleep 5
-          done
-          set -e
-          
-          echo "All push attempts failed."
-          exit 1
+          fi
