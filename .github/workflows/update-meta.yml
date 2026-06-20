@@ -30,11 +30,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Compile Meta Decks
         env:
@@ -51,13 +52,24 @@ jobs:
           # Only commit if there are changes
           if git diff --staged --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "chore: auto-update meta data and cached images [skip ci]"
-            
-            # Retry push with rebase to handle concurrent updates
-            for i in 1 2 3; do
-              git pull --rebase origin main && git push && break
-              echo "Push attempt $i failed, retrying in 5s..."
-              sleep 5
-            done
+            exit 0
           fi
+          
+          git commit -m "chore: auto-update meta data and cached images [skip ci]"
+          
+          # Disable exit-on-error for retry loop (bash -e kills the script on first git push failure)
+          set +e
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            git push
+            if [ $? -eq 0 ]; then
+              echo "Push succeeded on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt failed. Retrying in 5s..."
+            sleep 5
+          done
+          set -e
+          
+          echo "All push attempts failed."
+          exit 1
