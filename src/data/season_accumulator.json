@@ -2,26 +2,26 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-23T14:53:07.138Z",
-  "totalBattlesAnalyzed": 925,
-  "totalPlayersScanned": 400,
-  "totalRunCount": 20,
+  "lastUpdatedAt": "2026-06-23T17:18:46.203Z",
+  "totalBattlesAnalyzed": 965,
+  "totalPlayersScanned": 420,
+  "totalRunCount": 21,
   "playerLastScan": {
     "G9YV9GR8R": "20260621T131816.000Z",
     "2CLV2RP0": "20260621T124728.000Z",
-    "Y9R22RQ2": "20260623T022501.000Z",
+    "Y9R22RQ2": "20260623T162054.000Z",
     "R90PRV0PY": "20260619T173506.000Z",
-    "9G28ULYR": "20260623T134103.000Z",
+    "9G28ULYR": "20260623T165244.000Z",
     "92L9R2JG": "20260623T131816.000Z",
-    "PCG229PC": "20260622T014632.000Z",
+    "PCG229PC": "20260623T171518.000Z",
     "GG829JGY": "20260623T090404.000Z",
-    "PPV2JUUGU": "20260623T054421.000Z",
+    "PPV2JUUGU": "20260623T165459.000Z",
     "9890JJJV": "20260601T085828.000Z",
     "9RV2VVJVL": "20260521T190503.000Z",
     "989PQYY8": "20260621T171318.000Z",
     "GLUU9JGQ": "20260623T132514.000Z",
-    "UJ0CVRUV": "20260623T035806.000Z",
-    "R09228V": "20260622T205300.000Z",
+    "UJ0CVRUV": "20260623T155456.000Z",
+    "R09228V": "20260623T150320.000Z",
     "YU9JR0Q": "20260623T054955.000Z"
   },
   "decks": {
@@ -60,10 +60,10 @@
           "evo": 0
         }
       ],
-      "useCount": 106,
-      "winCount": 63,
+      "useCount": 109,
+      "winCount": 64,
       "slotConfigs": {
-        "26000058|26000062|26000049": 106
+        "26000058|26000062|26000049": 109
       },
       "proUsage": {
         "G9YV9GR8R": {
@@ -73,8 +73,8 @@
         },
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 37,
-          "games": 70
+          "wins": 38,
+          "games": 73
         },
         "R09228V": {
           "name": "Morten",
@@ -550,11 +550,11 @@
           "evo": 0
         }
       ],
-      "useCount": 22,
-      "winCount": 13,
+      "useCount": 41,
+      "winCount": 26,
       "slotConfigs": {
         "27000000|26000038|26000010": 6,
-        "26000010|26000038|27000000": 12,
+        "26000010|26000038|27000000": 31,
         "26000010|26000038|26000014": 4
       },
       "proUsage": {
@@ -565,8 +565,8 @@
         },
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 7,
-          "games": 12
+          "wins": 20,
+          "games": 31
         },
         "9RV2VVJVL": {
           "name": "Jack",
@@ -754,16 +754,16 @@
           "evo": 0
         }
       ],
-      "useCount": 53,
-      "winCount": 30,
+      "useCount": 64,
+      "winCount": 33,
       "slotConfigs": {
-        "26000036|26000017|26000035": 53
+        "26000036|26000017|26000035": 64
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 30,
-          "games": 52
+          "wins": 33,
+          "games": 63
         },
         "GLUU9JGQ": {
           "name": "FBI",
@@ -1347,16 +1347,16 @@
           "evo": 0
         }
       ],
-      "useCount": 45,
+      "useCount": 47,
       "winCount": 21,
       "slotConfigs": {
-        "28000004|26000002|26000011": 45
+        "28000004|26000002|26000011": 47
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
           "wins": 14,
-          "games": 32
+          "games": 33
         },
         "PCG229PC": {
           "name": "OYASSUU",
@@ -1367,6 +1367,11 @@
           "name": "FBI",
           "wins": 0,
           "games": 2
+        },
+        "R09228V": {
+          "name": "Morten",
+          "wins": 0,
+          "games": 1
         }
       }
     },
@@ -2131,17 +2136,17 @@
           "evo": 0
         }
       ],
-      "useCount": 48,
-      "winCount": 39,
+      "useCount": 52,
+      "winCount": 42,
       "slotConfigs": {
-        "27000002|26000002|26000056": 25,
+        "27000002|26000002|26000056": 29,
         "26000056|26000002|27000002": 23
       },
       "proUsage": {
         "UJ0CVRUV": {
           "name": "NotRealPro",
-          "wins": 21,
-          "games": 25
+          "wins": 24,
+          "games": 29
         },
         "GLUU9JGQ": {
           "name": "FBI",
