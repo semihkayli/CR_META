@@ -2,16 +2,16 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-25T14:36:41.233Z",
-  "totalBattlesAnalyzed": 1596,
-  "totalPlayersScanned": 640,
-  "totalRunCount": 32,
+  "lastUpdatedAt": "2026-06-25T17:12:59.595Z",
+  "totalBattlesAnalyzed": 1624,
+  "totalPlayersScanned": 660,
+  "totalRunCount": 33,
   "playerLastScan": {
     "G9YV9GR8R": "20260621T131816.000Z",
     "2CLV2RP0": "20260624T150245.000Z",
     "Y9R22RQ2": "20260624T050943.000Z",
     "R90PRV0PY": "20260625T092458.000Z",
-    "9G28ULYR": "20260625T120643.000Z",
+    "9G28ULYR": "20260625T170542.000Z",
     "92L9R2JG": "20260625T112433.000Z",
     "PCG229PC": "20260624T215543.000Z",
     "GG829JGY": "20260625T072224.000Z",
@@ -19,10 +19,10 @@
     "9890JJJV": "20260601T085828.000Z",
     "9RV2VVJVL": "20260521T190503.000Z",
     "989PQYY8": "20260621T171318.000Z",
-    "GLUU9JGQ": "20260625T101621.000Z",
-    "UJ0CVRUV": "20260625T143421.000Z",
+    "GLUU9JGQ": "20260625T152558.000Z",
+    "UJ0CVRUV": "20260625T144736.000Z",
     "R09228V": "20260625T061709.000Z",
-    "YU9JR0Q": "20260625T082035.000Z"
+    "YU9JR0Q": "20260625T154342.000Z"
   },
   "decks": {
     "26000010;26000031;26000032;26000049;26000058;26000062;27000004;28000011": {
@@ -60,10 +60,10 @@
           "evo": 0
         }
       ],
-      "useCount": 181,
-      "winCount": 109,
+      "useCount": 191,
+      "winCount": 113,
       "slotConfigs": {
-        "26000058|26000062|26000049": 181
+        "26000058|26000062|26000049": 191
       },
       "proUsage": {
         "G9YV9GR8R": {
@@ -83,8 +83,8 @@
         },
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 11,
-          "games": 17
+          "wins": 15,
+          "games": 27
         }
       }
     },
@@ -2152,17 +2152,17 @@
           "evo": 0
         }
       ],
-      "useCount": 69,
-      "winCount": 55,
+      "useCount": 72,
+      "winCount": 56,
       "slotConfigs": {
-        "27000002|26000002|26000056": 45,
+        "27000002|26000002|26000056": 48,
         "26000056|26000002|27000002": 24
       },
       "proUsage": {
         "UJ0CVRUV": {
           "name": "NotRealPro",
-          "wins": 36,
-          "games": 45
+          "wins": 37,
+          "games": 48
         },
         "GLUU9JGQ": {
           "name": "FBI",
@@ -4712,7 +4712,7 @@
           "evo": 0
         },
         {
-          "id": 28000001,
+          "id": 28000008,
           "evo": 0
         },
         {
@@ -4720,15 +4720,15 @@
           "evo": 0
         },
         {
-          "id": 28000008,
+          "id": 28000001,
           "evo": 0
         }
       ],
-      "useCount": 13,
-      "winCount": 6,
+      "useCount": 14,
+      "winCount": 7,
       "slotConfigs": {
         "26000058|26000072|26000055": 4,
-        "26000055|26000072|26000058": 9
+        "26000055|26000072|26000058": 10
       },
       "proUsage": {
         "92L9R2JG": {
@@ -4738,8 +4738,8 @@
         },
         "GLUU9JGQ": {
           "name": "FBI",
-          "wins": 5,
-          "games": 7
+          "wins": 6,
+          "games": 8
         }
       }
     },
@@ -5018,10 +5018,10 @@
           "evo": 0
         }
       ],
-      "useCount": 52,
-      "winCount": 31,
+      "useCount": 53,
+      "winCount": 32,
       "slotConfigs": {
-        "26000024|28000015|26000050": 52
+        "26000024|28000015|26000050": 53
       },
       "proUsage": {
         "9G28ULYR": {
@@ -5036,8 +5036,8 @@
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 26,
-          "games": 38
+          "wins": 27,
+          "games": 39
         }
       }
     },
@@ -5998,16 +5998,16 @@
           "evo": 0
         }
       ],
-      "useCount": 15,
-      "winCount": 9,
+      "useCount": 26,
+      "winCount": 14,
       "slotConfigs": {
-        "28000008|26000003|26000039": 15
+        "28000008|26000003|26000039": 26
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 9,
-          "games": 15
+          "wins": 14,
+          "games": 26
         }
       }
     },
