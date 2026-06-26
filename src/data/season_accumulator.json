@@ -2,25 +2,25 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-25T22:22:10.465Z",
-  "totalBattlesAnalyzed": 1666,
-  "totalPlayersScanned": 700,
-  "totalRunCount": 35,
+  "lastUpdatedAt": "2026-06-26T03:54:29.189Z",
+  "totalBattlesAnalyzed": 1695,
+  "totalPlayersScanned": 720,
+  "totalRunCount": 36,
   "playerLastScan": {
     "G9YV9GR8R": "20260621T131816.000Z",
     "2CLV2RP0": "20260624T150245.000Z",
     "Y9R22RQ2": "20260624T050943.000Z",
     "R90PRV0PY": "20260625T092458.000Z",
-    "9G28ULYR": "20260625T215633.000Z",
+    "9G28ULYR": "20260625T231540.000Z",
     "92L9R2JG": "20260625T112433.000Z",
     "PCG229PC": "20260624T215543.000Z",
     "GG829JGY": "20260625T072224.000Z",
-    "PPV2JUUGU": "20260625T051525.000Z",
+    "PPV2JUUGU": "20260626T022800.000Z",
     "9890JJJV": "20260601T085828.000Z",
     "9RV2VVJVL": "20260521T190503.000Z",
     "989PQYY8": "20260621T171318.000Z",
-    "GLUU9JGQ": "20260625T172208.000Z",
-    "UJ0CVRUV": "20260625T144736.000Z",
+    "GLUU9JGQ": "20260625T225409.000Z",
+    "UJ0CVRUV": "20260626T014403.000Z",
     "R09228V": "20260625T061709.000Z",
     "YU9JR0Q": "20260625T175704.000Z"
   },
@@ -2152,17 +2152,17 @@
           "evo": 0
         }
       ],
-      "useCount": 72,
-      "winCount": 56,
+      "useCount": 77,
+      "winCount": 60,
       "slotConfigs": {
-        "27000002|26000002|26000056": 48,
+        "27000002|26000002|26000056": 53,
         "26000056|26000002|27000002": 24
       },
       "proUsage": {
         "UJ0CVRUV": {
           "name": "NotRealPro",
-          "wins": 37,
-          "games": 48
+          "wins": 41,
+          "games": 53
         },
         "GLUU9JGQ": {
           "name": "FBI",
@@ -2822,7 +2822,7 @@
           "evo": 1
         },
         {
-          "id": 26000052,
+          "id": 26000020,
           "evo": 0
         },
         {
@@ -2830,7 +2830,7 @@
           "evo": 0
         },
         {
-          "id": 26000020,
+          "id": 26000052,
           "evo": 0
         },
         {
@@ -2842,16 +2842,16 @@
           "evo": 0
         }
       ],
-      "useCount": 3,
-      "winCount": 2,
+      "useCount": 22,
+      "winCount": 14,
       "slotConfigs": {
-        "26000036|26000017|26000050": 3
+        "26000036|26000017|26000050": 22
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 1,
-          "games": 2
+          "wins": 13,
+          "games": 21
         },
         "GLUU9JGQ": {
           "name": "FBI",
@@ -5023,16 +5023,16 @@
           "evo": 0
         }
       ],
-      "useCount": 57,
-      "winCount": 35,
+      "useCount": 59,
+      "winCount": 37,
       "slotConfigs": {
-        "26000024|28000015|26000050": 57
+        "26000024|28000015|26000050": 59
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 1,
-          "games": 4
+          "wins": 3,
+          "games": 6
         },
         "PPV2JUUGU": {
           "name": "Boss",
@@ -6403,6 +6403,54 @@
           "name": "LucasXGamer",
           "wins": 0,
           "games": 3
+        }
+      }
+    },
+    "26000032;26000058;26000062;26000099;26000102;27000004;28000012;28000015": {
+      "cards": [
+        {
+          "id": 26000058,
+          "evo": 1
+        },
+        {
+          "id": 26000099,
+          "evo": 0
+        },
+        {
+          "id": 26000062,
+          "evo": 2
+        },
+        {
+          "id": 26000032,
+          "evo": 0
+        },
+        {
+          "id": 27000004,
+          "evo": 0
+        },
+        {
+          "id": 28000012,
+          "evo": 0
+        },
+        {
+          "id": 26000102,
+          "evo": 0
+        },
+        {
+          "id": 28000015,
+          "evo": 0
+        }
+      ],
+      "useCount": 2,
+      "winCount": 0,
+      "slotConfigs": {
+        "26000058|26000099|26000062": 2
+      },
+      "proUsage": {
+        "GLUU9JGQ": {
+          "name": "FBI",
+          "wins": 0,
+          "games": 2
         }
       }
     }
