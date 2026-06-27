@@ -2,16 +2,16 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-27T08:38:34.539Z",
-  "totalBattlesAnalyzed": 1888,
-  "totalPlayersScanned": 860,
-  "totalRunCount": 43,
+  "lastUpdatedAt": "2026-06-27T10:58:45.402Z",
+  "totalBattlesAnalyzed": 1894,
+  "totalPlayersScanned": 880,
+  "totalRunCount": 44,
   "playerLastScan": {
     "G9YV9GR8R": "20260621T131816.000Z",
     "2CLV2RP0": "20260624T150245.000Z",
     "Y9R22RQ2": "20260624T050943.000Z",
     "R90PRV0PY": "20260627T073857.000Z",
-    "9G28ULYR": "20260627T041211.000Z",
+    "9G28ULYR": "20260627T105328.000Z",
     "92L9R2JG": "20260626T052420.000Z",
     "PCG229PC": "20260626T141643.000Z",
     "GG829JGY": "20260626T224916.000Z",
@@ -22,7 +22,7 @@
     "GLUU9JGQ": "20260627T032734.000Z",
     "UJ0CVRUV": "20260627T023429.000Z",
     "R09228V": "20260627T022836.000Z",
-    "YU9JR0Q": "20260626T164602.000Z",
+    "YU9JR0Q": "20260627T090547.000Z",
     "P8Q0JYRP": "20260627T062853.000Z"
   },
   "decks": {
@@ -5035,10 +5035,10 @@
           "evo": 0
         }
       ],
-      "useCount": 67,
-      "winCount": 42,
+      "useCount": 68,
+      "winCount": 43,
       "slotConfigs": {
-        "26000024|28000015|26000050": 67
+        "26000024|28000015|26000050": 68
       },
       "proUsage": {
         "9G28ULYR": {
@@ -5053,8 +5053,8 @@
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 35,
-          "games": 50
+          "wins": 36,
+          "games": 51
         },
         "92L9R2JG": {
           "name": "Surgical Goblin",
@@ -6661,6 +6661,55 @@
           "name": "Xpeciaals",
           "wins": 12,
           "games": 16
+        }
+      }
+    },
+    "26000010;26000027;26000030;26000032;27000006;28000003;28000011;28000018": {
+      "cards": [
+        {
+          "id": 26000030,
+          "evo": 1
+        },
+        {
+          "id": 26000027,
+          "evo": 2
+        },
+        {
+          "id": 27000006,
+          "evo": 1
+        },
+        {
+          "id": 26000010,
+          "evo": 0
+        },
+        {
+          "id": 26000032,
+          "evo": 0
+        },
+        {
+          "id": 28000011,
+          "evo": 0
+        },
+        {
+          "id": 28000003,
+          "evo": 0
+        },
+        {
+          "id": 28000018,
+          "evo": 0
+        }
+      ],
+      "useCount": 4,
+      "winCount": 2,
+      "slotConfigs": {
+        "26000010|26000027|27000006": 1,
+        "26000030|26000027|27000006": 3
+      },
+      "proUsage": {
+        "9G28ULYR": {
+          "name": "LucasXGamer",
+          "wins": 2,
+          "games": 4
         }
       }
     }
