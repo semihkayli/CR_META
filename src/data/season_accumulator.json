@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-28T19:23:16.848Z",
-  "totalBattlesAnalyzed": 2121,
-  "totalPlayersScanned": 1080,
-  "totalRunCount": 54,
+  "lastUpdatedAt": "2026-06-28T22:03:43.195Z",
+  "totalBattlesAnalyzed": 2153,
+  "totalPlayersScanned": 1100,
+  "totalRunCount": 55,
   "playerLastScan": {
     "G9YV9GR8R": "20260621T131816.000Z",
     "2CLV2RP0": "20260628T151210.000Z",
@@ -13,9 +13,9 @@
     "R90PRV0PY": "20260628T184739.000Z",
     "9G28ULYR": "20260628T163003.000Z",
     "92L9R2JG": "20260628T143930.000Z",
-    "PCG229PC": "20260628T191902.000Z",
+    "PCG229PC": "20260628T215910.000Z",
     "GG829JGY": "20260626T224916.000Z",
-    "PPV2JUUGU": "20260628T191540.000Z",
+    "PPV2JUUGU": "20260628T193612.000Z",
     "9890JJJV": "20260601T085828.000Z",
     "9RV2VVJVL": "20260521T190503.000Z",
     "989PQYY8": "20260628T170151.000Z",
@@ -62,10 +62,10 @@
           "evo": 0
         }
       ],
-      "useCount": 258,
-      "winCount": 139,
+      "useCount": 288,
+      "winCount": 161,
       "slotConfigs": {
-        "26000058|26000062|26000049": 258
+        "26000058|26000062|26000049": 288
       },
       "proUsage": {
         "G9YV9GR8R": {
@@ -75,8 +75,8 @@
         },
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 46,
-          "games": 99
+          "wins": 68,
+          "games": 129
         },
         "R09228V": {
           "name": "Morten",
@@ -5035,7 +5035,7 @@
           "evo": 0
         },
         {
-          "id": 28000000,
+          "id": 26000084,
           "evo": 0
         },
         {
@@ -5043,14 +5043,14 @@
           "evo": 0
         },
         {
-          "id": 26000084,
+          "id": 28000000,
           "evo": 0
         }
       ],
-      "useCount": 112,
-      "winCount": 59,
+      "useCount": 114,
+      "winCount": 61,
       "slotConfigs": {
-        "26000024|28000015|26000050": 111,
+        "26000024|28000015|26000050": 113,
         "26000024|26000050|28000015": 1
       },
       "proUsage": {
@@ -5061,8 +5061,8 @@
         },
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 7,
-          "games": 22
+          "wins": 9,
+          "games": 24
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
