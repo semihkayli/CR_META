@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-28T11:09:01.179Z",
-  "totalBattlesAnalyzed": 2032,
-  "totalPlayersScanned": 1020,
-  "totalRunCount": 51,
+  "lastUpdatedAt": "2026-06-28T13:50:09.340Z",
+  "totalBattlesAnalyzed": 2041,
+  "totalPlayersScanned": 1040,
+  "totalRunCount": 52,
   "playerLastScan": {
     "G9YV9GR8R": "20260621T131816.000Z",
     "2CLV2RP0": "20260624T150245.000Z",
@@ -13,7 +13,7 @@
     "R90PRV0PY": "20260627T073857.000Z",
     "9G28ULYR": "20260627T171102.000Z",
     "92L9R2JG": "20260626T052420.000Z",
-    "PCG229PC": "20260628T110723.000Z",
+    "PCG229PC": "20260628T120712.000Z",
     "GG829JGY": "20260626T224916.000Z",
     "PPV2JUUGU": "20260628T073738.000Z",
     "9890JJJV": "20260601T085828.000Z",
@@ -22,7 +22,7 @@
     "GLUU9JGQ": "20260628T100000.000Z",
     "UJ0CVRUV": "20260628T030804.000Z",
     "R09228V": "20260627T022836.000Z",
-    "YU9JR0Q": "20260628T103251.000Z",
+    "YU9JR0Q": "20260628T134919.000Z",
     "P8Q0JYRP": "20260628T003727.000Z"
   },
   "decks": {
@@ -61,10 +61,10 @@
           "evo": 0
         }
       ],
-      "useCount": 245,
+      "useCount": 246,
       "winCount": 135,
       "slotConfigs": {
-        "26000058|26000062|26000049": 245
+        "26000058|26000062|26000049": 246
       },
       "proUsage": {
         "G9YV9GR8R": {
@@ -75,7 +75,7 @@
         "PCG229PC": {
           "name": "OYASSUU",
           "wins": 42,
-          "games": 86
+          "games": 87
         },
         "R09228V": {
           "name": "Morten",
@@ -5041,10 +5041,10 @@
           "evo": 0
         }
       ],
-      "useCount": 86,
-      "winCount": 51,
+      "useCount": 94,
+      "winCount": 53,
       "slotConfigs": {
-        "26000024|28000015|26000050": 85,
+        "26000024|28000015|26000050": 93,
         "26000024|26000050|28000015": 1
       },
       "proUsage": {
@@ -5060,8 +5060,8 @@
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 43,
-          "games": 65
+          "wins": 44,
+          "games": 69
         },
         "92L9R2JG": {
           "name": "Surgical Goblin",
@@ -5070,8 +5070,8 @@
         },
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 0,
-          "games": 1
+          "wins": 1,
+          "games": 5
         }
       }
     },
