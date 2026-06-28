@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-28T08:55:06.661Z",
-  "totalBattlesAnalyzed": 2017,
-  "totalPlayersScanned": 1000,
-  "totalRunCount": 50,
+  "lastUpdatedAt": "2026-06-28T11:09:01.179Z",
+  "totalBattlesAnalyzed": 2032,
+  "totalPlayersScanned": 1020,
+  "totalRunCount": 51,
   "playerLastScan": {
     "G9YV9GR8R": "20260621T131816.000Z",
     "2CLV2RP0": "20260624T150245.000Z",
@@ -13,16 +13,16 @@
     "R90PRV0PY": "20260627T073857.000Z",
     "9G28ULYR": "20260627T171102.000Z",
     "92L9R2JG": "20260626T052420.000Z",
-    "PCG229PC": "20260627T232919.000Z",
+    "PCG229PC": "20260628T110723.000Z",
     "GG829JGY": "20260626T224916.000Z",
     "PPV2JUUGU": "20260628T073738.000Z",
     "9890JJJV": "20260601T085828.000Z",
     "9RV2VVJVL": "20260521T190503.000Z",
     "989PQYY8": "20260621T171318.000Z",
-    "GLUU9JGQ": "20260627T032734.000Z",
+    "GLUU9JGQ": "20260628T100000.000Z",
     "UJ0CVRUV": "20260628T030804.000Z",
     "R09228V": "20260627T022836.000Z",
-    "YU9JR0Q": "20260628T082955.000Z",
+    "YU9JR0Q": "20260628T103251.000Z",
     "P8Q0JYRP": "20260628T003727.000Z"
   },
   "decks": {
@@ -5041,10 +5041,11 @@
           "evo": 0
         }
       ],
-      "useCount": 82,
-      "winCount": 48,
+      "useCount": 86,
+      "winCount": 51,
       "slotConfigs": {
-        "26000024|28000015|26000050": 82
+        "26000024|28000015|26000050": 85,
+        "26000024|26000050|28000015": 1
       },
       "proUsage": {
         "9G28ULYR": {
@@ -5059,11 +5060,16 @@
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 40,
-          "games": 62
+          "wins": 43,
+          "games": 65
         },
         "92L9R2JG": {
           "name": "Surgical Goblin",
+          "wins": 0,
+          "games": 1
+        },
+        "PCG229PC": {
+          "name": "OYASSUU",
           "wins": 0,
           "games": 1
         }
@@ -5248,16 +5254,16 @@
           "evo": 0
         }
       ],
-      "useCount": 76,
-      "winCount": 44,
+      "useCount": 78,
+      "winCount": 45,
       "slotConfigs": {
-        "26000010|26000038|27000000": 76
+        "26000010|26000038|27000000": 78
       },
       "proUsage": {
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 44,
-          "games": 76
+          "wins": 45,
+          "games": 78
         }
       }
     },
@@ -6561,16 +6567,16 @@
           "evo": 0
         }
       ],
-      "useCount": 19,
-      "winCount": 15,
+      "useCount": 28,
+      "winCount": 20,
       "slotConfigs": {
-        "27000012|26000006|28000008": 19
+        "27000012|26000006|28000008": 28
       },
       "proUsage": {
         "GLUU9JGQ": {
           "name": "FBI",
-          "wins": 15,
-          "games": 19
+          "wins": 20,
+          "games": 28
         }
       }
     },
