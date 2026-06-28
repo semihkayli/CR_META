@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-27T22:04:42.067Z",
-  "totalBattlesAnalyzed": 1988,
-  "totalPlayersScanned": 960,
-  "totalRunCount": 48,
+  "lastUpdatedAt": "2026-06-28T04:00:33.387Z",
+  "totalBattlesAnalyzed": 1999,
+  "totalPlayersScanned": 980,
+  "totalRunCount": 49,
   "playerLastScan": {
     "G9YV9GR8R": "20260621T131816.000Z",
     "2CLV2RP0": "20260624T150245.000Z",
@@ -13,17 +13,17 @@
     "R90PRV0PY": "20260627T073857.000Z",
     "9G28ULYR": "20260627T171102.000Z",
     "92L9R2JG": "20260626T052420.000Z",
-    "PCG229PC": "20260627T212710.000Z",
+    "PCG229PC": "20260627T232919.000Z",
     "GG829JGY": "20260626T224916.000Z",
-    "PPV2JUUGU": "20260627T212802.000Z",
+    "PPV2JUUGU": "20260627T225503.000Z",
     "9890JJJV": "20260601T085828.000Z",
     "9RV2VVJVL": "20260521T190503.000Z",
     "989PQYY8": "20260621T171318.000Z",
     "GLUU9JGQ": "20260627T032734.000Z",
-    "UJ0CVRUV": "20260627T161501.000Z",
+    "UJ0CVRUV": "20260628T030804.000Z",
     "R09228V": "20260627T022836.000Z",
     "YU9JR0Q": "20260627T174356.000Z",
-    "P8Q0JYRP": "20260627T184018.000Z"
+    "P8Q0JYRP": "20260628T003727.000Z"
   },
   "decks": {
     "26000010;26000031;26000032;26000049;26000058;26000062;27000004;28000011": {
@@ -2170,17 +2170,17 @@
           "evo": 0
         }
       ],
-      "useCount": 98,
-      "winCount": 73,
+      "useCount": 100,
+      "winCount": 74,
       "slotConfigs": {
-        "27000002|26000002|26000056": 74,
+        "27000002|26000002|26000056": 76,
         "26000056|26000002|27000002": 24
       },
       "proUsage": {
         "UJ0CVRUV": {
           "name": "NotRealPro",
-          "wins": 54,
-          "games": 74
+          "wins": 55,
+          "games": 76
         },
         "GLUU9JGQ": {
           "name": "FBI",
@@ -2860,16 +2860,16 @@
           "evo": 0
         }
       ],
-      "useCount": 53,
+      "useCount": 54,
       "winCount": 32,
       "slotConfigs": {
-        "26000036|26000017|26000050": 53
+        "26000036|26000017|26000050": 54
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
           "wins": 31,
-          "games": 52
+          "games": 53
         },
         "GLUU9JGQ": {
           "name": "FBI",
@@ -5248,16 +5248,16 @@
           "evo": 0
         }
       ],
-      "useCount": 74,
-      "winCount": 43,
+      "useCount": 76,
+      "winCount": 44,
       "slotConfigs": {
-        "26000010|26000038|27000000": 74
+        "26000010|26000038|27000000": 76
       },
       "proUsage": {
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 43,
-          "games": 74
+          "wins": 44,
+          "games": 76
         }
       }
     },
@@ -6657,16 +6657,16 @@
           "evo": 0
         }
       ],
-      "useCount": 22,
-      "winCount": 17,
+      "useCount": 24,
+      "winCount": 18,
       "slotConfigs": {
-        "26000056|26000002|27000002": 22
+        "26000056|26000002|27000002": 24
       },
       "proUsage": {
         "P8Q0JYRP": {
           "name": "Xpeciaals",
-          "wins": 17,
-          "games": 22
+          "wins": 18,
+          "games": 24
         }
       }
     },
@@ -6764,6 +6764,54 @@
           "name": "LucasXGamer",
           "wins": 6,
           "games": 11
+        }
+      }
+    },
+    "26000010;26000021;26000064;26000065;26000084;27000006;28000014;28000015": {
+      "cards": [
+        {
+          "id": 27000006,
+          "evo": 1
+        },
+        {
+          "id": 26000065,
+          "evo": 0
+        },
+        {
+          "id": 26000064,
+          "evo": 1
+        },
+        {
+          "id": 28000015,
+          "evo": 0
+        },
+        {
+          "id": 26000010,
+          "evo": 0
+        },
+        {
+          "id": 26000021,
+          "evo": 0
+        },
+        {
+          "id": 28000014,
+          "evo": 0
+        },
+        {
+          "id": 26000084,
+          "evo": 0
+        }
+      ],
+      "useCount": 4,
+      "winCount": 0,
+      "slotConfigs": {
+        "27000006|26000065|26000064": 4
+      },
+      "proUsage": {
+        "PCG229PC": {
+          "name": "OYASSUU",
+          "wins": 0,
+          "games": 4
         }
       }
     }
