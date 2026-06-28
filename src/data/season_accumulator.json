@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-28T04:00:33.387Z",
-  "totalBattlesAnalyzed": 1999,
-  "totalPlayersScanned": 980,
-  "totalRunCount": 49,
+  "lastUpdatedAt": "2026-06-28T08:55:06.661Z",
+  "totalBattlesAnalyzed": 2017,
+  "totalPlayersScanned": 1000,
+  "totalRunCount": 50,
   "playerLastScan": {
     "G9YV9GR8R": "20260621T131816.000Z",
     "2CLV2RP0": "20260624T150245.000Z",
@@ -15,14 +15,14 @@
     "92L9R2JG": "20260626T052420.000Z",
     "PCG229PC": "20260627T232919.000Z",
     "GG829JGY": "20260626T224916.000Z",
-    "PPV2JUUGU": "20260627T225503.000Z",
+    "PPV2JUUGU": "20260628T073738.000Z",
     "9890JJJV": "20260601T085828.000Z",
     "9RV2VVJVL": "20260521T190503.000Z",
     "989PQYY8": "20260621T171318.000Z",
     "GLUU9JGQ": "20260627T032734.000Z",
     "UJ0CVRUV": "20260628T030804.000Z",
     "R09228V": "20260627T022836.000Z",
-    "YU9JR0Q": "20260627T174356.000Z",
+    "YU9JR0Q": "20260628T082955.000Z",
     "P8Q0JYRP": "20260628T003727.000Z"
   },
   "decks": {
@@ -2860,16 +2860,16 @@
           "evo": 0
         }
       ],
-      "useCount": 54,
-      "winCount": 32,
+      "useCount": 64,
+      "winCount": 36,
       "slotConfigs": {
-        "26000036|26000017|26000050": 54
+        "26000036|26000017|26000050": 64
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 31,
-          "games": 53
+          "wins": 35,
+          "games": 63
         },
         "GLUU9JGQ": {
           "name": "FBI",
@@ -5041,10 +5041,10 @@
           "evo": 0
         }
       ],
-      "useCount": 74,
-      "winCount": 44,
+      "useCount": 82,
+      "winCount": 48,
       "slotConfigs": {
-        "26000024|28000015|26000050": 74
+        "26000024|28000015|26000050": 82
       },
       "proUsage": {
         "9G28ULYR": {
@@ -5054,13 +5054,13 @@
         },
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 4,
-          "games": 10
+          "wins": 5,
+          "games": 13
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 37,
-          "games": 57
+          "wins": 40,
+          "games": 62
         },
         "92L9R2JG": {
           "name": "Surgical Goblin",
