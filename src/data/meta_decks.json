@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-06-29T20:00:35.228Z",
+  "updatedAt": "2026-06-29T22:09:10.257Z",
   "seasonId": "2026-06",
-  "totalBattlesAnalyzed": 2360,
-  "totalPlayersScanned": 1180,
-  "totalRuns": 59,
+  "totalBattlesAnalyzed": 2365,
+  "totalPlayersScanned": 1200,
+  "totalRuns": 60,
   "metaDecks": [
     {
       "deckId": "26000010;26000031;26000032;26000049;26000058;26000062;27000004;28000011",
@@ -1213,69 +1213,6 @@
       "rating": 40.5
     },
     {
-      "deckId": "26000000;26000001;26000010;26000084;27000006;27000008;28000000;28000011",
-      "cards": [
-        {
-          "name": "Archers",
-          "id": 26000001,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Knight",
-          "id": 26000000,
-          "evolutionLevel": 2,
-          "iconUrls": {}
-        },
-        {
-          "name": "Tesla",
-          "id": 27000006,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Fireball",
-          "id": 28000000,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "X-Bow",
-          "id": 27000008,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "The Log",
-          "id": 28000011,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Skeletons",
-          "id": 26000010,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Electro Spirit",
-          "id": 26000084,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        }
-      ],
-      "slotConfig": {
-        "evoSlotCardId": 26000001,
-        "championSlotCardId": 26000000,
-        "flexSlotCardId": 27000006,
-        "flexSlotType": "evolution"
-      },
-      "winRate": 61.1,
-      "useCount": 36,
-      "winCount": 22,
-      "rating": 40.4
-    },
-    {
       "deckId": "26000004;26000013;26000030;26000039;26000060;28000001;28000002;28000026",
       "cards": [
         {
@@ -1530,6 +1467,69 @@
       "useCount": 28,
       "winCount": 17,
       "rating": 39.1
+    },
+    {
+      "deckId": "26000000;26000001;26000010;26000084;27000006;27000008;28000000;28000011",
+      "cards": [
+        {
+          "name": "Archers",
+          "id": 26000001,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Knight",
+          "id": 26000000,
+          "evolutionLevel": 2,
+          "iconUrls": {}
+        },
+        {
+          "name": "Tesla",
+          "id": 27000006,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Fireball",
+          "id": 28000000,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "X-Bow",
+          "id": 27000008,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "The Log",
+          "id": 28000011,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Skeletons",
+          "id": 26000010,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Electro Spirit",
+          "id": 26000084,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 26000001,
+        "championSlotCardId": 26000000,
+        "flexSlotCardId": 27000006,
+        "flexSlotType": "evolution"
+      },
+      "winRate": 57.5,
+      "useCount": 40,
+      "winCount": 23,
+      "rating": 38.7
     },
     {
       "deckId": "26000017;26000020;26000035;26000036;26000083;26000095;28000016;28000026",
@@ -4027,17 +4027,17 @@
         "flexSlotCardId": 27000006,
         "flexSlotType": "evolution"
       },
-      "totalUseCount": 36,
-      "totalWinCount": 22,
-      "overallWinRate": 61.1,
+      "totalUseCount": 40,
+      "totalWinCount": 23,
+      "overallWinRate": 57.5,
       "proCount": 3,
       "pros": [
         {
           "tag": "#G9YV9GR8R",
           "name": "Mohamed Light",
-          "useCount": 29,
-          "winCount": 17,
-          "winRate": 58.6
+          "useCount": 33,
+          "winCount": 18,
+          "winRate": 54.5
         },
         {
           "tag": "#2CLV2RP0",
@@ -5671,7 +5671,7 @@
     {
       "tag": "#G9YV9GR8R",
       "name": "Mohamed Light",
-      "updatedAt": "2026-06-29T20:00:35.695Z",
+      "updatedAt": "2026-06-29T22:09:10.760Z",
       "deck": [
         {
           "name": "Archers",
@@ -5742,7 +5742,7 @@
     {
       "tag": "#2CLV2RP0",
       "name": "Mugi",
-      "updatedAt": "2026-06-29T20:00:36.163Z",
+      "updatedAt": "2026-06-29T22:09:11.293Z",
       "deck": [
         {
           "name": "Mega Knight",
@@ -5813,7 +5813,7 @@
     {
       "tag": "#92L9R2JG",
       "name": "Surgical Goblin",
-      "updatedAt": "2026-06-29T20:00:37.987Z",
+      "updatedAt": "2026-06-29T22:09:13.426Z",
       "deck": [
         {
           "name": "Wall Breakers",
@@ -5884,7 +5884,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-06-29T20:00:38.469Z",
+      "updatedAt": "2026-06-29T22:09:13.954Z",
       "deck": [
         {
           "name": "Bats",
@@ -5955,7 +5955,7 @@
     {
       "tag": "#PPV2JUUGU",
       "name": "Boss",
-      "updatedAt": "2026-06-29T20:00:39.851Z",
+      "updatedAt": "2026-06-29T22:09:15.492Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -6026,7 +6026,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-06-29T20:00:40.331Z",
+      "updatedAt": "2026-06-29T22:09:16.020Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6097,7 +6097,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-06-29T20:00:40.745Z",
+      "updatedAt": "2026-06-29T22:09:16.475Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6168,7 +6168,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-06-29T20:00:41.223Z",
+      "updatedAt": "2026-06-29T22:09:17.014Z",
       "deck": [
         {
           "name": "Goblin Giant",
@@ -6239,7 +6239,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-06-29T20:00:41.661Z",
+      "updatedAt": "2026-06-29T22:09:17.473Z",
       "deck": [
         {
           "name": "Wizard",
@@ -6310,7 +6310,7 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-06-29T20:00:42.498Z",
+      "updatedAt": "2026-06-29T22:09:18.380Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6381,7 +6381,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-06-29T20:00:42.982Z",
+      "updatedAt": "2026-06-29T22:09:18.912Z",
       "deck": [
         {
           "name": "Furnace",
@@ -6452,7 +6452,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-06-29T20:00:43.459Z",
+      "updatedAt": "2026-06-29T22:09:19.446Z",
       "deck": [
         {
           "name": "Electro Dragon",
@@ -6523,7 +6523,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-06-29T20:00:43.940Z",
+      "updatedAt": "2026-06-29T22:09:19.974Z",
       "deck": [
         {
           "name": "Royal Hogs",

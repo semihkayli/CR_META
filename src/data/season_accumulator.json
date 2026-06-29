@@ -2,12 +2,12 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-29T20:00:35.224Z",
-  "totalBattlesAnalyzed": 2360,
-  "totalPlayersScanned": 1180,
-  "totalRunCount": 59,
+  "lastUpdatedAt": "2026-06-29T22:09:10.252Z",
+  "totalBattlesAnalyzed": 2365,
+  "totalPlayersScanned": 1200,
+  "totalRunCount": 60,
   "playerLastScan": {
-    "G9YV9GR8R": "20260629T134957.000Z",
+    "G9YV9GR8R": "20260629T204900.000Z",
     "2CLV2RP0": "20260629T091214.000Z",
     "Y9R22RQ2": "20260629T044728.000Z",
     "R90PRV0PY": "20260629T065300.000Z",
@@ -22,7 +22,7 @@
     "GLUU9JGQ": "20260628T100000.000Z",
     "UJ0CVRUV": "20260629T164212.000Z",
     "R09228V": "20260627T022836.000Z",
-    "YU9JR0Q": "20260629T195624.000Z",
+    "YU9JR0Q": "20260629T200138.000Z",
     "P8Q0JYRP": "20260629T200014.000Z",
     "J80V2Y9VC": "20260629T114147.000Z"
   },
@@ -125,10 +125,10 @@
           "evo": 0
         }
       ],
-      "useCount": 36,
-      "winCount": 22,
+      "useCount": 40,
+      "winCount": 23,
       "slotConfigs": {
-        "26000001|26000000|27000006": 36
+        "26000001|26000000|27000006": 40
       },
       "proUsage": {
         "2CLV2RP0": {
@@ -143,8 +143,8 @@
         },
         "G9YV9GR8R": {
           "name": "Mohamed Light",
-          "wins": 17,
-          "games": 29
+          "wins": 18,
+          "games": 33
         }
       }
     },
