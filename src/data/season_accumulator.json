@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-06-30T14:22:52.806Z",
-  "totalBattlesAnalyzed": 2481,
-  "totalPlayersScanned": 1260,
-  "totalRunCount": 63,
+  "lastUpdatedAt": "2026-06-30T17:07:22.946Z",
+  "totalBattlesAnalyzed": 2487,
+  "totalPlayersScanned": 1280,
+  "totalRunCount": 64,
   "playerLastScan": {
     "G9YV9GR8R": "20260629T204900.000Z",
     "2CLV2RP0": "20260630T135845.000Z",
@@ -18,11 +18,11 @@
     "PPV2JUUGU": "20260630T090655.000Z",
     "9890JJJV": "20260630T042257.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
-    "989PQYY8": "20260630T132515.000Z",
+    "989PQYY8": "20260630T155314.000Z",
     "GLUU9JGQ": "20260628T100000.000Z",
     "UJ0CVRUV": "20260630T020329.000Z",
     "R09228V": "20260627T022836.000Z",
-    "YU9JR0Q": "20260630T114641.000Z",
+    "YU9JR0Q": "20260630T160221.000Z",
     "P8Q0JYRP": "20260630T114014.000Z",
     "J80V2Y9VC": "20260630T121231.000Z"
   },
@@ -7173,17 +7173,17 @@
           "evo": 0
         }
       ],
-      "useCount": 4,
-      "winCount": 3,
+      "useCount": 8,
+      "winCount": 5,
       "slotConfigs": {
         "26000049|26000042|26000004": 2,
-        "26000049|26000036|26000004": 2
+        "26000049|26000036|26000004": 6
       },
       "proUsage": {
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 3,
-          "games": 4
+          "wins": 5,
+          "games": 8
         }
       }
     },
@@ -7270,16 +7270,16 @@
           "evo": 0
         }
       ],
-      "useCount": 2,
-      "winCount": 1,
+      "useCount": 4,
+      "winCount": 2,
       "slotConfigs": {
-        "27000002|26000034|26000022": 2
+        "27000002|26000034|26000022": 4
       },
       "proUsage": {
         "989PQYY8": {
           "name": "SULLY",
-          "wins": 1,
-          "games": 2
+          "wins": 2,
+          "games": 4
         }
       }
     }
