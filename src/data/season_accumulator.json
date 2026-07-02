@@ -2,18 +2,18 @@
   "version": 3,
   "seasonId": "2026-06",
   "startedAt": "2026-06-20T11:20:32.315Z",
-  "lastUpdatedAt": "2026-07-02T14:05:25.203Z",
-  "totalBattlesAnalyzed": 3300,
-  "totalPlayersScanned": 1500,
-  "totalRunCount": 75,
+  "lastUpdatedAt": "2026-07-02T16:50:59.455Z",
+  "totalBattlesAnalyzed": 3314,
+  "totalPlayersScanned": 1520,
+  "totalRunCount": 76,
   "playerLastScan": {
     "G9YV9GR8R": "20260630T221511.000Z",
     "2CLV2RP0": "20260702T140018.000Z",
     "Y9R22RQ2": "20260702T030645.000Z",
     "R90PRV0PY": "20260702T133600.000Z",
-    "9G28ULYR": "20260702T131706.000Z",
+    "9G28ULYR": "20260702T155253.000Z",
     "92L9R2JG": "20260702T095016.000Z",
-    "PCG229PC": "20260702T070056.000Z",
+    "PCG229PC": "20260702T163744.000Z",
     "GG829JGY": "20260702T043217.000Z",
     "PPV2JUUGU": "20260702T093813.000Z",
     "9890JJJV": "20260702T034329.000Z",
@@ -873,15 +873,7 @@
           "evo": 1
         },
         {
-          "id": 26000030,
-          "evo": 0
-        },
-        {
           "id": 28000014,
-          "evo": 0
-        },
-        {
-          "id": 28000018,
           "evo": 0
         },
         {
@@ -889,14 +881,22 @@
           "evo": 0
         },
         {
+          "id": 26000030,
+          "evo": 0
+        },
+        {
+          "id": 28000018,
+          "evo": 0
+        },
+        {
           "id": 28000011,
           "evo": 0
         }
       ],
-      "useCount": 131,
-      "winCount": 60,
+      "useCount": 144,
+      "winCount": 64,
       "slotConfigs": {
-        "26000059|26000072|27000000": 94,
+        "26000059|26000072|27000000": 107,
         "27000000|26000072|26000059": 37
       },
       "proUsage": {
@@ -912,8 +912,8 @@
         },
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 27,
-          "games": 74
+          "wins": 31,
+          "games": 87
         },
         "GLUU9JGQ": {
           "name": "FBI",
