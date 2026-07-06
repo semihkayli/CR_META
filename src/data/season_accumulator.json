@@ -2,16 +2,16 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-06T20:00:20.471Z",
-  "totalBattlesAnalyzed": 513,
-  "totalPlayersScanned": 60,
-  "totalRunCount": 3,
+  "lastUpdatedAt": "2026-07-06T22:14:42.616Z",
+  "totalBattlesAnalyzed": 521,
+  "totalPlayersScanned": 80,
+  "totalRunCount": 4,
   "playerLastScan": {
     "G9YV9GR8R": "20260706T035338.000Z",
     "2CLV2RP0": "20260706T124836.000Z",
     "Y9R22RQ2": "20260706T095424.000Z",
     "R90PRV0PY": "20260706T080632.000Z",
-    "9G28ULYR": "20260706T181335.000Z",
+    "9G28ULYR": "20260706T221334.000Z",
     "92L9R2JG": "20260706T094715.000Z",
     "R09228V": "20260706T085956.000Z",
     "PCG229PC": "20260706T045040.000Z",
@@ -784,16 +784,16 @@
           "evo": 0
         }
       ],
-      "useCount": 20,
-      "winCount": 18,
+      "useCount": 23,
+      "winCount": 21,
       "slotConfigs": {
-        "26000011|26000017|26000010": 20
+        "26000011|26000017|26000010": 23
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 18,
-          "games": 20
+          "wins": 21,
+          "games": 23
         }
       }
     },
@@ -2435,6 +2435,54 @@
           "name": "MYLO XYLOTO",
           "wins": 3,
           "games": 7
+        }
+      }
+    },
+    "26000010;26000024;26000044;26000077;26000084;26000106;28000002;28000011": {
+      "cards": [
+        {
+          "id": 26000044,
+          "evo": 1
+        },
+        {
+          "id": 26000077,
+          "evo": 0
+        },
+        {
+          "id": 26000024,
+          "evo": 1
+        },
+        {
+          "id": 26000010,
+          "evo": 0
+        },
+        {
+          "id": 26000084,
+          "evo": 0
+        },
+        {
+          "id": 26000106,
+          "evo": 0
+        },
+        {
+          "id": 28000011,
+          "evo": 0
+        },
+        {
+          "id": 28000002,
+          "evo": 0
+        }
+      ],
+      "useCount": 5,
+      "winCount": 2,
+      "slotConfigs": {
+        "26000044|26000077|26000024": 5
+      },
+      "proUsage": {
+        "9G28ULYR": {
+          "name": "LucasXGamer",
+          "wins": 2,
+          "games": 5
         }
       }
     }
