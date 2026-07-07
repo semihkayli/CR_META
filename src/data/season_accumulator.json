@@ -2,13 +2,13 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-07T14:38:28.495Z",
-  "totalBattlesAnalyzed": 664,
-  "totalPlayersScanned": 140,
-  "totalRunCount": 7,
+  "lastUpdatedAt": "2026-07-07T17:15:51.508Z",
+  "totalBattlesAnalyzed": 672,
+  "totalPlayersScanned": 160,
+  "totalRunCount": 8,
   "playerLastScan": {
     "G9YV9GR8R": "20260706T035338.000Z",
-    "2CLV2RP0": "20260707T143110.000Z",
+    "2CLV2RP0": "20260707T151728.000Z",
     "Y9R22RQ2": "20260707T040416.000Z",
     "R90PRV0PY": "20260706T080632.000Z",
     "9G28ULYR": "20260707T040927.000Z",
@@ -3085,6 +3085,54 @@
           "name": "Boss",
           "wins": 5,
           "games": 6
+        }
+      }
+    },
+    "26000004;26000015;26000042;26000051;26000074;28000007;28000015;28000017": {
+      "cards": [
+        {
+          "id": 28000017,
+          "evo": 1
+        },
+        {
+          "id": 26000074,
+          "evo": 0
+        },
+        {
+          "id": 26000015,
+          "evo": 1
+        },
+        {
+          "id": 26000051,
+          "evo": 0
+        },
+        {
+          "id": 26000042,
+          "evo": 0
+        },
+        {
+          "id": 26000004,
+          "evo": 0
+        },
+        {
+          "id": 28000015,
+          "evo": 0
+        },
+        {
+          "id": 28000007,
+          "evo": 0
+        }
+      ],
+      "useCount": 8,
+      "winCount": 8,
+      "slotConfigs": {
+        "28000017|26000074|26000015": 8
+      },
+      "proUsage": {
+        "2CLV2RP0": {
+          "name": "Mugi",
+          "wins": 8,
+          "games": 8
         }
       }
     }
