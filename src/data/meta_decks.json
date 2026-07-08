@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-08T11:06:31.502Z",
+  "updatedAt": "2026-07-08T14:13:18.808Z",
   "seasonId": "2026-07",
-  "totalBattlesAnalyzed": 916,
-  "totalPlayersScanned": 280,
-  "totalRuns": 14,
+  "totalBattlesAnalyzed": 918,
+  "totalPlayersScanned": 300,
+  "totalRuns": 15,
   "metaDecks": [
     {
       "deckId": "26000002;26000030;26000040;26000084;26000106;27000000;28000004;28000011",
@@ -382,10 +382,10 @@
         "flexSlotCardId": 26000010,
         "flexSlotType": "evolution"
       },
-      "winRate": 93.1,
-      "useCount": 29,
+      "winRate": 90,
+      "useCount": 30,
       "winCount": 27,
-      "rating": 72.3
+      "rating": 71.3
     },
     {
       "deckId": "26000004;26000015;26000042;26000051;26000074;28000007;28000015;28000017",
@@ -3948,16 +3948,16 @@
         "flexSlotCardId": 26000040,
         "flexSlotType": "evolution"
       },
-      "totalUseCount": 2,
-      "totalWinCount": 2,
+      "totalUseCount": 3,
+      "totalWinCount": 3,
       "overallWinRate": 100,
       "proCount": 1,
       "pros": [
         {
           "tag": "#PCG229PC",
           "name": "OYASSUU",
-          "useCount": 2,
-          "winCount": 2,
+          "useCount": 3,
+          "winCount": 3,
           "winRate": 100
         }
       ]
@@ -4092,17 +4092,17 @@
         "flexSlotCardId": 26000010,
         "flexSlotType": "evolution"
       },
-      "totalUseCount": 29,
+      "totalUseCount": 30,
       "totalWinCount": 27,
-      "overallWinRate": 93.1,
+      "overallWinRate": 90,
       "proCount": 1,
       "pros": [
         {
           "tag": "#9G28ULYR",
           "name": "LucasXGamer",
-          "useCount": 29,
+          "useCount": 30,
           "winCount": 27,
-          "winRate": 93.1
+          "winRate": 90
         }
       ]
     },
@@ -4473,7 +4473,7 @@
     {
       "tag": "#G9YV9GR8R",
       "name": "Mohamed Light",
-      "updatedAt": "2026-07-08T11:06:31.972Z",
+      "updatedAt": "2026-07-08T14:13:19.316Z",
       "deck": [
         {
           "name": "Archers",
@@ -4544,7 +4544,7 @@
     {
       "tag": "#2CLV2RP0",
       "name": "Mugi",
-      "updatedAt": "2026-07-08T11:06:32.453Z",
+      "updatedAt": "2026-07-08T14:13:19.785Z",
       "deck": [
         {
           "name": "Mega Knight",
@@ -4615,7 +4615,7 @@
     {
       "tag": "#9G28ULYR",
       "name": "LucasXGamer",
-      "updatedAt": "2026-07-08T11:06:33.814Z",
+      "updatedAt": "2026-07-08T14:13:21.168Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -4686,7 +4686,7 @@
     {
       "tag": "#92L9R2JG",
       "name": "Surgical Goblin",
-      "updatedAt": "2026-07-08T11:06:34.289Z",
+      "updatedAt": "2026-07-08T14:13:21.649Z",
       "deck": [
         {
           "name": "Royal Giant",
@@ -4757,7 +4757,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-07-08T11:06:34.765Z",
+      "updatedAt": "2026-07-08T14:13:22.139Z",
       "deck": [
         {
           "name": "Bats",
@@ -4828,7 +4828,7 @@
     {
       "tag": "#PCG229PC",
       "name": "OYASSUU",
-      "updatedAt": "2026-07-08T11:06:35.164Z",
+      "updatedAt": "2026-07-08T14:13:22.546Z",
       "deck": [
         {
           "name": "Royal Hogs",
@@ -4899,7 +4899,7 @@
     {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-07-08T11:06:35.670Z",
+      "updatedAt": "2026-07-08T14:13:23.035Z",
       "deck": [
         {
           "name": "Battle Ram",
@@ -4970,7 +4970,7 @@
     {
       "tag": "#PPV2JUUGU",
       "name": "Boss",
-      "updatedAt": "2026-07-08T11:06:36.167Z",
+      "updatedAt": "2026-07-08T14:13:23.541Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -5041,7 +5041,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-07-08T11:06:36.666Z",
+      "updatedAt": "2026-07-08T14:13:24.023Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -5112,7 +5112,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-07-08T11:06:37.075Z",
+      "updatedAt": "2026-07-08T14:13:24.454Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -5183,7 +5183,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-07-08T11:06:37.553Z",
+      "updatedAt": "2026-07-08T14:13:24.958Z",
       "deck": [
         {
           "name": "Zap",
@@ -5254,7 +5254,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-07-08T11:06:38.036Z",
+      "updatedAt": "2026-07-08T14:13:25.376Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -5323,9 +5323,80 @@
       ]
     },
     {
+      "tag": "#989PQYY8",
+      "name": "SULLY",
+      "updatedAt": "2026-07-08T14:13:25.784Z",
+      "deck": [
+        {
+          "name": "Knight",
+          "id": 26000000,
+          "evolutionLevel": 3,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png"
+          }
+        },
+        {
+          "name": "Goblinstein",
+          "id": 26000099,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/mQ20B49dXdk7Nv0lMdLw175M3YvkSpN6KNnho8UKBd8.png"
+          }
+        },
+        {
+          "name": "Barbarian Barrel",
+          "id": 28000015,
+          "evolutionLevel": 2,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png"
+          }
+        },
+        {
+          "name": "Graveyard",
+          "id": 28000010,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/Icp8BIyyfBTj1ncCJS7mb82SY7TPV-MAE-J2L2R48DI.png"
+          }
+        },
+        {
+          "name": "Skeletons",
+          "id": 26000010,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png"
+          }
+        },
+        {
+          "name": "Ice Wizard",
+          "id": 26000023,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/W3dkw0HTw9n1jB-zbknY2w3wHuyuLxSRIAV5fUT1SEY.png"
+          }
+        },
+        {
+          "name": "Cannon",
+          "id": 27000000,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png"
+          }
+        },
+        {
+          "name": "Poison",
+          "id": 28000009,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/98HDkG2189yOULcVG9jz2QbJKtfuhH21DIrIjkOjxI8.png"
+          }
+        }
+      ]
+    },
+    {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-07-08T11:06:38.857Z",
+      "updatedAt": "2026-07-08T14:13:26.192Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -5396,7 +5467,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-07-08T11:06:39.340Z",
+      "updatedAt": "2026-07-08T14:13:26.660Z",
       "deck": [
         {
           "name": "Baby Dragon",
@@ -5467,7 +5538,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-07-08T11:06:39.813Z",
+      "updatedAt": "2026-07-08T14:13:27.150Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -5538,7 +5609,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-07-08T11:06:40.298Z",
+      "updatedAt": "2026-07-08T14:13:27.633Z",
       "deck": [
         {
           "name": "Royal Hogs",
@@ -5609,7 +5680,7 @@
     {
       "tag": "#UJ0CVRUV",
       "name": "NotRealPro",
-      "updatedAt": "2026-07-08T11:06:40.772Z",
+      "updatedAt": "2026-07-08T14:13:28.113Z",
       "deck": [
         {
           "name": "Royal Ghost",
