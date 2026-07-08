@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-08T14:13:18.806Z",
-  "totalBattlesAnalyzed": 918,
-  "totalPlayersScanned": 300,
-  "totalRunCount": 15,
+  "lastUpdatedAt": "2026-07-08T16:40:52.398Z",
+  "totalBattlesAnalyzed": 919,
+  "totalPlayersScanned": 320,
+  "totalRunCount": 16,
   "playerLastScan": {
     "G9YV9GR8R": "20260706T035338.000Z",
     "2CLV2RP0": "20260708T100945.000Z",
@@ -20,7 +20,7 @@
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260706T084228.000Z",
-    "989PQYY8": "20260706T143342.000Z",
+    "989PQYY8": "20260708T142942.000Z",
     "GLUU9JGQ": "20260704T031342.000Z",
     "J80V2Y9VC": "20260704T024734.000Z",
     "YU9JR0Q": "20260708T081921.000Z",
@@ -1667,11 +1667,15 @@
           "evo": 2
         },
         {
-          "id": 26000000,
-          "evo": 1
+          "id": 28000015,
+          "evo": 2
         },
         {
           "id": 28000010,
+          "evo": 0
+        },
+        {
+          "id": 26000023,
           "evo": 0
         },
         {
@@ -1679,30 +1683,26 @@
           "evo": 0
         },
         {
-          "id": 28000015,
+          "id": 26000000,
           "evo": 0
         },
         {
           "id": 28000012,
           "evo": 0
-        },
-        {
-          "id": 26000023,
-          "evo": 0
         }
       ],
-      "useCount": 8,
+      "useCount": 9,
       "winCount": 5,
       "slotConfigs": {
         "26000015|28000015|26000000": 1,
-        "26000015|27000009|28000015": 1,
+        "26000015|27000009|28000015": 2,
         "26000015|27000009|26000000": 6
       },
       "proUsage": {
         "989PQYY8": {
           "name": "SULLY",
           "wins": 1,
-          "games": 4
+          "games": 5
         },
         "2CLV2RP0": {
           "name": "Mugi",
