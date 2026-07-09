@@ -2,17 +2,17 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-09T09:42:15.496Z",
-  "totalBattlesAnalyzed": 1077,
-  "totalPlayersScanned": 400,
-  "totalRunCount": 20,
+  "lastUpdatedAt": "2026-07-09T15:13:27.294Z",
+  "totalBattlesAnalyzed": 1091,
+  "totalPlayersScanned": 420,
+  "totalRunCount": 21,
   "playerLastScan": {
     "G9YV9GR8R": "20260706T035338.000Z",
-    "2CLV2RP0": "20260709T093902.000Z",
+    "2CLV2RP0": "20260709T100203.000Z",
     "Y9R22RQ2": "20260709T052933.000Z",
     "R90PRV0PY": "20260708T173442.000Z",
     "9G28ULYR": "20260709T040634.000Z",
-    "92L9R2JG": "20260709T082507.000Z",
+    "92L9R2JG": "20260709T111250.000Z",
     "R09228V": "20260708T231917.000Z",
     "PCG229PC": "20260709T005213.000Z",
     "GG829JGY": "20260709T042148.000Z",
@@ -25,7 +25,7 @@
     "J80V2Y9VC": "20260704T024734.000Z",
     "YU9JR0Q": "20260709T082136.000Z",
     "UJ0CVRUV": "20260708T025055.000Z",
-    "LUYY2URU": "20260708T181717.000Z"
+    "LUYY2URU": "20260709T104135.000Z"
   },
   "decks": {
     "26000000;26000001;26000010;26000084;27000006;27000008;28000000;28000011": {
@@ -2457,16 +2457,16 @@
           "evo": 0
         }
       ],
-      "useCount": 18,
-      "winCount": 13,
+      "useCount": 21,
+      "winCount": 14,
       "slotConfigs": {
-        "26000036|26000017|26000035": 18
+        "26000036|26000017|26000035": 21
       },
       "proUsage": {
         "LUYY2URU": {
           "name": "Ral9",
-          "wins": 13,
-          "games": 18
+          "wins": 14,
+          "games": 21
         }
       }
     },
@@ -3240,10 +3240,10 @@
           "evo": 0
         }
       ],
-      "useCount": 70,
-      "winCount": 55,
+      "useCount": 76,
+      "winCount": 61,
       "slotConfigs": {
-        "28000004|26000002|26000040": 70
+        "28000004|26000002|26000040": 76
       },
       "proUsage": {
         "R09228V": {
@@ -3263,8 +3263,8 @@
         },
         "2CLV2RP0": {
           "name": "Mugi",
-          "wins": 2,
-          "games": 4
+          "wins": 8,
+          "games": 10
         },
         "92L9R2JG": {
           "name": "Surgical Goblin",
@@ -4103,10 +4103,10 @@
           "evo": 0
         }
       ],
-      "useCount": 16,
-      "winCount": 11,
+      "useCount": 17,
+      "winCount": 12,
       "slotConfigs": {
-        "26000056|26000002|27000002": 16
+        "26000056|26000002|27000002": 17
       },
       "proUsage": {
         "R09228V": {
@@ -4121,8 +4121,8 @@
         },
         "92L9R2JG": {
           "name": "Surgical Goblin",
-          "wins": 2,
-          "games": 2
+          "wins": 3,
+          "games": 3
         }
       }
     },
@@ -4361,6 +4361,54 @@
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
+          "wins": 1,
+          "games": 2
+        }
+      }
+    },
+    "26000003;26000010;26000017;26000018;26000033;28000008;28000012;28000016": {
+      "cards": [
+        {
+          "id": 28000008,
+          "evo": 1
+        },
+        {
+          "id": 26000003,
+          "evo": 2
+        },
+        {
+          "id": 26000017,
+          "evo": 2
+        },
+        {
+          "id": 28000016,
+          "evo": 0
+        },
+        {
+          "id": 28000012,
+          "evo": 0
+        },
+        {
+          "id": 26000033,
+          "evo": 0
+        },
+        {
+          "id": 26000010,
+          "evo": 0
+        },
+        {
+          "id": 26000018,
+          "evo": 0
+        }
+      ],
+      "useCount": 2,
+      "winCount": 1,
+      "slotConfigs": {
+        "28000008|26000003|26000017": 2
+      },
+      "proUsage": {
+        "LUYY2URU": {
+          "name": "Ral9",
           "wins": 1,
           "games": 2
         }
