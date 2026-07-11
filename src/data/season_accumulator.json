@@ -2,16 +2,16 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-11T13:22:47.162Z",
-  "totalBattlesAnalyzed": 1565,
-  "totalPlayersScanned": 680,
-  "totalRunCount": 34,
+  "lastUpdatedAt": "2026-07-11T15:58:07.656Z",
+  "totalBattlesAnalyzed": 1567,
+  "totalPlayersScanned": 700,
+  "totalRunCount": 35,
   "playerLastScan": {
     "G9YV9GR8R": "20260710T142307.000Z",
     "2CLV2RP0": "20260710T101155.000Z",
     "Y9R22RQ2": "20260710T052905.000Z",
     "R90PRV0PY": "20260711T105630.000Z",
-    "9G28ULYR": "20260711T064400.000Z",
+    "9G28ULYR": "20260711T155343.000Z",
     "92L9R2JG": "20260710T225700.000Z",
     "R09228V": "20260710T230539.000Z",
     "PCG229PC": "20260709T160752.000Z",
@@ -851,16 +851,16 @@
           "evo": 0
         }
       ],
-      "useCount": 63,
-      "winCount": 52,
+      "useCount": 65,
+      "winCount": 54,
       "slotConfigs": {
-        "26000011|26000017|26000010": 63
+        "26000011|26000017|26000010": 65
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 42,
-          "games": 53
+          "wins": 44,
+          "games": 55
         },
         "R90PRV0PY": {
           "name": "Ryley",
