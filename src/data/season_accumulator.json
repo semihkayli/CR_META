@@ -2,28 +2,28 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-12T06:06:09.637Z",
-  "totalBattlesAnalyzed": 1622,
-  "totalPlayersScanned": 780,
-  "totalRunCount": 39,
+  "lastUpdatedAt": "2026-07-12T10:38:21.408Z",
+  "totalBattlesAnalyzed": 1634,
+  "totalPlayersScanned": 800,
+  "totalRunCount": 40,
   "playerLastScan": {
     "G9YV9GR8R": "20260710T142307.000Z",
     "2CLV2RP0": "20260710T101155.000Z",
     "Y9R22RQ2": "20260712T031745.000Z",
     "R90PRV0PY": "20260711T105630.000Z",
     "9G28ULYR": "20260712T010755.000Z",
-    "92L9R2JG": "20260710T225700.000Z",
+    "92L9R2JG": "20260712T093530.000Z",
     "R09228V": "20260711T205422.000Z",
     "PCG229PC": "20260709T160752.000Z",
     "GG829JGY": "20260710T092741.000Z",
-    "PPV2JUUGU": "20260712T050253.000Z",
+    "PPV2JUUGU": "20260712T092530.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260706T084228.000Z",
     "989PQYY8": "20260710T000909.000Z",
     "GLUU9JGQ": "20260710T024552.000Z",
     "J80V2Y9VC": "20260704T024734.000Z",
-    "YU9JR0Q": "20260710T042843.000Z",
+    "YU9JR0Q": "20260712T103733.000Z",
     "UJ0CVRUV": "20260708T025055.000Z",
     "LUYY2URU": "20260711T101847.000Z"
   },
@@ -3291,10 +3291,10 @@
           "evo": 0
         }
       ],
-      "useCount": 99,
-      "winCount": 78,
+      "useCount": 103,
+      "winCount": 80,
       "slotConfigs": {
-        "28000004|26000002|26000040": 99
+        "28000004|26000002|26000040": 103
       },
       "proUsage": {
         "R09228V": {
@@ -3309,8 +3309,8 @@
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 3,
-          "games": 5
+          "wins": 5,
+          "games": 9
         },
         "2CLV2RP0": {
           "name": "Mugi",
@@ -5183,16 +5183,16 @@
           "evo": 0
         }
       ],
-      "useCount": 67,
+      "useCount": 68,
       "winCount": 34,
       "slotConfigs": {
-        "26000024|28000015|26000050": 67
+        "26000024|28000015|26000050": 68
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
           "wins": 29,
-          "games": 55
+          "games": 56
         },
         "R90PRV0PY": {
           "name": "Ryley",
@@ -5934,6 +5934,54 @@
           "name": "Morten",
           "wins": 11,
           "games": 17
+        }
+      }
+    },
+    "26000003;26000005;26000007;26000018;26000034;28000001;28000010;28000017": {
+      "cards": [
+        {
+          "id": 26000007,
+          "evo": 1
+        },
+        {
+          "id": 26000018,
+          "evo": 2
+        },
+        {
+          "id": 28000017,
+          "evo": 1
+        },
+        {
+          "id": 28000010,
+          "evo": 0
+        },
+        {
+          "id": 26000003,
+          "evo": 0
+        },
+        {
+          "id": 26000034,
+          "evo": 0
+        },
+        {
+          "id": 26000005,
+          "evo": 0
+        },
+        {
+          "id": 28000001,
+          "evo": 0
+        }
+      ],
+      "useCount": 7,
+      "winCount": 5,
+      "slotConfigs": {
+        "26000007|26000018|28000017": 7
+      },
+      "proUsage": {
+        "92L9R2JG": {
+          "name": "Surgical Goblin",
+          "wins": 5,
+          "games": 7
         }
       }
     }
