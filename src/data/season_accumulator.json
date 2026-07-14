@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-14T10:48:08.687Z",
-  "totalBattlesAnalyzed": 2080,
-  "totalPlayersScanned": 1080,
-  "totalRunCount": 54,
+  "lastUpdatedAt": "2026-07-14T13:47:16.053Z",
+  "totalBattlesAnalyzed": 2089,
+  "totalPlayersScanned": 1100,
+  "totalRunCount": 55,
   "playerLastScan": {
     "G9YV9GR8R": "20260710T142307.000Z",
     "2CLV2RP0": "20260714T090542.000Z",
@@ -14,9 +14,9 @@
     "9G28ULYR": "20260714T013442.000Z",
     "92L9R2JG": "20260714T100147.000Z",
     "R09228V": "20260714T001252.000Z",
-    "PCG229PC": "20260714T103150.000Z",
+    "PCG229PC": "20260714T105140.000Z",
     "GG829JGY": "20260713T071919.000Z",
-    "PPV2JUUGU": "20260714T094817.000Z",
+    "PPV2JUUGU": "20260714T124154.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260706T084228.000Z",
@@ -585,12 +585,12 @@
           "evo": 0
         }
       ],
-      "useCount": 88,
+      "useCount": 89,
       "winCount": 53,
       "slotConfigs": {
         "27000000|26000038|26000010": 35,
         "26000010|26000038|26000014": 5,
-        "27000000|26000038|26000014": 40,
+        "27000000|26000038|26000014": 41,
         "26000010|26000038|27000000": 8
       },
       "proUsage": {
@@ -612,7 +612,7 @@
         "PCG229PC": {
           "name": "OYASSUU",
           "wins": 43,
-          "games": 72
+          "games": 73
         },
         "2CLV2RP0": {
           "name": "Mugi",
@@ -787,10 +787,10 @@
           "evo": 0
         }
       ],
-      "useCount": 22,
-      "winCount": 14,
+      "useCount": 29,
+      "winCount": 17,
       "slotConfigs": {
-        "26000035|28000015|27000012": 22
+        "26000035|28000015|27000012": 29
       },
       "proUsage": {
         "9G28ULYR": {
@@ -800,8 +800,8 @@
         },
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 1,
-          "games": 3
+          "wins": 4,
+          "games": 10
         }
       }
     },
@@ -6368,10 +6368,10 @@
           "evo": 0
         }
       ],
-      "useCount": 49,
+      "useCount": 50,
       "winCount": 38,
       "slotConfigs": {
-        "26000059|26000065|26000015": 43,
+        "26000059|26000065|26000015": 44,
         "26000015|26000065|26000059": 6
       },
       "proUsage": {
@@ -6398,7 +6398,7 @@
         "PPV2JUUGU": {
           "name": "Boss",
           "wins": 6,
-          "games": 8
+          "games": 9
         }
       }
     },
