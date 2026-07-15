@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-15T19:13:49.477Z",
+  "updatedAt": "2026-07-15T22:02:36.272Z",
   "seasonId": "2026-07",
   "totalBattlesAnalyzed": 2278,
-  "totalPlayersScanned": 1300,
-  "totalRuns": 65,
+  "totalPlayersScanned": 1320,
+  "totalRuns": 66,
   "metaDecks": [
     {
       "deckId": "26000010;26000031;26000032;26000049;26000058;26000062;27000004;28000011",
@@ -5866,7 +5866,7 @@
     {
       "tag": "#G9YV9GR8R",
       "name": "Mohamed Light",
-      "updatedAt": "2026-07-15T19:13:49.966Z",
+      "updatedAt": "2026-07-15T22:02:36.800Z",
       "deck": [
         {
           "name": "Goblin Cage",
@@ -5937,7 +5937,7 @@
     {
       "tag": "#Y9R22RQ2",
       "name": "Ian77",
-      "updatedAt": "2026-07-15T19:13:50.949Z",
+      "updatedAt": "2026-07-15T22:02:37.832Z",
       "deck": [
         {
           "name": "Royal Hogs",
@@ -6008,7 +6008,7 @@
     {
       "tag": "#R90PRV0PY",
       "name": "Ryley",
-      "updatedAt": "2026-07-15T19:13:51.381Z",
+      "updatedAt": "2026-07-15T22:02:38.284Z",
       "deck": [
         {
           "name": "Goblin Drill",
@@ -6079,7 +6079,7 @@
     {
       "tag": "#9G28ULYR",
       "name": "LucasXGamer",
-      "updatedAt": "2026-07-15T19:13:51.883Z",
+      "updatedAt": "2026-07-15T22:02:38.819Z",
       "deck": [
         {
           "name": "Giant Snowball",
@@ -6150,7 +6150,7 @@
     {
       "tag": "#92L9R2JG",
       "name": "Surgical Goblin",
-      "updatedAt": "2026-07-15T19:13:52.384Z",
+      "updatedAt": "2026-07-15T22:02:39.350Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6221,7 +6221,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-07-15T19:13:52.878Z",
+      "updatedAt": "2026-07-15T22:02:39.882Z",
       "deck": [
         {
           "name": "Knight",
@@ -6290,9 +6290,80 @@
       ]
     },
     {
+      "tag": "#PCG229PC",
+      "name": "OYASSUU",
+      "updatedAt": "2026-07-15T22:02:40.344Z",
+      "deck": [
+        {
+          "name": "Royal Hogs",
+          "id": 26000059,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/ASSQJG_MoVq9e81HZzo4bynMnyLNpNJMfSLb3hqydOw.png"
+          }
+        },
+        {
+          "name": "Archer Queen",
+          "id": 26000072,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/p7OQmOAFTery7zCzlpDdm-LOD1kINTm42AwIHchZfWk.png"
+          }
+        },
+        {
+          "name": "Cannon",
+          "id": 27000000,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png"
+          }
+        },
+        {
+          "name": "Earthquake",
+          "id": 28000014,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/XeQXcrUu59C52DslyZVwCnbi4yamID-WxfVZLShgZmE.png"
+          }
+        },
+        {
+          "name": "Skeletons",
+          "id": 26000010,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png"
+          }
+        },
+        {
+          "name": "Ice Spirit",
+          "id": 26000030,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/lv1budiafU9XmSdrDkk0NYyqASAFYyZ06CPysXKZXlA.png"
+          }
+        },
+        {
+          "name": "Royal Delivery",
+          "id": 28000018,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/LPg7AGjGI3_xmi7gLLgGC50yKM1jJ2teWkZfoHJcIZo.png"
+          }
+        },
+        {
+          "name": "The Log",
+          "id": 28000011,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png"
+          }
+        }
+      ]
+    },
+    {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-07-15T19:13:53.819Z",
+      "updatedAt": "2026-07-15T22:02:40.861Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6363,7 +6434,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-07-15T19:13:54.804Z",
+      "updatedAt": "2026-07-15T22:02:41.917Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6434,7 +6505,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-07-15T19:13:55.228Z",
+      "updatedAt": "2026-07-15T22:02:42.381Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6505,7 +6576,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-07-15T19:13:55.722Z",
+      "updatedAt": "2026-07-15T22:02:42.913Z",
       "deck": [
         {
           "name": "Zap",
@@ -6574,72 +6645,72 @@
       ]
     },
     {
-      "tag": "#989PQYY8",
-      "name": "SULLY",
-      "updatedAt": "2026-07-15T19:13:56.650Z",
+      "tag": "#P8Q0JYRP",
+      "name": "Xpeciaals",
+      "updatedAt": "2026-07-15T22:02:43.394Z",
       "deck": [
         {
-          "name": "Knight",
-          "id": 26000000,
-          "evolutionLevel": 3,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png"
-          }
-        },
-        {
-          "name": "Goblinstein",
-          "id": 26000099,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/mQ20B49dXdk7Nv0lMdLw175M3YvkSpN6KNnho8UKBd8.png"
-          }
-        },
-        {
-          "name": "Barbarian Barrel",
-          "id": 28000015,
-          "evolutionLevel": 2,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png"
-          }
-        },
-        {
-          "name": "Graveyard",
-          "id": 28000010,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/Icp8BIyyfBTj1ncCJS7mb82SY7TPV-MAE-J2L2R48DI.png"
-          }
-        },
-        {
-          "name": "Skeletons",
-          "id": 26000010,
+          "name": "Wizard",
+          "id": 26000017,
           "evolutionLevel": 1,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png"
           }
         },
         {
-          "name": "Ice Wizard",
-          "id": 26000023,
+          "name": "The Log",
+          "id": 28000011,
           "evolutionLevel": 0,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/W3dkw0HTw9n1jB-zbknY2w3wHuyuLxSRIAV5fUT1SEY.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png"
           }
         },
         {
-          "name": "Cannon",
-          "id": 27000000,
+          "name": "Royal Ghost",
+          "id": 26000050,
           "evolutionLevel": 1,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/3En2cz0ISQAaMTHY3hj3rTveFN2kJYq-H4VxvdJNvCM.png"
           }
         },
         {
-          "name": "Poison",
-          "id": 28000009,
+          "name": "Giant Skeleton",
+          "id": 26000020,
           "evolutionLevel": 0,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/98HDkG2189yOULcVG9jz2QbJKtfuhH21DIrIjkOjxI8.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/0p0gd0XaVRu1Hb1iSG1hTYbz2AN6aEiZnhaAib5O8Z8.png"
+          }
+        },
+        {
+          "name": "Mother Witch",
+          "id": 26000083,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/fO-Xah8XZkYKaSK9SCp3wnzwxtvIhun9NVY-zzte1Ng.png"
+          }
+        },
+        {
+          "name": "Vines",
+          "id": 28000026,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/V5sJlPuo2WBRtirJ1lGEPJA4NvQ0KPwFeMrpxLX5z_8.png"
+          }
+        },
+        {
+          "name": "Zappies",
+          "id": 26000052,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/QZfHRpLRmutZbCr5fpLnTpIp89vLI6NrAwzGZ8tHEc4.png"
+          }
+        },
+        {
+          "name": "Battle Ram",
+          "id": 26000036,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/dyc50V2cplKi4H7pq1B3I36pl_sEH5DQrNHboS_dbbM.png"
           }
         }
       ]
@@ -6647,7 +6718,7 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-07-15T19:13:57.079Z",
+      "updatedAt": "2026-07-15T22:02:44.398Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -6718,7 +6789,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-07-15T19:13:57.597Z",
+      "updatedAt": "2026-07-15T22:02:44.923Z",
       "deck": [
         {
           "name": "Bomber",
@@ -6789,7 +6860,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-07-15T19:13:58.101Z",
+      "updatedAt": "2026-07-15T22:02:45.443Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6860,7 +6931,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-07-15T19:13:58.588Z",
+      "updatedAt": "2026-07-15T22:02:45.970Z",
       "deck": [
         {
           "name": "Royal Hogs",
@@ -6931,7 +7002,7 @@
     {
       "tag": "#UJ0CVRUV",
       "name": "NotRealPro",
-      "updatedAt": "2026-07-15T19:13:59.085Z",
+      "updatedAt": "2026-07-15T22:02:46.488Z",
       "deck": [
         {
           "name": "Goblin Drill",
