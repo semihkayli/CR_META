@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-15T02:35:01.294Z",
-  "totalBattlesAnalyzed": 2174,
-  "totalPlayersScanned": 1180,
-  "totalRunCount": 59,
+  "lastUpdatedAt": "2026-07-15T05:33:46.569Z",
+  "totalBattlesAnalyzed": 2183,
+  "totalPlayersScanned": 1200,
+  "totalRunCount": 60,
   "playerLastScan": {
     "G9YV9GR8R": "20260710T142307.000Z",
     "2CLV2RP0": "20260714T090542.000Z",
@@ -14,7 +14,7 @@
     "9G28ULYR": "20260714T234824.000Z",
     "92L9R2JG": "20260714T100147.000Z",
     "R09228V": "20260714T001252.000Z",
-    "PCG229PC": "20260714T105140.000Z",
+    "PCG229PC": "20260715T034703.000Z",
     "GG829JGY": "20260713T071919.000Z",
     "PPV2JUUGU": "20260714T183622.000Z",
     "9890JJJV": "20260704T035429.000Z",
@@ -585,12 +585,12 @@
           "evo": 0
         }
       ],
-      "useCount": 89,
-      "winCount": 53,
+      "useCount": 98,
+      "winCount": 60,
       "slotConfigs": {
         "27000000|26000038|26000010": 35,
         "26000010|26000038|26000014": 5,
-        "27000000|26000038|26000014": 41,
+        "27000000|26000038|26000014": 50,
         "26000010|26000038|27000000": 8
       },
       "proUsage": {
@@ -611,8 +611,8 @@
         },
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 43,
-          "games": 73
+          "wins": 50,
+          "games": 82
         },
         "2CLV2RP0": {
           "name": "Mugi",
