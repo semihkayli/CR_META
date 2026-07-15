@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-15T05:33:46.569Z",
-  "totalBattlesAnalyzed": 2183,
-  "totalPlayersScanned": 1200,
-  "totalRunCount": 60,
+  "lastUpdatedAt": "2026-07-15T08:13:37.660Z",
+  "totalBattlesAnalyzed": 2216,
+  "totalPlayersScanned": 1220,
+  "totalRunCount": 61,
   "playerLastScan": {
     "G9YV9GR8R": "20260710T142307.000Z",
     "2CLV2RP0": "20260714T090542.000Z",
@@ -15,8 +15,8 @@
     "92L9R2JG": "20260714T100147.000Z",
     "R09228V": "20260714T001252.000Z",
     "PCG229PC": "20260715T034703.000Z",
-    "GG829JGY": "20260713T071919.000Z",
-    "PPV2JUUGU": "20260714T183622.000Z",
+    "GG829JGY": "20260715T080147.000Z",
+    "PPV2JUUGU": "20260715T071431.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260706T084228.000Z",
@@ -4262,16 +4262,16 @@
           "evo": 0
         }
       ],
-      "useCount": 3,
-      "winCount": 2,
+      "useCount": 14,
+      "winCount": 9,
       "slotConfigs": {
-        "27000013|26000093|27000000": 3
+        "27000013|26000093|27000000": 14
       },
       "proUsage": {
         "GG829JGY": {
           "name": "SirTag",
-          "wins": 2,
-          "games": 3
+          "wins": 9,
+          "games": 14
         }
       }
     },
@@ -4310,16 +4310,16 @@
           "evo": 0
         }
       ],
-      "useCount": 3,
+      "useCount": 4,
       "winCount": 2,
       "slotConfigs": {
-        "26000017|26000039|28000017": 3
+        "26000017|26000039|28000017": 4
       },
       "proUsage": {
         "GG829JGY": {
           "name": "SirTag",
           "wins": 2,
-          "games": 3
+          "games": 4
         }
       }
     },
@@ -6359,7 +6359,7 @@
           "evo": 1
         },
         {
-          "id": 28000011,
+          "id": 28000007,
           "evo": 0
         },
         {
@@ -6367,23 +6367,23 @@
           "evo": 0
         },
         {
-          "id": 27000000,
-          "evo": 0
-        },
-        {
           "id": 26000084,
           "evo": 0
         },
         {
-          "id": 28000007,
+          "id": 28000011,
+          "evo": 0
+        },
+        {
+          "id": 27000000,
           "evo": 0
         }
       ],
-      "useCount": 59,
-      "winCount": 44,
+      "useCount": 65,
+      "winCount": 46,
       "slotConfigs": {
-        "26000059|26000065|26000015": 53,
-        "26000015|26000065|26000059": 6
+        "26000059|26000065|26000015": 56,
+        "26000015|26000065|26000059": 9
       },
       "proUsage": {
         "92L9R2JG": {
@@ -6393,8 +6393,8 @@
         },
         "GG829JGY": {
           "name": "SirTag",
-          "wins": 4,
-          "games": 6
+          "wins": 5,
+          "games": 9
         },
         "R90PRV0PY": {
           "name": "Ryley",
@@ -6408,8 +6408,8 @@
         },
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 6,
-          "games": 10
+          "wins": 7,
+          "games": 13
         }
       }
     },
@@ -6736,16 +6736,21 @@
           "evo": 0
         }
       ],
-      "useCount": 2,
-      "winCount": 1,
+      "useCount": 7,
+      "winCount": 2,
       "slotConfigs": {
-        "26000001|26000034|28000017": 2
+        "26000001|26000034|28000017": 7
       },
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
           "wins": 1,
           "games": 2
+        },
+        "GG829JGY": {
+          "name": "SirTag",
+          "wins": 1,
+          "games": 5
         }
       }
     },
@@ -6880,16 +6885,21 @@
           "evo": 0
         }
       ],
-      "useCount": 4,
-      "winCount": 4,
+      "useCount": 8,
+      "winCount": 5,
       "slotConfigs": {
-        "26000015|27000009|28000017": 4
+        "26000015|27000009|28000017": 8
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
           "wins": 4,
-          "games": 4
+          "games": 5
+        },
+        "GG829JGY": {
+          "name": "SirTag",
+          "wins": 1,
+          "games": 3
         }
       }
     },
@@ -6987,6 +6997,54 @@
           "name": "LucasXGamer",
           "wins": 4,
           "games": 6
+        }
+      }
+    },
+    "26000002;26000022;26000026;26000032;26000058;26000102;27000003;28000011": {
+      "cards": [
+        {
+          "id": 26000058,
+          "evo": 1
+        },
+        {
+          "id": 26000002,
+          "evo": 2
+        },
+        {
+          "id": 26000022,
+          "evo": 1
+        },
+        {
+          "id": 26000032,
+          "evo": 0
+        },
+        {
+          "id": 26000102,
+          "evo": 0
+        },
+        {
+          "id": 26000026,
+          "evo": 0
+        },
+        {
+          "id": 28000011,
+          "evo": 0
+        },
+        {
+          "id": 27000003,
+          "evo": 0
+        }
+      ],
+      "useCount": 5,
+      "winCount": 1,
+      "slotConfigs": {
+        "26000058|26000002|26000022": 5
+      },
+      "proUsage": {
+        "GG829JGY": {
+          "name": "SirTag",
+          "wins": 1,
+          "games": 5
         }
       }
     }
