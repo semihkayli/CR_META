@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-15T08:13:37.660Z",
-  "totalBattlesAnalyzed": 2216,
-  "totalPlayersScanned": 1220,
-  "totalRunCount": 61,
+  "lastUpdatedAt": "2026-07-15T10:51:43.584Z",
+  "totalBattlesAnalyzed": 2221,
+  "totalPlayersScanned": 1240,
+  "totalRunCount": 62,
   "playerLastScan": {
     "G9YV9GR8R": "20260710T142307.000Z",
     "2CLV2RP0": "20260714T090542.000Z",
@@ -15,7 +15,7 @@
     "92L9R2JG": "20260714T100147.000Z",
     "R09228V": "20260714T001252.000Z",
     "PCG229PC": "20260715T034703.000Z",
-    "GG829JGY": "20260715T080147.000Z",
+    "GG829JGY": "20260715T090231.000Z",
     "PPV2JUUGU": "20260715T071431.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
@@ -6736,10 +6736,10 @@
           "evo": 0
         }
       ],
-      "useCount": 7,
+      "useCount": 8,
       "winCount": 2,
       "slotConfigs": {
-        "26000001|26000034|28000017": 7
+        "26000001|26000034|28000017": 8
       },
       "proUsage": {
         "92L9R2JG": {
@@ -6750,7 +6750,7 @@
         "GG829JGY": {
           "name": "SirTag",
           "wins": 1,
-          "games": 5
+          "games": 6
         }
       }
     },
@@ -6865,7 +6865,7 @@
           "evo": 1
         },
         {
-          "id": 26000051,
+          "id": 26000050,
           "evo": 0
         },
         {
@@ -6873,11 +6873,11 @@
           "evo": 0
         },
         {
-          "id": 26000042,
+          "id": 26000051,
           "evo": 0
         },
         {
-          "id": 26000050,
+          "id": 26000042,
           "evo": 0
         },
         {
@@ -6885,10 +6885,10 @@
           "evo": 0
         }
       ],
-      "useCount": 8,
-      "winCount": 5,
+      "useCount": 12,
+      "winCount": 8,
       "slotConfigs": {
-        "26000015|27000009|28000017": 8
+        "26000015|27000009|28000017": 12
       },
       "proUsage": {
         "PPV2JUUGU": {
@@ -6898,8 +6898,8 @@
         },
         "GG829JGY": {
           "name": "SirTag",
-          "wins": 1,
-          "games": 3
+          "wins": 4,
+          "games": 7
         }
       }
     },

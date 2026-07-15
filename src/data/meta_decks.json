@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-15T08:13:37.665Z",
+  "updatedAt": "2026-07-15T10:51:43.588Z",
   "seasonId": "2026-07",
-  "totalBattlesAnalyzed": 2216,
-  "totalPlayersScanned": 1220,
-  "totalRuns": 61,
+  "totalBattlesAnalyzed": 2221,
+  "totalPlayersScanned": 1240,
+  "totalRuns": 62,
   "metaDecks": [
     {
       "deckId": "26000010;26000031;26000032;26000049;26000058;26000062;27000004;28000011",
@@ -1719,6 +1719,71 @@
       "rating": 41
     },
     {
+      "deckId": "26000015;26000042;26000050;26000051;26000106;27000009;28000007;28000017",
+      "cards": [
+        {
+          "name": "Baby Dragon",
+          "id": 26000015,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Tombstone",
+          "id": 27000009,
+          "evolutionLevel": 2,
+          "iconUrls": {}
+        },
+        {
+          "name": "Giant Snowball",
+          "id": 28000017,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Royal Ghost",
+          "id": 26000050,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Card_26000106",
+          "id": 26000106,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": ""
+          }
+        },
+        {
+          "name": "Ram Rider",
+          "id": 26000051,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Electro Wizard",
+          "id": 26000042,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Lightning",
+          "id": 28000007,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 26000015,
+        "championSlotCardId": 27000009,
+        "flexSlotCardId": 28000017,
+        "flexSlotType": "evolution"
+      },
+      "winRate": 66.7,
+      "useCount": 12,
+      "winCount": 8,
+      "rating": 41
+    },
+    {
       "deckId": "26000010;26000030;26000040;26000084;26000106;27000000;28000004;28000015",
       "cards": [
         {
@@ -2353,71 +2418,6 @@
         "evoSlotCardId": 26000035,
         "championSlotCardId": 27000009,
         "flexSlotCardId": 26000015,
-        "flexSlotType": "evolution"
-      },
-      "winRate": 62.5,
-      "useCount": 8,
-      "winCount": 5,
-      "rating": 37.5
-    },
-    {
-      "deckId": "26000015;26000042;26000050;26000051;26000106;27000009;28000007;28000017",
-      "cards": [
-        {
-          "name": "Baby Dragon",
-          "id": 26000015,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Tombstone",
-          "id": 27000009,
-          "evolutionLevel": 2,
-          "iconUrls": {}
-        },
-        {
-          "name": "Giant Snowball",
-          "id": 28000017,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Ram Rider",
-          "id": 26000051,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Card_26000106",
-          "id": 26000106,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": ""
-          }
-        },
-        {
-          "name": "Electro Wizard",
-          "id": 26000042,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Royal Ghost",
-          "id": 26000050,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Lightning",
-          "id": 28000007,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        }
-      ],
-      "slotConfig": {
-        "evoSlotCardId": 26000015,
-        "championSlotCardId": 27000009,
-        "flexSlotCardId": 28000017,
         "flexSlotType": "evolution"
       },
       "winRate": 62.5,
@@ -5213,6 +5213,87 @@
       ]
     },
     {
+      "deckId": "26000015;26000042;26000050;26000051;26000106;27000009;28000007;28000017",
+      "cards": [
+        {
+          "name": "Baby Dragon",
+          "id": 26000015,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Tombstone",
+          "id": 27000009,
+          "evolutionLevel": 2,
+          "iconUrls": {}
+        },
+        {
+          "name": "Giant Snowball",
+          "id": 28000017,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Royal Ghost",
+          "id": 26000050,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Card_26000106",
+          "id": 26000106,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": ""
+          }
+        },
+        {
+          "name": "Ram Rider",
+          "id": 26000051,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Electro Wizard",
+          "id": 26000042,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Lightning",
+          "id": 28000007,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 26000015,
+        "championSlotCardId": 27000009,
+        "flexSlotCardId": 28000017,
+        "flexSlotType": "evolution"
+      },
+      "totalUseCount": 12,
+      "totalWinCount": 8,
+      "overallWinRate": 66.7,
+      "proCount": 2,
+      "pros": [
+        {
+          "tag": "#GG829JGY",
+          "name": "SirTag",
+          "useCount": 7,
+          "winCount": 4,
+          "winRate": 57.1
+        },
+        {
+          "tag": "#PPV2JUUGU",
+          "name": "Boss",
+          "useCount": 5,
+          "winCount": 4,
+          "winRate": 80
+        }
+      ]
+    },
+    {
       "deckId": "26000010;26000011;26000017;26000030;26000031;26000084;27000007;27000008",
       "cards": [
         {
@@ -5369,87 +5450,6 @@
           "useCount": 1,
           "winCount": 0,
           "winRate": 0
-        }
-      ]
-    },
-    {
-      "deckId": "26000015;26000042;26000050;26000051;26000106;27000009;28000007;28000017",
-      "cards": [
-        {
-          "name": "Baby Dragon",
-          "id": 26000015,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Tombstone",
-          "id": 27000009,
-          "evolutionLevel": 2,
-          "iconUrls": {}
-        },
-        {
-          "name": "Giant Snowball",
-          "id": 28000017,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Ram Rider",
-          "id": 26000051,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Card_26000106",
-          "id": 26000106,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": ""
-          }
-        },
-        {
-          "name": "Electro Wizard",
-          "id": 26000042,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Royal Ghost",
-          "id": 26000050,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Lightning",
-          "id": 28000007,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        }
-      ],
-      "slotConfig": {
-        "evoSlotCardId": 26000015,
-        "championSlotCardId": 27000009,
-        "flexSlotCardId": 28000017,
-        "flexSlotType": "evolution"
-      },
-      "totalUseCount": 8,
-      "totalWinCount": 5,
-      "overallWinRate": 62.5,
-      "proCount": 2,
-      "pros": [
-        {
-          "tag": "#PPV2JUUGU",
-          "name": "Boss",
-          "useCount": 5,
-          "winCount": 4,
-          "winRate": 80
-        },
-        {
-          "tag": "#GG829JGY",
-          "name": "SirTag",
-          "useCount": 3,
-          "winCount": 1,
-          "winRate": 33.3
         }
       ]
     },
@@ -5859,7 +5859,7 @@
     {
       "tag": "#G9YV9GR8R",
       "name": "Mohamed Light",
-      "updatedAt": "2026-07-15T08:13:38.161Z",
+      "updatedAt": "2026-07-15T10:51:44.065Z",
       "deck": [
         {
           "name": "Goblin Cage",
@@ -5930,7 +5930,7 @@
     {
       "tag": "#Y9R22RQ2",
       "name": "Ian77",
-      "updatedAt": "2026-07-15T08:13:39.164Z",
+      "updatedAt": "2026-07-15T10:51:45.022Z",
       "deck": [
         {
           "name": "Royal Hogs",
@@ -6001,7 +6001,7 @@
     {
       "tag": "#R90PRV0PY",
       "name": "Ryley",
-      "updatedAt": "2026-07-15T08:13:39.601Z",
+      "updatedAt": "2026-07-15T10:51:45.428Z",
       "deck": [
         {
           "name": "Goblin Drill",
@@ -6072,7 +6072,7 @@
     {
       "tag": "#9G28ULYR",
       "name": "LucasXGamer",
-      "updatedAt": "2026-07-15T08:13:40.103Z",
+      "updatedAt": "2026-07-15T10:51:45.904Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6143,7 +6143,7 @@
     {
       "tag": "#92L9R2JG",
       "name": "Surgical Goblin",
-      "updatedAt": "2026-07-15T08:13:40.620Z",
+      "updatedAt": "2026-07-15T10:51:46.381Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6214,7 +6214,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-07-15T08:13:41.119Z",
+      "updatedAt": "2026-07-15T10:51:46.863Z",
       "deck": [
         {
           "name": "Knight",
@@ -6285,7 +6285,7 @@
     {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-07-15T08:13:42.062Z",
+      "updatedAt": "2026-07-15T10:51:47.752Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6356,7 +6356,7 @@
     {
       "tag": "#PPV2JUUGU",
       "name": "Boss",
-      "updatedAt": "2026-07-15T08:13:42.563Z",
+      "updatedAt": "2026-07-15T10:51:48.221Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -6427,7 +6427,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-07-15T08:13:43.065Z",
+      "updatedAt": "2026-07-15T10:51:48.693Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6498,7 +6498,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-07-15T08:13:43.502Z",
+      "updatedAt": "2026-07-15T10:51:49.103Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6569,7 +6569,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-07-15T08:13:44.009Z",
+      "updatedAt": "2026-07-15T10:51:49.585Z",
       "deck": [
         {
           "name": "Zap",
@@ -6640,7 +6640,7 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-07-15T08:13:45.457Z",
+      "updatedAt": "2026-07-15T10:51:50.822Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -6711,7 +6711,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-07-15T08:13:45.953Z",
+      "updatedAt": "2026-07-15T10:51:51.294Z",
       "deck": [
         {
           "name": "Bomber",
@@ -6782,7 +6782,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-07-15T08:13:46.450Z",
+      "updatedAt": "2026-07-15T10:51:51.761Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6853,7 +6853,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-07-15T08:13:46.957Z",
+      "updatedAt": "2026-07-15T10:51:52.240Z",
       "deck": [
         {
           "name": "Royal Hogs",
@@ -6924,7 +6924,7 @@
     {
       "tag": "#UJ0CVRUV",
       "name": "NotRealPro",
-      "updatedAt": "2026-07-15T08:13:47.463Z",
+      "updatedAt": "2026-07-15T10:51:52.718Z",
       "deck": [
         {
           "name": "Goblin Drill",
