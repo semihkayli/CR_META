@@ -2,21 +2,21 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-17T08:11:57.299Z",
-  "totalBattlesAnalyzed": 2441,
-  "totalPlayersScanned": 1540,
-  "totalRunCount": 77,
+  "lastUpdatedAt": "2026-07-17T10:48:11.513Z",
+  "totalBattlesAnalyzed": 2462,
+  "totalPlayersScanned": 1560,
+  "totalRunCount": 78,
   "playerLastScan": {
     "G9YV9GR8R": "20260716T215251.000Z",
     "2CLV2RP0": "20260715T152146.000Z",
     "Y9R22RQ2": "20260716T153345.000Z",
     "R90PRV0PY": "20260713T222536.000Z",
     "9G28ULYR": "20260716T221431.000Z",
-    "92L9R2JG": "20260716T142303.000Z",
+    "92L9R2JG": "20260717T104600.000Z",
     "R09228V": "20260714T001252.000Z",
     "PCG229PC": "20260716T095055.000Z",
     "GG829JGY": "20260717T020819.000Z",
-    "PPV2JUUGU": "20260717T075338.000Z",
+    "PPV2JUUGU": "20260717T104222.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260706T084228.000Z",
@@ -946,16 +946,16 @@
           "evo": 0
         }
       ],
-      "useCount": 16,
-      "winCount": 10,
+      "useCount": 21,
+      "winCount": 13,
       "slotConfigs": {
-        "26000035|28000015|26000063": 16
+        "26000035|28000015|26000063": 21
       },
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
-          "wins": 10,
-          "games": 16
+          "wins": 13,
+          "games": 21
         }
       }
     },
@@ -6133,11 +6133,11 @@
           "evo": 0
         }
       ],
-      "useCount": 10,
-      "winCount": 4,
+      "useCount": 16,
+      "winCount": 8,
       "slotConfigs": {
         "27000002|26000002|26000056": 3,
-        "26000056|26000002|27000002": 7
+        "26000056|26000002|27000002": 13
       },
       "proUsage": {
         "2CLV2RP0": {
@@ -6157,8 +6157,8 @@
         },
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 1,
-          "games": 6
+          "wins": 5,
+          "games": 12
         }
       }
     },
@@ -6703,10 +6703,10 @@
           "evo": 0
         }
       ],
-      "useCount": 6,
+      "useCount": 7,
       "winCount": 3,
       "slotConfigs": {
-        "26000012|26000006|26000037": 6
+        "26000012|26000006|26000037": 7
       },
       "proUsage": {
         "92L9R2JG": {
@@ -6717,7 +6717,7 @@
         "PPV2JUUGU": {
           "name": "Boss",
           "wins": 3,
-          "games": 4
+          "games": 5
         }
       }
     },
@@ -7304,6 +7304,54 @@
         "GG829JGY": {
           "name": "SirTag",
           "wins": 8,
+          "games": 9
+        }
+      }
+    },
+    "26000009;26000035;26000063;26000080;26000106;27000007;28000012;28000015": {
+      "cards": [
+        {
+          "id": 26000035,
+          "evo": 1
+        },
+        {
+          "id": 28000015,
+          "evo": 2
+        },
+        {
+          "id": 26000063,
+          "evo": 1
+        },
+        {
+          "id": 26000009,
+          "evo": 0
+        },
+        {
+          "id": 26000106,
+          "evo": 0
+        },
+        {
+          "id": 26000080,
+          "evo": 0
+        },
+        {
+          "id": 28000012,
+          "evo": 0
+        },
+        {
+          "id": 27000007,
+          "evo": 0
+        }
+      ],
+      "useCount": 9,
+      "winCount": 3,
+      "slotConfigs": {
+        "26000035|28000015|26000063": 9
+      },
+      "proUsage": {
+        "92L9R2JG": {
+          "name": "Surgical Goblin",
+          "wins": 3,
           "games": 9
         }
       }
