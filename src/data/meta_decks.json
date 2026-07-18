@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-18T02:36:50.491Z",
+  "updatedAt": "2026-07-18T05:28:15.948Z",
   "seasonId": "2026-07",
   "totalBattlesAnalyzed": 2542,
-  "totalPlayersScanned": 1660,
-  "totalRuns": 83,
+  "totalPlayersScanned": 1680,
+  "totalRuns": 84,
   "metaDecks": [
     {
       "deckId": "26000010;26000031;26000032;26000049;26000058;26000062;27000004;28000011",
@@ -5877,7 +5877,7 @@
     {
       "tag": "#G9YV9GR8R",
       "name": "Mohamed Light",
-      "updatedAt": "2026-07-18T02:36:50.969Z",
+      "updatedAt": "2026-07-18T05:28:16.424Z",
       "deck": [
         {
           "name": "Mortar",
@@ -5948,7 +5948,7 @@
     {
       "tag": "#Y9R22RQ2",
       "name": "Ian77",
-      "updatedAt": "2026-07-18T02:36:51.849Z",
+      "updatedAt": "2026-07-18T05:28:17.299Z",
       "deck": [
         {
           "name": "Goblin Drill",
@@ -6019,7 +6019,7 @@
     {
       "tag": "#R90PRV0PY",
       "name": "Ryley",
-      "updatedAt": "2026-07-18T02:36:52.276Z",
+      "updatedAt": "2026-07-18T05:28:17.709Z",
       "deck": [
         {
           "name": "Goblin Drill",
@@ -6090,7 +6090,7 @@
     {
       "tag": "#9G28ULYR",
       "name": "LucasXGamer",
-      "updatedAt": "2026-07-18T02:36:52.764Z",
+      "updatedAt": "2026-07-18T05:28:18.186Z",
       "deck": [
         {
           "name": "Archers",
@@ -6161,7 +6161,7 @@
     {
       "tag": "#92L9R2JG",
       "name": "Surgical Goblin",
-      "updatedAt": "2026-07-18T02:36:53.239Z",
+      "updatedAt": "2026-07-18T05:28:18.659Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6232,7 +6232,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-07-18T02:36:53.719Z",
+      "updatedAt": "2026-07-18T05:28:19.142Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6303,7 +6303,7 @@
     {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-07-18T02:36:54.609Z",
+      "updatedAt": "2026-07-18T05:28:20.027Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6374,7 +6374,7 @@
     {
       "tag": "#PPV2JUUGU",
       "name": "Boss",
-      "updatedAt": "2026-07-18T02:36:55.093Z",
+      "updatedAt": "2026-07-18T05:28:20.503Z",
       "deck": [
         {
           "name": "Royal Hogs",
@@ -6445,7 +6445,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-07-18T02:36:55.574Z",
+      "updatedAt": "2026-07-18T05:28:20.980Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6516,7 +6516,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-07-18T02:36:55.990Z",
+      "updatedAt": "2026-07-18T05:28:21.386Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6587,7 +6587,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-07-18T02:36:56.474Z",
+      "updatedAt": "2026-07-18T05:28:21.854Z",
       "deck": [
         {
           "name": "Zap",
@@ -6658,7 +6658,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-07-18T02:36:56.886Z",
+      "updatedAt": "2026-07-18T05:28:22.270Z",
       "deck": [
         {
           "name": "Wizard",
@@ -6729,7 +6729,7 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-07-18T02:36:57.793Z",
+      "updatedAt": "2026-07-18T05:28:23.149Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -6800,7 +6800,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-07-18T02:36:58.264Z",
+      "updatedAt": "2026-07-18T05:28:23.615Z",
       "deck": [
         {
           "name": "Bomber",
@@ -6871,7 +6871,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-07-18T02:36:58.750Z",
+      "updatedAt": "2026-07-18T05:28:24.091Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6942,7 +6942,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-07-18T02:36:59.227Z",
+      "updatedAt": "2026-07-18T05:28:24.563Z",
       "deck": [
         {
           "name": "Royal Hogs",
@@ -7013,7 +7013,7 @@
     {
       "tag": "#UJ0CVRUV",
       "name": "NotRealPro",
-      "updatedAt": "2026-07-18T02:36:59.713Z",
+      "updatedAt": "2026-07-18T05:28:25.044Z",
       "deck": [
         {
           "name": "Goblin Drill",
