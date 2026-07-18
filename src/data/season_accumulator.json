@@ -2,21 +2,21 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-18T07:53:49.340Z",
-  "totalBattlesAnalyzed": 2548,
-  "totalPlayersScanned": 1700,
-  "totalRunCount": 85,
+  "lastUpdatedAt": "2026-07-18T10:19:26.996Z",
+  "totalBattlesAnalyzed": 2562,
+  "totalPlayersScanned": 1720,
+  "totalRunCount": 86,
   "playerLastScan": {
     "G9YV9GR8R": "20260717T211259.000Z",
     "2CLV2RP0": "20260717T140118.000Z",
     "Y9R22RQ2": "20260716T153345.000Z",
     "R90PRV0PY": "20260713T222536.000Z",
     "9G28ULYR": "20260718T005035.000Z",
-    "92L9R2JG": "20260717T130235.000Z",
+    "92L9R2JG": "20260718T101915.000Z",
     "R09228V": "20260714T001252.000Z",
     "PCG229PC": "20260718T062821.000Z",
     "GG829JGY": "20260717T020819.000Z",
-    "PPV2JUUGU": "20260717T171649.000Z",
+    "PPV2JUUGU": "20260718T095203.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260706T084228.000Z",
@@ -126,10 +126,10 @@
           "evo": 0
         }
       ],
-      "useCount": 178,
-      "winCount": 132,
+      "useCount": 180,
+      "winCount": 134,
       "slotConfigs": {
-        "26000058|26000062|26000049": 113,
+        "26000058|26000062|26000049": 115,
         "26000049|26000062|26000058": 65
       },
       "proUsage": {
@@ -152,6 +152,11 @@
           "name": "OYASSUU",
           "wins": 3,
           "games": 6
+        },
+        "PPV2JUUGU": {
+          "name": "Boss",
+          "wins": 2,
+          "games": 2
         }
       }
     },
@@ -636,15 +641,11 @@
           "evo": 1
         },
         {
-          "id": 26000031,
-          "evo": 0
-        },
-        {
           "id": 26000058,
           "evo": 0
         },
         {
-          "id": 26000030,
+          "id": 28000003,
           "evo": 0
         },
         {
@@ -652,14 +653,18 @@
           "evo": 0
         },
         {
-          "id": 28000003,
+          "id": 26000031,
+          "evo": 0
+        },
+        {
+          "id": 26000030,
           "evo": 0
         }
       ],
-      "useCount": 122,
-      "winCount": 71,
+      "useCount": 127,
+      "winCount": 72,
       "slotConfigs": {
-        "28000004|26000002|26000011": 122
+        "28000004|26000002|26000011": 127
       },
       "proUsage": {
         "R90PRV0PY": {
@@ -689,8 +694,8 @@
         },
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 12,
-          "games": 28
+          "wins": 13,
+          "games": 33
         },
         "R09228V": {
           "name": "Morten",
@@ -7402,16 +7407,16 @@
           "evo": 0
         }
       ],
-      "useCount": 3,
-      "winCount": 2,
+      "useCount": 4,
+      "winCount": 3,
       "slotConfigs": {
-        "26000000|26000039|26000093": 3
+        "26000000|26000039|26000093": 4
       },
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
-          "wins": 2,
-          "games": 3
+          "wins": 3,
+          "games": 4
         }
       }
     },
@@ -7652,6 +7657,54 @@
           "name": "LucasXGamer",
           "wins": 3,
           "games": 8
+        }
+      }
+    },
+    "26000005;26000006;26000011;26000013;26000029;26000037;28000000;28000017": {
+      "cards": [
+        {
+          "id": 26000037,
+          "evo": 1
+        },
+        {
+          "id": 26000006,
+          "evo": 2
+        },
+        {
+          "id": 26000011,
+          "evo": 1
+        },
+        {
+          "id": 26000029,
+          "evo": 0
+        },
+        {
+          "id": 28000000,
+          "evo": 0
+        },
+        {
+          "id": 26000005,
+          "evo": 0
+        },
+        {
+          "id": 26000013,
+          "evo": 0
+        },
+        {
+          "id": 28000017,
+          "evo": 0
+        }
+      ],
+      "useCount": 5,
+      "winCount": 2,
+      "slotConfigs": {
+        "26000037|26000006|26000011": 5
+      },
+      "proUsage": {
+        "92L9R2JG": {
+          "name": "Surgical Goblin",
+          "wins": 2,
+          "games": 5
         }
       }
     }
