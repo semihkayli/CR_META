@@ -2,19 +2,19 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-19T02:51:39.902Z",
-  "totalBattlesAnalyzed": 2594,
-  "totalPlayersScanned": 1820,
-  "totalRunCount": 91,
+  "lastUpdatedAt": "2026-07-19T05:55:38.200Z",
+  "totalBattlesAnalyzed": 2597,
+  "totalPlayersScanned": 1840,
+  "totalRunCount": 92,
   "playerLastScan": {
     "G9YV9GR8R": "20260718T230346.000Z",
     "2CLV2RP0": "20260718T212909.000Z",
-    "Y9R22RQ2": "20260716T153345.000Z",
+    "Y9R22RQ2": "20260719T042415.000Z",
     "R90PRV0PY": "20260713T222536.000Z",
     "9G28ULYR": "20260718T220455.000Z",
     "92L9R2JG": "20260718T111317.000Z",
     "R09228V": "20260719T020440.000Z",
-    "PCG229PC": "20260718T210213.000Z",
+    "PCG229PC": "20260719T052604.000Z",
     "GG829JGY": "20260717T020819.000Z",
     "PPV2JUUGU": "20260718T200318.000Z",
     "9890JJJV": "20260704T035429.000Z",
@@ -597,12 +597,12 @@
           "evo": 0
         }
       ],
-      "useCount": 121,
+      "useCount": 122,
       "winCount": 74,
       "slotConfigs": {
         "27000000|26000038|26000010": 35,
         "26000010|26000038|26000014": 5,
-        "27000000|26000038|26000014": 73,
+        "27000000|26000038|26000014": 74,
         "26000010|26000038|27000000": 8
       },
       "proUsage": {
@@ -624,7 +624,7 @@
         "PCG229PC": {
           "name": "OYASSUU",
           "wins": 64,
-          "games": 105
+          "games": 106
         },
         "2CLV2RP0": {
           "name": "Mugi",
@@ -6150,11 +6150,11 @@
           "evo": 0
         }
       ],
-      "useCount": 27,
-      "winCount": 15,
+      "useCount": 29,
+      "winCount": 16,
       "slotConfigs": {
         "27000002|26000002|26000056": 3,
-        "26000056|26000002|27000002": 24
+        "26000056|26000002|27000002": 26
       },
       "proUsage": {
         "2CLV2RP0": {
@@ -6179,6 +6179,11 @@
         },
         "92L9R2JG": {
           "name": "Surgical Goblin",
+          "wins": 1,
+          "games": 2
+        },
+        "Y9R22RQ2": {
+          "name": "Ian77",
           "wins": 1,
           "games": 2
         }
