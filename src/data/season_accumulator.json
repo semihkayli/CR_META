@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-19T19:08:43.023Z",
-  "totalBattlesAnalyzed": 2682,
-  "totalPlayersScanned": 1940,
-  "totalRunCount": 97,
+  "lastUpdatedAt": "2026-07-19T21:54:34.430Z",
+  "totalBattlesAnalyzed": 2683,
+  "totalPlayersScanned": 1960,
+  "totalRunCount": 98,
   "playerLastScan": {
     "G9YV9GR8R": "20260718T230346.000Z",
     "2CLV2RP0": "20260719T125135.000Z",
@@ -16,7 +16,7 @@
     "R09228V": "20260719T020440.000Z",
     "PCG229PC": "20260719T052604.000Z",
     "GG829JGY": "20260719T080625.000Z",
-    "PPV2JUUGU": "20260719T185009.000Z",
+    "PPV2JUUGU": "20260719T200515.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260706T084228.000Z",
@@ -5250,16 +5250,16 @@
           "evo": 0
         }
       ],
-      "useCount": 206,
-      "winCount": 108,
+      "useCount": 207,
+      "winCount": 109,
       "slotConfigs": {
-        "26000024|28000015|26000050": 206
+        "26000024|28000015|26000050": 207
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 89,
-          "games": 171
+          "wins": 90,
+          "games": 172
         },
         "R90PRV0PY": {
           "name": "Ryley",
