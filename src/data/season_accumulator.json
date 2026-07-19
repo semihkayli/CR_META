@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-19T08:22:32.820Z",
-  "totalBattlesAnalyzed": 2614,
-  "totalPlayersScanned": 1860,
-  "totalRunCount": 93,
+  "lastUpdatedAt": "2026-07-19T10:36:09.032Z",
+  "totalBattlesAnalyzed": 2615,
+  "totalPlayersScanned": 1880,
+  "totalRunCount": 94,
   "playerLastScan": {
     "G9YV9GR8R": "20260718T230346.000Z",
     "2CLV2RP0": "20260718T212909.000Z",
@@ -23,7 +23,7 @@
     "989PQYY8": "20260718T144718.000Z",
     "GLUU9JGQ": "20260710T024552.000Z",
     "J80V2Y9VC": "20260704T024734.000Z",
-    "YU9JR0Q": "20260719T081755.000Z",
+    "YU9JR0Q": "20260719T091620.000Z",
     "UJ0CVRUV": "20260717T005031.000Z",
     "LUYY2URU": "20260711T101847.000Z",
     "92L8QYJJG": "20260719T020603.000Z"
@@ -2061,10 +2061,10 @@
           "evo": 0
         }
       ],
-      "useCount": 105,
-      "winCount": 76,
+      "useCount": 106,
+      "winCount": 77,
       "slotConfigs": {
-        "26000056|26000002|27000002": 53,
+        "26000056|26000002|27000002": 54,
         "27000002|26000002|26000056": 52
       },
       "proUsage": {
@@ -2080,8 +2080,8 @@
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 30,
-          "games": 39
+          "wins": 31,
+          "games": 40
         },
         "PPV2JUUGU": {
           "name": "Boss",
