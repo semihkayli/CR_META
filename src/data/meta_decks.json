@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-19T21:54:34.435Z",
+  "updatedAt": "2026-07-20T03:20:34.259Z",
   "seasonId": "2026-07",
   "totalBattlesAnalyzed": 2683,
-  "totalPlayersScanned": 1960,
-  "totalRuns": 98,
+  "totalPlayersScanned": 1980,
+  "totalRuns": 99,
   "metaDecks": [
     {
       "deckId": "26000010;26000031;26000032;26000049;26000058;26000062;27000004;28000011",
@@ -5907,7 +5907,7 @@
     {
       "tag": "#G9YV9GR8R",
       "name": "Mohamed Light",
-      "updatedAt": "2026-07-19T21:54:34.916Z",
+      "updatedAt": "2026-07-20T03:20:34.783Z",
       "deck": [
         {
           "name": "Royal Ghost",
@@ -5978,7 +5978,7 @@
     {
       "tag": "#Y9R22RQ2",
       "name": "Ian77",
-      "updatedAt": "2026-07-19T21:54:35.885Z",
+      "updatedAt": "2026-07-20T03:20:35.819Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6049,7 +6049,7 @@
     {
       "tag": "#R90PRV0PY",
       "name": "Ryley",
-      "updatedAt": "2026-07-19T21:54:36.306Z",
+      "updatedAt": "2026-07-20T03:20:36.279Z",
       "deck": [
         {
           "name": "Goblin Drill",
@@ -6120,7 +6120,7 @@
     {
       "tag": "#9G28ULYR",
       "name": "LucasXGamer",
-      "updatedAt": "2026-07-19T21:54:36.783Z",
+      "updatedAt": "2026-07-20T03:20:36.795Z",
       "deck": [
         {
           "name": "Goblin Drill",
@@ -6191,7 +6191,7 @@
     {
       "tag": "#92L9R2JG",
       "name": "Surgical Goblin",
-      "updatedAt": "2026-07-19T21:54:37.263Z",
+      "updatedAt": "2026-07-20T03:20:37.325Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6262,7 +6262,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-07-19T21:54:37.741Z",
+      "updatedAt": "2026-07-20T03:20:37.849Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6333,7 +6333,7 @@
     {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-07-19T21:54:38.632Z",
+      "updatedAt": "2026-07-20T03:20:38.844Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6404,7 +6404,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-07-19T21:54:39.586Z",
+      "updatedAt": "2026-07-20T03:20:39.899Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6475,7 +6475,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-07-19T21:54:39.996Z",
+      "updatedAt": "2026-07-20T03:20:40.354Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6546,7 +6546,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-07-19T21:54:40.490Z",
+      "updatedAt": "2026-07-20T03:20:40.882Z",
       "deck": [
         {
           "name": "Zap",
@@ -6617,7 +6617,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-07-19T21:54:40.902Z",
+      "updatedAt": "2026-07-20T03:20:41.338Z",
       "deck": [
         {
           "name": "Wizard",
@@ -6688,7 +6688,7 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-07-19T21:54:41.803Z",
+      "updatedAt": "2026-07-20T03:20:42.317Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -6759,7 +6759,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-07-19T21:54:42.281Z",
+      "updatedAt": "2026-07-20T03:20:42.845Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6830,7 +6830,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-07-19T21:54:42.750Z",
+      "updatedAt": "2026-07-20T03:20:43.371Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6901,7 +6901,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-07-19T21:54:43.241Z",
+      "updatedAt": "2026-07-20T03:20:43.901Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6972,7 +6972,7 @@
     {
       "tag": "#UJ0CVRUV",
       "name": "NotRealPro",
-      "updatedAt": "2026-07-19T21:54:43.718Z",
+      "updatedAt": "2026-07-20T03:20:44.427Z",
       "deck": [
         {
           "name": "Goblin Drill",
