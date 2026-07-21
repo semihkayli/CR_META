@@ -2,19 +2,19 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-21T02:48:27.322Z",
-  "totalBattlesAnalyzed": 2920,
-  "totalPlayersScanned": 2100,
-  "totalRunCount": 105,
+  "lastUpdatedAt": "2026-07-21T05:53:06.809Z",
+  "totalBattlesAnalyzed": 2939,
+  "totalPlayersScanned": 2120,
+  "totalRunCount": 106,
   "playerLastScan": {
     "G9YV9GR8R": "20260718T230346.000Z",
     "2CLV2RP0": "20260720T151933.000Z",
-    "Y9R22RQ2": "20260721T024519.000Z",
+    "Y9R22RQ2": "20260721T025429.000Z",
     "R90PRV0PY": "20260713T222536.000Z",
     "9G28ULYR": "20260720T134624.000Z",
     "92L9R2JG": "20260718T111317.000Z",
     "R09228V": "20260720T230347.000Z",
-    "PCG229PC": "20260720T142522.000Z",
+    "PCG229PC": "20260721T052127.000Z",
     "GG829JGY": "20260720T065738.000Z",
     "PPV2JUUGU": "20260721T021721.000Z",
     "9890JJJV": "20260704T035429.000Z",
@@ -673,10 +673,10 @@
           "evo": 0
         }
       ],
-      "useCount": 148,
-      "winCount": 83,
+      "useCount": 165,
+      "winCount": 91,
       "slotConfigs": {
-        "28000004|26000002|26000011": 148
+        "28000004|26000002|26000011": 165
       },
       "proUsage": {
         "R90PRV0PY": {
@@ -691,8 +691,8 @@
         },
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 45,
-          "games": 68
+          "wins": 53,
+          "games": 85
         },
         "Y9R22RQ2": {
           "name": "Ian77",
@@ -5249,7 +5249,7 @@
           "evo": 0
         },
         {
-          "id": 26000084,
+          "id": 28000000,
           "evo": 0
         },
         {
@@ -5257,14 +5257,14 @@
           "evo": 0
         },
         {
-          "id": 28000000,
+          "id": 26000084,
           "evo": 0
         }
       ],
-      "useCount": 295,
-      "winCount": 159,
+      "useCount": 297,
+      "winCount": 160,
       "slotConfigs": {
-        "26000024|28000015|26000050": 295
+        "26000024|28000015|26000050": 297
       },
       "proUsage": {
         "PPV2JUUGU": {
@@ -5284,8 +5284,8 @@
         },
         "Y9R22RQ2": {
           "name": "Ian77",
-          "wins": 22,
-          "games": 40
+          "wins": 23,
+          "games": 42
         },
         "9G28ULYR": {
           "name": "LucasXGamer",
