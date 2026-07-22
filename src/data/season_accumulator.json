@@ -2,28 +2,28 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-22T11:10:53.654Z",
-  "totalBattlesAnalyzed": 3165,
-  "totalPlayersScanned": 2320,
-  "totalRunCount": 116,
+  "lastUpdatedAt": "2026-07-22T13:59:04.048Z",
+  "totalBattlesAnalyzed": 3175,
+  "totalPlayersScanned": 2340,
+  "totalRunCount": 117,
   "playerLastScan": {
     "G9YV9GR8R": "20260721T232208.000Z",
     "2CLV2RP0": "20260721T132816.000Z",
     "Y9R22RQ2": "20260722T043617.000Z",
-    "R90PRV0PY": "20260722T111026.000Z",
+    "R90PRV0PY": "20260722T115137.000Z",
     "9G28ULYR": "20260721T230756.000Z",
     "92L9R2JG": "20260722T093008.000Z",
     "R09228V": "20260720T230347.000Z",
     "PCG229PC": "20260722T070807.000Z",
     "GG829JGY": "20260722T101549.000Z",
-    "PPV2JUUGU": "20260722T013212.000Z",
+    "PPV2JUUGU": "20260722T124006.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260722T054024.000Z",
     "989PQYY8": "20260720T141403.000Z",
     "GLUU9JGQ": "20260721T184613.000Z",
     "J80V2Y9VC": "20260704T024734.000Z",
-    "YU9JR0Q": "20260722T083556.000Z",
+    "YU9JR0Q": "20260722T114939.000Z",
     "UJ0CVRUV": "20260722T043539.000Z",
     "LUYY2URU": "20260711T101847.000Z",
     "92L8QYJJG": "20260722T002045.000Z"
@@ -2067,10 +2067,10 @@
           "evo": 0
         }
       ],
-      "useCount": 129,
-      "winCount": 94,
+      "useCount": 133,
+      "winCount": 96,
       "slotConfigs": {
-        "26000056|26000002|27000002": 69,
+        "26000056|26000002|27000002": 73,
         "27000002|26000002|26000056": 60
       },
       "proUsage": {
@@ -2086,8 +2086,8 @@
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 35,
-          "games": 48
+          "wins": 37,
+          "games": 52
         },
         "PPV2JUUGU": {
           "name": "Boss",
@@ -5276,16 +5276,16 @@
           "evo": 0
         }
       ],
-      "useCount": 331,
-      "winCount": 178,
+      "useCount": 332,
+      "winCount": 179,
       "slotConfigs": {
-        "26000024|28000015|26000050": 331
+        "26000024|28000015|26000050": 332
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 144,
-          "games": 266
+          "wins": 145,
+          "games": 267
         },
         "R90PRV0PY": {
           "name": "Ryley",
@@ -8955,16 +8955,16 @@
           "evo": 0
         }
       ],
-      "useCount": 3,
-      "winCount": 2,
+      "useCount": 8,
+      "winCount": 5,
       "slotConfigs": {
-        "26000058|26000062|28000004": 3
+        "26000058|26000062|28000004": 8
       },
       "proUsage": {
         "R90PRV0PY": {
           "name": "Ryley",
-          "wins": 2,
-          "games": 3
+          "wins": 5,
+          "games": 8
         }
       }
     },
