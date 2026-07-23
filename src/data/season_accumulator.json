@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-23T02:52:01.054Z",
-  "totalBattlesAnalyzed": 3331,
-  "totalPlayersScanned": 2420,
-  "totalRunCount": 121,
+  "lastUpdatedAt": "2026-07-23T05:56:27.236Z",
+  "totalBattlesAnalyzed": 3333,
+  "totalPlayersScanned": 2440,
+  "totalRunCount": 122,
   "playerLastScan": {
     "G9YV9GR8R": "20260721T232208.000Z",
     "2CLV2RP0": "20260723T005734.000Z",
@@ -24,7 +24,7 @@
     "GLUU9JGQ": "20260722T205850.000Z",
     "J80V2Y9VC": "20260704T024734.000Z",
     "YU9JR0Q": "20260722T172257.000Z",
-    "UJ0CVRUV": "20260723T025024.000Z",
+    "UJ0CVRUV": "20260723T025810.000Z",
     "LUYY2URU": "20260711T101847.000Z",
     "92L8QYJJG": "20260722T002045.000Z"
   },
@@ -2072,11 +2072,11 @@
           "evo": 0
         }
       ],
-      "useCount": 140,
-      "winCount": 101,
+      "useCount": 142,
+      "winCount": 103,
       "slotConfigs": {
         "26000056|26000002|27000002": 78,
-        "27000002|26000002|26000056": 62
+        "27000002|26000002|26000056": 64
       },
       "proUsage": {
         "GLUU9JGQ": {
@@ -2086,8 +2086,8 @@
         },
         "UJ0CVRUV": {
           "name": "NotRealPro",
-          "wins": 43,
-          "games": 62
+          "wins": 45,
+          "games": 64
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
