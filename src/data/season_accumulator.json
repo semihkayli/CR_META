@@ -2,21 +2,21 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-24T19:26:50.206Z",
-  "totalBattlesAnalyzed": 3733,
-  "totalPlayersScanned": 2700,
-  "totalRunCount": 135,
+  "lastUpdatedAt": "2026-07-24T22:05:46.589Z",
+  "totalBattlesAnalyzed": 3763,
+  "totalPlayersScanned": 2720,
+  "totalRunCount": 136,
   "playerLastScan": {
     "G9YV9GR8R": "20260724T121559.000Z",
     "2CLV2RP0": "20260724T154900.000Z",
-    "Y9R22RQ2": "20260724T034623.000Z",
+    "Y9R22RQ2": "20260724T220134.000Z",
     "R90PRV0PY": "20260724T122508.000Z",
-    "9G28ULYR": "20260724T182322.000Z",
-    "92L9R2JG": "20260724T192637.000Z",
+    "9G28ULYR": "20260724T213229.000Z",
+    "92L9R2JG": "20260724T195801.000Z",
     "R09228V": "20260722T220932.000Z",
     "PCG229PC": "20260722T221829.000Z",
     "GG829JGY": "20260724T131736.000Z",
-    "PPV2JUUGU": "20260724T011854.000Z",
+    "PPV2JUUGU": "20260724T220529.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260724T122038.000Z",
@@ -26,7 +26,7 @@
     "YU9JR0Q": "20260724T114220.000Z",
     "UJ0CVRUV": "20260724T015629.000Z",
     "LUYY2URU": "20260711T101847.000Z",
-    "92L8QYJJG": "20260724T180217.000Z"
+    "92L8QYJJG": "20260724T213559.000Z"
   },
   "decks": {
     "26000000;26000001;26000010;26000084;27000006;27000008;28000000;28000011": {
@@ -5339,17 +5339,17 @@
           "evo": 0
         }
       ],
-      "useCount": 408,
-      "winCount": 216,
+      "useCount": 419,
+      "winCount": 223,
       "slotConfigs": {
-        "26000024|28000015|26000050": 407,
+        "26000024|28000015|26000050": 418,
         "26000044|28000015|26000050": 1
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 182,
-          "games": 342
+          "wins": 186,
+          "games": 349
         },
         "R90PRV0PY": {
           "name": "Ryley",
@@ -5363,8 +5363,8 @@
         },
         "Y9R22RQ2": {
           "name": "Ian77",
-          "wins": 23,
-          "games": 43
+          "wins": 26,
+          "games": 47
         },
         "9G28ULYR": {
           "name": "LucasXGamer",
@@ -5846,16 +5846,16 @@
           "evo": 0
         }
       ],
-      "useCount": 9,
-      "winCount": 5,
+      "useCount": 15,
+      "winCount": 9,
       "slotConfigs": {
-        "28000004|26000002|26000011": 9
+        "28000004|26000002|26000011": 15
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 5,
-          "games": 9
+          "wins": 9,
+          "games": 15
         }
       }
     },
@@ -8219,10 +8219,10 @@
           "evo": 0
         }
       ],
-      "useCount": 10,
-      "winCount": 6,
+      "useCount": 13,
+      "winCount": 8,
       "slotConfigs": {
-        "26000045|26000074|26000037": 10
+        "26000045|26000074|26000037": 13
       },
       "proUsage": {
         "R09228V": {
@@ -8232,8 +8232,8 @@
         },
         "92L8QYJJG": {
           "name": "Candee",
-          "wins": 1,
-          "games": 1
+          "wins": 3,
+          "games": 4
         }
       }
     },
@@ -9719,16 +9719,16 @@
           "evo": 0
         }
       ],
-      "useCount": 11,
-      "winCount": 9,
+      "useCount": 13,
+      "winCount": 11,
       "slotConfigs": {
-        "26000015|28000015|27000006": 11
+        "26000015|28000015|27000006": 13
       },
       "proUsage": {
         "92L8QYJJG": {
           "name": "Candee",
-          "wins": 9,
-          "games": 11
+          "wins": 11,
+          "games": 13
         }
       }
     },
@@ -10295,16 +10295,16 @@
           "evo": 0
         }
       ],
-      "useCount": 11,
-      "winCount": 6,
+      "useCount": 17,
+      "winCount": 10,
       "slotConfigs": {
-        "27000012|28000015|26000047": 11
+        "27000012|28000015|26000047": 17
       },
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
-          "wins": 6,
-          "games": 11
+          "wins": 10,
+          "games": 17
         }
       }
     },
@@ -10449,6 +10449,54 @@
           "name": "FBI",
           "wins": 13,
           "games": 16
+        }
+      }
+    },
+    "26000000;26000015;26000034;26000085;27000006;28000007;28000012;28000015": {
+      "cards": [
+        {
+          "id": 26000015,
+          "evo": 1
+        },
+        {
+          "id": 28000015,
+          "evo": 2
+        },
+        {
+          "id": 27000006,
+          "evo": 1
+        },
+        {
+          "id": 26000085,
+          "evo": 0
+        },
+        {
+          "id": 28000007,
+          "evo": 0
+        },
+        {
+          "id": 28000012,
+          "evo": 0
+        },
+        {
+          "id": 26000000,
+          "evo": 0
+        },
+        {
+          "id": 26000034,
+          "evo": 0
+        }
+      ],
+      "useCount": 2,
+      "winCount": 1,
+      "slotConfigs": {
+        "26000015|28000015|27000006": 2
+      },
+      "proUsage": {
+        "92L8QYJJG": {
+          "name": "Candee",
+          "wins": 1,
+          "games": 2
         }
       }
     }
