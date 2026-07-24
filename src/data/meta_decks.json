@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-24T02:47:14.407Z",
+  "updatedAt": "2026-07-24T05:51:43.618Z",
   "seasonId": "2026-07",
-  "totalBattlesAnalyzed": 3615,
-  "totalPlayersScanned": 2580,
-  "totalRuns": 129,
+  "totalBattlesAnalyzed": 3622,
+  "totalPlayersScanned": 2600,
+  "totalRuns": 130,
   "metaDecks": [
     {
       "deckId": "26000010;26000024;26000044;26000050;26000061;26000084;28000000;28000015",
@@ -5968,7 +5968,7 @@
     {
       "tag": "#2CLV2RP0",
       "name": "Mugi",
-      "updatedAt": "2026-07-24T02:47:15.388Z",
+      "updatedAt": "2026-07-24T05:51:44.662Z",
       "deck": [
         {
           "name": "Mega Knight",
@@ -6039,7 +6039,7 @@
     {
       "tag": "#Y9R22RQ2",
       "name": "Ian77",
-      "updatedAt": "2026-07-24T02:47:15.883Z",
+      "updatedAt": "2026-07-24T05:51:45.185Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6110,7 +6110,7 @@
     {
       "tag": "#92L9R2JG",
       "name": "Surgical Goblin",
-      "updatedAt": "2026-07-24T02:47:17.300Z",
+      "updatedAt": "2026-07-24T05:51:46.707Z",
       "deck": [
         {
           "name": "Lightning",
@@ -6181,7 +6181,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-07-24T02:47:17.804Z",
+      "updatedAt": "2026-07-24T05:51:47.240Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6252,7 +6252,7 @@
     {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-07-24T02:47:18.737Z",
+      "updatedAt": "2026-07-24T05:51:48.213Z",
       "deck": [
         {
           "name": "Mortar",
@@ -6323,7 +6323,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-07-24T02:47:19.752Z",
+      "updatedAt": "2026-07-24T05:51:49.253Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6394,7 +6394,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-07-24T02:47:20.177Z",
+      "updatedAt": "2026-07-24T05:51:49.712Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6465,7 +6465,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-07-24T02:47:20.673Z",
+      "updatedAt": "2026-07-24T05:51:50.238Z",
       "deck": [
         {
           "name": "Zap",
@@ -6536,7 +6536,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-07-24T02:47:21.097Z",
+      "updatedAt": "2026-07-24T05:51:50.698Z",
       "deck": [
         {
           "name": "Wizard",
@@ -6607,7 +6607,7 @@
     {
       "tag": "#989PQYY8",
       "name": "SULLY",
-      "updatedAt": "2026-07-24T02:47:21.587Z",
+      "updatedAt": "2026-07-24T05:51:51.213Z",
       "deck": [
         {
           "name": "Knight",
@@ -6678,7 +6678,7 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-07-24T02:47:22.011Z",
+      "updatedAt": "2026-07-24T05:51:51.735Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -6749,7 +6749,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-07-24T02:47:22.501Z",
+      "updatedAt": "2026-07-24T05:51:52.262Z",
       "deck": [
         {
           "name": "Furnace",
@@ -6820,7 +6820,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-07-24T02:47:22.985Z",
+      "updatedAt": "2026-07-24T05:51:52.794Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6891,7 +6891,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-07-24T02:47:23.475Z",
+      "updatedAt": "2026-07-24T05:51:53.316Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6962,7 +6962,7 @@
     {
       "tag": "#UJ0CVRUV",
       "name": "NotRealPro",
-      "updatedAt": "2026-07-24T02:47:23.970Z",
+      "updatedAt": "2026-07-24T05:51:53.844Z",
       "deck": [
         {
           "name": "Goblin Drill",
