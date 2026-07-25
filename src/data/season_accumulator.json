@@ -2,25 +2,25 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-25T13:37:10.927Z",
-  "totalBattlesAnalyzed": 3842,
-  "totalPlayersScanned": 2820,
-  "totalRunCount": 141,
+  "lastUpdatedAt": "2026-07-25T16:05:03.893Z",
+  "totalBattlesAnalyzed": 3848,
+  "totalPlayersScanned": 2840,
+  "totalRunCount": 142,
   "playerLastScan": {
     "G9YV9GR8R": "20260724T121559.000Z",
     "2CLV2RP0": "20260725T031014.000Z",
     "Y9R22RQ2": "20260725T062638.000Z",
     "R90PRV0PY": "20260724T122508.000Z",
-    "9G28ULYR": "20260725T021238.000Z",
+    "9G28ULYR": "20260725T145504.000Z",
     "92L9R2JG": "20260724T195801.000Z",
     "R09228V": "20260725T131849.000Z",
     "PCG229PC": "20260722T221829.000Z",
     "GG829JGY": "20260724T131736.000Z",
-    "PPV2JUUGU": "20260725T132954.000Z",
+    "PPV2JUUGU": "20260725T134023.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260724T122038.000Z",
-    "989PQYY8": "20260725T092519.000Z",
+    "989PQYY8": "20260725T152232.000Z",
     "GLUU9JGQ": "20260725T110308.000Z",
     "J80V2Y9VC": "20260704T024734.000Z",
     "YU9JR0Q": "20260724T114220.000Z",
@@ -819,16 +819,16 @@
           "evo": 0
         }
       ],
-      "useCount": 46,
-      "winCount": 29,
+      "useCount": 47,
+      "winCount": 30,
       "slotConfigs": {
-        "26000035|28000015|27000012": 46
+        "26000035|28000015|27000012": 47
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 25,
-          "games": 36
+          "wins": 26,
+          "games": 37
         },
         "PPV2JUUGU": {
           "name": "Boss",
@@ -1786,16 +1786,16 @@
           "evo": 0
         }
       ],
-      "useCount": 27,
-      "winCount": 16,
+      "useCount": 31,
+      "winCount": 18,
       "slotConfigs": {
-        "27000002|26000002|26000022": 27
+        "27000002|26000002|26000022": 31
       },
       "proUsage": {
         "989PQYY8": {
           "name": "SULLY",
-          "wins": 16,
-          "games": 27
+          "wins": 18,
+          "games": 31
         }
       }
     },
@@ -5344,17 +5344,17 @@
           "evo": 0
         }
       ],
-      "useCount": 444,
+      "useCount": 445,
       "winCount": 234,
       "slotConfigs": {
-        "26000024|28000015|26000050": 443,
+        "26000024|28000015|26000050": 444,
         "26000044|28000015|26000050": 1
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
           "wins": 197,
-          "games": 374
+          "games": 375
         },
         "R90PRV0PY": {
           "name": "Ryley",
