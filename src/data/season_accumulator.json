@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-27T16:58:56.160Z",
-  "totalBattlesAnalyzed": 4256,
-  "totalPlayersScanned": 3100,
-  "totalRunCount": 155,
+  "lastUpdatedAt": "2026-07-27T19:35:24.124Z",
+  "totalBattlesAnalyzed": 4262,
+  "totalPlayersScanned": 3120,
+  "totalRunCount": 156,
   "playerLastScan": {
     "G9YV9GR8R": "20260724T121559.000Z",
     "2CLV2RP0": "20260727T051844.000Z",
@@ -13,14 +13,14 @@
     "R90PRV0PY": "20260726T103220.000Z",
     "9G28ULYR": "20260727T071049.000Z",
     "92L9R2JG": "20260727T072616.000Z",
-    "R09228V": "20260725T221904.000Z",
+    "R09228V": "20260727T175715.000Z",
     "PCG229PC": "20260727T161537.000Z",
     "GG829JGY": "20260726T060721.000Z",
     "PPV2JUUGU": "20260727T001432.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260727T165232.000Z",
-    "989PQYY8": "20260727T083627.000Z",
+    "989PQYY8": "20260727T183617.000Z",
     "GLUU9JGQ": "20260727T072701.000Z",
     "J80V2Y9VC": "20260704T024734.000Z",
     "YU9JR0Q": "20260726T145043.000Z",
@@ -1802,16 +1802,16 @@
           "evo": 0
         }
       ],
-      "useCount": 32,
-      "winCount": 18,
+      "useCount": 34,
+      "winCount": 20,
       "slotConfigs": {
-        "27000002|26000002|26000022": 32
+        "27000002|26000002|26000022": 34
       },
       "proUsage": {
         "989PQYY8": {
           "name": "SULLY",
-          "wins": 18,
-          "games": 32
+          "wins": 20,
+          "games": 34
         }
       }
     },
@@ -8309,16 +8309,16 @@
           "evo": 0
         }
       ],
-      "useCount": 29,
-      "winCount": 21,
+      "useCount": 31,
+      "winCount": 23,
       "slotConfigs": {
-        "26000001|26000065|26000059": 29
+        "26000001|26000065|26000059": 31
       },
       "proUsage": {
         "R09228V": {
           "name": "Morten",
-          "wins": 21,
-          "games": 29
+          "wins": 23,
+          "games": 31
         }
       }
     },
@@ -10876,16 +10876,16 @@
           "evo": 0
         }
       ],
-      "useCount": 8,
+      "useCount": 10,
       "winCount": 4,
       "slotConfigs": {
-        "26000059|26000038|26000050": 8
+        "26000059|26000038|26000050": 10
       },
       "proUsage": {
         "R09228V": {
           "name": "Morten",
           "wins": 4,
-          "games": 8
+          "games": 10
         }
       }
     },
