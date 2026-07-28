@@ -2,21 +2,21 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-27T22:09:18.487Z",
-  "totalBattlesAnalyzed": 4288,
-  "totalPlayersScanned": 3140,
-  "totalRunCount": 157,
+  "lastUpdatedAt": "2026-07-28T02:43:49.799Z",
+  "totalBattlesAnalyzed": 4344,
+  "totalPlayersScanned": 3160,
+  "totalRunCount": 158,
   "playerLastScan": {
     "G9YV9GR8R": "20260724T121559.000Z",
-    "2CLV2RP0": "20260727T220441.000Z",
+    "2CLV2RP0": "20260727T223552.000Z",
     "Y9R22RQ2": "20260726T042644.000Z",
     "R90PRV0PY": "20260726T103220.000Z",
     "9G28ULYR": "20260727T071049.000Z",
     "92L9R2JG": "20260727T072616.000Z",
-    "R09228V": "20260727T220803.000Z",
-    "PCG229PC": "20260727T204334.000Z",
+    "R09228V": "20260727T221323.000Z",
+    "PCG229PC": "20260728T000925.000Z",
     "GG829JGY": "20260726T060721.000Z",
-    "PPV2JUUGU": "20260727T220747.000Z",
+    "PPV2JUUGU": "20260728T024017.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260727T194546.000Z",
@@ -607,12 +607,12 @@
           "evo": 0
         }
       ],
-      "useCount": 201,
-      "winCount": 115,
+      "useCount": 220,
+      "winCount": 126,
       "slotConfigs": {
         "27000000|26000038|26000010": 38,
         "26000010|26000038|26000014": 5,
-        "27000000|26000038|26000014": 147,
+        "27000000|26000038|26000014": 166,
         "26000010|26000038|27000000": 11
       },
       "proUsage": {
@@ -633,8 +633,8 @@
         },
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 104,
-          "games": 179
+          "wins": 115,
+          "games": 198
         },
         "2CLV2RP0": {
           "name": "Mugi",
@@ -5366,17 +5366,17 @@
           "evo": 0
         }
       ],
-      "useCount": 466,
-      "winCount": 244,
+      "useCount": 496,
+      "winCount": 262,
       "slotConfigs": {
-        "26000024|28000015|26000050": 465,
+        "26000024|28000015|26000050": 495,
         "26000044|28000015|26000050": 1
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 207,
-          "games": 395
+          "wins": 225,
+          "games": 425
         },
         "R90PRV0PY": {
           "name": "Ryley",
@@ -7937,10 +7937,6 @@
           "evo": 0
         },
         {
-          "id": 28000007,
-          "evo": 0
-        },
-        {
           "id": 26000005,
           "evo": 0
         },
@@ -7951,18 +7947,22 @@
         {
           "id": 28000015,
           "evo": 0
+        },
+        {
+          "id": 28000007,
+          "evo": 0
         }
       ],
-      "useCount": 13,
-      "winCount": 4,
+      "useCount": 15,
+      "winCount": 6,
       "slotConfigs": {
-        "27000002|26000099|26000050": 13
+        "27000002|26000099|26000050": 15
       },
       "proUsage": {
         "2CLV2RP0": {
           "name": "Mugi",
-          "wins": 4,
-          "games": 11
+          "wins": 6,
+          "games": 13
         },
         "92L9R2JG": {
           "name": "Surgical Goblin",
@@ -8309,16 +8309,16 @@
           "evo": 0
         }
       ],
-      "useCount": 44,
-      "winCount": 32,
+      "useCount": 45,
+      "winCount": 33,
       "slotConfigs": {
-        "26000001|26000065|26000059": 44
+        "26000001|26000065|26000059": 45
       },
       "proUsage": {
         "R09228V": {
           "name": "Morten",
-          "wins": 32,
-          "games": 44
+          "wins": 33,
+          "games": 45
         }
       }
     },
@@ -10242,10 +10242,10 @@
           "evo": 0
         }
       ],
-      "useCount": 3,
+      "useCount": 5,
       "winCount": 3,
       "slotConfigs": {
-        "26000001|26000099|26000010": 3
+        "26000001|26000099|26000010": 5
       },
       "proUsage": {
         "9G28ULYR": {
@@ -10256,7 +10256,7 @@
         "2CLV2RP0": {
           "name": "Mugi",
           "wins": 1,
-          "games": 1
+          "games": 3
         }
       }
     },
