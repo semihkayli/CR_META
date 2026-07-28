@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-28T05:47:34.457Z",
+  "updatedAt": "2026-07-28T08:36:10.420Z",
   "seasonId": "2026-07",
   "totalBattlesAnalyzed": 4368,
-  "totalPlayersScanned": 3180,
-  "totalRuns": 159,
+  "totalPlayersScanned": 3200,
+  "totalRuns": 160,
   "metaDecks": [
     {
       "deckId": "26000010;26000024;26000044;26000050;26000061;26000084;28000000;28000015",
@@ -6055,7 +6055,7 @@
     {
       "tag": "#9G28ULYR",
       "name": "LucasXGamer",
-      "updatedAt": "2026-07-28T05:47:37.014Z",
+      "updatedAt": "2026-07-28T08:36:12.741Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6126,7 +6126,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-07-28T05:47:38.072Z",
+      "updatedAt": "2026-07-28T08:36:13.724Z",
       "deck": [
         {
           "name": "Dart Goblin",
@@ -6195,9 +6195,80 @@
       ]
     },
     {
+      "tag": "#GG829JGY",
+      "name": "SirTag",
+      "updatedAt": "2026-07-28T08:36:14.620Z",
+      "deck": [
+        {
+          "name": "Mortar",
+          "id": 27000002,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/lPOSw6H7YOHq2miSCrf7ZDL3ANjhJdPPDYOTujdNrVE.png"
+          }
+        },
+        {
+          "name": "Dark Prince",
+          "id": 26000027,
+          "evolutionLevel": 2,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/M7fXlrKXHu2IvpSGpk36kXVstslbR08Bbxcy0jQcln8.png"
+          }
+        },
+        {
+          "name": "Minion Horde",
+          "id": 26000022,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/Wyjq5l0IXHTkX9Rmpap6HaH08MvjbxFp1xBO9a47YSI.png"
+          }
+        },
+        {
+          "name": "Miner",
+          "id": 26000032,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/Y4yWvdwBCg2FpAZgs8T09Gy34WOwpLZW-ttL52Ae8NE.png"
+          }
+        },
+        {
+          "name": "Mother Witch",
+          "id": 26000083,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/fO-Xah8XZkYKaSK9SCp3wnzwxtvIhun9NVY-zzte1Ng.png"
+          }
+        },
+        {
+          "name": "Vines",
+          "id": 28000026,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/V5sJlPuo2WBRtirJ1lGEPJA4NvQ0KPwFeMrpxLX5z_8.png"
+          }
+        },
+        {
+          "name": "Rascals",
+          "id": 26000053,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/KV48DfwVHKx9XCjzBdk3daT_Eb52Me4VgjVO7WctRc4.png"
+          }
+        },
+        {
+          "name": "Guards",
+          "id": 26000025,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/1ArKfLJxYo6_NU_S9cAeIrfbXqWH0oULVJXedxBXQlU.png"
+          }
+        }
+      ]
+    },
+    {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-07-28T05:47:40.096Z",
+      "updatedAt": "2026-07-28T08:36:15.575Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6268,7 +6339,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-07-28T05:47:40.549Z",
+      "updatedAt": "2026-07-28T08:36:15.993Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6339,7 +6410,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-07-28T05:47:41.083Z",
+      "updatedAt": "2026-07-28T08:36:16.469Z",
       "deck": [
         {
           "name": "Wall Breakers",
@@ -6410,7 +6481,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-07-28T05:47:41.560Z",
+      "updatedAt": "2026-07-28T08:36:16.879Z",
       "deck": [
         {
           "name": "Wizard",
@@ -6481,7 +6552,7 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-07-28T05:47:42.537Z",
+      "updatedAt": "2026-07-28T08:36:17.786Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -6552,7 +6623,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-07-28T05:47:43.061Z",
+      "updatedAt": "2026-07-28T08:36:18.278Z",
       "deck": [
         {
           "name": "Furnace",
@@ -6623,7 +6694,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-07-28T05:47:43.610Z",
+      "updatedAt": "2026-07-28T08:36:18.760Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6694,7 +6765,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-07-28T05:47:44.153Z",
+      "updatedAt": "2026-07-28T08:36:19.241Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6765,7 +6836,7 @@
     {
       "tag": "#UJ0CVRUV",
       "name": "NotRealPro",
-      "updatedAt": "2026-07-28T05:47:44.670Z",
+      "updatedAt": "2026-07-28T08:36:19.719Z",
       "deck": [
         {
           "name": "Goblin Drill",
