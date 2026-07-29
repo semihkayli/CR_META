@@ -2,19 +2,19 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-29T08:43:03.356Z",
-  "totalBattlesAnalyzed": 4693,
-  "totalPlayersScanned": 3360,
-  "totalRunCount": 168,
+  "lastUpdatedAt": "2026-07-29T11:27:14.546Z",
+  "totalBattlesAnalyzed": 4717,
+  "totalPlayersScanned": 3380,
+  "totalRunCount": 169,
   "playerLastScan": {
     "G9YV9GR8R": "20260728T102253.000Z",
-    "2CLV2RP0": "20260727T223552.000Z",
+    "2CLV2RP0": "20260729T100709.000Z",
     "Y9R22RQ2": "20260726T042644.000Z",
     "R90PRV0PY": "20260726T103220.000Z",
-    "9G28ULYR": "20260728T235007.000Z",
+    "9G28ULYR": "20260729T094252.000Z",
     "92L9R2JG": "20260729T082959.000Z",
     "R09228V": "20260729T013337.000Z",
-    "PCG229PC": "20260729T063230.000Z",
+    "PCG229PC": "20260729T103427.000Z",
     "GG829JGY": "20260729T083551.000Z",
     "PPV2JUUGU": "20260729T080804.000Z",
     "9890JJJV": "20260704T035429.000Z",
@@ -3772,16 +3772,16 @@
           "evo": 0
         }
       ],
-      "useCount": 30,
-      "winCount": 16,
+      "useCount": 41,
+      "winCount": 21,
       "slotConfigs": {
-        "28000004|26000065|26000040": 30
+        "28000004|26000065|26000040": 41
       },
       "proUsage": {
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 16,
-          "games": 30
+          "wins": 21,
+          "games": 41
         }
       }
     },
@@ -5372,7 +5372,7 @@
           "evo": 0
         },
         {
-          "id": 26000084,
+          "id": 28000000,
           "evo": 0
         },
         {
@@ -5380,14 +5380,14 @@
           "evo": 0
         },
         {
-          "id": 28000000,
+          "id": 26000084,
           "evo": 0
         }
       ],
-      "useCount": 622,
-      "winCount": 328,
+      "useCount": 627,
+      "winCount": 329,
       "slotConfigs": {
-        "26000024|28000015|26000050": 621,
+        "26000024|28000015|26000050": 626,
         "26000044|28000015|26000050": 1
       },
       "proUsage": {
@@ -5420,6 +5420,11 @@
           "name": "Morten",
           "wins": 6,
           "games": 10
+        },
+        "2CLV2RP0": {
+          "name": "Mugi",
+          "wins": 1,
+          "games": 5
         }
       }
     },
@@ -10366,16 +10371,21 @@
           "evo": 0
         }
       ],
-      "useCount": 17,
-      "winCount": 10,
+      "useCount": 22,
+      "winCount": 12,
       "slotConfigs": {
-        "27000012|28000015|26000047": 17
+        "27000012|28000015|26000047": 22
       },
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
           "wins": 10,
           "games": 17
+        },
+        "2CLV2RP0": {
+          "name": "Mugi",
+          "wins": 2,
+          "games": 5
         }
       }
     },
@@ -10803,16 +10813,16 @@
           "evo": 0
         }
       ],
-      "useCount": 12,
-      "winCount": 9,
+      "useCount": 15,
+      "winCount": 12,
       "slotConfigs": {
-        "28000004|26000062|26000058": 12
+        "28000004|26000062|26000058": 15
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 9,
-          "games": 12
+          "wins": 12,
+          "games": 15
         }
       }
     },
