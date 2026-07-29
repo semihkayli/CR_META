@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-29T02:45:40.397Z",
-  "totalBattlesAnalyzed": 4628,
-  "totalPlayersScanned": 3320,
-  "totalRunCount": 166,
+  "lastUpdatedAt": "2026-07-29T05:53:55.078Z",
+  "totalBattlesAnalyzed": 4663,
+  "totalPlayersScanned": 3340,
+  "totalRunCount": 167,
   "playerLastScan": {
     "G9YV9GR8R": "20260728T102253.000Z",
     "2CLV2RP0": "20260727T223552.000Z",
@@ -14,9 +14,9 @@
     "9G28ULYR": "20260728T235007.000Z",
     "92L9R2JG": "20260727T072616.000Z",
     "R09228V": "20260729T013337.000Z",
-    "PCG229PC": "20260728T142444.000Z",
+    "PCG229PC": "20260729T052842.000Z",
     "GG829JGY": "20260726T060721.000Z",
-    "PPV2JUUGU": "20260729T024202.000Z",
+    "PPV2JUUGU": "20260729T054335.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260728T121519.000Z",
@@ -607,12 +607,12 @@
           "evo": 0
         }
       ],
-      "useCount": 229,
-      "winCount": 128,
+      "useCount": 234,
+      "winCount": 130,
       "slotConfigs": {
         "27000000|26000038|26000010": 38,
         "26000010|26000038|26000014": 5,
-        "27000000|26000038|26000014": 175,
+        "27000000|26000038|26000014": 180,
         "26000010|26000038|27000000": 11
       },
       "proUsage": {
@@ -633,8 +633,8 @@
         },
         "PCG229PC": {
           "name": "OYASSUU",
-          "wins": 117,
-          "games": 207
+          "wins": 119,
+          "games": 212
         },
         "2CLV2RP0": {
           "name": "Mugi",
@@ -5384,17 +5384,17 @@
           "evo": 0
         }
       ],
-      "useCount": 576,
-      "winCount": 303,
+      "useCount": 606,
+      "winCount": 321,
       "slotConfigs": {
-        "26000024|28000015|26000050": 575,
+        "26000024|28000015|26000050": 605,
         "26000044|28000015|26000050": 1
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 253,
-          "games": 485
+          "wins": 271,
+          "games": 515
         },
         "R90PRV0PY": {
           "name": "Ryley",
