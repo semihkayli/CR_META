@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-29T11:27:14.552Z",
+  "updatedAt": "2026-07-29T14:12:41.406Z",
   "seasonId": "2026-07",
-  "totalBattlesAnalyzed": 4717,
-  "totalPlayersScanned": 3380,
-  "totalRuns": 169,
+  "totalBattlesAnalyzed": 4728,
+  "totalPlayersScanned": 3400,
+  "totalRuns": 170,
   "metaDecks": [
     {
       "deckId": "26000010;26000024;26000044;26000050;26000061;26000084;28000000;28000015",
@@ -321,6 +321,69 @@
       "rating": 57.1
     },
     {
+      "deckId": "26000002;26000005;26000053;26000054;26000056;27000002;28000000;28000015",
+      "cards": [
+        {
+          "name": "Mortar",
+          "id": 27000002,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Goblins",
+          "id": 26000002,
+          "evolutionLevel": 2,
+          "iconUrls": {}
+        },
+        {
+          "name": "Skeleton Barrel",
+          "id": 26000056,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Cannon Cart",
+          "id": 26000054,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Barbarian Barrel",
+          "id": 28000015,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Fireball",
+          "id": 28000000,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Rascals",
+          "id": 26000053,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Minions",
+          "id": 26000005,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 26000056,
+        "championSlotCardId": 26000002,
+        "flexSlotCardId": 27000002,
+        "flexSlotType": "evolution"
+      },
+      "winRate": 69.3,
+      "useCount": 202,
+      "winCount": 140,
+      "rating": 54.1
+    },
+    {
       "deckId": "26000010;26000021;26000064;26000065;26000084;27000006;28000011;28000014",
       "cards": [
         {
@@ -381,69 +444,6 @@
       "winRate": 83.6,
       "useCount": 61,
       "winCount": 51,
-      "rating": 53.6
-    },
-    {
-      "deckId": "26000002;26000005;26000053;26000054;26000056;27000002;28000000;28000015",
-      "cards": [
-        {
-          "name": "Skeleton Barrel",
-          "id": 26000056,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Goblins",
-          "id": 26000002,
-          "evolutionLevel": 2,
-          "iconUrls": {}
-        },
-        {
-          "name": "Mortar",
-          "id": 27000002,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Cannon Cart",
-          "id": 26000054,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Fireball",
-          "id": 28000000,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Minions",
-          "id": 26000005,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Rascals",
-          "id": 26000053,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Barbarian Barrel",
-          "id": 28000015,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        }
-      ],
-      "slotConfig": {
-        "evoSlotCardId": 26000056,
-        "championSlotCardId": 26000002,
-        "flexSlotCardId": 27000002,
-        "flexSlotType": "evolution"
-      },
-      "winRate": 69,
-      "useCount": 197,
-      "winCount": 136,
       "rating": 53.6
     },
     {
@@ -4216,8 +4216,8 @@
       "deckId": "26000002;26000005;26000053;26000054;26000056;27000002;28000000;28000015",
       "cards": [
         {
-          "name": "Skeleton Barrel",
-          "id": 26000056,
+          "name": "Mortar",
+          "id": 27000002,
           "evolutionLevel": 1,
           "iconUrls": {}
         },
@@ -4228,8 +4228,8 @@
           "iconUrls": {}
         },
         {
-          "name": "Mortar",
-          "id": 27000002,
+          "name": "Skeleton Barrel",
+          "id": 26000056,
           "evolutionLevel": 1,
           "iconUrls": {}
         },
@@ -4240,14 +4240,14 @@
           "iconUrls": {}
         },
         {
-          "name": "Fireball",
-          "id": 28000000,
+          "name": "Barbarian Barrel",
+          "id": 28000015,
           "evolutionLevel": 0,
           "iconUrls": {}
         },
         {
-          "name": "Minions",
-          "id": 26000005,
+          "name": "Fireball",
+          "id": 28000000,
           "evolutionLevel": 0,
           "iconUrls": {}
         },
@@ -4258,8 +4258,8 @@
           "iconUrls": {}
         },
         {
-          "name": "Barbarian Barrel",
-          "id": 28000015,
+          "name": "Minions",
+          "id": 26000005,
           "evolutionLevel": 0,
           "iconUrls": {}
         }
@@ -4270,24 +4270,24 @@
         "flexSlotCardId": 27000002,
         "flexSlotType": "evolution"
       },
-      "totalUseCount": 197,
-      "totalWinCount": 136,
-      "overallWinRate": 69,
+      "totalUseCount": 202,
+      "totalWinCount": 140,
+      "overallWinRate": 69.3,
       "proCount": 5,
       "pros": [
         {
           "tag": "#UJ0CVRUV",
           "name": "NotRealPro",
-          "useCount": 94,
-          "winCount": 63,
-          "winRate": 67
+          "useCount": 98,
+          "winCount": 67,
+          "winRate": 68.4
         },
         {
           "tag": "#YU9JR0Q",
           "name": "MYLO XYLOTO",
-          "useCount": 81,
+          "useCount": 82,
           "winCount": 55,
-          "winRate": 67.9
+          "winRate": 67.1
         },
         {
           "tag": "#GLUU9JGQ",
@@ -6085,7 +6085,7 @@
     {
       "tag": "#9G28ULYR",
       "name": "LucasXGamer",
-      "updatedAt": "2026-07-29T11:27:16.873Z",
+      "updatedAt": "2026-07-29T14:12:43.733Z",
       "deck": [
         {
           "name": "Valkyrie",
@@ -6156,7 +6156,7 @@
     {
       "tag": "#92L9R2JG",
       "name": "Surgical Goblin",
-      "updatedAt": "2026-07-29T11:27:17.370Z",
+      "updatedAt": "2026-07-29T14:12:44.209Z",
       "deck": [
         {
           "name": "Wall Breakers",
@@ -6227,7 +6227,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-07-29T11:27:17.850Z",
+      "updatedAt": "2026-07-29T14:12:44.687Z",
       "deck": [
         {
           "name": "Dart Goblin",
@@ -6298,7 +6298,7 @@
     {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-07-29T11:27:18.743Z",
+      "updatedAt": "2026-07-29T14:12:45.582Z",
       "deck": [
         {
           "name": "Mortar",
@@ -6369,7 +6369,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-07-29T11:27:19.726Z",
+      "updatedAt": "2026-07-29T14:12:46.536Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6440,7 +6440,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-07-29T11:27:20.134Z",
+      "updatedAt": "2026-07-29T14:12:46.943Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6511,7 +6511,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-07-29T11:27:20.623Z",
+      "updatedAt": "2026-07-29T14:12:47.419Z",
       "deck": [
         {
           "name": "Zap",
@@ -6582,7 +6582,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-07-29T11:27:21.034Z",
+      "updatedAt": "2026-07-29T14:12:47.831Z",
       "deck": [
         {
           "name": "Wizard",
@@ -6653,7 +6653,7 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-07-29T11:27:21.925Z",
+      "updatedAt": "2026-07-29T14:12:48.727Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -6724,7 +6724,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-07-29T11:27:22.897Z",
+      "updatedAt": "2026-07-29T14:12:49.701Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6795,7 +6795,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-07-29T11:27:23.393Z",
+      "updatedAt": "2026-07-29T14:12:50.178Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6866,7 +6866,7 @@
     {
       "tag": "#UJ0CVRUV",
       "name": "NotRealPro",
-      "updatedAt": "2026-07-29T11:27:23.888Z",
+      "updatedAt": "2026-07-29T14:12:50.662Z",
       "deck": [
         {
           "name": "Goblin Drill",
