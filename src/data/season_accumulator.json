@@ -2,16 +2,16 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-30T14:05:44.303Z",
-  "totalBattlesAnalyzed": 4890,
-  "totalPlayersScanned": 3560,
-  "totalRunCount": 178,
+  "lastUpdatedAt": "2026-07-30T16:27:39.045Z",
+  "totalBattlesAnalyzed": 4898,
+  "totalPlayersScanned": 3580,
+  "totalRunCount": 179,
   "playerLastScan": {
     "G9YV9GR8R": "20260728T102253.000Z",
-    "2CLV2RP0": "20260730T140226.000Z",
+    "2CLV2RP0": "20260730T141354.000Z",
     "Y9R22RQ2": "20260726T042644.000Z",
     "R90PRV0PY": "20260726T103220.000Z",
-    "9G28ULYR": "20260730T034638.000Z",
+    "9G28ULYR": "20260730T162225.000Z",
     "92L9R2JG": "20260729T082959.000Z",
     "R09228V": "20260729T013337.000Z",
     "PCG229PC": "20260730T133715.000Z",
@@ -7341,16 +7341,16 @@
           "evo": 0
         }
       ],
-      "useCount": 8,
+      "useCount": 9,
       "winCount": 5,
       "slotConfigs": {
-        "26000024|26000077|26000044": 8
+        "26000024|26000077|26000044": 9
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
           "wins": 5,
-          "games": 8
+          "games": 9
         }
       }
     },
@@ -10813,16 +10813,16 @@
           "evo": 0
         }
       ],
-      "useCount": 17,
-      "winCount": 12,
+      "useCount": 18,
+      "winCount": 13,
       "slotConfigs": {
-        "28000004|26000062|26000058": 17
+        "28000004|26000062|26000058": 18
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 12,
-          "games": 17
+          "wins": 13,
+          "games": 18
         }
       }
     },
@@ -11683,16 +11683,16 @@
           "evo": 0
         }
       ],
-      "useCount": 12,
-      "winCount": 6,
+      "useCount": 16,
+      "winCount": 7,
       "slotConfigs": {
-        "26000035|26000062|26000036": 12
+        "26000035|26000062|26000036": 16
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 6,
-          "games": 12
+          "wins": 7,
+          "games": 16
         }
       }
     },
@@ -11971,16 +11971,16 @@
           "evo": 0
         }
       ],
-      "useCount": 15,
-      "winCount": 9,
+      "useCount": 17,
+      "winCount": 11,
       "slotConfigs": {
-        "26000010|26000027|27000006": 15
+        "26000010|26000027|27000006": 17
       },
       "proUsage": {
         "2CLV2RP0": {
           "name": "Mugi",
-          "wins": 9,
-          "games": 15
+          "wins": 11,
+          "games": 17
         }
       }
     },
