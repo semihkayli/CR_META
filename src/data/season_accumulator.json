@@ -2,21 +2,21 @@
   "version": 3,
   "seasonId": "2026-07",
   "startedAt": "2026-07-06T10:26:15.376Z",
-  "lastUpdatedAt": "2026-07-30T02:30:57.727Z",
-  "totalBattlesAnalyzed": 4805,
-  "totalPlayersScanned": 3480,
-  "totalRunCount": 174,
+  "lastUpdatedAt": "2026-07-30T05:42:30.409Z",
+  "totalBattlesAnalyzed": 4840,
+  "totalPlayersScanned": 3500,
+  "totalRunCount": 175,
   "playerLastScan": {
     "G9YV9GR8R": "20260728T102253.000Z",
     "2CLV2RP0": "20260729T114057.000Z",
     "Y9R22RQ2": "20260726T042644.000Z",
     "R90PRV0PY": "20260726T103220.000Z",
-    "9G28ULYR": "20260729T094252.000Z",
+    "9G28ULYR": "20260730T034638.000Z",
     "92L9R2JG": "20260729T082959.000Z",
     "R09228V": "20260729T013337.000Z",
     "PCG229PC": "20260729T103427.000Z",
     "GG829JGY": "20260730T013329.000Z",
-    "PPV2JUUGU": "20260730T023004.000Z",
+    "PPV2JUUGU": "20260730T053516.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "P8Q0JYRP": "20260729T231004.000Z",
@@ -5384,17 +5384,17 @@
           "evo": 0
         }
       ],
-      "useCount": 671,
-      "winCount": 351,
+      "useCount": 697,
+      "winCount": 364,
       "slotConfigs": {
-        "26000024|28000015|26000050": 670,
+        "26000024|28000015|26000050": 696,
         "26000044|28000015|26000050": 1
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 300,
-          "games": 575
+          "wins": 313,
+          "games": 601
         },
         "R90PRV0PY": {
           "name": "Ryley",
@@ -10813,16 +10813,16 @@
           "evo": 0
         }
       ],
-      "useCount": 15,
+      "useCount": 17,
       "winCount": 12,
       "slotConfigs": {
-        "28000004|26000062|26000058": 15
+        "28000004|26000062|26000058": 17
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
           "wins": 12,
-          "games": 15
+          "games": 17
         }
       }
     },
@@ -11683,16 +11683,16 @@
           "evo": 0
         }
       ],
-      "useCount": 5,
-      "winCount": 2,
+      "useCount": 12,
+      "winCount": 6,
       "slotConfigs": {
-        "26000035|26000062|26000036": 5
+        "26000035|26000062|26000036": 12
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 2,
-          "games": 5
+          "wins": 6,
+          "games": 12
         }
       }
     },
