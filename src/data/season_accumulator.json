@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-04T05:48:27.352Z",
-  "totalBattlesAnalyzed": 606,
-  "totalPlayersScanned": 120,
-  "totalRunCount": 6,
+  "lastUpdatedAt": "2026-08-04T08:38:44.562Z",
+  "totalBattlesAnalyzed": 607,
+  "totalPlayersScanned": 140,
+  "totalRunCount": 7,
   "playerLastScan": {
     "G9YV9GR8R": "20260803T154711.000Z",
     "2CLV2RP0": "20260803T120455.000Z",
@@ -21,7 +21,7 @@
     "9RV2VVJVL": "20260629T092413.000Z",
     "LUYY2URU": "20260803T072735.000Z",
     "P8Q0JYRP": "20260803T090045.000Z",
-    "989PQYY8": "20260803T223003.000Z",
+    "989PQYY8": "20260804T083726.000Z",
     "J80V2Y9VC": "20260802T101915.000Z",
     "YU9JR0Q": "20260802T095305.000Z",
     "92L8QYJJG": "20260802T213505.000Z",
@@ -1289,16 +1289,16 @@
           "evo": 0
         }
       ],
-      "useCount": 17,
-      "winCount": 11,
+      "useCount": 18,
+      "winCount": 12,
       "slotConfigs": {
-        "27000002|26000002|26000022": 17
+        "27000002|26000002|26000022": 18
       },
       "proUsage": {
         "989PQYY8": {
           "name": "SULLY",
-          "wins": 11,
-          "games": 17
+          "wins": 12,
+          "games": 18
         }
       }
     },
