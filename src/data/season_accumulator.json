@@ -2,20 +2,20 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-04T02:39:51.844Z",
-  "totalBattlesAnalyzed": 580,
-  "totalPlayersScanned": 100,
-  "totalRunCount": 5,
+  "lastUpdatedAt": "2026-08-04T05:48:27.352Z",
+  "totalBattlesAnalyzed": 606,
+  "totalPlayersScanned": 120,
+  "totalRunCount": 6,
   "playerLastScan": {
     "G9YV9GR8R": "20260803T154711.000Z",
     "2CLV2RP0": "20260803T120455.000Z",
     "Y9R22RQ2": "20260803T201811.000Z",
-    "R90PRV0PY": "20260804T023911.000Z",
+    "R90PRV0PY": "20260804T024342.000Z",
     "9G28ULYR": "20260803T153636.000Z",
     "92L9R2JG": "20260803T102151.000Z",
     "R09228V": "20260804T014403.000Z",
     "PCG229PC": "20260803T073530.000Z",
-    "GG829JGY": "20260801T072843.000Z",
+    "GG829JGY": "20260804T051444.000Z",
     "PPV2JUUGU": "20260803T085817.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
@@ -1007,7 +1007,7 @@
           "evo": 2
         },
         {
-          "id": 28000008,
+          "id": 26000043,
           "evo": 1
         },
         {
@@ -1015,7 +1015,7 @@
           "evo": 0
         },
         {
-          "id": 26000043,
+          "id": 28000008,
           "evo": 0
         },
         {
@@ -1031,16 +1031,17 @@
           "evo": 0
         }
       ],
-      "useCount": 4,
-      "winCount": 2,
+      "useCount": 29,
+      "winCount": 25,
       "slotConfigs": {
-        "26000060|26000027|28000008": 4
+        "26000060|26000027|28000008": 4,
+        "26000060|26000027|26000043": 25
       },
       "proUsage": {
         "GG829JGY": {
           "name": "SirTag",
-          "wins": 2,
-          "games": 4
+          "wins": 25,
+          "games": 29
         }
       }
     },
@@ -2490,16 +2491,16 @@
           "evo": 0
         }
       ],
-      "useCount": 10,
-      "winCount": 9,
+      "useCount": 11,
+      "winCount": 10,
       "slotConfigs": {
-        "26000044|26000011|26000024": 10
+        "26000044|26000011|26000024": 11
       },
       "proUsage": {
         "R90PRV0PY": {
           "name": "Ryley",
-          "wins": 9,
-          "games": 10
+          "wins": 10,
+          "games": 11
         }
       }
     },
