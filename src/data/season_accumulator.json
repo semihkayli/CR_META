@@ -2,18 +2,18 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-05T02:37:51.319Z",
-  "totalBattlesAnalyzed": 748,
-  "totalPlayersScanned": 260,
-  "totalRunCount": 13,
+  "lastUpdatedAt": "2026-08-05T05:47:07.764Z",
+  "totalBattlesAnalyzed": 755,
+  "totalPlayersScanned": 280,
+  "totalRunCount": 14,
   "playerLastScan": {
     "G9YV9GR8R": "20260804T222908.000Z",
     "2CLV2RP0": "20260804T125622.000Z",
     "Y9R22RQ2": "20260803T201811.000Z",
     "R90PRV0PY": "20260804T194218.000Z",
-    "9G28ULYR": "20260804T221449.000Z",
+    "9G28ULYR": "20260805T052528.000Z",
     "92L9R2JG": "20260804T100043.000Z",
-    "R09228V": "20260805T022749.000Z",
+    "R09228V": "20260805T035313.000Z",
     "PCG229PC": "20260803T073530.000Z",
     "GG829JGY": "20260804T051444.000Z",
     "PPV2JUUGU": "20260804T223703.000Z",
@@ -3275,16 +3275,16 @@
           "evo": 0
         }
       ],
-      "useCount": 5,
-      "winCount": 4,
+      "useCount": 8,
+      "winCount": 5,
       "slotConfigs": {
-        "27000006|26000102|27000010": 5
+        "27000006|26000102|27000010": 8
       },
       "proUsage": {
         "R09228V": {
           "name": "Morten",
-          "wins": 4,
-          "games": 5
+          "wins": 5,
+          "games": 8
         }
       }
     },
@@ -3331,6 +3331,54 @@
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
+          "wins": 1,
+          "games": 2
+        }
+      }
+    },
+    "26000013;26000019;26000031;26000102;27000006;27000013;28000009;28000017": {
+      "cards": [
+        {
+          "id": 27000013,
+          "evo": 1
+        },
+        {
+          "id": 26000102,
+          "evo": 2
+        },
+        {
+          "id": 28000017,
+          "evo": 1
+        },
+        {
+          "id": 28000009,
+          "evo": 0
+        },
+        {
+          "id": 27000006,
+          "evo": 0
+        },
+        {
+          "id": 26000019,
+          "evo": 0
+        },
+        {
+          "id": 26000031,
+          "evo": 0
+        },
+        {
+          "id": 26000013,
+          "evo": 0
+        }
+      ],
+      "useCount": 2,
+      "winCount": 1,
+      "slotConfigs": {
+        "27000013|26000102|28000017": 2
+      },
+      "proUsage": {
+        "R09228V": {
+          "name": "Morten",
           "wins": 1,
           "games": 2
         }
