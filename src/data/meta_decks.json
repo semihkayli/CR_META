@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-08-06T14:12:42.108Z",
+  "updatedAt": "2026-08-07T00:02:59.780Z",
   "seasonId": "2026-08",
-  "totalBattlesAnalyzed": 1136,
-  "totalPlayersScanned": 500,
-  "totalRuns": 25,
+  "totalBattlesAnalyzed": 1222,
+  "totalPlayersScanned": 520,
+  "totalRuns": 26,
   "metaDecks": [
     {
       "deckId": "26000050;26000059;26000084;26000102;27000001;27000010;28000000;28000015",
@@ -260,6 +260,132 @@
       "rating": 60.8
     },
     {
+      "deckId": "26000010;26000014;26000021;26000030;26000038;27000000;28000000;28000011",
+      "cards": [
+        {
+          "name": "Cannon",
+          "id": 27000000,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Ice Golem",
+          "id": 26000038,
+          "evolutionLevel": 2,
+          "iconUrls": {}
+        },
+        {
+          "name": "Skeletons",
+          "id": 26000010,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Musketeer",
+          "id": 26000014,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Fireball",
+          "id": 28000000,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "The Log",
+          "id": 28000011,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Ice Spirit",
+          "id": 26000030,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Hog Rider",
+          "id": 26000021,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 27000000,
+        "championSlotCardId": 26000038,
+        "flexSlotCardId": 26000010,
+        "flexSlotType": "evolution"
+      },
+      "winRate": 61.5,
+      "useCount": 78,
+      "winCount": 48,
+      "rating": 59.3
+    },
+    {
+      "deckId": "26000006;26000015;26000034;26000035;26000037;28000005;28000012;28000015",
+      "cards": [
+        {
+          "name": "Baby Dragon",
+          "id": 26000015,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Balloon",
+          "id": 26000006,
+          "evolutionLevel": 2,
+          "iconUrls": {}
+        },
+        {
+          "name": "Inferno Dragon",
+          "id": 26000037,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Freeze",
+          "id": 28000005,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Bowler",
+          "id": 26000034,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Lumberjack",
+          "id": 26000035,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Tornado",
+          "id": 28000012,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Barbarian Barrel",
+          "id": 28000015,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 26000015,
+        "championSlotCardId": 26000006,
+        "flexSlotCardId": 26000037,
+        "flexSlotType": "evolution"
+      },
+      "winRate": 92.3,
+      "useCount": 13,
+      "winCount": 12,
+      "rating": 57
+    },
+    {
       "deckId": "26000027;26000033;26000042;26000043;26000060;28000002;28000008;28000016",
       "cards": [
         {
@@ -321,69 +447,6 @@
       "useCount": 32,
       "winCount": 26,
       "rating": 56.5
-    },
-    {
-      "deckId": "26000006;26000015;26000034;26000035;26000037;28000005;28000012;28000015",
-      "cards": [
-        {
-          "name": "Baby Dragon",
-          "id": 26000015,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Balloon",
-          "id": 26000006,
-          "evolutionLevel": 2,
-          "iconUrls": {}
-        },
-        {
-          "name": "Inferno Dragon",
-          "id": 26000037,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Freeze",
-          "id": 28000005,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Bowler",
-          "id": 26000034,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Lumberjack",
-          "id": 26000035,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Tornado",
-          "id": 28000012,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Barbarian Barrel",
-          "id": 28000015,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        }
-      ],
-      "slotConfig": {
-        "evoSlotCardId": 26000015,
-        "championSlotCardId": 26000006,
-        "flexSlotCardId": 26000037,
-        "flexSlotType": "evolution"
-      },
-      "winRate": 91.7,
-      "useCount": 12,
-      "winCount": 11,
-      "rating": 56.3
     },
     {
       "deckId": "26000010;26000031;26000040;26000058;26000084;26000102;27000000;28000004",
@@ -961,69 +1024,6 @@
       "rating": 51.3
     },
     {
-      "deckId": "26000010;26000014;26000021;26000030;26000038;27000000;28000000;28000011",
-      "cards": [
-        {
-          "name": "Cannon",
-          "id": 27000000,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Ice Golem",
-          "id": 26000038,
-          "evolutionLevel": 2,
-          "iconUrls": {}
-        },
-        {
-          "name": "Skeletons",
-          "id": 26000010,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Musketeer",
-          "id": 26000014,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Fireball",
-          "id": 28000000,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "The Log",
-          "id": 28000011,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Ice Spirit",
-          "id": 26000030,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Hog Rider",
-          "id": 26000021,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        }
-      ],
-      "slotConfig": {
-        "evoSlotCardId": 27000000,
-        "championSlotCardId": 26000038,
-        "flexSlotCardId": 26000010,
-        "flexSlotType": "evolution"
-      },
-      "winRate": 60,
-      "useCount": 55,
-      "winCount": 33,
-      "rating": 51
-    },
-    {
       "deckId": "26000010;26000015;26000059;26000084;26000102;27000000;28000007;28000011",
       "cards": [
         {
@@ -1534,6 +1534,136 @@
       "useCount": 32,
       "winCount": 20,
       "rating": 45.2
+    },
+    {
+      "deckId": "26000036;26000043;26000055;26000080;26000083;26000102;28000001;28000016",
+      "cards": [
+        {
+          "name": "Mega Knight",
+          "id": 26000055,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Card_26000102",
+          "id": 26000102,
+          "evolutionLevel": 2,
+          "iconUrls": {
+            "medium": ""
+          }
+        },
+        {
+          "name": "Elite Barbarians",
+          "id": 26000043,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Arrows",
+          "id": 28000001,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Skeleton Dragons",
+          "id": 26000080,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Mother Witch",
+          "id": 26000083,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Heal Spirit",
+          "id": 28000016,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Battle Ram",
+          "id": 26000036,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 26000055,
+        "championSlotCardId": 26000102,
+        "flexSlotCardId": 26000043,
+        "flexSlotType": "evolution"
+      },
+      "winRate": 66.7,
+      "useCount": 24,
+      "winCount": 16,
+      "rating": 45.1
+    },
+    {
+      "deckId": "26000026;26000030;26000041;26000058;26000102;27000000;28000003;28000004",
+      "cards": [
+        {
+          "name": "Princess",
+          "id": 26000026,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Card_26000102",
+          "id": 26000102,
+          "evolutionLevel": 2,
+          "iconUrls": {
+            "medium": ""
+          }
+        },
+        {
+          "name": "Goblin Barrel",
+          "id": 28000004,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Wall Breakers",
+          "id": 26000058,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Rocket",
+          "id": 28000003,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Ice Spirit",
+          "id": 26000030,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Cannon",
+          "id": 27000000,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Goblin Gang",
+          "id": 26000041,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 26000026,
+        "championSlotCardId": 26000102,
+        "flexSlotCardId": 28000004,
+        "flexSlotType": "evolution"
+      },
+      "winRate": 75,
+      "useCount": 8,
+      "winCount": 6,
+      "rating": 45
     },
     {
       "deckId": "26000002;26000022;26000032;26000053;26000054;26000080;27000002;28000001",
@@ -2241,10 +2371,10 @@
         "flexSlotCardId": 26000022,
         "flexSlotType": "evolution"
       },
-      "winRate": 52.4,
-      "useCount": 21,
-      "winCount": 11,
-      "rating": 35.6
+      "winRate": 54.5,
+      "useCount": 22,
+      "winCount": 12,
+      "rating": 37.2
     },
     {
       "deckId": "26000009;26000043;26000063;26000080;26000102;27000007;28000012;28000015",
@@ -2310,6 +2440,71 @@
       "useCount": 17,
       "winCount": 9,
       "rating": 34.6
+    },
+    {
+      "deckId": "26000010;26000011;26000029;26000080;27000009;28000000;28000008;28000025",
+      "cards": [
+        {
+          "name": "Zap",
+          "id": 28000008,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Valkyrie",
+          "id": 26000011,
+          "evolutionLevel": 2,
+          "iconUrls": {}
+        },
+        {
+          "name": "Tombstone",
+          "id": 27000009,
+          "evolutionLevel": 2,
+          "iconUrls": {}
+        },
+        {
+          "name": "Lava Hound",
+          "id": 26000029,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Card_28000025",
+          "id": 28000025,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": ""
+          }
+        },
+        {
+          "name": "Skeletons",
+          "id": 26000010,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Skeleton Dragons",
+          "id": 26000080,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Fireball",
+          "id": 28000000,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 28000008,
+        "championSlotCardId": 26000011,
+        "flexSlotCardId": 27000009,
+        "flexSlotType": "evolution"
+      },
+      "winRate": 53.3,
+      "useCount": 15,
+      "winCount": 8,
+      "rating": 34.2
     },
     {
       "deckId": "26000019;26000040;26000041;26000053;26000056;26000069;26000097;28000026",
@@ -2726,17 +2921,17 @@
         "flexSlotCardId": 26000010,
         "flexSlotType": "evolution"
       },
-      "totalUseCount": 55,
-      "totalWinCount": 33,
-      "overallWinRate": 60,
+      "totalUseCount": 78,
+      "totalWinCount": 48,
+      "overallWinRate": 61.5,
       "proCount": 4,
       "pros": [
         {
           "tag": "#PCG229PC",
           "name": "OYASSUU",
-          "useCount": 46,
-          "winCount": 27,
-          "winRate": 58.7
+          "useCount": 69,
+          "winCount": 42,
+          "winRate": 60.9
         },
         {
           "tag": "#9G28ULYR",
@@ -4934,17 +5129,17 @@
         "flexSlotCardId": 26000037,
         "flexSlotType": "evolution"
       },
-      "totalUseCount": 12,
-      "totalWinCount": 11,
-      "overallWinRate": 91.7,
+      "totalUseCount": 13,
+      "totalWinCount": 12,
+      "overallWinRate": 92.3,
       "proCount": 1,
       "pros": [
         {
           "tag": "#J80V2Y9VC",
           "name": "Faisal F1",
-          "useCount": 12,
-          "winCount": 11,
-          "winRate": 91.7
+          "useCount": 13,
+          "winCount": 12,
+          "winRate": 92.3
         }
       ]
     }
@@ -4953,7 +5148,7 @@
     {
       "tag": "#G9YV9GR8R",
       "name": "Mohamed Light",
-      "updatedAt": "2026-08-06T14:12:42.549Z",
+      "updatedAt": "2026-08-07T00:03:00.229Z",
       "deck": [
         {
           "name": "Archers",
@@ -5022,80 +5217,9 @@
       ]
     },
     {
-      "tag": "#2CLV2RP0",
-      "name": "Mugi",
-      "updatedAt": "2026-08-06T14:12:43.005Z",
-      "deck": [
-        {
-          "name": "Royal Hogs",
-          "id": 26000059,
-          "evolutionLevel": 1,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/ASSQJG_MoVq9e81HZzo4bynMnyLNpNJMfSLb3hqydOw.png"
-          }
-        },
-        {
-          "name": "Mighty Miner",
-          "id": 26000065,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/Cd9R56yraxTvJiD8xJ2qT2OdsHyh94FqOAarXpbyelo.png"
-          }
-        },
-        {
-          "name": "Baby Dragon",
-          "id": 26000015,
-          "evolutionLevel": 1,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png"
-          }
-        },
-        {
-          "name": "Lightning",
-          "id": 28000007,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/fpnESbYqe5GyZmaVVYe-SEu7tE0Kxh_HZyVigzvLjks.png"
-          }
-        },
-        {
-          "name": "Electro Spirit",
-          "id": 26000084,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png"
-          }
-        },
-        {
-          "name": "The Log",
-          "id": 28000011,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png"
-          }
-        },
-        {
-          "name": "Cannon",
-          "id": 27000000,
-          "evolutionLevel": 1,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png"
-          }
-        },
-        {
-          "name": "Skeletons",
-          "id": 26000010,
-          "evolutionLevel": 1,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png"
-          }
-        }
-      ]
-    },
-    {
       "tag": "#R90PRV0PY",
       "name": "Ryley",
-      "updatedAt": "2026-08-06T14:12:43.893Z",
+      "updatedAt": "2026-08-07T00:03:01.608Z",
       "deck": [
         {
           "name": "Wall Breakers",
@@ -5164,16 +5288,87 @@
       ]
     },
     {
-      "tag": "#R09228V",
-      "name": "Morten",
-      "updatedAt": "2026-08-06T14:12:45.227Z",
+      "tag": "#9G28ULYR",
+      "name": "LucasXGamer",
+      "updatedAt": "2026-08-07T00:03:02.059Z",
       "deck": [
         {
-          "name": "Royal Hogs",
-          "id": 26000059,
+          "name": "Baby Dragon",
+          "id": 26000015,
           "evolutionLevel": 1,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/ASSQJG_MoVq9e81HZzo4bynMnyLNpNJMfSLb3hqydOw.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png"
+          }
+        },
+        {
+          "name": "Valkyrie",
+          "id": 26000011,
+          "evolutionLevel": 3,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png"
+          }
+        },
+        {
+          "name": "Cannon",
+          "id": 27000000,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png"
+          }
+        },
+        {
+          "name": "Tornado",
+          "id": 28000012,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/QJB-QK1QJHdw4hjpAwVSyZBozc2ZWAR9pQ-SMUyKaT0.png"
+          }
+        },
+        {
+          "name": "Void",
+          "id": 28000023,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/BykyeWDqzn4PlHSszu3NbrXT1mHxW2EA8vHbQGR5LDE.png"
+          }
+        },
+        {
+          "name": "Ice Wizard",
+          "id": 26000023,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/W3dkw0HTw9n1jB-zbknY2w3wHuyuLxSRIAV5fUT1SEY.png"
+          }
+        },
+        {
+          "name": "Electro Giant",
+          "id": 26000085,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/_uChZkNHAMq6tPb3v6A49xinOe3CnhjstOhG6OZbPYc.png"
+          }
+        },
+        {
+          "name": "Electro Spirit",
+          "id": 26000084,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "#92L9R2JG",
+      "name": "Surgical Goblin",
+      "updatedAt": "2026-08-07T00:03:02.519Z",
+      "deck": [
+        {
+          "name": "Mega Knight",
+          "id": 26000055,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png"
           }
         },
         {
@@ -5193,19 +5388,19 @@
           }
         },
         {
-          "name": "Goblin Hut",
-          "id": 27000001,
+          "name": "Ram Rider",
+          "id": 26000051,
           "evolutionLevel": 0,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/l8ZdzzNLcwB4u7ihGgxNFQOjCT_njFuAhZr7D6PRF7E.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/QaJyerT7f7oMyZ3Fv1glKymtLSvx7YUXisAulxl7zRI.png"
           }
         },
         {
-          "name": "Furnace",
-          "id": 27000010,
-          "evolutionLevel": 1,
+          "name": "Spirit Empress",
+          "id": 28000025,
+          "evolutionLevel": 0,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/iqbDiG7yYRIzvCPXdt9zPb3IvMt7F7Gi4wIPnh2x4aI.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/MWWBZqiQeRBXSqEITVMj46nO_uCIUsqBidvUw9K2twY.png"
           }
         },
         {
@@ -5217,19 +5412,90 @@
           }
         },
         {
-          "name": "Electro Spirit",
-          "id": 26000084,
-          "evolutionLevel": 0,
+          "name": "Furnace",
+          "id": 27000010,
+          "evolutionLevel": 1,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/iqbDiG7yYRIzvCPXdt9zPb3IvMt7F7Gi4wIPnh2x4aI.png"
           }
         },
         {
-          "name": "Barbarian Barrel",
-          "id": 28000015,
+          "name": "Zap",
+          "id": 28000008,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "#R09228V",
+      "name": "Morten",
+      "updatedAt": "2026-08-07T00:03:02.965Z",
+      "deck": [
+        {
+          "name": "Archers",
+          "id": 26000001,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/W4Hmp8MTSdXANN8KdblbtHwtsbt0o749BbxNqmJYfA8.png"
+          }
+        },
+        {
+          "name": "Berserker",
+          "id": 26000102,
           "evolutionLevel": 2,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/NA6W8S1JBYBlOPwD3dNvJLFvVDKq-UuBs_J3i3ewLFI.png"
+          }
+        },
+        {
+          "name": "Wall Breakers",
+          "id": 26000058,
+          "evolutionLevel": 1,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/_xPphEfC8eEwFNrfU3cMQG9-f5JaLQ31ARCA7l3XtW4.png"
+          }
+        },
+        {
+          "name": "Miner",
+          "id": 26000032,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/Y4yWvdwBCg2FpAZgs8T09Gy34WOwpLZW-ttL52Ae8NE.png"
+          }
+        },
+        {
+          "name": "The Log",
+          "id": 28000011,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png"
+          }
+        },
+        {
+          "name": "Poison",
+          "id": 28000009,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/98HDkG2189yOULcVG9jz2QbJKtfuhH21DIrIjkOjxI8.png"
+          }
+        },
+        {
+          "name": "Goblins",
+          "id": 26000002,
+          "evolutionLevel": 2,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png"
+          }
+        },
+        {
+          "name": "Bomb Tower",
+          "id": 27000004,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/rirYRyHPc97emRjoH-c1O8uZCBzPVnToaGuNGusF3TQ.png"
           }
         }
       ]
@@ -5237,7 +5503,7 @@
     {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-08-06T14:12:46.093Z",
+      "updatedAt": "2026-08-07T00:03:03.801Z",
       "deck": [
         {
           "name": "Mortar",
@@ -5308,7 +5574,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-08-06T14:12:46.992Z",
+      "updatedAt": "2026-08-07T00:03:04.691Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -5379,7 +5645,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-08-06T14:12:47.376Z",
+      "updatedAt": "2026-08-07T00:03:05.078Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -5450,7 +5716,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-08-06T14:12:47.832Z",
+      "updatedAt": "2026-08-07T00:03:05.515Z",
       "deck": [
         {
           "name": "Zap",
@@ -5521,7 +5787,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-08-06T14:12:48.218Z",
+      "updatedAt": "2026-08-07T00:03:05.896Z",
       "deck": [
         {
           "name": "Wizard",
@@ -5592,7 +5858,7 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-08-06T14:12:49.128Z",
+      "updatedAt": "2026-08-07T00:03:06.726Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -5663,7 +5929,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-08-06T14:12:49.570Z",
+      "updatedAt": "2026-08-07T00:03:07.168Z",
       "deck": [
         {
           "name": "Bomber",
@@ -5734,7 +6000,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-08-06T14:12:50.015Z",
+      "updatedAt": "2026-08-07T00:03:07.611Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -5805,7 +6071,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-08-06T14:12:50.468Z",
+      "updatedAt": "2026-08-07T00:03:08.067Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -5876,7 +6142,7 @@
     {
       "tag": "#UJ0CVRUV",
       "name": "NotRealPro",
-      "updatedAt": "2026-08-06T14:12:50.915Z",
+      "updatedAt": "2026-08-07T00:03:08.514Z",
       "deck": [
         {
           "name": "Royal Ghost",
