@@ -2,21 +2,21 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-07T21:40:01.145Z",
-  "totalBattlesAnalyzed": 1460,
-  "totalPlayersScanned": 660,
-  "totalRunCount": 33,
+  "lastUpdatedAt": "2026-08-08T01:44:07.786Z",
+  "totalBattlesAnalyzed": 1498,
+  "totalPlayersScanned": 680,
+  "totalRunCount": 34,
   "playerLastScan": {
     "G9YV9GR8R": "20260804T222908.000Z",
     "2CLV2RP0": "20260806T140716.000Z",
     "Y9R22RQ2": "20260807T062305.000Z",
     "R90PRV0PY": "20260807T191434.000Z",
-    "9G28ULYR": "20260807T194810.000Z",
+    "9G28ULYR": "20260808T000128.000Z",
     "92L9R2JG": "20260807T205112.000Z",
-    "R09228V": "20260807T213537.000Z",
+    "R09228V": "20260808T014024.000Z",
     "PCG229PC": "20260807T160813.000Z",
     "GG829JGY": "20260807T082654.000Z",
-    "PPV2JUUGU": "20260807T084010.000Z",
+    "PPV2JUUGU": "20260807T222527.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "LUYY2URU": "20260803T072735.000Z",
@@ -4845,16 +4845,16 @@
           "evo": 0
         }
       ],
-      "useCount": 2,
-      "winCount": 2,
+      "useCount": 3,
+      "winCount": 3,
       "slotConfigs": {
-        "26000043|26000072|26000036": 2
+        "26000043|26000072|26000036": 3
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 2,
-          "games": 2
+          "wins": 3,
+          "games": 3
         }
       }
     },
@@ -5037,11 +5037,11 @@
           "evo": 0
         }
       ],
-      "useCount": 9,
+      "useCount": 10,
       "winCount": 7,
       "slotConfigs": {
         "26000060|26000099|26000004": 2,
-        "26000004|26000099|26000060": 7
+        "26000004|26000099|26000060": 8
       },
       "proUsage": {
         "Y9R22RQ2": {
@@ -5052,7 +5052,7 @@
         "9G28ULYR": {
           "name": "LucasXGamer",
           "wins": 6,
-          "games": 7
+          "games": 8
         }
       }
     },
@@ -5332,16 +5332,16 @@
           "evo": 0
         }
       ],
-      "useCount": 46,
-      "winCount": 28,
+      "useCount": 76,
+      "winCount": 45,
       "slotConfigs": {
-        "26000037|26000102|26000093": 46
+        "26000037|26000102|26000093": 76
       },
       "proUsage": {
         "R09228V": {
           "name": "Morten",
-          "wins": 28,
-          "games": 46
+          "wins": 45,
+          "games": 76
         }
       }
     },
@@ -5390,6 +5390,54 @@
           "name": "Surgical Goblin",
           "wins": 3,
           "games": 6
+        }
+      }
+    },
+    "26000010;26000015;26000063;26000067;26000102;27000005;28000012;28000015": {
+      "cards": [
+        {
+          "id": 26000063,
+          "evo": 1
+        },
+        {
+          "id": 26000102,
+          "evo": 2
+        },
+        {
+          "id": 26000015,
+          "evo": 1
+        },
+        {
+          "id": 26000067,
+          "evo": 0
+        },
+        {
+          "id": 27000005,
+          "evo": 0
+        },
+        {
+          "id": 26000010,
+          "evo": 0
+        },
+        {
+          "id": 28000012,
+          "evo": 0
+        },
+        {
+          "id": 28000015,
+          "evo": 0
+        }
+      ],
+      "useCount": 5,
+      "winCount": 3,
+      "slotConfigs": {
+        "26000063|26000102|26000015": 5
+      },
+      "proUsage": {
+        "PPV2JUUGU": {
+          "name": "Boss",
+          "wins": 3,
+          "games": 5
         }
       }
     }
