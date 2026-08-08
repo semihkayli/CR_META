@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-08T04:11:46.119Z",
-  "totalBattlesAnalyzed": 1524,
-  "totalPlayersScanned": 700,
-  "totalRunCount": 35,
+  "lastUpdatedAt": "2026-08-08T06:55:25.897Z",
+  "totalBattlesAnalyzed": 1536,
+  "totalPlayersScanned": 720,
+  "totalRunCount": 36,
   "playerLastScan": {
     "G9YV9GR8R": "20260804T222908.000Z",
     "2CLV2RP0": "20260806T140716.000Z",
@@ -16,7 +16,7 @@
     "R09228V": "20260808T014024.000Z",
     "PCG229PC": "20260807T160813.000Z",
     "GG829JGY": "20260807T082654.000Z",
-    "PPV2JUUGU": "20260808T040656.000Z",
+    "PPV2JUUGU": "20260808T050446.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "LUYY2URU": "20260803T072735.000Z",
@@ -5476,16 +5476,16 @@
           "evo": 0
         }
       ],
-      "useCount": 17,
+      "useCount": 23,
       "winCount": 13,
       "slotConfigs": {
-        "26000036|26000017|26000043": 17
+        "26000036|26000017|26000043": 23
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
           "wins": 13,
-          "games": 17
+          "games": 23
         }
       }
     },
@@ -5524,16 +5524,16 @@
           "evo": 0
         }
       ],
-      "useCount": 9,
-      "winCount": 3,
+      "useCount": 15,
+      "winCount": 6,
       "slotConfigs": {
-        "26000059|26000017|26000102": 9
+        "26000059|26000017|26000102": 15
       },
       "proUsage": {
         "PPV2JUUGU": {
           "name": "Boss",
-          "wins": 3,
-          "games": 9
+          "wins": 6,
+          "games": 15
         }
       }
     }
