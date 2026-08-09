@@ -2,13 +2,13 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-09T09:40:50.346Z",
-  "totalBattlesAnalyzed": 1762,
-  "totalPlayersScanned": 900,
-  "totalRunCount": 45,
+  "lastUpdatedAt": "2026-08-09T12:53:12.270Z",
+  "totalBattlesAnalyzed": 1771,
+  "totalPlayersScanned": 920,
+  "totalRunCount": 46,
   "playerLastScan": {
     "G9YV9GR8R": "20260804T222908.000Z",
-    "2CLV2RP0": "20260809T093746.000Z",
+    "2CLV2RP0": "20260809T124942.000Z",
     "Y9R22RQ2": "20260809T053205.000Z",
     "R90PRV0PY": "20260809T061317.000Z",
     "9G28ULYR": "20260809T054131.000Z",
@@ -16,7 +16,7 @@
     "R09228V": "20260809T044010.000Z",
     "PCG229PC": "20260807T160813.000Z",
     "GG829JGY": "20260807T082654.000Z",
-    "PPV2JUUGU": "20260809T093946.000Z",
+    "PPV2JUUGU": "20260809T094334.000Z",
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "LUYY2URU": "20260803T072735.000Z",
@@ -5345,24 +5345,29 @@
           "evo": 0
         },
         {
-          "id": 28000008,
+          "id": 28000024,
           "evo": 0
         },
         {
-          "id": 28000024,
+          "id": 28000008,
           "evo": 0
         }
       ],
-      "useCount": 126,
-      "winCount": 73,
+      "useCount": 134,
+      "winCount": 78,
       "slotConfigs": {
-        "26000037|26000102|26000093": 126
+        "26000037|26000102|26000093": 134
       },
       "proUsage": {
         "R09228V": {
           "name": "Morten",
           "wins": 73,
           "games": 126
+        },
+        "2CLV2RP0": {
+          "name": "Mugi",
+          "wins": 5,
+          "games": 8
         }
       }
     },
@@ -6228,10 +6233,10 @@
           "evo": 0
         }
       ],
-      "useCount": 4,
+      "useCount": 5,
       "winCount": 2,
       "slotConfigs": {
-        "26000036|26000074|26000043": 4
+        "26000036|26000074|26000043": 5
       },
       "proUsage": {
         "92L9R2JG": {
@@ -6242,7 +6247,7 @@
         "PPV2JUUGU": {
           "name": "Boss",
           "wins": 1,
-          "games": 1
+          "games": 2
         }
       }
     },
