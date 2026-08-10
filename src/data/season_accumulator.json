@@ -2,13 +2,13 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-10T10:17:34.867Z",
-  "totalBattlesAnalyzed": 1926,
-  "totalPlayersScanned": 1060,
-  "totalRunCount": 53,
+  "lastUpdatedAt": "2026-08-10T13:11:03.504Z",
+  "totalBattlesAnalyzed": 1946,
+  "totalPlayersScanned": 1080,
+  "totalRunCount": 54,
   "playerLastScan": {
     "G9YV9GR8R": "20260810T095303.000Z",
-    "2CLV2RP0": "20260810T101554.000Z",
+    "2CLV2RP0": "20260810T130555.000Z",
     "Y9R22RQ2": "20260810T082434.000Z",
     "R90PRV0PY": "20260810T093420.000Z",
     "9G28ULYR": "20260810T060747.000Z",
@@ -23,7 +23,7 @@
     "P8Q0JYRP": "20260808T102726.000Z",
     "989PQYY8": "20260809T200504.000Z",
     "J80V2Y9VC": "20260810T084118.000Z",
-    "YU9JR0Q": "20260810T081418.000Z",
+    "YU9JR0Q": "20260810T122231.000Z",
     "92L8QYJJG": "20260802T213505.000Z",
     "UJ0CVRUV": "20260809T022257.000Z"
   },
@@ -2482,10 +2482,10 @@
           "evo": 0
         }
       ],
-      "useCount": 4,
-      "winCount": 2,
+      "useCount": 19,
+      "winCount": 8,
       "slotConfigs": {
-        "27000010|26000011|26000102": 3,
+        "27000010|26000011|26000102": 18,
         "27000010|26000102|26000011": 1
       },
       "proUsage": {
@@ -2496,8 +2496,8 @@
         },
         "2CLV2RP0": {
           "name": "Mugi",
-          "wins": 1,
-          "games": 1
+          "wins": 7,
+          "games": 16
         }
       }
     },
@@ -5514,10 +5514,10 @@
           "evo": 0
         }
       ],
-      "useCount": 47,
-      "winCount": 29,
+      "useCount": 49,
+      "winCount": 31,
       "slotConfigs": {
-        "26000036|26000017|26000043": 47
+        "26000036|26000017|26000043": 49
       },
       "proUsage": {
         "PPV2JUUGU": {
@@ -5534,6 +5534,11 @@
           "name": "Mugi",
           "wins": 4,
           "games": 4
+        },
+        "YU9JR0Q": {
+          "name": "MYLO XYLOTO",
+          "wins": 2,
+          "games": 2
         }
       }
     },
@@ -6462,6 +6467,54 @@
           "name": "Surgical Goblin",
           "wins": 12,
           "games": 24
+        }
+      }
+    },
+    "26000040;26000052;26000053;26000056;26000102;27000002;28000009;28000015": {
+      "cards": [
+        {
+          "id": 26000056,
+          "evo": 1
+        },
+        {
+          "id": 26000102,
+          "evo": 2
+        },
+        {
+          "id": 27000002,
+          "evo": 1
+        },
+        {
+          "id": 28000009,
+          "evo": 0
+        },
+        {
+          "id": 28000015,
+          "evo": 0
+        },
+        {
+          "id": 26000053,
+          "evo": 0
+        },
+        {
+          "id": 26000052,
+          "evo": 0
+        },
+        {
+          "id": 26000040,
+          "evo": 0
+        }
+      ],
+      "useCount": 3,
+      "winCount": 2,
+      "slotConfigs": {
+        "26000056|26000102|27000002": 3
+      },
+      "proUsage": {
+        "YU9JR0Q": {
+          "name": "MYLO XYLOTO",
+          "wins": 2,
+          "games": 3
         }
       }
     }
