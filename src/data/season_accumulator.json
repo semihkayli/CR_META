@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-12T02:02:44.313Z",
+  "lastUpdatedAt": "2026-08-12T04:47:50.390Z",
   "totalBattlesAnalyzed": 2306,
-  "totalPlayersScanned": 1320,
-  "totalRunCount": 66,
+  "totalPlayersScanned": 1340,
+  "totalRunCount": 67,
   "playerLastScan": {
     "G9YV9GR8R": "20260811T184207.000Z",
     "2CLV2RP0": "20260811T145023.000Z",
