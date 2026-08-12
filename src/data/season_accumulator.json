@@ -2,12 +2,12 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-12T10:06:27.856Z",
-  "totalBattlesAnalyzed": 2342,
-  "totalPlayersScanned": 1380,
-  "totalRunCount": 69,
+  "lastUpdatedAt": "2026-08-12T13:12:27.426Z",
+  "totalBattlesAnalyzed": 2354,
+  "totalPlayersScanned": 1400,
+  "totalRunCount": 70,
   "playerLastScan": {
-    "G9YV9GR8R": "20260812T100016.000Z",
+    "G9YV9GR8R": "20260812T101111.000Z",
     "2CLV2RP0": "20260811T145023.000Z",
     "Y9R22RQ2": "20260811T102134.000Z",
     "R90PRV0PY": "20260811T184533.000Z",
@@ -20,7 +20,7 @@
     "9890JJJV": "20260704T035429.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "LUYY2URU": "20260811T180945.000Z",
-    "P8Q0JYRP": "20260812T095817.000Z",
+    "P8Q0JYRP": "20260812T122908.000Z",
     "989PQYY8": "20260811T230549.000Z",
     "J80V2Y9VC": "20260810T084118.000Z",
     "YU9JR0Q": "20260811T221225.000Z",
@@ -123,17 +123,17 @@
           "evo": 0
         }
       ],
-      "useCount": 71,
-      "winCount": 64,
+      "useCount": 73,
+      "winCount": 66,
       "slotConfigs": {
-        "26000001|26000099|26000059": 48,
+        "26000001|26000099|26000059": 50,
         "26000059|26000099|26000001": 23
       },
       "proUsage": {
         "G9YV9GR8R": {
           "name": "Mohamed Light",
-          "wins": 48,
-          "games": 48
+          "wins": 50,
+          "games": 50
         },
         "PPV2JUUGU": {
           "name": "Boss",
@@ -5131,12 +5131,12 @@
           "evo": 0
         }
       ],
-      "useCount": 60,
-      "winCount": 35,
+      "useCount": 69,
+      "winCount": 41,
       "slotConfigs": {
         "28000017|26000102|27000000": 34,
         "28000017|27000000|26000102": 5,
-        "27000000|26000102|28000017": 21
+        "27000000|26000102|28000017": 30
       },
       "proUsage": {
         "R90PRV0PY": {
@@ -5151,8 +5151,8 @@
         },
         "P8Q0JYRP": {
           "name": "Xpeciaals",
-          "wins": 16,
-          "games": 26
+          "wins": 22,
+          "games": 35
         }
       }
     },
