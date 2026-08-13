@@ -2,17 +2,17 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-13T07:36:15.500Z",
-  "totalBattlesAnalyzed": 2587,
-  "totalPlayersScanned": 1520,
-  "totalRunCount": 76,
+  "lastUpdatedAt": "2026-08-13T10:07:48.507Z",
+  "totalBattlesAnalyzed": 2590,
+  "totalPlayersScanned": 1540,
+  "totalRunCount": 77,
   "playerLastScan": {
     "G9YV9GR8R": "20260813T054243.000Z",
     "2CLV2RP0": "20260811T145023.000Z",
     "Y9R22RQ2": "20260813T053510.000Z",
     "R90PRV0PY": "20260812T182126.000Z",
     "9G28ULYR": "20260813T024743.000Z",
-    "92L9R2JG": "20260813T073314.000Z",
+    "92L9R2JG": "20260813T084709.000Z",
     "R09228V": "20260813T052007.000Z",
     "PCG229PC": "20260807T160813.000Z",
     "GG829JGY": "20260811T185451.000Z",
@@ -7882,6 +7882,54 @@
           "name": "Surgical Goblin",
           "wins": 1,
           "games": 1
+        }
+      }
+    },
+    "26000018;26000021;26000026;26000038;26000049;26000084;28000003;28000011": {
+      "cards": [
+        {
+          "id": 26000026,
+          "evo": 1
+        },
+        {
+          "id": 26000038,
+          "evo": 2
+        },
+        {
+          "id": 26000049,
+          "evo": 1
+        },
+        {
+          "id": 26000021,
+          "evo": 0
+        },
+        {
+          "id": 28000003,
+          "evo": 0
+        },
+        {
+          "id": 26000018,
+          "evo": 0
+        },
+        {
+          "id": 26000084,
+          "evo": 0
+        },
+        {
+          "id": 28000011,
+          "evo": 0
+        }
+      ],
+      "useCount": 2,
+      "winCount": 1,
+      "slotConfigs": {
+        "26000026|26000038|26000049": 2
+      },
+      "proUsage": {
+        "92L9R2JG": {
+          "name": "Surgical Goblin",
+          "wins": 1,
+          "games": 2
         }
       }
     }
