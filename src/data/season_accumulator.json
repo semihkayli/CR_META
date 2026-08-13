@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-13T15:59:45.773Z",
-  "totalBattlesAnalyzed": 2650,
-  "totalPlayersScanned": 1580,
-  "totalRunCount": 79,
+  "lastUpdatedAt": "2026-08-13T19:03:49.380Z",
+  "totalBattlesAnalyzed": 2664,
+  "totalPlayersScanned": 1600,
+  "totalRunCount": 80,
   "playerLastScan": {
     "G9YV9GR8R": "20260813T054243.000Z",
     "2CLV2RP0": "20260813T132804.000Z",
@@ -13,7 +13,7 @@
     "R90PRV0PY": "20260812T182126.000Z",
     "9G28ULYR": "20260813T024743.000Z",
     "92L9R2JG": "20260813T084709.000Z",
-    "R09228V": "20260813T155716.000Z",
+    "R09228V": "20260813T185859.000Z",
     "PCG229PC": "20260807T160813.000Z",
     "GG829JGY": "20260811T185451.000Z",
     "PPV2JUUGU": "20260812T072536.000Z",
@@ -23,7 +23,7 @@
     "P8Q0JYRP": "20260813T145450.000Z",
     "989PQYY8": "20260813T150051.000Z",
     "J80V2Y9VC": "20260810T084118.000Z",
-    "YU9JR0Q": "20260813T151112.000Z",
+    "YU9JR0Q": "20260813T171105.000Z",
     "92L8QYJJG": "20260813T140235.000Z",
     "UJ0CVRUV": "20260813T003327.000Z",
     "GLUU9JGQ": "20260812T143929.000Z"
@@ -3898,10 +3898,10 @@
           "evo": 0
         }
       ],
-      "useCount": 34,
-      "winCount": 28,
+      "useCount": 37,
+      "winCount": 30,
       "slotConfigs": {
-        "26000056|26000102|27000002": 23,
+        "26000056|26000102|27000002": 26,
         "27000002|26000102|26000056": 11
       },
       "proUsage": {
@@ -3922,8 +3922,8 @@
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 7,
-          "games": 9
+          "wins": 9,
+          "games": 12
         },
         "UJ0CVRUV": {
           "name": "NotRealPro",
@@ -8022,16 +8022,16 @@
           "evo": 0
         }
       ],
-      "useCount": 19,
-      "winCount": 13,
+      "useCount": 30,
+      "winCount": 19,
       "slotConfigs": {
-        "26000059|26000062|26000043": 19
+        "26000059|26000062|26000043": 30
       },
       "proUsage": {
         "R09228V": {
           "name": "Morten",
-          "wins": 13,
-          "games": 19
+          "wins": 19,
+          "games": 30
         }
       }
     }
