@@ -2,18 +2,18 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-15T01:18:24.440Z",
-  "totalBattlesAnalyzed": 3155,
-  "totalPlayersScanned": 1800,
-  "totalRunCount": 90,
+  "lastUpdatedAt": "2026-08-15T03:40:03.699Z",
+  "totalBattlesAnalyzed": 3161,
+  "totalPlayersScanned": 1820,
+  "totalRunCount": 91,
   "playerLastScan": {
     "G9YV9GR8R": "20260814T013553.000Z",
     "2CLV2RP0": "20260814T074952.000Z",
-    "Y9R22RQ2": "20260814T133656.000Z",
+    "Y9R22RQ2": "20260815T025412.000Z",
     "R90PRV0PY": "20260814T194444.000Z",
     "9G28ULYR": "20260815T004418.000Z",
     "92L9R2JG": "20260814T195938.000Z",
-    "R09228V": "20260814T231525.000Z",
+    "R09228V": "20260815T024717.000Z",
     "PCG229PC": "20260807T160813.000Z",
     "GG829JGY": "20260814T231202.000Z",
     "PPV2JUUGU": "20260814T225340.000Z",
@@ -5575,10 +5575,10 @@
           "evo": 0
         }
       ],
-      "useCount": 109,
-      "winCount": 75,
+      "useCount": 114,
+      "winCount": 79,
       "slotConfigs": {
-        "26000036|26000017|26000043": 109
+        "26000036|26000017|26000043": 114
       },
       "proUsage": {
         "PPV2JUUGU": {
@@ -5603,8 +5603,8 @@
         },
         "Y9R22RQ2": {
           "name": "Ian77",
-          "wins": 8,
-          "games": 8
+          "wins": 12,
+          "games": 13
         },
         "92L9R2JG": {
           "name": "Surgical Goblin",
@@ -7595,16 +7595,16 @@
           "evo": 0
         }
       ],
-      "useCount": 34,
+      "useCount": 35,
       "winCount": 17,
       "slotConfigs": {
-        "26000035|26000011|26000043": 34
+        "26000035|26000011|26000043": 35
       },
       "proUsage": {
         "R09228V": {
           "name": "Morten",
           "wins": 17,
-          "games": 34
+          "games": 35
         }
       }
     },
