@@ -2,13 +2,13 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-16T09:28:20.148Z",
-  "totalBattlesAnalyzed": 3380,
-  "totalPlayersScanned": 2020,
-  "totalRunCount": 101,
+  "lastUpdatedAt": "2026-08-16T12:41:16.018Z",
+  "totalBattlesAnalyzed": 3395,
+  "totalPlayersScanned": 2040,
+  "totalRunCount": 102,
   "playerLastScan": {
     "G9YV9GR8R": "20260815T145030.000Z",
-    "2CLV2RP0": "20260815T124043.000Z",
+    "2CLV2RP0": "20260816T123736.000Z",
     "Y9R22RQ2": "20260816T015739.000Z",
     "R90PRV0PY": "20260815T134750.000Z",
     "9G28ULYR": "20260816T062422.000Z",
@@ -24,7 +24,7 @@
     "989PQYY8": "20260815T213627.000Z",
     "J80V2Y9VC": "20260810T084118.000Z",
     "YU9JR0Q": "20260815T184935.000Z",
-    "92L8QYJJG": "20260815T234819.000Z",
+    "92L8QYJJG": "20260816T123614.000Z",
     "UJ0CVRUV": "20260814T021128.000Z",
     "GLUU9JGQ": "20260812T143929.000Z"
   },
@@ -6358,10 +6358,10 @@
           "evo": 0
         }
       ],
-      "useCount": 5,
+      "useCount": 6,
       "winCount": 2,
       "slotConfigs": {
-        "26000036|26000074|26000043": 5
+        "26000036|26000074|26000043": 6
       },
       "proUsage": {
         "92L9R2JG": {
@@ -6373,6 +6373,11 @@
           "name": "Boss",
           "wins": 1,
           "games": 2
+        },
+        "2CLV2RP0": {
+          "name": "Mugi",
+          "wins": 0,
+          "games": 1
         }
       }
     },
@@ -10002,16 +10007,16 @@
           "evo": 0
         }
       ],
-      "useCount": 34,
-      "winCount": 23,
+      "useCount": 43,
+      "winCount": 26,
       "slotConfigs": {
-        "27000006|26000102|26000059": 34
+        "27000006|26000102|26000059": 43
       },
       "proUsage": {
         "92L8QYJJG": {
           "name": "Candee",
-          "wins": 23,
-          "games": 34
+          "wins": 26,
+          "games": 43
         }
       }
     },
@@ -10108,6 +10113,54 @@
           "name": "LucasXGamer",
           "wins": 4,
           "games": 4
+        }
+      }
+    },
+    "26000029;26000037;26000080;26000101;26000102;27000009;28000000;28000008": {
+      "cards": [
+        {
+          "id": 26000037,
+          "evo": 1
+        },
+        {
+          "id": 26000102,
+          "evo": 2
+        },
+        {
+          "id": 28000008,
+          "evo": 1
+        },
+        {
+          "id": 26000029,
+          "evo": 0
+        },
+        {
+          "id": 26000080,
+          "evo": 0
+        },
+        {
+          "id": 26000101,
+          "evo": 0
+        },
+        {
+          "id": 27000009,
+          "evo": 0
+        },
+        {
+          "id": 28000000,
+          "evo": 0
+        }
+      ],
+      "useCount": 5,
+      "winCount": 3,
+      "slotConfigs": {
+        "26000037|26000102|28000008": 5
+      },
+      "proUsage": {
+        "2CLV2RP0": {
+          "name": "Mugi",
+          "wins": 3,
+          "games": 5
         }
       }
     }
