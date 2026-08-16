@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-08-16T03:49:44.543Z",
+  "updatedAt": "2026-08-16T06:41:04.105Z",
   "seasonId": "2026-08",
-  "totalBattlesAnalyzed": 3345,
-  "totalPlayersScanned": 1980,
-  "totalRuns": 99,
+  "totalBattlesAnalyzed": 3379,
+  "totalPlayersScanned": 2000,
+  "totalRuns": 100,
   "metaDecks": [
     {
       "deckId": "26000050;26000059;26000084;26000102;27000001;27000010;28000000;28000015",
@@ -386,6 +386,73 @@
       "useCount": 78,
       "winCount": 61,
       "rating": 54.8
+    },
+    {
+      "deckId": "26000005;26000043;26000083;26000101;26000102;28000000;28000008;28000016",
+      "cards": [
+        {
+          "name": "Elite Barbarians",
+          "id": 26000043,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Card_26000102",
+          "id": 26000102,
+          "evolutionLevel": 2,
+          "iconUrls": {
+            "medium": ""
+          }
+        },
+        {
+          "name": "Zap",
+          "id": 28000008,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Card_26000101",
+          "id": 26000101,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": ""
+          }
+        },
+        {
+          "name": "Mother Witch",
+          "id": 26000083,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Fireball",
+          "id": 28000000,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Minions",
+          "id": 26000005,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Heal Spirit",
+          "id": 28000016,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 28000008,
+        "championSlotCardId": 26000102,
+        "flexSlotCardId": 26000043,
+        "flexSlotType": "evolution"
+      },
+      "winRate": 72.8,
+      "useCount": 103,
+      "winCount": 75,
+      "rating": 54.4
     },
     {
       "deckId": "26000031;26000032;26000049;26000058;26000062;26000102;27000004;28000011",
@@ -2261,73 +2328,6 @@
       "rating": 45.5
     },
     {
-      "deckId": "26000005;26000043;26000083;26000101;26000102;28000000;28000008;28000016",
-      "cards": [
-        {
-          "name": "Elite Barbarians",
-          "id": 26000043,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Card_26000102",
-          "id": 26000102,
-          "evolutionLevel": 2,
-          "iconUrls": {
-            "medium": ""
-          }
-        },
-        {
-          "name": "Zap",
-          "id": 28000008,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Card_26000101",
-          "id": 26000101,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": ""
-          }
-        },
-        {
-          "name": "Mother Witch",
-          "id": 26000083,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Fireball",
-          "id": 28000000,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Minions",
-          "id": 26000005,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Heal Spirit",
-          "id": 28000016,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        }
-      ],
-      "slotConfig": {
-        "evoSlotCardId": 28000008,
-        "championSlotCardId": 26000102,
-        "flexSlotCardId": 26000043,
-        "flexSlotType": "evolution"
-      },
-      "winRate": 63,
-      "useCount": 73,
-      "winCount": 46,
-      "rating": 45.1
-    },
-    {
       "deckId": "26000026;26000030;26000041;26000058;26000102;27000000;28000003;28000004",
       "cards": [
         {
@@ -3680,6 +3680,110 @@
       ]
     },
     {
+      "deckId": "26000005;26000043;26000083;26000101;26000102;28000000;28000008;28000016",
+      "cards": [
+        {
+          "name": "Elite Barbarians",
+          "id": 26000043,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Card_26000102",
+          "id": 26000102,
+          "evolutionLevel": 2,
+          "iconUrls": {
+            "medium": ""
+          }
+        },
+        {
+          "name": "Zap",
+          "id": 28000008,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Card_26000101",
+          "id": 26000101,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": ""
+          }
+        },
+        {
+          "name": "Mother Witch",
+          "id": 26000083,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Fireball",
+          "id": 28000000,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Minions",
+          "id": 26000005,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Heal Spirit",
+          "id": 28000016,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 28000008,
+        "championSlotCardId": 26000102,
+        "flexSlotCardId": 26000043,
+        "flexSlotType": "evolution"
+      },
+      "totalUseCount": 103,
+      "totalWinCount": 75,
+      "overallWinRate": 72.8,
+      "proCount": 5,
+      "pros": [
+        {
+          "tag": "#PPV2JUUGU",
+          "name": "Boss",
+          "useCount": 36,
+          "winCount": 24,
+          "winRate": 66.7
+        },
+        {
+          "tag": "#9890JJJV",
+          "name": "Pompeyo",
+          "useCount": 32,
+          "winCount": 31,
+          "winRate": 96.9
+        },
+        {
+          "tag": "#92L9R2JG",
+          "name": "Surgical Goblin",
+          "useCount": 16,
+          "winCount": 9,
+          "winRate": 56.3
+        },
+        {
+          "tag": "#R90PRV0PY",
+          "name": "Ryley",
+          "useCount": 16,
+          "winCount": 10,
+          "winRate": 62.5
+        },
+        {
+          "tag": "#9G28ULYR",
+          "name": "LucasXGamer",
+          "useCount": 3,
+          "winCount": 1,
+          "winRate": 33.3
+        }
+      ]
+    },
+    {
       "deckId": "26000011;26000036;26000043;26000046;26000052;26000083;28000001;28000016",
       "cards": [
         {
@@ -3776,110 +3880,6 @@
           "useCount": 3,
           "winCount": 2,
           "winRate": 66.7
-        }
-      ]
-    },
-    {
-      "deckId": "26000005;26000043;26000083;26000101;26000102;28000000;28000008;28000016",
-      "cards": [
-        {
-          "name": "Elite Barbarians",
-          "id": 26000043,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Card_26000102",
-          "id": 26000102,
-          "evolutionLevel": 2,
-          "iconUrls": {
-            "medium": ""
-          }
-        },
-        {
-          "name": "Zap",
-          "id": 28000008,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Card_26000101",
-          "id": 26000101,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": ""
-          }
-        },
-        {
-          "name": "Mother Witch",
-          "id": 26000083,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Fireball",
-          "id": 28000000,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Minions",
-          "id": 26000005,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Heal Spirit",
-          "id": 28000016,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        }
-      ],
-      "slotConfig": {
-        "evoSlotCardId": 28000008,
-        "championSlotCardId": 26000102,
-        "flexSlotCardId": 26000043,
-        "flexSlotType": "evolution"
-      },
-      "totalUseCount": 73,
-      "totalWinCount": 46,
-      "overallWinRate": 63,
-      "proCount": 5,
-      "pros": [
-        {
-          "tag": "#PPV2JUUGU",
-          "name": "Boss",
-          "useCount": 36,
-          "winCount": 24,
-          "winRate": 66.7
-        },
-        {
-          "tag": "#92L9R2JG",
-          "name": "Surgical Goblin",
-          "useCount": 16,
-          "winCount": 9,
-          "winRate": 56.3
-        },
-        {
-          "tag": "#R90PRV0PY",
-          "name": "Ryley",
-          "useCount": 16,
-          "winCount": 10,
-          "winRate": 62.5
-        },
-        {
-          "tag": "#9G28ULYR",
-          "name": "LucasXGamer",
-          "useCount": 3,
-          "winCount": 1,
-          "winRate": 33.3
-        },
-        {
-          "tag": "#9890JJJV",
-          "name": "Pompeyo",
-          "useCount": 2,
-          "winCount": 2,
-          "winRate": 100
         }
       ]
     },
@@ -5881,7 +5881,7 @@
     {
       "tag": "#G9YV9GR8R",
       "name": "Mohamed Light",
-      "updatedAt": "2026-08-16T03:49:45.043Z",
+      "updatedAt": "2026-08-16T06:41:04.573Z",
       "deck": [
         {
           "name": "Archers",
@@ -5952,7 +5952,7 @@
     {
       "tag": "#2CLV2RP0",
       "name": "Mugi",
-      "updatedAt": "2026-08-16T03:49:45.517Z",
+      "updatedAt": "2026-08-16T06:41:05.043Z",
       "deck": [
         {
           "name": "Royal Hogs",
@@ -6023,7 +6023,7 @@
     {
       "tag": "#Y9R22RQ2",
       "name": "Ian77",
-      "updatedAt": "2026-08-16T03:49:45.996Z",
+      "updatedAt": "2026-08-16T06:41:05.512Z",
       "deck": [
         {
           "name": "Goblin Barrel",
@@ -6094,7 +6094,7 @@
     {
       "tag": "#R90PRV0PY",
       "name": "Ryley",
-      "updatedAt": "2026-08-16T03:49:46.477Z",
+      "updatedAt": "2026-08-16T06:41:05.974Z",
       "deck": [
         {
           "name": "Goblin Barrel",
@@ -6165,7 +6165,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-08-16T03:49:47.932Z",
+      "updatedAt": "2026-08-16T06:41:07.374Z",
       "deck": [
         {
           "name": "Elite Barbarians",
@@ -6236,7 +6236,7 @@
     {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-08-16T03:49:48.905Z",
+      "updatedAt": "2026-08-16T06:41:08.324Z",
       "deck": [
         {
           "name": "Baby Dragon",
@@ -6307,7 +6307,7 @@
     {
       "tag": "#PPV2JUUGU",
       "name": "Boss",
-      "updatedAt": "2026-08-16T03:49:49.390Z",
+      "updatedAt": "2026-08-16T06:41:08.786Z",
       "deck": [
         {
           "name": "Musketeer",
@@ -6378,7 +6378,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-08-16T03:49:49.876Z",
+      "updatedAt": "2026-08-16T06:41:09.250Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6449,7 +6449,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-08-16T03:49:50.296Z",
+      "updatedAt": "2026-08-16T06:41:09.653Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6520,7 +6520,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-08-16T03:49:50.785Z",
+      "updatedAt": "2026-08-16T06:41:10.120Z",
       "deck": [
         {
           "name": "Zap",
@@ -6591,7 +6591,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-08-16T03:49:51.210Z",
+      "updatedAt": "2026-08-16T06:41:10.526Z",
       "deck": [
         {
           "name": "Wizard",
@@ -6662,7 +6662,7 @@
     {
       "tag": "#989PQYY8",
       "name": "SULLY",
-      "updatedAt": "2026-08-16T03:49:51.692Z",
+      "updatedAt": "2026-08-16T06:41:10.999Z",
       "deck": [
         {
           "name": "Knight",
@@ -6733,7 +6733,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-08-16T03:49:52.605Z",
+      "updatedAt": "2026-08-16T06:41:11.886Z",
       "deck": [
         {
           "name": "Executioner",
@@ -6804,7 +6804,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-08-16T03:49:53.089Z",
+      "updatedAt": "2026-08-16T06:41:12.369Z",
       "deck": [
         {
           "name": "Electro Dragon",
@@ -6875,7 +6875,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-08-16T03:49:53.566Z",
+      "updatedAt": "2026-08-16T06:41:12.845Z",
       "deck": [
         {
           "name": "Goblin Drill",
@@ -6946,7 +6946,7 @@
     {
       "tag": "#UJ0CVRUV",
       "name": "NotRealPro",
-      "updatedAt": "2026-08-16T03:49:54.050Z",
+      "updatedAt": "2026-08-16T06:41:13.317Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
