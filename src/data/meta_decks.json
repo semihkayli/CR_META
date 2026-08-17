@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-08-17T18:40:40.701Z",
+  "updatedAt": "2026-08-17T21:27:07.753Z",
   "seasonId": "2026-08",
-  "totalBattlesAnalyzed": 3701,
-  "totalPlayersScanned": 2240,
-  "totalRuns": 112,
+  "totalBattlesAnalyzed": 3730,
+  "totalPlayersScanned": 2260,
+  "totalRuns": 113,
   "metaDecks": [
     {
       "deckId": "26000050;26000059;26000084;26000102;27000001;27000010;28000000;28000015",
@@ -2259,6 +2259,71 @@
       "rating": 46.3
     },
     {
+      "deckId": "26000010;26000032;26000043;26000050;26000099;27000001;28000009;28000011",
+      "cards": [
+        {
+          "name": "Elite Barbarians",
+          "id": 26000043,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Card_26000099",
+          "id": 26000099,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": ""
+          }
+        },
+        {
+          "name": "Royal Ghost",
+          "id": 26000050,
+          "evolutionLevel": 1,
+          "iconUrls": {}
+        },
+        {
+          "name": "Goblin Hut",
+          "id": 27000001,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Poison",
+          "id": 28000009,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Miner",
+          "id": 26000032,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "Skeletons",
+          "id": 26000010,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        },
+        {
+          "name": "The Log",
+          "id": 28000011,
+          "evolutionLevel": 0,
+          "iconUrls": {}
+        }
+      ],
+      "slotConfig": {
+        "evoSlotCardId": 26000043,
+        "championSlotCardId": 26000099,
+        "flexSlotCardId": 26000050,
+        "flexSlotType": "evolution"
+      },
+      "winRate": 73.9,
+      "useCount": 23,
+      "winCount": 17,
+      "rating": 46
+    },
+    {
       "deckId": "26000002;26000011;26000021;26000030;26000045;28000003;28000011;28000012",
       "cards": [
         {
@@ -3157,71 +3222,6 @@
       "useCount": 10,
       "winCount": 7,
       "rating": 42.2
-    },
-    {
-      "deckId": "26000036;26000043;26000055;26000080;26000083;26000102;28000001;28000016",
-      "cards": [
-        {
-          "name": "Mega Knight",
-          "id": 26000055,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Card_26000102",
-          "id": 26000102,
-          "evolutionLevel": 2,
-          "iconUrls": {
-            "medium": ""
-          }
-        },
-        {
-          "name": "Elite Barbarians",
-          "id": 26000043,
-          "evolutionLevel": 1,
-          "iconUrls": {}
-        },
-        {
-          "name": "Arrows",
-          "id": 28000001,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Skeleton Dragons",
-          "id": 26000080,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Mother Witch",
-          "id": 26000083,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Heal Spirit",
-          "id": 28000016,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        },
-        {
-          "name": "Battle Ram",
-          "id": 26000036,
-          "evolutionLevel": 0,
-          "iconUrls": {}
-        }
-      ],
-      "slotConfig": {
-        "evoSlotCardId": 26000055,
-        "championSlotCardId": 26000102,
-        "flexSlotCardId": 26000043,
-        "flexSlotType": "evolution"
-      },
-      "winRate": 66.7,
-      "useCount": 24,
-      "winCount": 16,
-      "rating": 41.8
     }
   ],
   "proDecks": [
@@ -5901,7 +5901,7 @@
     {
       "tag": "#G9YV9GR8R",
       "name": "Mohamed Light",
-      "updatedAt": "2026-08-17T18:40:41.188Z",
+      "updatedAt": "2026-08-17T21:27:08.274Z",
       "deck": [
         {
           "name": "Archers",
@@ -5972,7 +5972,7 @@
     {
       "tag": "#2CLV2RP0",
       "name": "Mugi",
-      "updatedAt": "2026-08-17T18:40:41.662Z",
+      "updatedAt": "2026-08-17T21:27:08.800Z",
       "deck": [
         {
           "name": "Lumberjack",
@@ -6043,7 +6043,7 @@
     {
       "tag": "#Y9R22RQ2",
       "name": "Ian77",
-      "updatedAt": "2026-08-17T18:40:42.141Z",
+      "updatedAt": "2026-08-17T21:27:09.328Z",
       "deck": [
         {
           "name": "Ice Spirit",
@@ -6114,7 +6114,7 @@
     {
       "tag": "#R90PRV0PY",
       "name": "Ryley",
-      "updatedAt": "2026-08-17T18:40:42.627Z",
+      "updatedAt": "2026-08-17T21:27:09.847Z",
       "deck": [
         {
           "name": "Goblin Drill",
@@ -6185,7 +6185,7 @@
     {
       "tag": "#9G28ULYR",
       "name": "LucasXGamer",
-      "updatedAt": "2026-08-17T18:40:43.124Z",
+      "updatedAt": "2026-08-17T21:27:10.511Z",
       "deck": [
         {
           "name": "Archers",
@@ -6256,7 +6256,7 @@
     {
       "tag": "#R09228V",
       "name": "Morten",
-      "updatedAt": "2026-08-17T18:40:44.084Z",
+      "updatedAt": "2026-08-17T21:27:11.558Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6327,7 +6327,7 @@
     {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-08-17T18:40:45.062Z",
+      "updatedAt": "2026-08-17T21:27:12.594Z",
       "deck": [
         {
           "name": "Baby Dragon",
@@ -6398,7 +6398,7 @@
     {
       "tag": "#PPV2JUUGU",
       "name": "Boss",
-      "updatedAt": "2026-08-17T18:40:45.540Z",
+      "updatedAt": "2026-08-17T21:27:13.129Z",
       "deck": [
         {
           "name": "Musketeer",
@@ -6469,7 +6469,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-08-17T18:40:46.029Z",
+      "updatedAt": "2026-08-17T21:27:13.649Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6540,7 +6540,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-08-17T18:40:46.449Z",
+      "updatedAt": "2026-08-17T21:27:14.109Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6611,7 +6611,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-08-17T18:40:46.943Z",
+      "updatedAt": "2026-08-17T21:27:14.627Z",
       "deck": [
         {
           "name": "Zap",
@@ -6682,7 +6682,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-08-17T18:40:47.356Z",
+      "updatedAt": "2026-08-17T21:27:15.082Z",
       "deck": [
         {
           "name": "Wizard",
@@ -6753,7 +6753,7 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-08-17T18:40:48.280Z",
+      "updatedAt": "2026-08-17T21:27:16.071Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6824,7 +6824,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-08-17T18:40:48.773Z",
+      "updatedAt": "2026-08-17T21:27:16.593Z",
       "deck": [
         {
           "name": "Executioner",
@@ -6895,7 +6895,7 @@
     {
       "tag": "#YU9JR0Q",
       "name": "MYLO XYLOTO",
-      "updatedAt": "2026-08-17T18:40:49.262Z",
+      "updatedAt": "2026-08-17T21:27:17.123Z",
       "deck": [
         {
           "name": "Electro Dragon",
@@ -6966,7 +6966,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-08-17T18:40:49.742Z",
+      "updatedAt": "2026-08-17T21:27:17.641Z",
       "deck": [
         {
           "name": "Tesla",
