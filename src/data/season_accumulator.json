@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-19T03:47:39.888Z",
-  "totalBattlesAnalyzed": 4096,
-  "totalPlayersScanned": 2460,
-  "totalRunCount": 123,
+  "lastUpdatedAt": "2026-08-19T06:45:29.358Z",
+  "totalBattlesAnalyzed": 4128,
+  "totalPlayersScanned": 2480,
+  "totalRunCount": 124,
   "playerLastScan": {
     "G9YV9GR8R": "20260818T053429.000Z",
     "2CLV2RP0": "20260818T063907.000Z",
@@ -17,14 +17,14 @@
     "PCG229PC": "20260807T160813.000Z",
     "GG829JGY": "20260818T050411.000Z",
     "PPV2JUUGU": "20260818T101301.000Z",
-    "9890JJJV": "20260819T034643.000Z",
+    "9890JJJV": "20260819T055009.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "LUYY2URU": "20260811T180945.000Z",
     "P8Q0JYRP": "20260818T203738.000Z",
     "989PQYY8": "20260818T141056.000Z",
     "J80V2Y9VC": "20260817T085833.000Z",
     "YU9JR0Q": "20260819T003354.000Z",
-    "92L8QYJJG": "20260819T034430.000Z",
+    "92L8QYJJG": "20260819T035602.000Z",
     "UJ0CVRUV": "20260814T021128.000Z",
     "GLUU9JGQ": "20260812T143929.000Z"
   },
@@ -11165,16 +11165,16 @@
           "evo": 0
         }
       ],
-      "useCount": 21,
-      "winCount": 13,
+      "useCount": 51,
+      "winCount": 31,
       "slotConfigs": {
-        "26000037|26000006|26000102": 21
+        "26000037|26000006|26000102": 51
       },
       "proUsage": {
         "9890JJJV": {
           "name": "Pompeyo",
-          "wins": 13,
-          "games": 21
+          "wins": 31,
+          "games": 51
         }
       }
     },
@@ -11741,16 +11741,16 @@
           "evo": 0
         }
       ],
-      "useCount": 39,
-      "winCount": 32,
+      "useCount": 41,
+      "winCount": 34,
       "slotConfigs": {
-        "26000015|26000102|26000043": 39
+        "26000015|26000102|26000043": 41
       },
       "proUsage": {
         "92L8QYJJG": {
           "name": "Candee",
-          "wins": 32,
-          "games": 39
+          "wins": 34,
+          "games": 41
         }
       }
     },
