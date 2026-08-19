@@ -2,13 +2,13 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-19T09:35:18.108Z",
-  "totalBattlesAnalyzed": 4141,
-  "totalPlayersScanned": 2500,
-  "totalRunCount": 125,
+  "lastUpdatedAt": "2026-08-19T12:49:39.757Z",
+  "totalBattlesAnalyzed": 4151,
+  "totalPlayersScanned": 2520,
+  "totalRunCount": 126,
   "playerLastScan": {
-    "G9YV9GR8R": "20260819T083626.000Z",
-    "2CLV2RP0": "20260818T063907.000Z",
+    "G9YV9GR8R": "20260819T105746.000Z",
+    "2CLV2RP0": "20260819T124524.000Z",
     "Y9R22RQ2": "20260819T021715.000Z",
     "R90PRV0PY": "20260818T152929.000Z",
     "9G28ULYR": "20260819T080955.000Z",
@@ -21,7 +21,7 @@
     "9RV2VVJVL": "20260629T092413.000Z",
     "LUYY2URU": "20260811T180945.000Z",
     "P8Q0JYRP": "20260818T203738.000Z",
-    "989PQYY8": "20260818T141056.000Z",
+    "989PQYY8": "20260819T124530.000Z",
     "J80V2Y9VC": "20260817T085833.000Z",
     "YU9JR0Q": "20260819T003354.000Z",
     "92L8QYJJG": "20260819T035602.000Z",
@@ -123,17 +123,17 @@
           "evo": 0
         }
       ],
-      "useCount": 126,
-      "winCount": 104,
+      "useCount": 129,
+      "winCount": 107,
       "slotConfigs": {
-        "26000001|26000099|26000059": 81,
+        "26000001|26000099|26000059": 84,
         "26000059|26000099|26000001": 45
       },
       "proUsage": {
         "G9YV9GR8R": {
           "name": "Mohamed Light",
-          "wins": 76,
-          "games": 81
+          "wins": 79,
+          "games": 84
         },
         "PPV2JUUGU": {
           "name": "Boss",
@@ -7737,10 +7737,10 @@
           "evo": 0
         }
       ],
-      "useCount": 28,
-      "winCount": 16,
+      "useCount": 30,
+      "winCount": 18,
       "slotConfigs": {
-        "26000015|27000009|26000000": 28
+        "26000015|27000009|26000000": 30
       },
       "proUsage": {
         "YU9JR0Q": {
@@ -7750,8 +7750,8 @@
         },
         "989PQYY8": {
           "name": "SULLY",
-          "wins": 5,
-          "games": 9
+          "wins": 7,
+          "games": 11
         },
         "GG829JGY": {
           "name": "SirTag",
@@ -11847,6 +11847,54 @@
           "name": "SirTag",
           "wins": 8,
           "games": 9
+        }
+      }
+    },
+    "26000022;26000041;26000054;26000083;26000099;27000002;28000000;28000015": {
+      "cards": [
+        {
+          "id": 27000002,
+          "evo": 1
+        },
+        {
+          "id": 26000099,
+          "evo": 0
+        },
+        {
+          "id": 26000022,
+          "evo": 1
+        },
+        {
+          "id": 26000054,
+          "evo": 0
+        },
+        {
+          "id": 26000083,
+          "evo": 0
+        },
+        {
+          "id": 28000000,
+          "evo": 0
+        },
+        {
+          "id": 26000041,
+          "evo": 0
+        },
+        {
+          "id": 28000015,
+          "evo": 0
+        }
+      ],
+      "useCount": 4,
+      "winCount": 4,
+      "slotConfigs": {
+        "27000002|26000099|26000022": 4
+      },
+      "proUsage": {
+        "2CLV2RP0": {
+          "name": "Mugi",
+          "wins": 4,
+          "games": 4
         }
       }
     }
