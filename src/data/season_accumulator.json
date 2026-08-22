@@ -2,17 +2,17 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-22T12:40:35.362Z",
-  "totalBattlesAnalyzed": 4966,
-  "totalPlayersScanned": 3000,
-  "totalRunCount": 150,
+  "lastUpdatedAt": "2026-08-22T15:21:48.736Z",
+  "totalBattlesAnalyzed": 4974,
+  "totalPlayersScanned": 3020,
+  "totalRunCount": 151,
   "playerLastScan": {
     "G9YV9GR8R": "20260821T204749.000Z",
     "2CLV2RP0": "20260821T132131.000Z",
     "Y9R22RQ2": "20260822T045228.000Z",
     "R90PRV0PY": "20260821T050937.000Z",
     "9G28ULYR": "20260822T115511.000Z",
-    "92L9R2JG": "20260822T064705.000Z",
+    "92L9R2JG": "20260822T150544.000Z",
     "R09228V": "20260822T011756.000Z",
     "PCG229PC": "20260807T160813.000Z",
     "GG829JGY": "20260822T071541.000Z",
@@ -21,7 +21,7 @@
     "9RV2VVJVL": "20260629T092413.000Z",
     "LUYY2URU": "20260811T180945.000Z",
     "P8Q0JYRP": "20260821T125147.000Z",
-    "989PQYY8": "20260822T113505.000Z",
+    "989PQYY8": "20260822T152007.000Z",
     "J80V2Y9VC": "20260817T085833.000Z",
     "YU9JR0Q": "20260822T121621.000Z",
     "92L8QYJJG": "20260821T230830.000Z",
@@ -745,16 +745,16 @@
           "evo": 0
         }
       ],
-      "useCount": 32,
-      "winCount": 22,
+      "useCount": 39,
+      "winCount": 27,
       "slotConfigs": {
-        "28000004|26000011|26000012": 32
+        "28000004|26000011|26000012": 39
       },
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
-          "wins": 6,
-          "games": 12
+          "wins": 11,
+          "games": 19
         },
         "2CLV2RP0": {
           "name": "Mugi",
@@ -7785,10 +7785,10 @@
           "evo": 0
         }
       ],
-      "useCount": 49,
-      "winCount": 30,
+      "useCount": 50,
+      "winCount": 31,
       "slotConfigs": {
-        "26000015|27000009|26000000": 48,
+        "26000015|27000009|26000000": 49,
         "26000000|28000015|26000015": 1
       },
       "proUsage": {
@@ -7799,8 +7799,8 @@
         },
         "989PQYY8": {
           "name": "SULLY",
-          "wins": 19,
-          "games": 29
+          "wins": 20,
+          "games": 30
         },
         "GG829JGY": {
           "name": "SirTag",
