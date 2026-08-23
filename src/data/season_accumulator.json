@@ -2,14 +2,14 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-23T18:31:19.123Z",
-  "totalBattlesAnalyzed": 5131,
-  "totalPlayersScanned": 3200,
-  "totalRunCount": 160,
+  "lastUpdatedAt": "2026-08-23T21:22:36.832Z",
+  "totalBattlesAnalyzed": 5134,
+  "totalPlayersScanned": 3220,
+  "totalRunCount": 161,
   "playerLastScan": {
     "G9YV9GR8R": "20260823T132157.000Z",
     "2CLV2RP0": "20260823T130318.000Z",
-    "Y9R22RQ2": "20260823T055415.000Z",
+    "Y9R22RQ2": "20260823T203605.000Z",
     "R90PRV0PY": "20260823T034938.000Z",
     "9G28ULYR": "20260823T173205.000Z",
     "92L9R2JG": "20260822T150544.000Z",
@@ -5169,17 +5169,17 @@
           "evo": 0
         }
       ],
-      "useCount": 46,
-      "winCount": 24,
+      "useCount": 49,
+      "winCount": 26,
       "slotConfigs": {
-        "26000060|26000099|26000004": 31,
+        "26000060|26000099|26000004": 34,
         "26000004|26000099|26000060": 15
       },
       "proUsage": {
         "Y9R22RQ2": {
           "name": "Ian77",
-          "wins": 17,
-          "games": 31
+          "wins": 19,
+          "games": 34
         },
         "9G28ULYR": {
           "name": "LucasXGamer",
