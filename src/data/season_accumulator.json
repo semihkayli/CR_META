@@ -2,22 +2,22 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-23T01:24:01.402Z",
-  "totalBattlesAnalyzed": 5061,
-  "totalPlayersScanned": 3080,
-  "totalRunCount": 154,
+  "lastUpdatedAt": "2026-08-23T03:51:24.182Z",
+  "totalBattlesAnalyzed": 5076,
+  "totalPlayersScanned": 3100,
+  "totalRunCount": 155,
   "playerLastScan": {
     "G9YV9GR8R": "20260821T204749.000Z",
     "2CLV2RP0": "20260823T003456.000Z",
     "Y9R22RQ2": "20260822T045228.000Z",
-    "R90PRV0PY": "20260822T220910.000Z",
+    "R90PRV0PY": "20260823T034938.000Z",
     "9G28ULYR": "20260822T214124.000Z",
     "92L9R2JG": "20260822T150544.000Z",
-    "R09228V": "20260823T004330.000Z",
+    "R09228V": "20260823T015604.000Z",
     "PCG229PC": "20260807T160813.000Z",
     "GG829JGY": "20260822T071541.000Z",
     "PPV2JUUGU": "20260822T194204.000Z",
-    "9890JJJV": "20260823T012327.000Z",
+    "9890JJJV": "20260823T015605.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "LUYY2URU": "20260811T180945.000Z",
     "P8Q0JYRP": "20260822T174118.000Z",
@@ -1216,18 +1216,18 @@
           "evo": 0
         }
       ],
-      "useCount": 48,
-      "winCount": 36,
+      "useCount": 54,
+      "winCount": 38,
       "slotConfigs": {
         "26000037|26000006|27000012": 5,
         "26000037|26000006|26000038": 14,
-        "26000037|26000006|26000039": 29
+        "26000037|26000006|26000039": 35
       },
       "proUsage": {
         "9890JJJV": {
           "name": "Pompeyo",
-          "wins": 36,
-          "games": 48
+          "wins": 38,
+          "games": 54
         }
       }
     },
@@ -12517,10 +12517,10 @@
           "evo": 0
         }
       ],
-      "useCount": 18,
-      "winCount": 10,
+      "useCount": 20,
+      "winCount": 12,
       "slotConfigs": {
-        "26000036|26000074|26000043": 18
+        "26000036|26000074|26000043": 20
       },
       "proUsage": {
         "92L9R2JG": {
@@ -12535,8 +12535,8 @@
         },
         "R09228V": {
           "name": "Morten",
-          "wins": 2,
-          "games": 3
+          "wins": 4,
+          "games": 5
         }
       }
     },
@@ -14848,10 +14848,10 @@
           "evo": 0
         }
       ],
-      "useCount": 17,
-      "winCount": 12,
+      "useCount": 24,
+      "winCount": 15,
       "slotConfigs": {
-        "26000056|26000102|26000043": 17
+        "26000056|26000102|26000043": 24
       },
       "proUsage": {
         "GG829JGY": {
@@ -14861,8 +14861,8 @@
         },
         "R90PRV0PY": {
           "name": "Ryley",
-          "wins": 6,
-          "games": 8
+          "wins": 9,
+          "games": 15
         }
       }
     },
