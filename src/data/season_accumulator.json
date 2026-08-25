@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-25T03:49:54.662Z",
-  "totalBattlesAnalyzed": 5266,
-  "totalPlayersScanned": 3420,
-  "totalRunCount": 171,
+  "lastUpdatedAt": "2026-08-25T06:50:47.254Z",
+  "totalBattlesAnalyzed": 5275,
+  "totalPlayersScanned": 3440,
+  "totalRunCount": 172,
   "playerLastScan": {
     "G9YV9GR8R": "20260823T132157.000Z",
     "2CLV2RP0": "20260825T033918.000Z",
@@ -15,9 +15,9 @@
     "92L9R2JG": "20260824T103059.000Z",
     "R09228V": "20260824T040238.000Z",
     "PCG229PC": "20260807T160813.000Z",
-    "GG829JGY": "20260824T070833.000Z",
+    "GG829JGY": "20260825T064745.000Z",
     "PPV2JUUGU": "20260822T194204.000Z",
-    "9890JJJV": "20260824T012459.000Z",
+    "9890JJJV": "20260825T054729.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
     "LUYY2URU": "20260824T195833.000Z",
     "P8Q0JYRP": "20260824T114111.000Z",
@@ -1221,18 +1221,18 @@
           "evo": 0
         }
       ],
-      "useCount": 62,
-      "winCount": 43,
+      "useCount": 67,
+      "winCount": 46,
       "slotConfigs": {
         "26000037|26000006|27000012": 5,
         "26000037|26000006|26000038": 14,
-        "26000037|26000006|26000039": 43
+        "26000037|26000006|26000039": 48
       },
       "proUsage": {
         "9890JJJV": {
           "name": "Pompeyo",
-          "wins": 43,
-          "games": 62
+          "wins": 46,
+          "games": 67
         }
       }
     },
@@ -15179,16 +15179,16 @@
           "evo": 0
         }
       ],
-      "useCount": 4,
-      "winCount": 4,
+      "useCount": 8,
+      "winCount": 6,
       "slotConfigs": {
-        "26000043|26000102|28000008": 4
+        "26000043|26000102|28000008": 8
       },
       "proUsage": {
         "GG829JGY": {
           "name": "SirTag",
-          "wins": 4,
-          "games": 4
+          "wins": 6,
+          "games": 8
         }
       }
     },
