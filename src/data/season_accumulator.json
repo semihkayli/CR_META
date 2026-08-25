@@ -2,13 +2,13 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-25T01:19:36.814Z",
-  "totalBattlesAnalyzed": 5265,
-  "totalPlayersScanned": 3400,
-  "totalRunCount": 170,
+  "lastUpdatedAt": "2026-08-25T03:49:54.662Z",
+  "totalBattlesAnalyzed": 5266,
+  "totalPlayersScanned": 3420,
+  "totalRunCount": 171,
   "playerLastScan": {
     "G9YV9GR8R": "20260823T132157.000Z",
-    "2CLV2RP0": "20260824T152345.000Z",
+    "2CLV2RP0": "20260825T033918.000Z",
     "Y9R22RQ2": "20260823T223354.000Z",
     "R90PRV0PY": "20260823T034938.000Z",
     "9G28ULYR": "20260824T235520.000Z",
@@ -15035,16 +15035,16 @@
           "evo": 0
         }
       ],
-      "useCount": 3,
+      "useCount": 4,
       "winCount": 3,
       "slotConfigs": {
-        "27000002|26000099|26000022": 3
+        "27000002|26000099|26000022": 4
       },
       "proUsage": {
         "2CLV2RP0": {
           "name": "Mugi",
           "wins": 3,
-          "games": 3
+          "games": 4
         }
       }
     },
