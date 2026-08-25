@@ -2,16 +2,16 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-25T15:42:54.744Z",
-  "totalBattlesAnalyzed": 5333,
-  "totalPlayersScanned": 3500,
-  "totalRunCount": 175,
+  "lastUpdatedAt": "2026-08-25T18:40:50.022Z",
+  "totalBattlesAnalyzed": 5342,
+  "totalPlayersScanned": 3520,
+  "totalRunCount": 176,
   "playerLastScan": {
     "G9YV9GR8R": "20260823T132157.000Z",
     "2CLV2RP0": "20260825T142210.000Z",
     "Y9R22RQ2": "20260823T223354.000Z",
     "R90PRV0PY": "20260825T144201.000Z",
-    "9G28ULYR": "20260825T151119.000Z",
+    "9G28ULYR": "20260825T183915.000Z",
     "92L9R2JG": "20260825T130919.000Z",
     "R09228V": "20260824T040238.000Z",
     "PCG229PC": "20260807T160813.000Z",
@@ -23,7 +23,7 @@
     "P8Q0JYRP": "20260825T135745.000Z",
     "989PQYY8": "20260825T142711.000Z",
     "J80V2Y9VC": "20260817T085833.000Z",
-    "YU9JR0Q": "20260825T113001.000Z",
+    "YU9JR0Q": "20260825T164158.000Z",
     "92L8QYJJG": "20260824T135844.000Z",
     "UJ0CVRUV": "20260824T023206.000Z",
     "GLUU9JGQ": "20260812T143929.000Z"
@@ -3968,10 +3968,10 @@
           "evo": 0
         }
       ],
-      "useCount": 118,
+      "useCount": 119,
       "winCount": 82,
       "slotConfigs": {
-        "26000056|26000102|27000002": 75,
+        "26000056|26000102|27000002": 76,
         "27000002|26000102|26000056": 43
       },
       "proUsage": {
@@ -3993,7 +3993,7 @@
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
           "wins": 34,
-          "games": 57
+          "games": 58
         },
         "UJ0CVRUV": {
           "name": "NotRealPro",
@@ -5874,10 +5874,10 @@
           "evo": 0
         }
       ],
-      "useCount": 38,
-      "winCount": 22,
+      "useCount": 41,
+      "winCount": 23,
       "slotConfigs": {
-        "26000026|26000102|27000006": 38
+        "26000026|26000102|27000006": 41
       },
       "proUsage": {
         "R90PRV0PY": {
@@ -5892,8 +5892,8 @@
         },
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 6,
-          "games": 10
+          "wins": 7,
+          "games": 13
         }
       }
     },
@@ -7818,17 +7818,17 @@
           "evo": 0
         }
       ],
-      "useCount": 69,
+      "useCount": 71,
       "winCount": 42,
       "slotConfigs": {
-        "26000015|27000009|26000000": 68,
+        "26000015|27000009|26000000": 70,
         "26000000|28000015|26000015": 1
       },
       "proUsage": {
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
           "wins": 4,
-          "games": 7
+          "games": 9
         },
         "989PQYY8": {
           "name": "SULLY",
@@ -14944,16 +14944,16 @@
           "evo": 0
         }
       ],
-      "useCount": 9,
+      "useCount": 10,
       "winCount": 6,
       "slotConfigs": {
-        "26000024|26000102|26000050": 9
+        "26000024|26000102|26000050": 10
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
           "wins": 6,
-          "games": 9
+          "games": 10
         }
       }
     },
@@ -15477,16 +15477,16 @@
           "evo": 0
         }
       ],
-      "useCount": 8,
+      "useCount": 9,
       "winCount": 4,
       "slotConfigs": {
-        "27000002|26000099|26000043": 8
+        "27000002|26000099|26000043": 9
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
           "wins": 4,
-          "games": 8
+          "games": 9
         }
       }
     },
