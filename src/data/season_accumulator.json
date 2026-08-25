@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-25T06:50:47.254Z",
-  "totalBattlesAnalyzed": 5275,
-  "totalPlayersScanned": 3440,
-  "totalRunCount": 172,
+  "lastUpdatedAt": "2026-08-25T09:36:23.056Z",
+  "totalBattlesAnalyzed": 5280,
+  "totalPlayersScanned": 3460,
+  "totalRunCount": 173,
   "playerLastScan": {
     "G9YV9GR8R": "20260823T132157.000Z",
     "2CLV2RP0": "20260825T033918.000Z",
@@ -15,11 +15,11 @@
     "92L9R2JG": "20260824T103059.000Z",
     "R09228V": "20260824T040238.000Z",
     "PCG229PC": "20260807T160813.000Z",
-    "GG829JGY": "20260825T064745.000Z",
+    "GG829JGY": "20260825T070038.000Z",
     "PPV2JUUGU": "20260822T194204.000Z",
     "9890JJJV": "20260825T054729.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
-    "LUYY2URU": "20260824T195833.000Z",
+    "LUYY2URU": "20260825T073923.000Z",
     "P8Q0JYRP": "20260824T114111.000Z",
     "989PQYY8": "20260823T230453.000Z",
     "J80V2Y9VC": "20260817T085833.000Z",
@@ -1271,17 +1271,17 @@
           "evo": 0
         }
       ],
-      "useCount": 82,
-      "winCount": 64,
+      "useCount": 84,
+      "winCount": 65,
       "slotConfigs": {
-        "26000056|26000002|27000002": 54,
+        "26000056|26000002|27000002": 56,
         "27000002|26000002|26000056": 28
       },
       "proUsage": {
         "LUYY2URU": {
           "name": "Ral9",
-          "wins": 33,
-          "games": 40
+          "wins": 34,
+          "games": 42
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
@@ -15179,16 +15179,16 @@
           "evo": 0
         }
       ],
-      "useCount": 8,
-      "winCount": 6,
+      "useCount": 11,
+      "winCount": 8,
       "slotConfigs": {
-        "26000043|26000102|28000008": 8
+        "26000043|26000102|28000008": 11
       },
       "proUsage": {
         "GG829JGY": {
           "name": "SirTag",
-          "wins": 6,
-          "games": 8
+          "wins": 8,
+          "games": 11
         }
       }
     },
