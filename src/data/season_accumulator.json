@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-08",
   "startedAt": "2026-08-03T12:25:43.083Z",
-  "lastUpdatedAt": "2026-08-26T03:54:28.813Z",
-  "totalBattlesAnalyzed": 5384,
-  "totalPlayersScanned": 3580,
-  "totalRunCount": 179,
+  "lastUpdatedAt": "2026-08-26T06:51:44.169Z",
+  "totalBattlesAnalyzed": 5387,
+  "totalPlayersScanned": 3600,
+  "totalRunCount": 180,
   "playerLastScan": {
     "G9YV9GR8R": "20260823T132157.000Z",
     "2CLV2RP0": "20260825T142210.000Z",
@@ -15,7 +15,7 @@
     "92L9R2JG": "20260825T130919.000Z",
     "R09228V": "20260824T040238.000Z",
     "PCG229PC": "20260807T160813.000Z",
-    "GG829JGY": "20260826T023633.000Z",
+    "GG829JGY": "20260826T041430.000Z",
     "PPV2JUUGU": "20260822T194204.000Z",
     "9890JJJV": "20260825T054729.000Z",
     "9RV2VVJVL": "20260629T092413.000Z",
@@ -23,7 +23,7 @@
     "P8Q0JYRP": "20260825T135745.000Z",
     "989PQYY8": "20260825T142711.000Z",
     "J80V2Y9VC": "20260817T085833.000Z",
-    "YU9JR0Q": "20260826T022222.000Z",
+    "YU9JR0Q": "20260826T040951.000Z",
     "92L8QYJJG": "20260825T185657.000Z",
     "UJ0CVRUV": "20260825T230101.000Z",
     "GLUU9JGQ": "20260812T143929.000Z"
@@ -3973,10 +3973,10 @@
           "evo": 0
         }
       ],
-      "useCount": 126,
-      "winCount": 87,
+      "useCount": 127,
+      "winCount": 88,
       "slotConfigs": {
-        "26000056|26000102|27000002": 78,
+        "26000056|26000102|27000002": 79,
         "27000002|26000102|26000056": 48
       },
       "proUsage": {
@@ -3997,8 +3997,8 @@
         },
         "YU9JR0Q": {
           "name": "MYLO XYLOTO",
-          "wins": 35,
-          "games": 60
+          "wins": 36,
+          "games": 61
         },
         "UJ0CVRUV": {
           "name": "NotRealPro",
@@ -15194,16 +15194,16 @@
           "evo": 0
         }
       ],
-      "useCount": 12,
-      "winCount": 8,
+      "useCount": 14,
+      "winCount": 9,
       "slotConfigs": {
-        "26000043|26000102|28000008": 12
+        "26000043|26000102|28000008": 14
       },
       "proUsage": {
         "GG829JGY": {
           "name": "SirTag",
-          "wins": 8,
-          "games": 12
+          "wins": 9,
+          "games": 14
         }
       }
     },
