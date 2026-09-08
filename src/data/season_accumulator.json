@@ -2,16 +2,16 @@
   "version": 3,
   "seasonId": "2026-09",
   "startedAt": "2026-09-07T11:49:59.717Z",
-  "lastUpdatedAt": "2026-09-08T20:50:40.018Z",
-  "totalBattlesAnalyzed": 706,
-  "totalPlayersScanned": 140,
-  "totalRunCount": 7,
+  "lastUpdatedAt": "2026-09-08T23:14:36.093Z",
+  "totalBattlesAnalyzed": 716,
+  "totalPlayersScanned": 160,
+  "totalRunCount": 8,
   "playerLastScan": {
     "G9YV9GR8R": "20260908T183123.000Z",
     "2CLV2RP0": "20260908T150619.000Z",
     "Y9R22RQ2": "20260908T062744.000Z",
-    "R90PRV0PY": "20260908T125528.000Z",
-    "9G28ULYR": "20260908T195006.000Z",
+    "R90PRV0PY": "20260908T220810.000Z",
+    "9G28ULYR": "20260908T213133.000Z",
     "92L9R2JG": "20260908T064029.000Z",
     "R09228V": "20260908T200321.000Z",
     "PCG229PC": "20260907T090033.000Z",
@@ -600,16 +600,16 @@
           "evo": 0
         }
       ],
-      "useCount": 6,
-      "winCount": 5,
+      "useCount": 7,
+      "winCount": 6,
       "slotConfigs": {
-        "27000013|26000102|28000017": 6
+        "27000013|26000102|28000017": 7
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 5,
-          "games": 6
+          "wins": 6,
+          "games": 7
         }
       }
     },
@@ -2130,7 +2130,11 @@
           "evo": 0
         },
         {
-          "id": 28000015,
+          "id": 26000107,
+          "evo": 0
+        },
+        {
+          "id": 28000000,
           "evo": 0
         },
         {
@@ -2142,24 +2146,25 @@
           "evo": 0
         },
         {
-          "id": 28000000,
-          "evo": 0
-        },
-        {
-          "id": 26000107,
+          "id": 28000015,
           "evo": 0
         }
       ],
-      "useCount": 6,
-      "winCount": 6,
+      "useCount": 15,
+      "winCount": 14,
       "slotConfigs": {
-        "26000010|26000023|26000099": 6
+        "26000010|26000023|26000099": 15
       },
       "proUsage": {
         "G9YV9GR8R": {
           "name": "Mohamed Light",
           "wins": 6,
           "games": 6
+        },
+        "R90PRV0PY": {
+          "name": "Ryley",
+          "wins": 8,
+          "games": 9
         }
       }
     }
