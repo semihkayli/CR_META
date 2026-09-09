@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-09",
   "startedAt": "2026-09-07T11:49:59.717Z",
-  "lastUpdatedAt": "2026-09-09T20:36:44.605Z",
-  "totalBattlesAnalyzed": 905,
-  "totalPlayersScanned": 240,
-  "totalRunCount": 12,
+  "lastUpdatedAt": "2026-09-09T23:00:30.626Z",
+  "totalBattlesAnalyzed": 912,
+  "totalPlayersScanned": 260,
+  "totalRunCount": 13,
   "playerLastScan": {
     "G9YV9GR8R": "20260908T183123.000Z",
     "2CLV2RP0": "20260909T085233.000Z",
@@ -17,7 +17,7 @@
     "PCG229PC": "20260907T090033.000Z",
     "GG829JGY": "20260909T091323.000Z",
     "PPV2JUUGU": "20260909T190603.000Z",
-    "9890JJJV": "20260909T200726.000Z",
+    "9890JJJV": "20260909T210957.000Z",
     "LUYY2URU": "20260903T193312.000Z",
     "P8Q0JYRP": "20260908T173852.000Z",
     "989PQYY8": "20260908T181157.000Z",
@@ -1937,16 +1937,16 @@
           "evo": 0
         }
       ],
-      "useCount": 57,
-      "winCount": 51,
+      "useCount": 64,
+      "winCount": 55,
       "slotConfigs": {
-        "26000037|26000039|28000008": 57
+        "26000037|26000039|28000008": 64
       },
       "proUsage": {
         "9890JJJV": {
           "name": "Pompeyo",
-          "wins": 50,
-          "games": 55
+          "wins": 54,
+          "games": 62
         },
         "Y9R22RQ2": {
           "name": "Ian77",
