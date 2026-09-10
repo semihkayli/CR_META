@@ -2,18 +2,18 @@
   "version": 3,
   "seasonId": "2026-09",
   "startedAt": "2026-09-07T11:49:59.717Z",
-  "lastUpdatedAt": "2026-09-10T20:31:34.081Z",
-  "totalBattlesAnalyzed": 1100,
-  "totalPlayersScanned": 340,
-  "totalRunCount": 17,
+  "lastUpdatedAt": "2026-09-10T22:58:01.069Z",
+  "totalBattlesAnalyzed": 1113,
+  "totalPlayersScanned": 360,
+  "totalRunCount": 18,
   "playerLastScan": {
     "G9YV9GR8R": "20260908T183123.000Z",
     "2CLV2RP0": "20260910T141016.000Z",
-    "Y9R22RQ2": "20260910T023445.000Z",
+    "Y9R22RQ2": "20260910T221325.000Z",
     "R90PRV0PY": "20260910T143342.000Z",
-    "9G28ULYR": "20260910T163330.000Z",
+    "9G28ULYR": "20260910T225701.000Z",
     "92L9R2JG": "20260910T185826.000Z",
-    "R09228V": "20260910T202944.000Z",
+    "R09228V": "20260910T222604.000Z",
     "PCG229PC": "20260907T090033.000Z",
     "GG829JGY": "20260910T201725.000Z",
     "PPV2JUUGU": "20260910T200914.000Z",
@@ -2583,16 +2583,16 @@
           "evo": 0
         }
       ],
-      "useCount": 10,
-      "winCount": 7,
+      "useCount": 13,
+      "winCount": 9,
       "slotConfigs": {
-        "26000013|26000023|26000015": 10
+        "26000013|26000023|26000015": 13
       },
       "proUsage": {
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 7,
-          "games": 10
+          "wins": 9,
+          "games": 13
         }
       }
     },
@@ -2823,16 +2823,21 @@
           "evo": 0
         }
       ],
-      "useCount": 14,
-      "winCount": 11,
+      "useCount": 15,
+      "winCount": 12,
       "slotConfigs": {
-        "28000004|26000011|26000040": 14
+        "28000004|26000011|26000040": 15
       },
       "proUsage": {
         "92L9R2JG": {
           "name": "Surgical Goblin",
           "wins": 11,
           "games": 14
+        },
+        "Y9R22RQ2": {
+          "name": "Ian77",
+          "wins": 1,
+          "games": 1
         }
       }
     },
@@ -2851,15 +2856,15 @@
           "evo": 0
         },
         {
+          "id": 28000010,
+          "evo": 0
+        },
+        {
           "id": 26000107,
           "evo": 0
         },
         {
           "id": 27000001,
-          "evo": 0
-        },
-        {
-          "id": 28000010,
           "evo": 0
         },
         {
@@ -2871,16 +2876,16 @@
           "evo": 0
         }
       ],
-      "useCount": 26,
-      "winCount": 16,
+      "useCount": 35,
+      "winCount": 22,
       "slotConfigs": {
-        "26000010|26000023|26000099": 26
+        "26000010|26000023|26000099": 35
       },
       "proUsage": {
         "R09228V": {
           "name": "Morten",
-          "wins": 15,
-          "games": 24
+          "wins": 21,
+          "games": 33
         },
         "PPV2JUUGU": {
           "name": "Boss",
