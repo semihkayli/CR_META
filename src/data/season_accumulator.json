@@ -2,10 +2,10 @@
   "version": 3,
   "seasonId": "2026-09",
   "startedAt": "2026-09-07T11:49:59.717Z",
-  "lastUpdatedAt": "2026-09-14T03:51:54.603Z",
-  "totalBattlesAnalyzed": 1692,
-  "totalPlayersScanned": 680,
-  "totalRunCount": 34,
+  "lastUpdatedAt": "2026-09-14T12:05:13.827Z",
+  "totalBattlesAnalyzed": 1701,
+  "totalPlayersScanned": 700,
+  "totalRunCount": 35,
   "playerLastScan": {
     "G9YV9GR8R": "20260912T202108.000Z",
     "2CLV2RP0": "20260913T231020.000Z",
@@ -18,8 +18,8 @@
     "GG829JGY": "20260911T215043.000Z",
     "PPV2JUUGU": "20260914T021651.000Z",
     "9890JJJV": "20260913T224611.000Z",
-    "LUYY2URU": "20260911T222710.000Z",
-    "P8Q0JYRP": "20260913T200829.000Z",
+    "LUYY2URU": "20260914T095445.000Z",
+    "P8Q0JYRP": "20260914T080446.000Z",
     "989PQYY8": "20260913T100329.000Z",
     "GLUU9JGQ": "20260905T102456.000Z",
     "92L8QYJJG": "20260913T013136.000Z",
@@ -1313,16 +1313,16 @@
           "evo": 0
         }
       ],
-      "useCount": 33,
-      "winCount": 32,
+      "useCount": 35,
+      "winCount": 34,
       "slotConfigs": {
-        "26000056|26000002|27000002": 33
+        "26000056|26000002|27000002": 35
       },
       "proUsage": {
         "LUYY2URU": {
           "name": "Ral9",
-          "wins": 32,
-          "games": 33
+          "wins": 34,
+          "games": 35
         }
       }
     },
@@ -2765,10 +2765,10 @@
           "evo": 0
         }
       ],
-      "useCount": 16,
-      "winCount": 8,
+      "useCount": 22,
+      "winCount": 11,
       "slotConfigs": {
-        "26000015|26000023|26000000": 16
+        "26000015|26000023|26000000": 22
       },
       "proUsage": {
         "R90PRV0PY": {
@@ -2778,8 +2778,8 @@
         },
         "P8Q0JYRP": {
           "name": "Xpeciaals",
-          "wins": 7,
-          "games": 14
+          "wins": 10,
+          "games": 20
         }
       }
     },
