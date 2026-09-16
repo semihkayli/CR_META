@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-16T16:20:05.024Z",
+  "updatedAt": "2026-09-16T20:59:09.897Z",
   "seasonId": "2026-09",
-  "totalBattlesAnalyzed": 2106,
-  "totalPlayersScanned": 900,
-  "totalRuns": 45,
+  "totalBattlesAnalyzed": 2109,
+  "totalPlayersScanned": 920,
+  "totalRuns": 46,
   "metaDecks": [
     {
       "deckId": "26000010;26000023;26000084;26000099;26000107;27000001;28000000;28000015",
@@ -5951,7 +5951,7 @@
     {
       "tag": "#G9YV9GR8R",
       "name": "Mohamed Light",
-      "updatedAt": "2026-09-16T16:20:05.503Z",
+      "updatedAt": "2026-09-16T20:59:10.414Z",
       "deck": [
         {
           "name": "Furnace",
@@ -6022,7 +6022,7 @@
     {
       "tag": "#2CLV2RP0",
       "name": "Mugi",
-      "updatedAt": "2026-09-16T16:20:05.994Z",
+      "updatedAt": "2026-09-16T20:59:10.932Z",
       "deck": [
         {
           "name": "Executioner",
@@ -6093,7 +6093,7 @@
     {
       "tag": "#R90PRV0PY",
       "name": "Ryley",
-      "updatedAt": "2026-09-16T16:20:07.008Z",
+      "updatedAt": "2026-09-16T20:59:11.988Z",
       "deck": [
         {
           "name": "Goblin Drill",
@@ -6164,7 +6164,7 @@
     {
       "tag": "#9G28ULYR",
       "name": "LucasXGamer",
-      "updatedAt": "2026-09-16T16:20:07.517Z",
+      "updatedAt": "2026-09-16T20:59:12.520Z",
       "deck": [
         {
           "name": "Baby Dragon",
@@ -6235,7 +6235,7 @@
     {
       "tag": "#92L9R2JG",
       "name": "Surgical Goblin",
-      "updatedAt": "2026-09-16T16:20:08.036Z",
+      "updatedAt": "2026-09-16T20:59:13.102Z",
       "deck": [
         {
           "name": "Cannon",
@@ -6306,7 +6306,7 @@
     {
       "tag": "#GG829JGY",
       "name": "SirTag",
-      "updatedAt": "2026-09-16T16:20:09.539Z",
+      "updatedAt": "2026-09-16T20:59:14.702Z",
       "deck": [
         {
           "name": "Royal Ghost",
@@ -6377,7 +6377,7 @@
     {
       "tag": "#PPV2JUUGU",
       "name": "Boss",
-      "updatedAt": "2026-09-16T16:20:10.041Z",
+      "updatedAt": "2026-09-16T20:59:15.228Z",
       "deck": [
         {
           "name": "Musketeer",
@@ -6448,7 +6448,7 @@
     {
       "tag": "#9890JJJV",
       "name": "Pompeyo",
-      "updatedAt": "2026-09-16T16:20:10.580Z",
+      "updatedAt": "2026-09-16T20:59:15.752Z",
       "deck": [
         {
           "name": "Inferno Dragon",
@@ -6519,7 +6519,7 @@
     {
       "tag": "#9RV2VVJVL",
       "name": "Jack",
-      "updatedAt": "2026-09-16T16:20:11.016Z",
+      "updatedAt": "2026-09-16T20:59:16.217Z",
       "deck": [
         {
           "name": "Skeletons",
@@ -6590,7 +6590,7 @@
     {
       "tag": "#LUYY2URU",
       "name": "Ral9",
-      "updatedAt": "2026-09-16T16:20:11.523Z",
+      "updatedAt": "2026-09-16T20:59:16.745Z",
       "deck": [
         {
           "name": "Wall Breakers",
@@ -6661,7 +6661,7 @@
     {
       "tag": "#P8Q0JYRP",
       "name": "Xpeciaals",
-      "updatedAt": "2026-09-16T16:20:11.959Z",
+      "updatedAt": "2026-09-16T20:59:17.205Z",
       "deck": [
         {
           "name": "Wizard",
@@ -6732,70 +6732,70 @@
     {
       "tag": "#GLUU9JGQ",
       "name": "FBI",
-      "updatedAt": "2026-09-16T16:20:12.939Z",
+      "updatedAt": "2026-09-16T20:59:18.281Z",
       "deck": [
         {
-          "name": "Skeleton Army",
-          "id": 26000012,
+          "name": "Skeletons",
+          "id": 26000010,
           "evolutionLevel": 1,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png"
           }
         },
         {
-          "name": "Mega Minion",
-          "id": 26000039,
+          "name": "Ice Wizard",
+          "id": 26000023,
           "evolutionLevel": 2,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/-T_e4YLbuhPBKbYnBwQfXgynNpp5eOIN_0RracYwL9c.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/W3dkw0HTw9n1jB-zbknY2w3wHuyuLxSRIAV5fUT1SEY.png"
           }
         },
         {
-          "name": "Firecracker",
-          "id": 26000064,
+          "name": "Tesla",
+          "id": 27000006,
           "evolutionLevel": 1,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/c1rL3LO1U2D9-TkeFfAC18gP3AO8ztSwrcHMZplwL2Q.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/OiwnGrxFMNiHetYEerE-UZt0L_uYNzFY7qV_CA_OxR4.png"
           }
         },
         {
-          "name": "Electro Giant",
-          "id": 26000085,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/_uChZkNHAMq6tPb3v6A49xinOe3CnhjstOhG6OZbPYc.png"
-          }
-        },
-        {
-          "name": "Sparky",
-          "id": 26000033,
-          "evolutionLevel": 0,
-          "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/2GKMkBrArZXgQxf2ygFjDs4VvGYPbx8F6Lj_68iVhIM.png"
-          }
-        },
-        {
-          "name": "Mini P.E.K.K.A",
-          "id": 26000018,
+          "name": "Barbarian Barrel",
+          "id": 28000015,
           "evolutionLevel": 2,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png"
           }
         },
         {
-          "name": "Earthquake",
-          "id": 28000014,
+          "name": "Rune Giant",
+          "id": 26000101,
           "evolutionLevel": 0,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/XeQXcrUu59C52DslyZVwCnbi4yamID-WxfVZLShgZmE.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/UogMnGHQXT-TOVXRxslKdAKXUPhqUvrD_hV9x8lbzdE.png"
           }
         },
         {
-          "name": "Giant Snowball",
-          "id": 28000017,
-          "evolutionLevel": 1,
+          "name": "Poison",
+          "id": 28000009,
+          "evolutionLevel": 0,
           "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/7MaJLa6hK9WN2_VIshuh5DIDfGwm0wEv98gXtAxLDPs.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/98HDkG2189yOULcVG9jz2QbJKtfuhH21DIrIjkOjxI8.png"
+          }
+        },
+        {
+          "name": "Electro Spirit",
+          "id": 26000084,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png"
+          }
+        },
+        {
+          "name": "Minion Giant",
+          "id": 26000107,
+          "evolutionLevel": 0,
+          "iconUrls": {
+            "medium": "https://api-assets.clashroyale.com/cards/300/VRjL0yVLzrnoe-IBh2l2fDHDok0L-UoM9cG-X_8xbMk.png"
           }
         }
       ]
@@ -6803,7 +6803,7 @@
     {
       "tag": "#J80V2Y9VC",
       "name": "Faisal F1",
-      "updatedAt": "2026-09-16T16:20:13.440Z",
+      "updatedAt": "2026-09-16T20:59:18.810Z",
       "deck": [
         {
           "name": "Skeleton Barrel",
@@ -6874,7 +6874,7 @@
     {
       "tag": "#92L8QYJJG",
       "name": "Candee",
-      "updatedAt": "2026-09-16T16:20:14.432Z",
+      "updatedAt": "2026-09-16T20:59:19.884Z",
       "deck": [
         {
           "name": "Knight",
