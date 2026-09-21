@@ -2,16 +2,16 @@
   "version": 3,
   "seasonId": "2026-09",
   "startedAt": "2026-09-07T11:49:59.717Z",
-  "lastUpdatedAt": "2026-09-20T23:03:07.839Z",
-  "totalBattlesAnalyzed": 2608,
-  "totalPlayersScanned": 1320,
-  "totalRunCount": 66,
+  "lastUpdatedAt": "2026-09-21T03:51:11.267Z",
+  "totalBattlesAnalyzed": 2623,
+  "totalPlayersScanned": 1340,
+  "totalRunCount": 67,
   "playerLastScan": {
     "G9YV9GR8R": "20260917T163830.000Z",
     "2CLV2RP0": "20260920T124451.000Z",
     "Y9R22RQ2": "20260919T011629.000Z",
     "R90PRV0PY": "20260919T042109.000Z",
-    "9G28ULYR": "20260920T192324.000Z",
+    "9G28ULYR": "20260921T000515.000Z",
     "92L9R2JG": "20260920T070627.000Z",
     "R09228V": "20260914T143900.000Z",
     "PCG229PC": "20260920T151403.000Z",
@@ -19,7 +19,7 @@
     "PPV2JUUGU": "20260920T015753.000Z",
     "9890JJJV": "20260920T184045.000Z",
     "LUYY2URU": "20260916T064216.000Z",
-    "P8Q0JYRP": "20260920T215355.000Z",
+    "P8Q0JYRP": "20260920T234159.000Z",
     "989PQYY8": "20260920T203025.000Z",
     "GLUU9JGQ": "20260920T163445.000Z",
     "92L8QYJJG": "20260918T171152.000Z",
@@ -5430,17 +5430,17 @@
           "evo": 0
         }
       ],
-      "useCount": 53,
-      "winCount": 34,
+      "useCount": 58,
+      "winCount": 37,
       "slotConfigs": {
-        "28000015|26000023|27000009": 52,
+        "28000015|26000023|27000009": 57,
         "27000009|26000023|26000000": 1
       },
       "proUsage": {
         "P8Q0JYRP": {
           "name": "Xpeciaals",
-          "wins": 34,
-          "games": 53
+          "wins": 37,
+          "games": 58
         }
       }
     },
@@ -6755,10 +6755,10 @@
           "evo": 0
         }
       ],
-      "useCount": 29,
-      "winCount": 19,
+      "useCount": 39,
+      "winCount": 27,
       "slotConfigs": {
-        "28000004|26000011|26000012": 29
+        "28000004|26000011|26000012": 39
       },
       "proUsage": {
         "92L9R2JG": {
@@ -6773,8 +6773,8 @@
         },
         "9G28ULYR": {
           "name": "LucasXGamer",
-          "wins": 9,
-          "games": 13
+          "wins": 17,
+          "games": 23
         }
       }
     },
